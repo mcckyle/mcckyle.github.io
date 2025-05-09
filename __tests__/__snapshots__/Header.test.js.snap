@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<DocumentFragment>
+  <header>
+    <h1>
+      Kyle D. McColgan
+    </h1>
+    <h2>
+      Technology Professional
+    </h2>
+    <img
+      alt="KDM picture"
+      class="profile-img"
+      src="test-file-stub"
+    />
+  </header>
+</DocumentFragment>
+`;

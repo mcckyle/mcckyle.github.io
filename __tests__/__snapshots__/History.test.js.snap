@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot of the History section 1`] = `
+<DocumentFragment>
+  <section
+    aria-label="Professional History"
+    id="history"
+  >
+    <h2>
+      Professional History
+    </h2>
+    <ul>
+      <li>
+        Primary Systems, IT System Engineer, June 2022 - September 2022
+      </li>
+      <li>
+        Walmart, Software Engineer, July 2021 - October 2022
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;

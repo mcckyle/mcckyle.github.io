@@ -1,0 +1,45 @@
+#Filename: autograding.yml
+#Author: Kyle McColgan
+#Date: 9 May 2025
+#Description: GitHub Actions workflow file for GitHub Pages deployment process.
+
+name: autograding
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install package dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build  # Vite outputs to ./dist directory.
+
+      - name: Execute test cases
+        run: npm test
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} #Fix token reference...
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          user_name: kmccol1
+          user_email: kdmbus21@gmail.com

@@ -1,0 +1,19 @@
+/* App.css - Core component styles for the React app */
+
+/* App container styling */
+.app__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: transparent; /* Let styles.css control this */
+}
+
+/* Adding smooth scroll effect for the page */
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    margin: 30px 0;
+    border-top: 1px solid #a8c4e8;
+}

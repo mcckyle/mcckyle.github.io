@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component footer matches snapshot 1`] = `
+<DocumentFragment>
+  <footer>
+    <p>
+      Blossoming forward into May 🌱 | © 2025 Kyle McColgan
+    </p>
+  </footer>
+</DocumentFragment>
+`;
