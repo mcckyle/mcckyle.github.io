@@ -20,8 +20,8 @@ describe('Contact component', () => {
   });
 
   it('renders the GitHub link with correct href', () => {
-    const githubLink = screen.getByRole('link', { name: /github.com\/kmccol1/i });
-    expect(githubLink).toHaveAttribute('href', 'https://www.github.com/kmccol1');
+    const githubLink = screen.getByRole('link', { name: /github.com\/mcckyle/i });
+    expect(githubLink).toHaveAttribute('href', 'https://www.github.com/mcckyle');
   });
 
   it('renders the LinkedIn link with correct href', () => {

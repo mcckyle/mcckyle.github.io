@@ -1,4 +1,4 @@
-[![deployment](https://github.com/kmccol1/kmccol1.github.io/actions/workflows/autograding.yml/badge.svg)](https://github.com/kmccol1/kmccol1.github.io/actions/workflows/autograding.yml)
+[![deployment](https://github.com/mcckyle/mcckyle.github.io/actions/workflows/autograding.yml/badge.svg)](https://github.com/mcckyle/mcckyle.github.io/actions/workflows/autograding.yml)
 
 # Kyle McColgan – Technology Professional
 
@@ -8,10 +8,10 @@ This repository contains the source code for my personal website, designed to sh
 
 Feel free to explore my work, and don’t hesitate to reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./images/Screenshot_20250418_163203-1.png)
+![Portfolio Screenshot](./public/images/Screenshot_20250512_144304-1.png)
 *A glimpse of my personal website, with a screenshot, designed to highlight my work in web development and security.*
 
-*🌐 [Visit the live site](https://kmccol1.github.io/kmccol1.github.io/)*
+*🌐 [Visit the live site](https://mcckyle.github.io/)*
 
 ## Table of Contents
 
@@ -34,8 +34,9 @@ I’m always eager to collaborate, exchange ideas, and tackle complex challenges
 ## Technologies Used
 
 - **Languages:** HTML, CSS, JavaScript, and React.
-- **Testing Framework:** Jest, for unit testing JavaScript functionality
-- **Deployment:** GitHub Pages, for deployment.
+- **Build Tool** Vite, for rapid development and optimized production builds.
+- **Testing Framework:** Jest, for unit testing JavaScript functionality.
+- **Deployment:** GitHub Pages, for hosting and deployment.
 - **Version Control:** Git, managed through GitHub for collaboration and tracking changes.
 
 ## How to Use
@@ -45,8 +46,8 @@ Follow the steps below to run the site locally on your machine:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/kmccol1/kmccol1.github.io.git
-    cd kmccol1.github.io
+    git clone https://github.com/mcckyle/mcckyle.github.io.git
+    cd mcckyle.github.io
     ```
 
 2. **Install project dependencies:**
@@ -81,7 +82,7 @@ Follow the steps below to run the site locally on your machine:
 ## Project Structure
 
 ```
-kmccol1.github.io/
+mcckyle.github.io/
 ├── .git/                  # Git version control directory.
 ├── .github/               
 │   └── workflows/
@@ -159,6 +160,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 I'm always open to new opportunities, collaborations, or discussions about technology. Feel free to connect with me:
 
 - **LinkedIn:** [Kyle McColgan](https://www.linkedin.com/in/kylemccolgan/)
-- **GitHub:** [kmccol1](https://github.com/kmccol1)
+- **GitHub:** [mcckyle](https://github.com/mcckyle)
 
 Thank you for visiting my repository. I look forward to connecting!
