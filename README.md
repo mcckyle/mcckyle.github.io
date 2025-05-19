@@ -9,7 +9,7 @@ This repository contains the source code for my personal website, designed to sh
 Feel free to explore my work, and don’t hesitate to reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
 ![Portfolio Screenshot](./public/images/Screenshot_20250512_144304-1.png)
-*A glimpse of my personal website, with a screenshot, designed to highlight my work in web development and security.*
+*A glimpse of my personal website, with a screenshot, designed to highlight my technology-related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
 
@@ -19,8 +19,8 @@ Feel free to explore my work, and don’t hesitate to reach out if you're intere
 2. [Technologies Used](#technologies-used)
 3. [How to Use](#how-to-use)
 4. [Project Structure](#project-structure)
-5. [Tests](#tests)
-6. [Future Plans](#future-plans)
+5. [Future Plans](#future-plans)
+6. [Tests](#tests)
 7. [Acknowledgements](#acknowledgements)
 8. [License](#license)
 9. [Contact](#contact)
@@ -87,11 +87,9 @@ mcckyle.github.io/
 ├── .github/               
 │   └── workflows/
 │       └── autograding.yml
-├── node_modules/          # Node.js packages.
+│
 ├── public/                # Public assets.
 │   └── index.html
-├── images/                # Static images used across the site.
-│   └── kdm.png
 │
 ├── src/                   # Source code for the React app.
 │   ├── components/        # Reusable UI components.
@@ -105,9 +103,10 @@ mcckyle.github.io/
 │   │   ├── Contact.js
 │   │   └── History.js
 │   │         
-│   ├── App.js
+│   ├── App.jsx
 │   ├── App.css
-│   ├── index.js
+│   ├── main.jsx
+│   ├── setupTests.js
 │   ├── index.css          # Global styles.
 │   └── styles.css
 ├── __tests__/             # Unit and integration tests.
@@ -119,10 +118,16 @@ mcckyle.github.io/
 │   ├── AboutMe.test.js
 │   ├── Contact.test.js
 │   └── History.test.js
-├── build/                 # Production build output.
-├── .gitignore             # Files and directories to ignore in Git.
-├── package.json           # Project metadata and dependencies.
-└── README.md              # Project documentation.
+├── dist/                 # Production build output.
+├── .gitignore            # Files and directories to ignore in Git.
+├── babel.config.js
+├── eslint.config.js
+├── jest.config.cjs
+├── vite.config.cjs
+├── index.html
+├── LICENSE
+├── package.json          # Project metadata and dependencies.
+└── README.md             # Project documentation.
 ```
 
 ## Future Plans
@@ -146,7 +151,6 @@ npm test
 We would like to express our gratitude to the following:
 
 - **React**: For providing the powerful library that powers the front-end of this project.
-- **FontAwesome**: For providing accessible and scalable icons that enhance the visual design.
 - **Node.js**: For providing the runtime environment that powers the server-side of the project.
 - **GitHub Pages**: For hosting the repository and making collaboration possible.
 - **Open Source Community**: For sharing knowledge and developing tools that benefit developers worldwide.
@@ -157,9 +161,9 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## Contact
 
-I'm always open to new opportunities, collaborations, or discussions about technology. Feel free to connect with me:
+I'm always open to new opportunities, collaborations, or discussions about technology. Feel free to connect:
 
 - **LinkedIn:** [Kyle McColgan](https://www.linkedin.com/in/kylemccolgan/)
 - **GitHub:** [mcckyle](https://github.com/mcckyle)
 
-Thank you for visiting my repository. I look forward to connecting!
+Thank you for visiting my repository. I look forward to connecting!!

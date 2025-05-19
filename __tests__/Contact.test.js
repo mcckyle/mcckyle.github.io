@@ -41,7 +41,7 @@ describe('Contact component', () => {
 
   it('has a resume link pointing to the PDF path', () => {
     const resumeLink = screen.getByRole('link', { name: /View my resume/i });
-    expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-Spectrum-2025.pdf');
+    expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-May-2025.pdf');
   });
 
   it('sets target="_blank" on the resume link', () => {
