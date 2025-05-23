@@ -6,7 +6,7 @@ Welcome! 👋
 
 This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly, and secure web solutions.
 
-Feel free to explore my work, and don’t hesitate to reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
+Feel free to explore my work, and as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
 ![Portfolio Screenshot](./public/images/Screenshot_20250512_144304-1.png)
 *A glimpse of my personal website, with a screenshot, designed to highlight my technology-related projects*
@@ -27,17 +27,17 @@ Feel free to explore my work, and don’t hesitate to reach out if you're intere
 
 ## About Me
 
-Hi, I'm Kyle McColgan! I'm a technology professional and security enthusiast based in Saint Louis. I specialize in building custom, practical web solutions that prioritize both usability and security. My approach emphasizes streamlined user experiences alongside robust security practices, ensuring that applications are not only efficient and scalable but also resilient.
+Hello! My name is Kyle! I'm a technology professional and security enthusiast based in Saint Louis. I specialize in building custom, practical web solutions that prioritize both usability and security. My approach emphasizes streamlined user experiences alongside robust security practices, ensuring that the apps are not only efficient and scalable but also security-hardened.
 
-I’m always eager to collaborate, exchange ideas, and tackle complex challenges with fellow developers and security professionals. Whether it’s contributing to open-source projects, discussing emerging security trends, or refining innovative web solutions—let’s build something impactful together!
+I’m always eager to collaborate, exchange ideas, and tackle challenges with fellow tech enthusiasts! Whether it’s contributing to open-source projects, discussing emerging security trends, or elevating practical web solutions - let’s build something impactful together!!
 
 ## Technologies Used
 
 - **Languages:** HTML, CSS, JavaScript, and React.
 - **Build Tool** Vite, for rapid development and optimized production builds.
-- **Testing Framework:** Jest, for unit testing JavaScript functionality.
-- **Deployment:** GitHub Pages, for hosting and deployment.
-- **Version Control:** Git, managed through GitHub for collaboration and tracking changes.
+- **Testing Framework:** Jest, for unit testing the JavaScript functionality.
+- **Deployment:** GitHub Pages, for free hosting and deployment.
+- **Version Control:** Git, managed through GitHub.
 
 ## How to Use
 
@@ -134,7 +134,7 @@ mcckyle.github.io/
 
 - **Enhanced Features:** Introduce dynamic, interactive components using JavaScript.
 - **Security Upgrades:** Adopt advanced secure web development practices.
-- **Project Showcase:** Add more projects highlighting C++ and cybersecurity work.
+- **Project Showcase:** Add more projects highlighting C++ and security work.
 
 ## Tests
 
@@ -166,4 +166,4 @@ I'm always open to new opportunities, collaborations, or discussions about techn
 - **LinkedIn:** [Kyle McColgan](https://www.linkedin.com/in/kylemccolgan/)
 - **GitHub:** [mcckyle](https://github.com/mcckyle)
 
-Thank you for visiting my repository. I look forward to connecting!!
+Thank you for visiting my repository. I look forward to connecting!

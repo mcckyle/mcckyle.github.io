@@ -1,6 +1,6 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 9 May 2025
+//Date: 23 May 2025
 //Description: Contains the React component for the website skills section.
 
 import React from 'react';
@@ -16,7 +16,7 @@ function Skills() {
 
                 <li><strong>Backend & Systems:</strong> Comfortable working with Java, C++, and Python for backend development and systems programming. I focus on writing efficient, secure, and well-documented code for maintainability and performance.</li>
 
-                <li><strong>Information Security:</strong> Solid understanding of secure coding practices, data protection, and threat mitigation. Actively applying these principles in personal projects to reinforce privacy, integrity, and resilience in application design.</li>
+                <li><strong>Information Security:</strong> Solid understanding of secure coding practices, data protection, and threat mitigation. Actively applying these principles in personal projects to reinforce privacy, integrity, and robust application design.</li>
             </ul>
         </section>
     );

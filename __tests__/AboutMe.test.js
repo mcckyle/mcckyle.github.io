@@ -1,4 +1,8 @@
-// __tests__/AboutMe.test.js
+//Filename: AboutMe.test.js
+//Author: Kyle McColgan
+//Date: 23 May 2025
+//Description: This file contains the Jest unit tests for the website about me section.
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -20,7 +24,7 @@ describe('AboutMe Component', () => {
   });
 
   it('renders the first paragraph introducing Kyle', () => {
-    expect(screen.getByText(/Hi, I'm Kyle McColgan/i)).toBeInTheDocument();
+    expect(screen.getByText(/Hello! My name is Kyle McColgan/i)).toBeInTheDocument();
   });
 
   it('renders the About Me section', () => {
