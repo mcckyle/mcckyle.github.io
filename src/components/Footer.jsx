@@ -1,15 +1,17 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 9 May 2025
-//Description: Contains the React component for the website contact footer section.
+//Date: 02 June 2025
+//Description: This file contains the React component for the website footer section.
 
 import React from 'react';
 
 function Footer()
 {
     return (
-        <footer>
-            <p>Blossoming forward into May 🌱 | © 2025 Kyle McColgan</p>
+        <footer className = "site-footer">
+            <p className = "footer-text">
+                Welcoming the warmth of June ☀️ | © 2025 Kyle McColgan
+            </p>
         </footer>
     );
 }

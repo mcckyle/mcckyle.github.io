@@ -8,7 +8,7 @@ This repository contains the source code for my personal website, designed to sh
 
 Feel free to explore my work, and as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./public/images/Screenshot_20250512_144304-1.png)
+![Portfolio Screenshot](./public/images/Screenshot_20250602_175629.png)
 *A glimpse of my personal website, with a screenshot, designed to highlight my technology-related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
@@ -21,9 +21,10 @@ Feel free to explore my work, and as well as reach out if you're interested in c
 4. [Project Structure](#project-structure)
 5. [Future Plans](#future-plans)
 6. [Tests](#tests)
-7. [Acknowledgements](#acknowledgements)
-8. [License](#license)
-9. [Contact](#contact)
+7. [License](#license)
+8. [Contact](#contact)
+9. [Acknowledgements](#acknowledgements)
+
 
 ## About Me
 
@@ -146,15 +147,6 @@ To run the tests locally, use the following command:
 npm test
 ```
 
-## Acknowledgements
-
-We would like to express our gratitude to the following:
-
-- **React**: For providing the powerful library that powers the front-end of this project.
-- **Node.js**: For providing the runtime environment that powers the server-side of the project.
-- **GitHub Pages**: For hosting the repository and making collaboration possible.
-- **Open Source Community**: For sharing knowledge and developing tools that benefit developers worldwide.
-
 ## License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
@@ -167,3 +159,14 @@ I'm always open to new opportunities, collaborations, or discussions about techn
 - **GitHub:** [mcckyle](https://github.com/mcckyle)
 
 Thank you for visiting my repository. I look forward to connecting!
+
+## Acknowledgements
+
+We would like to express our gratitude to the following:
+
+- **React**: For providing the powerful library that powers the front-end of this project.
+- **Node.js**: For providing the runtime environment that powers the server-side of the project.
+- **GitHub Pages**: For hosting the repository and making collaboration possible.
+- **Open Source Community**: For sharing knowledge and developing tools that benefit developers worldwide.
+
+

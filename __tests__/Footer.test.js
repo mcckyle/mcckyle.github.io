@@ -1,6 +1,6 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 2 May 2025
+//Date: 02 June 2025
 //Description: Contains the Jest unit tests for the website Footer component.
 
 import React from 'react';
@@ -21,13 +21,13 @@ describe('Footer Component', () => {
 
   test('displays the correct update text', () => {
     render(<Footer />);
-    const text = screen.getByText(/May/i);
+    const text = screen.getByText(/June/i);
     expect(text).toBeInTheDocument();
   });
 
   test('contains a <p> element', () => {
     render(<Footer />);
-    const p = screen.getByText(/May/i);
+    const p = screen.getByText(/June/i);
     expect(p.tagName.toLowerCase()).toBe('p');
   });
 
