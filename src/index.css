@@ -1,7 +1,8 @@
 /* index.css - General page setup for the root entry point */
 
 /* Global reset and body styles */
-* {
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,23 +10,28 @@
 }
 
 /* Root div setup */
-#root {
+#root
+{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
     padding: 0 20px;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--bg-light);
 }
 
-p {
+p
+{
     margin-bottom: 15px;
     line-height: 1.8; /* Ensure readability */
 }
 
-:focus {
-    outline: 2px dashed #4a6fa5;
+:focus
+{
+    /*outline: 2px dashed #4a6fa5;*/
+    outline: 2px dashed var(--gold-accent);
     outline-offset: 4px;
     transition: outline-offset 0.2s ease;
 }
@@ -34,7 +40,8 @@ p {
 /* Media query */
 @media (max-width: 600px) {
     body {
-        background-color: #eaf0f9; /* Light blue background for small screens */
+        /*background-color: #eaf0f9;*/
+        background-color: var(--footer-bg);
     }
     #root {
         padding: 10px;
