@@ -1,4 +1,4 @@
-/* CSS variables... */
+/* Filename: styles.css */
 :root
 {
     /* Core Brand. */
@@ -17,7 +17,7 @@
     --hr-color: #d0d6e4; /* Divider. */
 }
 
-/* General Styles */
+/* General Styles. */
 html, body
 {
     font-family: 'Inter', sans-serif;
@@ -28,7 +28,7 @@ html, body
     height: 100%;
 }
 
-/* Header styles */
+/* Header styles. */
 header
 {
     text-align: center;
@@ -95,13 +95,11 @@ h2
         var(--white),
         var(--blue)
     );
-    /*border: 6px solid var(--gold-accent);*/
     box-shadow:
       0 0 0 2px var(--white),
       0 0 12px rgba(18, 61, 109, 0.15);
 
     transition: transform 0.3s ease-in-out;
-    /*filter: brightness(1.03) saturate(1.1);*/
 }
 
 .profile-img:hover
@@ -111,11 +109,9 @@ h2
       0 0 0 2px var(--white),
       0 0 20px rgba(135, 188, 228, 0.3),
       0 0 12px rgba(199, 154, 57, 0.1) inset;
-
-    /*filter: brightness(1.08) saturate(1.2);*/
 }
 
-/* Container styling */
+/* Container styling. */
 .container
 {
     width: 100%;
@@ -124,7 +120,7 @@ h2
     padding: 0 20px;
 }
 
-/* Section styling */
+/* Section styling. */
 section
 {
     background: var(--bg-light);
@@ -134,14 +130,14 @@ section
     border: 1px solid var(--border-light);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(4px);
-    transition: box-shadow 0.4s ease, transform 0.4s ease; /* Add transform transition */
+    transition: box-shadow 0.4s ease, transform 0.4s ease; /* Add transform transition. */
     will-change: transform, box-shadow;
 }
 
 section:hover
 {
-    transform: translateY(-6px); /* Lift the entire section */
-    box-shadow: 0 8px 20px rgba(18, 61, 109, 0.25); /* Deeper shadow on hover */
+    transform: translateY(-6px); /* Lift the entire section. */
+    box-shadow: 0 8px 20px rgba(18, 61, 109, 0.25); /* Deeper shadow on hover. */
 }
 
 ul
@@ -184,14 +180,11 @@ ul li::before
 ul li:hover::before
 {
     animation: burst 0.4s ease-out forwards;
-/*    transform: translateY(4px);
-    opacity: 0.7;*/
 }
 
-/* Horizontal rule */
+/* Horizontal rule. */
 hr
 {
-    /*border: 1px solid var(--hr-color);*/
     border: 0;
     height: 3px;
     margin: 3rem auto;
@@ -207,14 +200,14 @@ hr
     box-shadow: 0 1px 3px rgba(18, 61, 109, 0.15);
 }
 
-/* Footer styling */
+/* Footer styling. */
 .site-footer
 {
     background-color: var(--footer-bg);
     padding: 30px 0;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth. */
     transition: background-color 0.4s ease, box-shadow 0.3s ease;
     margin-top: 60px;
 }
@@ -223,9 +216,9 @@ hr
 {
     font-family: 'Georgia', serif;
     font-size: 1rem;
-    color: var(--blue); /* Blue text */
+    color: var(--blue); /* Blue text. */
     font-weight: 600;
-    letter-spacing: 0.6px; /* Slight letter-spacing for readability */
+    letter-spacing: 0.6px; /* Slight letter-spacing for readability. */
     opacity: 0.95;
     text-shadow: 0.5px 0.5px 1px rgba(18, 61, 109, 0.15);
     transition: opacity 0.3s ease;

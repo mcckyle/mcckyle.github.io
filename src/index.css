@@ -1,15 +1,14 @@
-/* index.css - General page setup for the root entry point */
+/* Filename: index.css */
 
-/* Global reset and body styles */
+/* Global reset and body styles. */
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease;
 }
 
-/* Root div setup */
+/* Root div setup. */
 #root
 {
     display: flex;
@@ -18,32 +17,30 @@
     justify-content: flex-start;
     min-height: 100vh;
     padding: 0 20px;
-    /*background-color: #ffffff;*/
     background-color: var(--bg-light);
 }
 
 p
 {
     margin-bottom: 15px;
-    line-height: 1.8; /* Ensure readability */
+    line-height: 1.8;
 }
 
-:focus
+:focus-visible
 {
-    /*outline: 2px dashed #4a6fa5;*/
     outline: 2px dashed var(--gold-accent);
     outline-offset: 4px;
-    transition: outline-offset 0.2s ease;
 }
 
 
-/* Media query */
+/* Media query. */
 @media (max-width: 600px) {
-    body {
-        /*background-color: #eaf0f9;*/
+    body
+    {
         background-color: var(--footer-bg);
     }
-    #root {
+    #root
+    {
         padding: 10px;
     }
 }

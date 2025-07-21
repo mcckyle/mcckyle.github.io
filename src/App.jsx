@@ -1,7 +1,7 @@
-//Date: 21 April 2025
-//File name: App.js
+//Filename: App.jsx
+//Date: 21 July 2025
 //Author: Kyle McColgan
-//Description: React root component for the website.
+//Description: This file contains the React root component for the website.
 
 import React from 'react';
 import './styles.css';
