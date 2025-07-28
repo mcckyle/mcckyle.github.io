@@ -1,11 +1,9 @@
 /* Filename: App.css */
 
 /* App-level container styling. */
-.container
+.app
 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    width: 100%;
 
     /* Subtle load effect. */
     animation: fadeInApp 0.6s ease-in-out;

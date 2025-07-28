@@ -33,6 +33,7 @@ header
 {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 h1
@@ -111,18 +112,10 @@ h2
       0 0 12px rgba(199, 154, 57, 0.1) inset;
 }
 
-/* Container styling. */
-.container
-{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* Section styling. */
 section
 {
+    /*max-width: 1200px;*/
     background: var(--bg-light);
     border-radius: 12px;
     padding: 20px;
@@ -203,6 +196,7 @@ hr
 /* Footer styling. */
 .site-footer
 {
+    width: 100%;
     background-color: var(--footer-bg);
     padding: 30px 0;
     text-align: center;

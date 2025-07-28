@@ -1,5 +1,5 @@
 //Filename: App.jsx
-//Date: 21 July 2025
+//Date: 27 July 2025
 //Author: Kyle McColgan
 //Description: This file contains the React root component for the website.
 
@@ -18,7 +18,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="container">
+    <div className="app">
         <Header />
         <hr />
         <Contact />
