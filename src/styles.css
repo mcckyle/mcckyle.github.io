@@ -2,25 +2,26 @@
 :root
 {
     /* Core Brand. */
-    --blue: #123d6d; /* Deep navy. */
-    --red: #c7383a; /* Ribbon. */
+    --blue: #264653;
+    --red: #e76f51;
     --white: #ffffff;
 
     /* Neutrals & accents. */
-    --bg-light: #fdfdfd; /* Bright parchment. */
-    --text-dark: #242424;
-    --border-light: #e6e6e6; /* Subtle Frame */
-    --gold-accent: #c79a39;
+    --bg-light: #fefdfb;
+    --text-dark: #2a2a2a;
+    --border-light: #e5ded4;
+    --gold-accent: #e9c46a;
 
-    /*UI Details.*/
-    --footer-bg: #f8f9fb; /* Light gray-blue. */
-    --hr-color: #d0d6e4; /* Divider. */
+    /* UI Details. */
+    --footer-bg: #faf6f0;
+    --hr-color: #e9e4d8;
 }
 
 /* General Styles. */
 html, body
 {
     font-family: 'Inter', sans-serif;
+    font-size: 16px;
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
@@ -38,57 +39,51 @@ header
 
 h1
 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.25rem;
     font-family: 'Playfair Display', serif;
     color: var(--blue);
+    font-weight: 600;
     letter-spacing: 0.5px;
-    text-shadow: 1px 1px 2px rgba(18, 61, 109, 0.2);
-    margin-bottom: 0.5rem;
 }
 
 h1::after
 {
     content: '';
     display: block;
-    width: 120px;
-    height: 4px;
+    width: 90px;
+    height: 3px;
     margin: 8px auto 0;
     background: linear-gradient(
         90deg,
-        var(--red) 0%,
-        var(--white) 33%,
-        var(--blue) 66%,
-        var(--red) 100%
+        var(--gold-accent) 0%,
+        var(--red) 50%,
+        var(--gold-accent) 100%
     );
     border-radius: 2px;
 }
 
 h2
 {
-    color: var(--red);
-    font-style: normal;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-size: 1.15rem;
+    color: var(--gold-accent);
     font-family: 'Georgia', serif;
-    margin-top: 1.2rem;
-    margin-bottom: 0.6rem;
-    text-shadow: 0.5px 0.5px 1px rgba(199, 56, 58, 0.15);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Profile image */
 .profile-img
 {
-    width: 100%;
-    max-width: 100%;
+    width: 95%;
+    max-width: 95%;
     height: auto;
+
     object-fit: cover;
-    border-radius: 16px; /* Slightly rounded look... */
-    margin-top: 20px;
-    display: block;
-    max-height: 360px;
-    padding: 6px;
+    border-radius: 12px; /* Slightly rounded look... */
+    max-height: 340px;
+    padding: 0;
+
     background:
       linear-gradient(
         to right,
@@ -96,41 +91,36 @@ h2
         var(--white),
         var(--blue)
     );
-    box-shadow:
-      0 0 0 2px var(--white),
-      0 0 12px rgba(18, 61, 109, 0.15);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
 
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-img:hover
 {
-    transform: scale(1.05);
-    box-shadow:
-      0 0 0 2px var(--white),
-      0 0 20px rgba(135, 188, 228, 0.3),
-      0 0 12px rgba(199, 154, 57, 0.1) inset;
+    transform: scale(1.015);
+    box-shadow: 0 4px 24px rgba(18, 61, 109, 0.15);
 }
 
 /* Section styling. */
 section
 {
-    /*max-width: 1200px;*/
-    background: var(--bg-light);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid var(--border-light);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(4px);
-    transition: box-shadow 0.4s ease, transform 0.4s ease; /* Add transform transition. */
+    background: rgba(255, 255, 255, 0.94);
+    border: none;
+    border-radius: 16px;
+    padding: 32px;
+    margin: 32px 0;
+    box-shadow: 0 8px 24px rgba(18, 61, 109, 0.07);
+    backdrop-filter: blur(10px);
     will-change: transform, box-shadow;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover
 {
-    transform: translateY(-6px); /* Lift the entire section. */
-    box-shadow: 0 8px 20px rgba(18, 61, 109, 0.25); /* Deeper shadow on hover. */
+    transform: translateY(-2px); /* Lift the entire section. */
+    box-shadow: 0 6px 18px rgba(38, 70, 83, 0.08); /* Deeper shadow on hover. */
 }
 
 ul
@@ -142,12 +132,14 @@ ul
 
 ul li
 {
-    display: flex;
-    align-items: center;
+    padding-left: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
     gap: 12px;
-    transition: transform 0.3s ease;
     position: relative;
-    padding-left: 1.5rem;
+
+    transition: transform 0.3s ease;
 }
 
 ul li:hover
@@ -157,65 +149,51 @@ ul li:hover
 
 ul li::before
 {
-    content: '🎆'; /* Firework emoji for July. */
-    display: inline-block;
-    font-size: 1.2rem;
-    transform-origin: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    will-change: transform, opacity;
+    content: '🌻'; /* Sunflower emoji for August 2025!! */
+    font-size: 1.1rem;
     position: absolute;
     left: 0;
-    top: 0.1rem;
-
-    text-shadow: 0 0 4px var(--red), 0 0 6px var(--blue), 0 0 8px var(--gold-accent);
+    top: 0.2rem;
+    opacity: 0.85;
+    transition: transform 0.2s ease;
 }
 
 ul li:hover::before
 {
-    animation: burst 0.4s ease-out forwards;
+    animation: float 1.6s ease-in-out infinite;
 }
 
 /* Horizontal rule. */
 hr
 {
     border: 0;
-    height: 3px;
+    height: 2px;
     margin: 3rem auto;
-    background: linear-gradient(
-        to right,
-        var(--red),
-        var(--white) 40%,
-        var(--blue) 60%,
-        var(--red)
-    );
     width: 100%;
     border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(18, 61, 109, 0.15);
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold-accent),
+        transparent
+    );
+    box-shadow: none;
 }
 
 /* Footer styling. */
 .site-footer
 {
-    width: 100%;
     background-color: var(--footer-bg);
-    padding: 30px 0;
+    box-shadow: none;
+    padding: 40px 0;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth. */
-    transition: background-color 0.4s ease, box-shadow 0.3s ease;
-    margin-top: 60px;
 }
 
 .footer-text
 {
-    font-family: 'Georgia', serif;
-    font-size: 1rem;
-    color: var(--blue); /* Blue text. */
-    font-weight: 600;
-    letter-spacing: 0.6px; /* Slight letter-spacing for readability. */
-    opacity: 0.95;
-    text-shadow: 0.5px 0.5px 1px rgba(18, 61, 109, 0.15);
-    transition: opacity 0.3s ease;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    opacity: 0.8;
 }
 
 .footer-text:hover
@@ -225,36 +203,40 @@ hr
 
 ::-webkit-scrollbar
 {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb
 {
-    background: var(--red);
+    background: linear-gradient(var(--red), var(--blue));
+    border-radius: 4px;
 }
 
-@keyframes burst {
+@keyframes float {
     0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(6px) scale(1.2) rotate(10deg);
+        transform: translateY(0px);
         opacity: 0.85;
     }
-    100% {
-        transform: translateY(12px) scale(0.95) rotate(-5deg);
-        opacity: 0.5;
-    }
-}
-
-@keyframes fadeIn {
-    to {
+    50% {
+        transform: translateY(-4px);
         opacity: 1;
     }
+    100% {
+        transform: translateY(0px);
+        opacity: 0.85;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html{
+        font-size: 14px;
+    }
     h1 {
         font-size: 2em;
     }

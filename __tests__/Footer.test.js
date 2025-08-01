@@ -1,7 +1,7 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 21 July 2025
-//Description: Contains the Jest unit tests for the website Footer component.
+//Date: 31 July 2025
+//Description: This file contains the Jest unit tests for the website Footer component.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -39,18 +39,18 @@ describe('Footer Component', () => {
   });
 
   //Test #5
-  test('text content includes the word "July" and an emoji.', () => {
+  test('text content includes the word "August" and an emoji.', () => {
     render(<Footer />);
-    const text = screen.getByText(/July/i);
-    expect(text.textContent).toMatch(/🇺🇸/);
+    const text = screen.getByText(/August/i);
+    expect(text.textContent).toMatch(/🌻/);
   });
 
   //Test #6
-  test('footer text includes the © symbol.', () => {
-    render(<Footer />);
-    const text = screen.getByText(/©/);
-    expect(text).toBeInTheDocument();
-  });
+  // test('footer text includes the © symbol.', () => {
+  //   render(<Footer />);
+  //   const text = screen.getByText(/©/);
+  //   expect(text).toBeInTheDocument();
+  // });
 
   //Test #7
   test('footer only contains one child element (the paragraph).', () => {

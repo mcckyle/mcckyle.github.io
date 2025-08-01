@@ -4,9 +4,9 @@
 .app
 {
     width: 100%;
+    max-width: 100%;
 
-    /* Subtle load effect. */
-    animation: fadeInApp 0.6s ease-in-out;
+    animation: fadeInApp 0.6s ease-in-out; /* Subtle load effect. */
 }
 
 /* App fade-in loading animation. */

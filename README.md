@@ -2,20 +2,22 @@
 
 # Kyle McColgan – Technology Professional
 
+## Overview
+
 Welcome! 👋
 
-This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly, and secure web solutions.
+This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly and accessible web solutions.
 
 Feel free to explore my work, and as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./public/images/Screenshot_20250602_175629.png)
-*A glimpse of my personal website, with a screenshot, designed to highlight my technology-related projects*
+![Portfolio Screenshot](./public/images/Screenshot_20250731_203517.png)
+*A glimpse of my personal website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
 
 ## Table of Contents
 
-1. [About Me](#about-me)
+1. [Overview](#overview)
 2. [Technologies Used](#technologies-used)
 3. [How to Use](#how-to-use)
 4. [Project Structure](#project-structure)
@@ -25,24 +27,26 @@ Feel free to explore my work, and as well as reach out if you're interested in c
 8. [Contact](#contact)
 9. [Acknowledgements](#acknowledgements)
 
-
-## About Me
-
-Hello! My name is Kyle! I'm a technology professional and security enthusiast based in Saint Louis. I specialize in building custom, practical web solutions that prioritize both usability and security. My approach emphasizes streamlined user experiences alongside robust security practices, ensuring that the apps are not only efficient and scalable but also security-hardened.
-
-I’m always eager to collaborate, exchange ideas, and tackle challenges with fellow tech enthusiasts! Whether it’s contributing to open-source projects, discussing emerging security trends, or elevating practical web solutions - let’s build something impactful together!!
-
 ## Technologies Used
 
-- **Languages:** HTML, CSS, JavaScript, and React.
-- **Build Tool** Vite, for rapid development and optimized production builds.
-- **Testing Framework:** Jest, for unit testing the JavaScript functionality.
-- **Deployment:** GitHub Pages, for free hosting and deployment.
-- **Version Control:** Git, managed through GitHub.
+- **Languages:** HTML, CSS, JavaScript, React.
+  For building responsive, interactive, and dynamic web interfaces.
+  
+- **Build Tool** [Vite](https://vitejs.dev)
+  Enables rapid development with optimized production builds.
+  
+- **Testing:** [Jest](https://jestjs.io)
+  Used for writing and running the unit tests for the JavaScript functionality.
+  
+- **Deployment:** [GitHub Pages](https://pages.github.com/)
+  Provides free hosting and deployment directly from the repository.
+  
+- **Version Control:** [Git](https://git-scm.com/)
+  For source control, collaboration, and code management.
 
 ## How to Use
 
-Follow the steps below to run the site locally on your machine:
+To run this project locally, follow the steps below:
 
 1. **Clone the repository:**
 
@@ -123,11 +127,12 @@ mcckyle.github.io/
 ├── .gitignore            # Files and directories to ignore in Git.
 ├── babel.config.js
 ├── eslint.config.js
+├── vite.config.js
 ├── jest.config.cjs
-├── vite.config.cjs
 ├── index.html
-├── LICENSE
+├── package-lock.json
 ├── package.json          # Project metadata and dependencies.
+├── LICENSE
 └── README.md             # Project documentation.
 ```
 
@@ -153,20 +158,20 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## Contact
 
-I'm always open to new opportunities, collaborations, or discussions about technology. Feel free to connect:
+I'm always open to new opportunities, collaborations, or thoughtful discussions about technology.
 
-- **LinkedIn:** [Kyle McColgan](https://www.linkedin.com/in/kylemccolgan/)
-- **GitHub:** [mcckyle](https://github.com/mcckyle)
+Feel free to connect with me:
 
-Thank you for visiting my repository. I look forward to connecting!
+- [**LinkedIn:**](https://www.linkedin.com/in/kylemccolgan/) - Kyle McColgan
+- [**GitHub:**](https://github.com/mcckyle) - @mcckyle
+
+Thank you for visiting this repository. I look forward to connecting!!
 
 ## Acknowledgements
 
-We would like to express our gratitude to the following:
+Special thanks to the technologies and communities that made this project possible:
 
-- **React**: For providing the powerful library that powers the front-end of this project.
-- **Node.js**: For providing the runtime environment that powers the server-side of the project.
-- **GitHub Pages**: For hosting the repository and making collaboration possible.
-- **Open Source Community**: For sharing knowledge and developing tools that benefit developers worldwide.
-
-
+- [**React**](https://reactjs.org/) - for providing the intuitive library that powers the front-end of this project.
+- [**Node.js**](https://nodejs.org/) -  for providing the runtime environment that powers the server-side of the project.
+- [**GitHub Pages**](https://pages.github.com/) - for the free and reliable static site hosting.
+- The **Open Source Community** - for generously sharing tools, libraries, and knowledge that fuel innovation and collaboration.

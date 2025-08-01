@@ -8,7 +8,7 @@ exports[`Footer Component footer matches the snapshot. 1`] = `
     <p
       class="footer-text"
     >
-      Proudly celebrating July 🇺🇸 | © 2025 Kyle McColgan
+      Soaking up the sunshine this August 🌻 | Designed by Kyle McColgan, 2025.
     </p>
   </footer>
 </DocumentFragment>
