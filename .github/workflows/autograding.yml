@@ -1,7 +1,7 @@
 #Filename: autograding.yml
 #Author: Kyle McColgan
-#Date: 9 May 2025
-#Description: GitHub Actions workflow file for GitHub Pages deployment process.
+#Date: 29 August 2025
+#Description: This file contains the GitHub Actions workflow for the GitHub Pages deployment process.
 
 name: autograding
 
@@ -41,5 +41,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }} #Fix token reference...
           publish_dir: ./dist
           publish_branch: gh-pages
-          user_name: kmccol1
-          user_email: kdmbus21@gmail.com
