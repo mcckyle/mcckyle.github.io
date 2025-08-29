@@ -1,4 +1,8 @@
-// __tests__/History.test.js
+//Filename: History.test.js
+//Author: Kyle McColgan
+//Date: 27 August 2025
+//Description: This file contains the Jest unit tests for my personal website history component.
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';

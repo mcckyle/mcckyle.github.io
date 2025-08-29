@@ -1,7 +1,7 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 31 July 2025
-//Description: This file contains the Jest unit tests for the website Footer component.
+//Date: 27 August 2025
+//Description: This file contains the Jest unit tests for my personal website Footer component.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';

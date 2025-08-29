@@ -1,11 +1,10 @@
 //Filename: App.jsx
-//Date: 27 July 2025
 //Author: Kyle McColgan
-//Description: This file contains the React root component for the website.
+//Date: 27 August 2025
+//Description: This file contains the React root component for my personal website.
 
 import React from 'react';
-import './styles.css';
-import './App.css';
+
 import Header from './components/Header';
 import Contact from './components/Contact';
 import Dedication from './components/Dedication';
@@ -16,25 +15,22 @@ import Projects from './components/Projects';
 import History from './components/History';
 import Footer from './components/Footer';
 
-function App() {
+import './App.css';
+
+function App()
+{
   return (
     <div className="app">
         <Header />
-        <hr />
-        <Contact />
-        <hr />
-        <Dedication />
-        <hr />
-        <Mission />
-        <hr />
-        <AboutMe />
-        <hr />
-        <Skills />
-        <hr />
-        <Projects />
-        <hr />
-        <History />
-        <hr />
+        <main>
+          <Contact />
+          <Dedication />
+          <Mission />
+          <AboutMe />
+          <Skills />
+          <Projects />
+          <History />
+        </main>
         <Footer />
     </div>
   );

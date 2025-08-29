@@ -1,7 +1,7 @@
 //Filename: Skills.test.js
 //Author: Kyle McColgan
-//Date: 23 May 2025
-//Description: This file contains the Jest unit tests for the website skills section.
+//Date: 27 August 2025
+//Description: This file contains the Jest unit tests for my personal website skills section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';

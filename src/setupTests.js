@@ -1,6 +1,6 @@
 // src/setupTests.js
 globalThis.importMeta = {
   env: {
-    BASE_URL: 'http://mcckyle.github.io/',
+    BASE_URL: 'https://mcckyle.github.io/',
   },
 };

@@ -1,206 +1,201 @@
 /* Filename: styles.css */
+
+/* =================
+   Theme Tokens.
+==================== */
 :root
 {
     /* Core Brand. */
-    --blue: #264653;
-    --red: #e76f51;
-    --white: #ffffff;
+    --primary: #ffb400; /* Warm, golden sunlight. */
+    --secondary: #6a994e; /* Muted green. */
+    --accent: #ff6b35; /* Coral highlight. */
 
-    /* Neutrals & accents. */
-    --bg-light: #fefdfb;
-    --text-dark: #2a2a2a;
-    --border-light: #e5ded4;
-    --gold-accent: #e9c46a;
+    /* Neutral Palette. */
+    --bg-light: #fffdf9; /* Soft ivory. */
+    --bg-dark: #faf6f0; /* Warm neutral section background color. */
+    --text-dark: #2b2b2b; /* Deep gray for readability. */
+    --text-muted: #6f6f6f; /* Subtext / Secondary Text Color. */
+    --border-light: #e8e2da;
 
     /* UI Details. */
-    --footer-bg: #faf6f0;
-    --hr-color: #e9e4d8;
+    --footer-bg: #fdf6f0;
+    --hr-color: #ffd97d;
+
+    /* Transitions. */
+    --transition-base: 0.3s ease;
+
+    /* Shadow Styles.*/
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* General Styles. */
-html, body
+/* =================
+   Base Styles.
+==================== */
+body
 {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     background-color: var(--bg-light);
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.7;
     scroll-behavior: smooth;
-    height: 100%;
+    margin: 0;
 }
 
-/* Header styles. */
-header
-{
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-h1
-{
-    font-size: 2.25rem;
-    font-family: 'Playfair Display', serif;
-    color: var(--blue);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-h1::after
-{
-    content: '';
-    display: block;
-    width: 90px;
-    height: 3px;
-    margin: 8px auto 0;
-    background: linear-gradient(
-        90deg,
-        var(--gold-accent) 0%,
-        var(--red) 50%,
-        var(--gold-accent) 100%
-    );
-    border-radius: 2px;
-}
-
-h2
-{
-    font-size: 1.15rem;
-    color: var(--gold-accent);
-    font-family: 'Georgia', serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Profile image */
-.profile-img
-{
-    width: 95%;
-    max-width: 95%;
-    height: auto;
-
-    object-fit: cover;
-    border-radius: 12px; /* Slightly rounded look... */
-    max-height: 340px;
-    padding: 0;
-
-    background:
-      linear-gradient(
-        to right,
-        var(--red),
-        var(--white),
-        var(--blue)
-    );
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-img:hover
-{
-    transform: scale(1.015);
-    box-shadow: 0 4px 24px rgba(18, 61, 109, 0.15);
-}
-
-/* Section styling. */
+/* =======================
+   Section Styles.
+========================== */
 section
 {
-    background: rgba(255, 255, 255, 0.94);
-    border: none;
+    background: var(--bg-dark);
     border-radius: 16px;
-    padding: 32px;
-    margin: 32px 0;
-    box-shadow: 0 8px 24px rgba(18, 61, 109, 0.07);
-    backdrop-filter: blur(10px);
-    will-change: transform, box-shadow;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+    box-shadow:var(--shadow-md);
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 section:hover
 {
     transform: translateY(-2px); /* Lift the entire section. */
-    box-shadow: 0 6px 18px rgba(38, 70, 83, 0.08); /* Deeper shadow on hover. */
+    box-shadow: var(--shadow-hover);
 }
 
+/* =================
+   Header Styles.
+==================== */
+.site-header
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-text h1
+{
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.header-text h1::after
+{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    border-radius: 2px;
+}
+
+.header-text h2
+{
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 1.5rem;
+}
+
+/* ==================
+   Image Styles.
+===================== */
+.header-img
+{
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    max-height: 420px;
+
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+    filter: brightness(0.92) saturate(1.05);
+
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.header-img:hover
+{
+    transform: scale(1.01);
+    box-shadow: var(--shadow-hover);
+}
+
+/* =======================
+   List Styles.
+========================== */
 ul
 {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 ul li
 {
-    padding-left: 1.75rem;
+    padding-left: 1.25rem;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.7;
     color: var(--text-dark);
-    gap: 12px;
     position: relative;
-
-    transition: transform 0.3s ease;
-}
-
-ul li:hover
-{
-    transform: translateY(-2px);
 }
 
 ul li::before
 {
     content: '🌻'; /* Sunflower emoji for August 2025!! */
-    font-size: 1.1rem;
     position: absolute;
+    top: 0.7rem;
     left: 0;
-    top: 0.2rem;
-    opacity: 0.85;
-    transition: transform 0.2s ease;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
 }
 
-ul li:hover::before
-{
-    animation: float 1.6s ease-in-out infinite;
-}
-
-/* Horizontal rule. */
+/* =======================
+   HR Styles.
+========================== */
 hr
 {
-    border: 0;
+    border: none;
     height: 2px;
     margin: 3rem auto;
     width: 100%;
     border-radius: 2px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--gold-accent),
-        transparent
-    );
-    box-shadow: none;
+    background: linear-gradient(to right, transparent, var(--hr-color), transparent);
 }
 
-/* Footer styling. */
+/* =======================
+   Footer Styles.
+========================== */
 .site-footer
 {
     background-color: var(--footer-bg);
-    box-shadow: none;
-    padding: 40px 0;
+    padding: 3rem 1rem;
     text-align: center;
 }
 
 .footer-text
 {
     font-size: 0.95rem;
-    color: var(--text-dark);
-    opacity: 0.8;
+    color: var(--text-muted);
+    transition: color var(--transition-base);
 }
 
 .footer-text:hover
 {
-    opacity: 1;
+    color: var(--text-dark);
 }
 
+/* =======================
+   Scrollbar Styles.
+========================== */
 ::-webkit-scrollbar
 {
     width: 8px;
@@ -208,42 +203,31 @@ hr
 
 ::-webkit-scrollbar-thumb
 {
-    background: linear-gradient(var(--red), var(--blue));
+    background: linear-gradient(var(--primary), var(--secondary));
     border-radius: 4px;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-        opacity: 0.85;
-    }
-    50% {
-        transform: translateY(-4px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 0.85;
-    }
+/* =======================
+   Media Queries Styles.
+========================== */
+@media (max-width: 768px)
+{
+    html { font-size: 15px; }
+    section { padding: 2rem; }
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 15px;
-    }
+@media (max-width: 480px)
+{
+    html { font-size: 14px; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.1em; }
+    section { padding: 1.5rem; }
 }
 
-@media (max-width: 480px) {
-    html{
-        font-size: 14px;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.2em;
-    }
-    .profile-img {
-        border-width: 5px;
-    }
-}
+/* =======================
+ * Animations Styles.
+ = ==*======================= */
+/*@keyframes float {
+ * 0%, 100% { transform: translateY(0px); opacity: 0.85; }
+ * 50% { transform: translateY(-4px); opacity: 1; }
+ } */*

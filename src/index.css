@@ -1,7 +1,9 @@
 /* Filename: index.css */
 
 /* Global reset and body styles. */
-*
+*,
+*::before,
+*::after
 {
     margin: 0;
     padding: 0;
@@ -11,34 +13,42 @@
 /* Root div setup. */
 #root
 {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    padding: 0;
-    background-color: var(--bg-light);
+    background: var(--bg-light);
 }
 
+a, button
+{
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+a:focus-visible, button:focus-visible
+{
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* Base Text Spacing Styles. */
 p
 {
-    margin-bottom: 15px;
+    margin-bottom: 1.25rem;
     line-height: 1.8;
 }
 
+/* Accessibility Styles. */
 :focus-visible
 {
-    outline: 2px dashed var(--gold-accent);
+    outline: 2px dashed var(--border-light);
     outline-offset: 4px;
 }
 
-
-/* Media query. */
-@media (max-width: 600px) {
-    body
-    {
-        background-color: var(--footer-bg);
-    }
+/* Media Query Styles. */
+@media (max-width: 600px)
+{
     #root
     {
-        padding: 10px;
+        padding: 0 12px;
     }
 }

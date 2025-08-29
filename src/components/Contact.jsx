@@ -1,7 +1,7 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 19 2025
-//Description: Contains the React component for the website contact details section.
+//Date: August 28 2025
+//Description: This file contains the React component for the website contact details section.
 
 import React from 'react';
 

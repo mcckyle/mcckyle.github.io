@@ -1,4 +1,8 @@
-// __tests__/Projects.test.js
+//Filename: Projects.test.js
+//Author: Kyle McColgan
+//Date: 27 August 2025
+//Description: This file contains the Jest unit tests for my personal website projects section.
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
