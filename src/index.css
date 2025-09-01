@@ -13,43 +13,36 @@
 /* Root div setup. */
 #root
 {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background: var(--bg-light);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(248, 237, 220, 0.6));
+/*        to bottom,
+        rgba(255, 250, 242, 0.95),
+        rgba(246, 224, 198, 0.85) 30%,
+        rgba(240, 200, 160, 0.75) 100%
+    );*/
 }
 
-a, button
-{
-    transition: color 0.3s ease, background 0.3s ease;
-}
-
-a:focus-visible, button:focus-visible
-{
-    outline: 2px solid var(--primary);
-    outline-offset: 3px;
-}
-
-/* Base Text Spacing Styles. */
 p
 {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.15rem;
     line-height: 1.8;
-    color: var(--text-dark);
+    color: var(--text);
 }
 
-/* Accessibility Styles. */
-:focus-visible
+/* Interactive Styles */
+a, button { transition: color 0.25s var(--ease), background-color 0.25s var(--ease), box-shadow 0.25s var(--ease); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px;}
+
+a:hover, button:hover
 {
-    outline: 2px dashed var(--border-light);
-    outline-offset: 4px;
+    color: var(--cranberry);
+    text-shadow: 0 0 6px color-mix(in oklab, var(--cranberry), white 35%);
 }
 
 /* Media Query Styles. */
 @media (max-width: 600px)
 {
-    #root
-    {
-        padding: 0 12px;
-    }
+    #root { padding: 0 12px; }
 }

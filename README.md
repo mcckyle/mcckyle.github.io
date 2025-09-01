@@ -83,7 +83,6 @@ To run this project locally, follow the steps below:
 
 ---
 
-
 ## Project Structure
 
 ```
