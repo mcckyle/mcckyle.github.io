@@ -1,12 +1,12 @@
 //Filename: Header.test.js
 //Author: Kyle McColgan
-//Date: 28 August 2025
-//Description: This file contains the Jest unit tests for my personal website header section.
+//Date: 29 September 2025
+//Description: This file contains the Jest unit tests for the personal React website header section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Header from '../src/components/Header';
+import Header from '../src/components/Header/Header.jsx';
 
 it('renders the header with the correct title', () => {
     render(<Header />);
@@ -22,25 +22,25 @@ it('renders the header with the correct subtitle', () => {
 
 it('renders the header image', () => {
     render(<Header />);
-    const image = screen.getByAltText('Kyle at the beach.');
+    const image = screen.getByAltText('Portrait of Kyle at the beach.');
     expect(image).toBeInTheDocument();
 });
 
 it('has the correct image source', () => {
     render(<Header />);
-    const image = screen.getByAltText('Kyle at the beach.');
+    const image = screen.getByAltText('Portrait of Kyle at the beach.');
     expect(image).toHaveAttribute('src', 'test-file-stub');
 });
 
 it('has the correct alt text for the image', () => {
     render(<Header />);
-    const image = screen.getByAltText('Kyle at the beach.');
-    expect(image).toHaveAttribute('alt', 'Kyle at the beach.');
+    const image = screen.getByAltText('Portrait of Kyle at the beach.');
+    expect(image).toHaveAttribute('alt', 'Portrait of Kyle at the beach.');
 });
 
 it('renders the image with the correct class', () => {
     render(<Header />);
-    const image = screen.getByAltText('Kyle at the beach.');
+    const image = screen.getByAltText('Portrait of Kyle at the beach.');
     expect(image).toHaveClass('header-img');
 });
 

@@ -1,12 +1,12 @@
 //Filename: Dedication.test.js
 //Author: Kyle McColgan
-//Date: 27 August 2025
+//Date: 29 September 2025
 //Description: This file contains the Jest unit tests for my personal website dedication section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Dedication from '../src/components/Dedication';
+import Dedication from '../src/components/Dedication/Dedication.jsx';
 
 describe('Dedication component', () => {
 
@@ -69,7 +69,7 @@ describe('Dedication component', () => {
   it('renders the section with a valid aria-label.', () => {
     render(<Dedication />);
     const section = screen.getByRole('region');
-    expect(section).toHaveAttribute('aria-label', 'Dedication');
+    expect(section).toHaveAttribute('aria-labelledby', 'dedication-title');
   });
 
 });

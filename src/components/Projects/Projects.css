@@ -1,0 +1,71 @@
+/* Filename: Projects.css */
+
+/* =======================
+   Projects Styles.
+========================== */
+.projects-title
+{
+    color: var(--accent);
+}
+
+.projects-list
+{
+    display: grid;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.project-card
+{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--accent);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project-card:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-title
+{
+    font-size: 1.35rem;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.project-description
+{
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.project-tech
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.tech-tag
+{
+    background: color-mix(in oklab, var(--accent), white 85%);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.5rem;
+    letter-spacing: 0.3px;
+}

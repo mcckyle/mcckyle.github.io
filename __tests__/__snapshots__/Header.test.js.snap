@@ -6,20 +6,38 @@ exports[`matches the snapshot 1`] = `
     class="site-header"
   >
     <div
-      class="header-text"
+      class="header-content"
     >
-      <h1>
-        Kyle D. McColgan
-      </h1>
-      <h2>
-        Technology Professional
-      </h2>
+      <div
+        class="header-text"
+      >
+        <h1
+          class="header-name"
+        >
+          Kyle D. McColgan
+        </h1>
+        <h2
+          class="header-role"
+        >
+          Technology Professional
+        </h2>
+      </div>
+      <figure
+        class="header-image-wrapper"
+      >
+        <img
+          alt="Portrait of Kyle at the beach."
+          class="header-img"
+          loading="lazy"
+          src="test-file-stub"
+        />
+        <figcaption
+          class="visually-hidden"
+        >
+          Semi-Professional headshot of Kyle.
+        </figcaption>
+      </figure>
     </div>
-    <img
-      alt="Kyle at the beach."
-      class="header-img"
-      src="test-file-stub"
-    />
   </header>
 </DocumentFragment>
 `;

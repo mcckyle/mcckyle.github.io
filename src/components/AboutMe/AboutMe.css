@@ -1,0 +1,27 @@
+/* Filename: AboutMe.css */
+
+/* =======================
+   About Styles.
+========================== */
+.about-title
+{
+    color: var(--primary);
+}
+
+.about-content
+{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.about-content p
+{
+    margin-bottom: 1.25rem;
+}
+
+.highlight
+{
+    color: var(--highlight);
+    font-weight: 600;
+}

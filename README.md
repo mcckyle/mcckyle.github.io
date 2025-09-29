@@ -8,10 +8,10 @@ Welcome! 👋
 
 This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly and accessible web solutions.
 
-Feel free to explore my work, and as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
+Feel free to explore my work, as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
 ![Portfolio Screenshot](./public/images/Screenshot_20250731_203517.png)
-*A glimpse of my personal website, with a screenshot, designed to summarize my technology related projects*
+*A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
 
@@ -168,9 +168,9 @@ Thank you for visiting this repository. I look forward to connecting!!
 
 ## Acknowledgements
 
-Special thanks to the technologies and communities that made this project possible:
+This project was made possible thanks to the following:
 
-- [**React**](https://reactjs.org/) - for providing the intuitive library that powers the front-end of this project.
-- [**Node.js**](https://nodejs.org/) -  for providing the runtime environment that powers the server-side of the project.
-- [**GitHub Pages**](https://pages.github.com/) - for the free and reliable static site hosting.
-- The **Open Source Community** - for generously sharing tools, libraries, and knowledge that fuel innovation and collaboration.
+- [**React**](https://reactjs.org/) - for the intuitive front-end library.
+- [**Node.js**](https://nodejs.org/) -  for the powerful and robust runtime environment.
+- [**GitHub Pages**](https://pages.github.com/) - for providing free and reliable static site hosting.
+- The **Open Source Community** - for generously sharing the tools, libraries, and knowledge that inspire and enable innovation and collaboration.

@@ -3,18 +3,26 @@
 exports[`Dedication component matches the snapshot of the Dedication section. 1`] = `
 <DocumentFragment>
   <section
-    aria-label="Dedication"
+    aria-labelledby="dedication-title"
+    class="section"
     id="dedication"
   >
-    <h2>
-      Dedication
-    </h2>
-    <p>
-      This website is lovingly dedicated to my family and closest friends, whose encouragement fuels my strength.
-    </p>
-    <p>
-      This work is a testament to your guidance, patience, and unwavering faith in me. For all that you are, and all that you have given - I am deeply grateful.
-    </p>
+    <div
+      class="dedication-content"
+    >
+      <h2
+        class="dedication-title"
+        id="dedication-title"
+      >
+        Dedication
+      </h2>
+      <p>
+        This website is lovingly dedicated to my family and closest friends, whose encouragement fuels my strength.
+      </p>
+      <p>
+        This work is a testament to your guidance, patience, and unwavering faith in me. For all that you are, and all that you have given - I am deeply grateful.
+      </p>
+    </div>
   </section>
 </DocumentFragment>
 `;

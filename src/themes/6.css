@@ -1,0 +1,89 @@
+/* Filename: 6.css (July) */
+
+:root
+{
+    /* Core Brand. */
+    --blue: #123d6d; /* Deep navy. */
+    --red: #c7383a; /* Ribbon. */
+    --white: #ffffff;
+
+    /* Neutrals & accents. */
+    --bg-light: #fdfdfd; /* Bright parchment. */
+    --text-dark: #242424;
+    --border-light: #e6e6e6; /* Subtle Frame */
+    --gold-accent: #c79a39;
+
+    /*UI Details.*/
+    --footer-bg: #f8f9fb; /* Light gray-blue. */
+    --hr-color: #d0d6e4; /* Divider. */
+}
+
+h1::after
+{
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 8px auto 0;
+    background: linear-gradient(
+        90deg,
+        var(--red) 0%,
+        var(--white) 33%,
+        var(--blue) 66%,
+        var(--red) 100%
+    );
+    border-radius: 2px;
+}
+
+ul li::before
+{
+    content: '🎆'; /* Firework emoji for July. */
+    font-size: 1.1rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    opacity: 0.85;
+    transition: transform 0.2s ease;
+}
+
+ul li:hover::before
+{
+    animation: burst 0.4s ease-out forwards;
+}
+
+/* Horizontal rule. */
+hr
+{
+    border: 0;
+    height: 3px;
+    margin: 3rem auto;
+    background: linear-gradient(
+        to right,
+        var(--red),
+        var(--white) 40%,
+        var(--blue) 60%,
+        var(--red)
+    );
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(18, 61, 109, 0.15);
+}
+
+@keyframes burst
+{
+    0%
+    {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50%
+    {
+        transform: translateY(6px) scale(1.2) rotate(10deg);
+        opacity: 0.85;
+    }
+    100%
+    {
+        transform: translateY(12px) scale(0.95) rotate(-5deg);
+        opacity: 0.5;
+    }
+}

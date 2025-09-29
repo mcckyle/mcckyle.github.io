@@ -1,12 +1,12 @@
 //Filename: Contact.test.js
 //Author: Kyle McColgan
-//Date: 27 August 2025
+//Date: 29 September 2025
 //Description: This file contains the Jest unit tests for my personal website contact section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Contact from '../src/components/Contact';
+import Contact from '../src/components/Contact/Contact.jsx';
 
 describe('Contact component', () => {
   beforeEach(() => {
@@ -18,8 +18,8 @@ describe('Contact component', () => {
     expect(section).toBeInTheDocument();
   });
 
-  it('renders the heading with text "Contact Information"', () => {
-    const heading = screen.getByRole('heading', { level: 2, name: /contact information/i });
+  it('renders the heading with text "Contact"', () => {
+    const heading = screen.getByRole('heading', { level: 2, name: /contact/i });
     expect(heading).toBeInTheDocument();
   });
 
@@ -34,22 +34,22 @@ describe('Contact component', () => {
   });
 
   it('renders the location text content', () => {
-    const location = screen.getByText(/south saint louis, missouri, united states/i);
+    const location = screen.getByText(/South Saint Louis, Missouri, USA/i);
     expect(location).toBeInTheDocument();
   });
 
-  it('renders the resume anchor text', () => {
-    const resumeLink = screen.getByRole('link', { name: /View my resume/i });
+  it('renders the resume link with correct text', () => {
+    const resumeLink = screen.getByRole('link', { name: /View PDF/i });
     expect(resumeLink).toBeInTheDocument();
   });
 
   it('has a resume link pointing to the PDF path', () => {
-    const resumeLink = screen.getByRole('link', { name: /View my resume/i });
+    const resumeLink = screen.getByRole('link', { name: /View PDF/i });
     expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-May-2025.pdf');
   });
 
   it('sets target="_blank" on the resume link', () => {
-    const resumeLink = screen.getByRole('link', { name: /View my resume/i });
+    const resumeLink = screen.getByRole('link', { name: /View PDF/i });
     expect(resumeLink).toHaveAttribute('target', '_blank');
   });
 
@@ -58,14 +58,14 @@ describe('Contact component', () => {
     expect(listItems).toHaveLength(4);
   });
 
-  it('renders the labels in bold using <strong>', () => {
+  it('renders the labels with the correct text content', () => {
     const labels = screen.getAllByText((content, element) => {
-      return element.tagName.toLowerCase() === 'strong';
+      return element.classList.contains('contact-label');
     });
     expect(labels).toHaveLength(4);
     expect(labels[0]).toHaveTextContent(/github/i);
     expect(labels[1]).toHaveTextContent(/linkedin/i);
     expect(labels[2]).toHaveTextContent(/location/i);
-    expect(labels[3]).toHaveTextContent(/resume\/cv/i);
+    expect(labels[3]).toHaveTextContent(/resume/i);
   });
 });

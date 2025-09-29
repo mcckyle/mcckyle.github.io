@@ -1,28 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches the snapshot of the Projects section 1`] = `
+exports[`Projects component matches the snapshot of the Projects section 1`] = `
 <DocumentFragment>
   <section
-    aria-label="Projects"
+    aria-labelledby="projects-title"
+    class="section"
     id="projects"
   >
-    <h2>
-      Projects
-    </h2>
-    <ul>
-      <li>
-        <strong>
-          Automated Snapshot Management Script:
-        </strong>
-         A Bash script designed to automate and manage system snapshots using Snapper. This project enhances system reliability by creating, managing, and restoring snapshots efficiently. The system automatically transfers snapshot contents to a local host for external storage, ensuring minimal storage usage while maintaining comprehensive versioning. The script is lightweight, user-friendly, and integrates seamlessly with Linux environments.
-      </li>
-      <li>
-        <strong>
-          ShowMeTasks:
-        </strong>
-         A full-stack to-do list application built with Java, React, and Spring Boot. ShowMeTasks provides a streamlined user experience for task management, featuring responsive design, robust backend logic, and a secure API for seamless interaction between the frontend and backend. This project emphasizes clean architecture and effective use of RESTful services.
-      </li>
-    </ul>
+    <div
+      class="projects-container"
+    >
+      <h2
+        class="projects-title"
+        id="projects-title"
+      >
+        Projects
+      </h2>
+      <ul
+        class="projects-list"
+      >
+        <li
+          class="project-card"
+        >
+          <h3
+            class="project-title"
+          >
+            Automated Snapshot Management Script
+          </h3>
+          <p
+            class="project-description"
+          >
+            A Bash script designed to automate and manage system snapshots using Snapper. This project enhances system reliability by creating, managing, and restoring snapshots efficiently. The system automatically transfers snapshot contents to a local host for external storage, ensuring minimal storage usage while maintaining comprehensive versioning. The script is lightweight, user-friendly, and integrates seamlessly with Linux environments.
+          </p>
+          <ul
+            class="project-tech"
+          >
+            <li
+              class="tech-tag"
+            >
+              Bash
+            </li>
+            <li
+              class="tech-tag"
+            >
+              Linux
+            </li>
+            <li
+              class="tech-tag"
+            >
+              Snapper
+            </li>
+          </ul>
+        </li>
+        <li
+          class="project-card"
+        >
+          <h3
+            class="project-title"
+          >
+            ShowMeTasks
+          </h3>
+          <p
+            class="project-description"
+          >
+            A full-stack to-do list application built with Java, React, and Spring Boot. The project provides a streamlined user experience for task management, featuring responsive design, robust backend logic, and a secure API for seamless interaction between the frontend and backend. This project emphasizes clean architecture and effective use of RESTful services.
+          </p>
+          <ul
+            class="project-tech"
+          >
+            <li
+              class="tech-tag"
+            >
+              Java
+            </li>
+            <li
+              class="tech-tag"
+            >
+              React
+            </li>
+            <li
+              class="tech-tag"
+            >
+              Spring Boot
+            </li>
+            <li
+              class="tech-tag"
+            >
+              MySQL
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </section>
 </DocumentFragment>
 `;

@@ -1,22 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches the snapshot of the History section 1`] = `
+exports[`History component matches the snapshot of the History section 1`] = `
 <DocumentFragment>
   <section
     aria-label="Professional History"
+    class="history"
     id="history"
   >
-    <h2>
-      Professional History
-    </h2>
-    <ul>
-      <li>
-        Primary Systems, IT System Engineer, June 2022 - September 2022
-      </li>
-      <li>
-        Walmart, Software Engineer, July 2021 - October 2022
-      </li>
-    </ul>
+    <div
+      class="history-container"
+    >
+      <h2
+        class="history-title"
+      >
+        Professional History
+      </h2>
+      <ul
+        class="history-list"
+      >
+        <li
+          class="history-item"
+        >
+          <article>
+            <h3
+              class="history-role"
+            >
+              IT System Engineer
+            </h3>
+            <p
+              class="history-company"
+            >
+              Primary Systems
+            </p>
+            <time
+              class="history-period"
+            >
+              May 2023 - September 2023
+            </time>
+          </article>
+        </li>
+        <li
+          class="history-item"
+        >
+          <article>
+            <h3
+              class="history-role"
+            >
+              Software Engineer
+            </h3>
+            <p
+              class="history-company"
+            >
+              Walmart
+            </p>
+            <time
+              class="history-period"
+            >
+              July 2021 - October 2022
+            </time>
+          </article>
+        </li>
+      </ul>
+    </div>
   </section>
 </DocumentFragment>
 `;

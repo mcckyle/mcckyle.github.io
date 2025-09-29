@@ -1,0 +1,66 @@
+/* Filename: 8.css (September) */
+
+/* =================
+   Theme Tokens.
+==================== */
+:root
+{
+    /* Core Brand Palette for September. */
+    --primary: #e09f3e; /* Color: Amber. */
+    --secondary: #386641; /* Color: Forest Green. */
+    --accent: #bc4749; /* Color: Warm Red. */
+    --highlight: #7b2cbf; /* Color: Plum Purple. */
+
+    /* Neutrals / Surfaces. */
+    --bg-base: #fffaf2; /* Parchment. */
+    --surface: #fbf3e6; /* Card Base. */
+    --line: #eadfce;
+
+    /* Text Scale. */
+    --text-strong: #231f1a;
+    --text: #2e2e2e;
+    --text-muted: #6f6358; /* Muted Text Color. */
+
+    /* Effects Styles. */
+    --rule: #e9c07a;
+    --footer-bg: #f4ece1;
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --transition: 0.3s var(--ease);
+}
+
+/* Seasonal Accent Styles. */
+body::after
+{
+    content: "🍁🍂";
+    font-size: 2.5rem;
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    opacity: 0.05;
+    pointer-events: none;
+
+    animation: driftLeaf 28s ease-in-out infinite;
+}
+
+ul li::before
+{
+    content: '🍂'; /* Autumn Leaf Emoji For September 2025!! */
+    position: absolute;
+    top: 0.65rem;
+    left: 0;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* =======================
+   Animations Styles.
+========================== */
+@keyframes driftLeaf
+{
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-10px, -6px) rotate(5deg); }
+    50% { transform: translate(0, -10px) rotate(-4deg); }
+    75% { transform: translate(8px, -6px) rotate(4deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}

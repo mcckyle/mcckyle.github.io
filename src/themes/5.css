@@ -1,0 +1,48 @@
+/* Filename: 5.css (June) */
+
+/* CSS variables... */
+:root
+{
+    --bg-light: #fffdf7;         /* Creamy off-white */
+    --text-dark: #2e2e2e;
+    --blue: #87bce4;            /* Soft sky blue */
+    --accent-pink: #f4a9a8;     /* Blush coral pink */
+    --border-light: #f0eae0;    /* Light sandy beige */
+    --footer-bg: #fdf7f0;       /* Pale golden cream */
+    --hr-color: #d4c6b8;        /* Taupe*/
+}
+
+ul li::before
+{
+    content: '☀️'; /* Sun emoji for June warmth */
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+ul li:hover::before
+{
+    animation: raindrop 0.3s forwards;
+    transform: translateY(4px);
+    opacity: 0.7;
+}
+
+/* Horizontal rule */
+hr
+{
+    margin: 20px 0;
+    border: 1px solid var(--hr-color);
+}
+
+@keyframes raindrop
+{
+    0%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(4px);
+        opacity: 0.7;
+    }
+}

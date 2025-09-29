@@ -1,0 +1,51 @@
+/* Filename: Footer.css */
+
+/* =======================
+   Footer Styles.
+========================== */
+.footer
+{
+    background: linear-gradient(
+        180deg,
+        color-mix(in oklab, var(--footer-bg), white 12%) 0%,
+        color-mix(in oklab, var(--accent), var(--footer-bg) 50%) 100%
+    );
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--rule);
+}
+
+.footer-container
+{
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-seasonal
+{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.footer-credit
+{
+    font-size: 0.85rem;
+    color: var(--text-muted);
+
+    transition: color var(--transition);
+}
+
+.footer-credit strong
+{
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.footer-credit:hover
+{
+    color: var(--accent);
+}

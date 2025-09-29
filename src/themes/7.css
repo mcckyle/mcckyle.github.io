@@ -1,0 +1,75 @@
+/* Filename: 7.css (August) */
+
+/* =================
+   Theme Tokens.
+==================== */
+:root
+{
+    /* Core Brand. */
+    --primary: #ffb400; /* Warm, golden sunlight. */
+    --secondary: #6a994e; /* Muted green. */
+    --accent: #ff6b35; /* Coral highlight. */
+
+    /* Neutral Palette. */
+    --bg-light: #fffdf9; /* Soft ivory. */
+    --bg-dark: #faf6f0; /* Warm neutral section background color. */
+    --text-dark: #2b2b2b; /* Deep gray for readability. */
+    --text-muted: #6f6f6f; /* Subtext / Secondary Text Color. */
+    --border-light: #e8e2da;
+
+    /* UI Details. */
+    --footer-bg: #fdf6f0;
+    --hr-color: #ffd97d;
+
+    /* Transitions. */
+    --transition-base: 0.3s ease;
+
+    /* Shadow Styles.*/
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.header-text h1::after
+{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    border-radius: 2px;
+}
+
+ul li::before
+{
+    content: '🌻'; /* Sunflower emoji for August 2025!! */
+    position: absolute;
+    top: 0.7rem;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+/* =======================
+   HR Styles.
+========================== */
+hr
+{
+    border: none;
+    height: 2px;
+    margin: 3rem auto;
+    width: 100%;
+    border-radius: 2px;
+    background: linear-gradient(to right, transparent, var(--hr-color), transparent);
+}
+
+/* =======================
+ * Animations Styles.
+ = ==*======================= */
+/*@keyframes float {
+ * 0%, 100% { transform: translateY(0px); opacity: 0.85; }
+ * 50% { transform: translateY(-4px); opacity: 1; }
+ } */*

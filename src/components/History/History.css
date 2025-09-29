@@ -1,0 +1,57 @@
+/* Filename: History.css */
+
+/* =======================
+   History Styles.
+========================== */
+.history-title
+{
+    color: var(--highlight);
+}
+
+.history-list
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-item
+{
+    border-left: 3px solid var(--highlight);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.history-item::before
+{
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--highlight);
+    border-radius: 50%;
+}
+
+.history-role
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+}
+
+.history-company
+{
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 0 0.25rem;
+}
+
+.history-period
+{
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+

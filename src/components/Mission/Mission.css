@@ -1,0 +1,21 @@
+/* Filename: Mission.css */
+
+/* =======================
+   Mission Styles.
+========================== */
+.mission-title
+{
+    color: var(--secondary);
+}
+
+.mission-content
+{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.mission-content p
+{
+    margin-bottom: 1.25rem;
+}

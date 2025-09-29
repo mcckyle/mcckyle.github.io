@@ -1,0 +1,48 @@
+/* Filename: 3.css (April) */
+
+/* CSS variables... */
+:root
+{
+    --bg-light: #f0f4f8;
+    --text-dark: #2d2d2d;
+    --blue: #4a6fa5;
+    --lavender: #a678b2;
+    --border-light: #dbe6f1;
+    --footer-bg: #e2eaf3;
+    --hr-color: #a8c4e8;
+}
+
+ul li::before
+{
+    content: '💦'; /* Raindrops icon for April showers */
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+ul li:hover::before
+{
+    animation: raindrop 0.3s forwards;
+    transform: translateY(4px);
+    opacity: 0.7;
+}
+
+/* Horizontal rule */
+hr
+{
+    margin: 20px 0;
+    border: 1px solid #a8c4e8; /* Subtle pastel blue */
+}
+
+@keyframes raindrop
+{
+    0%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(4px);
+        opacity: 0.7;
+    }
+}

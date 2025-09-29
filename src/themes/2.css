@@ -1,0 +1,15 @@
+/* Filename: 2.css (March) */
+
+ul li::before
+{
+    content: '🍀'; /* Shamrock icon for a March touch */
+    margin-right: 10px;
+    color: #216e39; /* Emerald green */
+}
+
+/* March-themed horizontal rule */
+hr
+{
+    margin: 20px 0;
+    border: 1px solid #cdaa50; /* Gold accent */
+}

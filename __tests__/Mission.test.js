@@ -1,12 +1,12 @@
 //Filename: Mission.test.js
 //Author: Kyle McColgan
-//Date: 27 August 2025
+//Date: 29 September 2025
 //Description: This file contains the Jest unit tests for my personal website mission section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Mission from '../src/components/Mission';
+import Mission from '../src/components/Mission/Mission.jsx';
 
 it('renders the Mission section', () => {
     render(<Mission />);

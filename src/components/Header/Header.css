@@ -1,0 +1,101 @@
+/* Filename: Header.css */
+
+/* =================
+   Header Styles.
+==================== */
+.site-header
+{
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.header-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* =======================
+   Header Text Styles.
+========================== */
+.header-name
+{
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1.2px;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+}
+
+.header-name::after
+{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+}
+
+.header-role
+{
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin: 0.75rem 0 0;
+    opacity: 0.85;
+}
+
+/* ========================
+   Header Image Styles.
+=========================== */
+.header-image-wrapper
+{
+    flex: 1;
+    max-width: 600px;
+}
+
+.header-img
+{
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    max-height: 360px;
+    filter: brightness(0.95) saturate(1.05);
+    box-shadow: var(--shadow);
+
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, transparent);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.header-img:hover
+{
+    transform: scale(1.008);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ========================
+   Accessibility Styles.
+============================ */
+.visually-hidden
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
