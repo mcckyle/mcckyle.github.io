@@ -1,0 +1,66 @@
+/* Filename: 9.css (October) */
+
+/* =================
+   Theme Tokens.
+==================== */
+:root
+{
+    /* Core Brand Palette for October. */
+    --primary: #d17b0f; /* Color: Pumpkin Orange. */
+    --secondary: #3d2c56; /* Color: Deep Indigo (Night Sky). */
+    --accent: #9e2a2b; /* Color: Rustic Crimson. */
+    --highlight: #f4a259; /* Color: Candlelight Amber. */
+
+    /* Neutrals / Surfaces. */
+    --bg-base: #fffdf9; /* Off-White Parchment. */
+    --surface: #faf6f0; /* Soft Card Base. */
+    --line: #e5ded5;
+
+    /* Text Scale. */
+    --text-strong: #1c1a18;
+    --text: #2f2c2a;
+    --text-muted: #6e655f; /* Color: Subtle Smoky Gray. */
+
+    /* Effects Styles. */
+    --rule: #f4a259;
+    --footer-bg: #f7f3ed;
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --transition: 0.3s var(--ease);
+}
+
+/* Seasonal Accent Styles. */
+body::after
+{
+    content: "🎃";
+    font-size: 2.75rem;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    opacity: 0.06;
+    pointer-events: none;
+
+    animation: floatPumpkin 22s ease-in-out infinite;
+}
+
+ul li::before
+{
+    content: '🕯️'; /* Candle Emoji For October 2025!! */
+    position: absolute;
+    top: 0.65rem;
+    left: 0;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* =======================
+ *   Animations Styles.
+ * ========================== */
+@keyframes floatPumpkin
+{
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-8px, -4px) rotate(3deg); }
+    50% { transform: translate(0, -10px) rotate(-3deg); }
+    75% { transform: translate(6px, -4px) rotate(2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}

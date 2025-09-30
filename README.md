@@ -6,11 +6,11 @@
 
 Welcome! 👋
 
-This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly and accessible web solutions.
+This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly and accessible web designs.
 
 Feel free to explore my work, as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./public/images/Screenshot_20250731_203517.png)
+![Portfolio Screenshot](./public/images/Screenshot_20250929_194934.png)
 *A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
@@ -97,31 +97,57 @@ mcckyle.github.io/
 │
 ├── src/                   # Source code for the React app.
 │   ├── components/        # Reusable UI components.
-│   │   ├── Header.js
-│   │   ├── Skills.js
-│   │   ├── Footer.js
-│   │   ├── Projects.js
-│   │   ├── Mission.js
-│   │   ├── Dedication.js
-│   │   ├── AboutMe.js
-│   │   ├── Contact.js
-│   │   └── History.js
-│   │         
+│   │   ├── Header/
+│   │   │   ├── Header.jsx
+│   │   │   └── Header.css
+│   │   ├── Contact/
+│   │   │   ├── Contact.jsx
+│   │   │   └── Contact.css
+│   │   ├── Dedication/
+│   │   │   ├── Dedication.jsx
+│   │   │   └── Dedication.css
+│   │   ├── Mission/
+│   │   │   ├── Mission.jsx
+│   │   │   └── Mission.css
+│   │   ├── AboutMe/
+│   │   │   ├── AboutMe.jsx
+│   │   │   └── AboutMe.css
+│   │   ├── Skills/
+│   │   │   ├── Skills.jsx
+│   │   │   └── Skills.css
+│   │   ├── Projects/
+│   │   │   ├── Projects.jsx
+│   │   │   └── Projects.css
+│   │   ├── History/
+│   │   │   ├── History.jsx
+│   │   │   └── History.css
+│   │   └── Footer/
+│   │       ├── Footer.jsx
+│   │       └── Footer.css
+│   │
 │   ├── App.jsx
 │   ├── App.css
 │   ├── main.jsx
-│   ├── setupTests.js
 │   ├── index.css          # Global styles.
-│   └── styles.css
+│   ├── setupTests.js
+│   └── styles/
+│       ├── base.css
+│       ├── layout.css
+│       ├── Footer.js
+│       ├── utilities.css
+│       └── animations.css
+│
 ├── __tests__/             # Unit and integration tests.
 │   ├── Header.test.js
+│   ├── Contact.test.js
+│   ├── Dedication.test.js
+│   ├── Mission.test.js
+│   ├── AboutMe.test.js
 │   ├── Skills.test.js
 │   ├── Projects.test.js
-│   ├── Mission.test.js
-│   ├── Dedication.test.js
-│   ├── AboutMe.test.js
-│   ├── Contact.test.js
-│   └── History.test.js
+│   ├── History.test.js
+│   └── Footer.test.js
+│
 ├── dist/                 # Production build output.
 ├── .gitignore            # Files and directories to ignore in Git.
 ├── babel.config.js

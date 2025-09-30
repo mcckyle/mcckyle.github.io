@@ -1,6 +1,6 @@
 /* Filename: App.css */
 
-/* App Container Styles. */
+/* App Root Container Styles. */
 .app
 {
     display: flex;
@@ -8,13 +8,10 @@
     min-height: 100vh;
 }
 
-/* Fade-in Animation For Sections Styles. */
-.site-main > section
+/* Main Content Wrapper Styles. */
+.site-main
 {
-    opacity: 0;
-    transform: translateY(18px);
-    filter: blur(2px);
-
-    animation-delay: calc(0.15s * var(--i, 1));
-    animation: sectionFade 0.85s var(--ease) forwards;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }

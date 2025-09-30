@@ -1,0 +1,42 @@
+/* Filename: layout.css */
+
+/* =======================
+   Section Styles.
+========================== */
+section
+{
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2.25rem 0;
+    box-shadow: var(--shadow);
+    border: 1px solid color-mix(in oklab, var(--line), white 15%);
+
+    transition: transform var(--transition),
+    background var(--transition),
+    border-color var(--transition);
+}
+
+section:hover
+{
+    transform: translateY(-2px); /* Lift the entire section. */
+    border-color: color-mix(in oklab, var(--line), var(--primary) 30%);
+    background: color-mix(in oklab, var(--surface), var(--primary) 3%);
+}
+
+.section-container
+{
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.section-title
+{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    line-height: 1.3;
+    color: var(--text-strong);
+}

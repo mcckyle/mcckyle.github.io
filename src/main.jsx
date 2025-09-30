@@ -1,14 +1,17 @@
 //Filename: main.jsx
 //Author: Kyle McColgan
-//Date: 28 September 2025
+//Date: 29 September 2025
 //Description: This file contains the main React component for the personal React project.
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 
-import './styles.css';
 import './index.css';
+import './styles/base.css';
+import './styles/layout.css';
+import './styles/utilities.css';
+import './styles/animations.css';
 import './App.css';
 
 //Dynamic theme loading...
