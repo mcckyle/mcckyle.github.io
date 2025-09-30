@@ -6,25 +6,25 @@
 :root
 {
     /* Core Brand Palette for October. */
-    --primary: #d17b0f; /* Color: Pumpkin Orange. */
-    --secondary: #3d2c56; /* Color: Deep Indigo (Night Sky). */
+    --primary: #ff7518; /* Color: Pumpkin Orange. */
+    --secondary: #c71585; /* Color: Sppoky Magenta-Purple. */
     --accent: #9e2a2b; /* Color: Rustic Crimson. */
     --highlight: #f4a259; /* Color: Candlelight Amber. */
 
     /* Neutrals / Surfaces. */
-    --bg-base: #fffdf9; /* Off-White Parchment. */
-    --surface: #faf6f0; /* Soft Card Base. */
-    --line: #e5ded5;
+    --bg-base: #1a1a1a; /* Deep Charcoal (Halloween Backdrop). */
+    --surface: #2c2c2c; /* Dark Card Base. */
+    --line: #3a3a3a; /* Subtle Dark Borders. */
 
     /* Text Scale. */
-    --text-strong: #1c1a18;
-    --text: #2f2c2a;
-    --text-muted: #6e655f; /* Color: Subtle Smoky Gray. */
+    --text-strong: #f5f5f5;
+    --text: #e6e6e6;
+    --text-muted: #9a9a9a;
 
     /* Effects Styles. */
-    --rule: #f4a259;
-    --footer-bg: #f7f3ed;
-    --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --rule: #ff7518;
+    --footer-bg: #333;
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
     --transition: 0.3s var(--ease);
 }
@@ -33,11 +33,11 @@
 body::after
 {
     content: "🎃";
-    font-size: 2.75rem;
+    font-size: 3rem;
     position: fixed;
     bottom: 5%;
     right: 5%;
-    opacity: 0.06;
+    opacity: 0.08;
     pointer-events: none;
 
     animation: floatPumpkin 22s ease-in-out infinite;
@@ -45,7 +45,7 @@ body::after
 
 ul li::before
 {
-    content: '🕯️'; /* Candle Emoji For October 2025!! */
+    content: '🎃'; /* Pumpkin Emoji For October 2025!! */
     position: absolute;
     top: 0.65rem;
     left: 0;
@@ -59,8 +59,8 @@ ul li::before
 @keyframes floatPumpkin
 {
     0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(-8px, -4px) rotate(3deg); }
-    50% { transform: translate(0, -10px) rotate(-3deg); }
-    75% { transform: translate(6px, -4px) rotate(2deg); }
+    25% { transform: translate(-8px, -6px) rotate(3deg); }
+    50% { transform: translate(0, -12px) rotate(-2deg); }
+    75% { transform: translate(6px, -6px) rotate(2deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
 }
