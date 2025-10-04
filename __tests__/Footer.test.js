@@ -1,6 +1,6 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 29 September 2025
+//Date: 3 October 2025
 //Description: This file contains the Jest unit tests for the personal React project footer component.
 
 import React from 'react';
@@ -14,10 +14,10 @@ describe('Footer Component', () => {
   });
 
   //Test #1
-  // test('renders without crashing', () => {
-  //   render(<Footer />);
-  //   // No assertion necessary; render should not be thrown...
-  // });
+  test('renders without crashing', () => {
+    render(<Footer />);
+    // No assertion necessary; render should not be thrown...
+  });
 
   //Test #2
   test('renders a footer element with the correct role.', () => {
@@ -28,7 +28,7 @@ describe('Footer Component', () => {
 
   //Test #3
   test('footer contains a paragraph with the correct class.', () => {
-    const paragraph = screen.getByText(/Welcoming/i);
+    const paragraph = screen.getByText(/Embracing/i);
     expect(paragraph).toHaveClass('footer-seasonal');
   });
 
@@ -39,17 +39,16 @@ describe('Footer Component', () => {
   });
 
   //Test #5
-  test('text content includes the word "September" and an emoji.', () => {
-    const text = screen.getByText(/September/i);
-    expect(text.textContent).toMatch(/🍂/);
+  test('text content includes the word "October" and an emoji.', () => {
+    const text = screen.getByText(/October/i);
+    expect(text.textContent).toMatch(/🎃👻/);
   });
 
   //Test #6
-  // test('footer text includes the © symbol.', () => {
-  //   render(<Footer />);
-  //   const text = screen.getByText(/©/);
-  //   expect(text).toBeInTheDocument();
-  // });
+  test('footer text includes the © symbol.', () => {
+    const text = screen.getByText(/©/);
+    expect(text).toBeInTheDocument();
+  });
 
   //Test #7
   test('footer only contains one child element (the paragraph).', () => {

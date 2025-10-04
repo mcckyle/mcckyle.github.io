@@ -1,21 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches the snapshot of the Mission section 1`] = `
+exports[`Mission Component matches the snapshot of the Mission section 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="mission-title"
     class="section"
     id="mission"
   >
-    <div
-      class="mission-content"
+    <h2
+      class="section-title"
+      id="mission-title"
     >
-      <h2
-        class="mission-title"
-        id="mission-title"
-      >
-        Mission Statement
-      </h2>
+      Mission Statement
+    </h2>
+    <div
+      class="section-body"
+      id="mission-body"
+    >
       <p>
         My mission is to uplift the local tech community by sharing the knowledge I've gained and fostering an environment of integrity, collaboration, and continuous growth. Through leading by example, I aim to inspire others in their journey toward technical excellence.
       </p>

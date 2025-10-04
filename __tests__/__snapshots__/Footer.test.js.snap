@@ -3,7 +3,7 @@
 exports[`Footer Component footer matches the snapshot. 1`] = `
 <DocumentFragment>
   <footer
-    aria-label="Footer"
+    aria-label="Site Footer"
     class="footer"
   >
     <div
@@ -12,16 +12,16 @@ exports[`Footer Component footer matches the snapshot. 1`] = `
       <p
         class="footer-seasonal"
       >
-        Welcoming the calm of September 🍂 
+        Embracing the spirit of October 🎃👻
       </p>
       <p
         class="footer-credit"
       >
-        Designed by 
+        © 2025 
         <strong>
           Kyle McColgan
         </strong>
-        , 2025.
+         · Saint Louis
       </p>
     </div>
   </footer>

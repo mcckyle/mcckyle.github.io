@@ -7,15 +7,16 @@ exports[`Dedication component matches the snapshot of the Dedication section. 1`
     class="section"
     id="dedication"
   >
-    <div
-      class="dedication-content"
+    <h2
+      class="section-title"
+      id="dedication-title"
     >
-      <h2
-        class="dedication-title"
-        id="dedication-title"
-      >
-        Dedication
-      </h2>
+      Dedication
+    </h2>
+    <div
+      class="section-body"
+      id="dedication-body"
+    >
       <p>
         This website is lovingly dedicated to my family and closest friends, whose encouragement fuels my strength.
       </p>

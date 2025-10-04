@@ -3,19 +3,7 @@
 /* =======================
    Dedication Styles.
 ========================== */
-.dedication-title
+#dedication .section-title
 {
     color: var(--highlight);
-}
-
-.dedication-content
-{
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text);
-}
-
-.dedication-content p
-{
-    margin-bottom: 1rem;
 }

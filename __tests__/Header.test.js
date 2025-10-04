@@ -1,6 +1,6 @@
 //Filename: Header.test.js
 //Author: Kyle McColgan
-//Date: 29 September 2025
+//Date: 2 October 2025
 //Description: This file contains the Jest unit tests for the personal React website header section.
 
 import React from 'react';
@@ -8,61 +8,68 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../src/components/Header/Header.jsx';
 
-it('renders the header with the correct title', () => {
-    render(<Header />);
-    const title = screen.getByRole('heading', { level: 1 });
-    expect(title).toHaveTextContent('Kyle D. McColgan');
-});
+describe('Header Component', () => {
+    beforeEach(() => {
+        render(<Header />);
+    });
 
-it('renders the header with the correct subtitle', () => {
-    render(<Header />);
-    const subtitle = screen.getByRole('heading', { level: 2 });
-    expect(subtitle).toHaveTextContent('Technology Professional');
-});
+    //Test #1
+    it('renders the header with the correct title', () => {
+        const title = screen.getByRole('heading', { level: 1 });
+        expect(title).toHaveTextContent('Kyle D. McColgan');
+    });
 
-it('renders the header image', () => {
-    render(<Header />);
-    const image = screen.getByAltText('Portrait of Kyle at the beach.');
-    expect(image).toBeInTheDocument();
-});
+    //Test #2
+    it('renders the header with the correct subtitle', () => {
+        const subtitle = screen.getByRole('heading', { level: 2 });
+        expect(subtitle).toHaveTextContent('Technology Professional');
+    });
 
-it('has the correct image source', () => {
-    render(<Header />);
-    const image = screen.getByAltText('Portrait of Kyle at the beach.');
-    expect(image).toHaveAttribute('src', 'test-file-stub');
-});
+    //Test #3
+    it('renders the header image', () => {
+        const image = screen.getByAltText('Kyle at the beach.');
+        expect(image).toBeInTheDocument();
+    });
 
-it('has the correct alt text for the image', () => {
-    render(<Header />);
-    const image = screen.getByAltText('Portrait of Kyle at the beach.');
-    expect(image).toHaveAttribute('alt', 'Portrait of Kyle at the beach.');
-});
+    //Test #4
+    it('has the correct image source', () => {
+        const image = screen.getByAltText('Kyle at the beach.');
+        expect(image).toHaveAttribute('src', 'test-file-stub');
+    });
 
-it('renders the image with the correct class', () => {
-    render(<Header />);
-    const image = screen.getByAltText('Portrait of Kyle at the beach.');
-    expect(image).toHaveClass('header-img');
-});
+    //Test #5
+    it('has the correct alt text for the image', () => {
+        const image = screen.getByAltText('Kyle at the beach.');
+        expect(image).toHaveAttribute('alt', 'Kyle at the beach.');
+    });
 
-it('renders the header element', () => {
-    render(<Header />);
-    const header = screen.getByRole('banner');
-    expect(header).toBeInTheDocument();
-});
+    //Test #6
+    it('renders the image with the correct class', () => {
+        const image = screen.getByAltText('Kyle at the beach.');
+        expect(image).toHaveClass('header-img');
+    });
 
-it('does not log any errors to the console', () => {
-    const consoleError = jest.spyOn(console, 'error').mockImplementation();
-    render(<Header />);
-    expect(consoleError).not.toHaveBeenCalled();
-});
+    //Test #7
+    it('renders the header element', () => {
+        const header = screen.getByRole('banner');
+        expect(header).toBeInTheDocument();
+    });
 
-it('ensures the header is not empty', () => {
-    render(<Header />);
-    const header = screen.getByRole('banner');
-    expect(header).not.toBeEmptyDOMElement();
-});
+    //Test #8
+    it('does not log any errors to the console', () => {
+        const consoleError = jest.spyOn(console, 'error').mockImplementation();
+        expect(consoleError).not.toHaveBeenCalled();
+    });
 
-it('matches the snapshot', () => {
-    const { asFragment } = render(<Header />);
-    expect(asFragment()).toMatchSnapshot();
+    //Test #9
+    it('ensures the header is not empty', () => {
+        const header = screen.getByRole('banner');
+        expect(header).not.toBeEmptyDOMElement();
+    });
+
+    //Test #10
+    it('matches the snapshot', () => {
+        const { asFragment } = render(<Header />);
+        expect(asFragment()).toMatchSnapshot();
+    });
 });

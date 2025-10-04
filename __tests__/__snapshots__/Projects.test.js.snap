@@ -7,91 +7,87 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
     class="section"
     id="projects"
   >
-    <div
-      class="projects-container"
+    <h2
+      class="section-title"
+      id="projects-title"
     >
-      <h2
-        class="projects-title"
-        id="projects-title"
+      Projects
+    </h2>
+    <ul
+      class="projects-list"
+    >
+      <li
+        class="card project-card"
       >
-        Projects
-      </h2>
-      <ul
-        class="projects-list"
+        <h3
+          class="project-title"
+        >
+          Automated Snapshot Management Script
+        </h3>
+        <p
+          class="project-description"
+        >
+          A Bash script designed to automate the storage of system snapshots using Snapper. Enhances system reliability by creating and managing snapshots efficiently. Includes automated transfer to a local host storage, ensuring minimal disk usage while maintaining version history.
+        </p>
+        <ul
+          class="project-tech"
+        >
+          <li
+            class="tech-tag"
+          >
+            Bash
+          </li>
+          <li
+            class="tech-tag"
+          >
+            Linux
+          </li>
+          <li
+            class="tech-tag"
+          >
+            Snapper
+          </li>
+        </ul>
+      </li>
+      <li
+        class="card project-card"
       >
-        <li
-          class="project-card"
+        <h3
+          class="project-title"
         >
-          <h3
-            class="project-title"
-          >
-            Automated Snapshot Management Script
-          </h3>
-          <p
-            class="project-description"
-          >
-            A Bash script designed to automate and manage system snapshots using Snapper. This project enhances system reliability by creating, managing, and restoring snapshots efficiently. The system automatically transfers snapshot contents to a local host for external storage, ensuring minimal storage usage while maintaining comprehensive versioning. The script is lightweight, user-friendly, and integrates seamlessly with Linux environments.
-          </p>
-          <ul
-            class="project-tech"
-          >
-            <li
-              class="tech-tag"
-            >
-              Bash
-            </li>
-            <li
-              class="tech-tag"
-            >
-              Linux
-            </li>
-            <li
-              class="tech-tag"
-            >
-              Snapper
-            </li>
-          </ul>
-        </li>
-        <li
-          class="project-card"
+          ShowMeTasks
+        </h3>
+        <p
+          class="project-description"
         >
-          <h3
-            class="project-title"
+          A full-stack to-do list application built with Java, React, and Spring Boot. Provides a streamlined experience for task management with responsive design, robust backend logic, and secure RESTful APIs. Emphasizes clean architecture and scalability.
+        </p>
+        <ul
+          class="project-tech"
+        >
+          <li
+            class="tech-tag"
           >
-            ShowMeTasks
-          </h3>
-          <p
-            class="project-description"
+            Java
+          </li>
+          <li
+            class="tech-tag"
           >
-            A full-stack to-do list application built with Java, React, and Spring Boot. The project provides a streamlined user experience for task management, featuring responsive design, robust backend logic, and a secure API for seamless interaction between the frontend and backend. This project emphasizes clean architecture and effective use of RESTful services.
-          </p>
-          <ul
-            class="project-tech"
+            React
+          </li>
+          <li
+            class="tech-tag"
           >
-            <li
-              class="tech-tag"
-            >
-              Java
-            </li>
-            <li
-              class="tech-tag"
-            >
-              React
-            </li>
-            <li
-              class="tech-tag"
-            >
-              Spring Boot
-            </li>
-            <li
-              class="tech-tag"
-            >
-              MySQL
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+            Spring Boot
+          </li>
+          <li
+            class="tech-tag"
+          >
+            MySQL
+          </li>
+        </ul>
+      </li>
+    </ul>
   </section>
 </DocumentFragment>
 `;

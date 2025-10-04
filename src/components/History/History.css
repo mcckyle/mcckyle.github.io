@@ -3,7 +3,7 @@
 /* =======================
    History Styles.
 ========================== */
-.history-title
+#history .section-title
 {
     color: var(--highlight);
 }
@@ -13,45 +13,74 @@
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.history-item
-{
-    border-left: 3px solid var(--highlight);
-    padding-left: 1rem;
-    margin-bottom: 1.5rem;
+    display: grid;
+    gap: 2rem;
     position: relative;
 }
 
+/* History Timeline Item Styles. */
+.history-item
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+}
+
+/* History Timeline Line Styles. */
 .history-item::before
 {
     content: "";
     position: absolute;
-    top: 0.5rem;
-    left: -7px;
-    width: 12px;
-    height: 12px;
-    background-color: var(--highlight);
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--highlight);
+    opacity: 0.25;
+}
+
+/* History Timeline Marker Styles. */
+.history-marker
+{
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--highlight);
     border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--surface);
+    margin-top: 0.4rem;
+}
+
+.history-content
+{
+    flex: 1;
 }
 
 .history-role
 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin: 0 0 0.25rem;
+    color: var(--primary);
+    margin: 0 0 0.35rem;
+    transition: color var(--transition);
+}
+
+.history-role:hover
+{
+    color: var(--accent);
 }
 
 .history-company
 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
+    color: var(--accent);
     margin: 0 0 0.25rem;
 }
 
 .history-period
 {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
 }
-

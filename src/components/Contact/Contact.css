@@ -1,24 +1,33 @@
 /* Filename: Contact.css */
 
-/* =======================
-   Contact Styles.
-========================== */
+/* ============================
+   Contact Section Styles.
+=============================== */
+#contact .section-title
+{
+    color: var(--accent);
+}
+
 .contact-list
 {
+    font-style: normal; /* Override <address> italics. */
     margin-top: 1rem;
 }
 
 .contact-list ul
 {
     display: grid;
-    gap: 0.85rem;
-    list-style: none;
+    gap: 0.75rem;
     padding: 0;
     margin: 0;
 }
 
 .contact-list li
 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text);
@@ -29,7 +38,6 @@
 {
     font-weight: 600;
     color: var(--secondary);
-    margin-right: 0.35rem;
 }
 
 /* Contact Links Styles. */
@@ -37,16 +45,37 @@
 {
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    position: relative;
 
-    transition: border-color var(--transition), color var(--transition);
+    transition: color var(--transition);
+}
+
+.contact-list a::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform var(--transition);
 }
 
 .contact-list a:hover,
 .contact-list a:focus
 {
     color: var(--primary);
-    border-color: var(--primary);
+}
+
+.contact-list a:hover::after,
+.contact-list a:focus::after
+{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Accessibility Focus Styles. */
@@ -54,5 +83,5 @@
 {
     outline: 2px solid var(--primary);
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 3px;
 }

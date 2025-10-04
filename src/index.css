@@ -18,16 +18,8 @@
     min-height: 100vh;
 }
 
-/* Global Text Elements Styles. */
-p
-{
-    margin-bottom: 1.15rem;
-    line-height: 1.8;
-    color: var(--text);
-}
-
 /* Media Query Styles. */
 @media (max-width: 600px)
 {
-    #root { padding: 0 12px; }
+    #root { padding: 0 0.75rem; }
 }

@@ -3,31 +3,23 @@
 /* =======================
    Skills Styles.
 ========================== */
-.skills-title
+#skills .section-title
 {
     color: var(--secondary);
+}
+
+#skills .card
+{
+    border-left: 4px solid var(--highlight);
 }
 
 .skills-list
 {
     display: grid;
-    gap: 2rem;
-}
-
-.skills-item
-{
-    padding: 1.25rem 1.5rem;
-    border-left: 4px solid var(--highlight);
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.skills-item:hover
-{
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    gap: 1.75rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .skills-subtitle
@@ -36,11 +28,4 @@
     font-weight: 600;
     color: var(--primary);
     margin-bottom: 0.5rem;
-}
-
-.skills-item p
-{
-    color: var(--text);
-    line-height: 1.65;
-    font-size: 1rem;
 }

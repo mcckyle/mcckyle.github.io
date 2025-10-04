@@ -1,6 +1,6 @@
 //Filename: Skills.test.js
 //Author: Kyle McColgan
-//Date: 29 September 2025
+//Date: 2 October 2025
 //Description: This file contains the Jest unit tests for the React personal project skills section.
 
 import React from 'react';
@@ -8,62 +8,70 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Skills from '../src/components/Skills/Skills.jsx';
 
-it('renders the Skills section', () => {
-    render(<Skills />);
-    const section = screen.getByRole('region', { name: /Skills/i });
-    expect(section).toBeInTheDocument();
-});
+describe('Skills Component', () => {
+    beforeEach(() => {
+        render(<Skills />);
+    });
 
-it('renders the Skills heading', () => {
-    render(<Skills />);
-    const heading = screen.getByRole('heading', { level: 2 });
-    expect(heading).toHaveTextContent('Skills');
-});
+    //Test #1
+    it('renders the Skills section', () => {
+        const section = screen.getByRole('region', { name: /Skills/i });
+        expect(section).toBeInTheDocument();
+    });
 
-it('renders four skill list items', () => {
-    render(<Skills />);
-    const listItems = screen.getAllByRole('listitem');
-    expect(listItems).toHaveLength(4);
-});
+    //Test #2
+    it('renders the Skills heading', () => {
+        const heading = screen.getByRole('heading', { level: 2 });
+        expect(heading).toHaveTextContent('Skills');
+    });
 
-it('renders the Application Development skill category', () => {
-    render(<Skills />);
-    const category = screen.getByText(/Application Development:/);
-    expect(category).toBeInTheDocument();
-});
+    //Test #3
+    it('renders four skill list items', () => {
+        const listItems = screen.getAllByRole('listitem');
+        expect(listItems).toHaveLength(4);
+    });
 
-it('renders the Frontend Engineering skill category', () => {
-    render(<Skills />);
-    const category = screen.getByText(/Frontend Engineering:/);
-    expect(category).toBeInTheDocument();
-});
+    //Test #4
+    it('renders the Application Development skill category', () => {
+        const category = screen.getByText(/Application Development/);
+        expect(category).toBeInTheDocument();
+    });
 
-// it('renders all skill categories in bold', () => {
-//     render(<Skills />);
-//     const boldElements = screen.getAllByRole('strong');
-//     expect(boldElements).toHaveLength(4);
-// });
+    //Test #5
+    it('renders the Frontend Engineering skill category', () => {
+        const category = screen.getByText(/Frontend Engineering/);
+        expect(category).toBeInTheDocument();
+    });
 
-it('renders the skills list as a <ul>', () => {
-    render(<Skills />);
-    const list = screen.getByRole('list');
-    expect(list.tagName).toBe('UL');
-});
+    //Test #6
+    // it('renders all skill categories in bold', () => {
+    //     render(<Skills />);
+    //     const boldElements = screen.getAllByRole('strong');
+    //     expect(boldElements).toHaveLength(4);
+    // });
 
-it('does not render any empty <li> elements', () => {
-    render(<Skills />);
-    const items = screen.getAllByRole('listitem');
-    items.forEach(item => expect(item).not.toBeEmptyDOMElement());
-});
+    //Test #7
+    it('renders the skills list as a <ul>', () => {
+        const list = screen.getByRole('list');
+        expect(list.tagName).toBe('UL');
+    });
 
-it('matches the snapshot of the Skills section', () => {
-    const { asFragment } = render(<Skills />);
-    expect(asFragment()).toMatchSnapshot();
-});
+    //Test #8
+    it('does not render any empty <li> elements', () => {
+        const items = screen.getAllByRole('listitem');
+        items.forEach(item => expect(item).not.toBeEmptyDOMElement());
+    });
 
-it('renders without console errors', () => {
-    const consoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
-    render(<Skills />);
-    expect(consoleError).not.toHaveBeenCalled();
-    consoleError.mockRestore();
+    //Test #9
+    it('matches the snapshot of the Skills section', () => {
+        const { asFragment } = render(<Skills />);
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    //Test #10
+    it('renders without console errors', () => {
+        const consoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
+        expect(consoleError).not.toHaveBeenCalled();
+        consoleError.mockRestore();
+    });
 });

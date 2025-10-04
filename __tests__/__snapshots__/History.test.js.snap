@@ -3,65 +3,74 @@
 exports[`History component matches the snapshot of the History section 1`] = `
 <DocumentFragment>
   <section
-    aria-label="Professional History"
-    class="history"
+    aria-labelledby="history-title"
+    class="section"
     id="history"
   >
-    <div
-      class="history-container"
+    <h2
+      class="section-title"
+      id="history-title"
     >
-      <h2
-        class="history-title"
+      Professional History
+    </h2>
+    <ul
+      class="history-list"
+    >
+      <li
+        class="history-item"
       >
-        Professional History
-      </h2>
-      <ul
-        class="history-list"
+        <div
+          aria-hidden="true"
+          class="history-marker"
+        />
+        <div
+          class="history-content"
+        >
+          <h3
+            class="history-role"
+          >
+            IT System Engineer
+          </h3>
+          <p
+            class="history-company"
+          >
+            Primary Systems
+          </p>
+          <time
+            class="history-period"
+          >
+            May 2023 - September 2023
+          </time>
+        </div>
+      </li>
+      <li
+        class="history-item"
       >
-        <li
-          class="history-item"
+        <div
+          aria-hidden="true"
+          class="history-marker"
+        />
+        <div
+          class="history-content"
         >
-          <article>
-            <h3
-              class="history-role"
-            >
-              IT System Engineer
-            </h3>
-            <p
-              class="history-company"
-            >
-              Primary Systems
-            </p>
-            <time
-              class="history-period"
-            >
-              May 2023 - September 2023
-            </time>
-          </article>
-        </li>
-        <li
-          class="history-item"
-        >
-          <article>
-            <h3
-              class="history-role"
-            >
-              Software Engineer
-            </h3>
-            <p
-              class="history-company"
-            >
-              Walmart
-            </p>
-            <time
-              class="history-period"
-            >
-              July 2021 - October 2022
-            </time>
-          </article>
-        </li>
-      </ul>
-    </div>
+          <h3
+            class="history-role"
+          >
+            Software Engineer
+          </h3>
+          <p
+            class="history-company"
+          >
+            Walmart
+          </p>
+          <time
+            class="history-period"
+          >
+            July 2021 - October 2022
+          </time>
+        </div>
+      </li>
+    </ul>
   </section>
 </DocumentFragment>
 `;

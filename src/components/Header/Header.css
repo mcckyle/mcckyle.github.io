@@ -6,7 +6,6 @@
 .site-header
 {
     margin-bottom: 2.5rem;
-    text-align: center;
 }
 
 .header-content
@@ -14,7 +13,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.5rem;
+    text-align: center;
 }
 
 /* =======================
@@ -23,12 +23,12 @@
 .header-name
 {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-size: clamp(2.4rem, 5vw, 3.25rem);
     font-weight: 700;
     color: var(--primary);
-    letter-spacing: 1.2px;
     margin: 0;
     line-height: 1.2;
+    letter-spacing: 1.2px;
     position: relative;
 }
 
@@ -36,21 +36,27 @@
 {
     content: "";
     display: block;
-    width: 90px;
+    width: 80px;
     height: 3px;
-    margin: 14px auto 0;
+    margin: 12px auto 0;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+
+    background: linear-gradient(
+      90deg,
+      var(--primary),
+      var(--accent),
+      var(--secondary)
+    );
 }
 
 .header-role
 {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent);
-    margin: 0.75rem 0 0;
+    margin: 0.5rem 0 0;
     opacity: 0.85;
 }
 
@@ -59,17 +65,18 @@
 =========================== */
 .header-image-wrapper
 {
-    flex: 1;
-    max-width: 600px;
+    max-width: 480px;
+    width: 100%;
 }
 
 .header-img
 {
     width: 100%;
-    border-radius: 16px;
+    max-height: 340px;
+    border-radius: 1rem;
     object-fit: cover;
-    max-height: 360px;
-    filter: brightness(0.95) saturate(1.05);
+
+    filter: brightness(0.97) saturate(1.04);
     box-shadow: var(--shadow);
 
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, transparent);
@@ -81,8 +88,8 @@
 
 .header-img:hover
 {
-    transform: scale(1.008);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 /* ========================
@@ -97,5 +104,30 @@
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
     border: 0;
 }
+
+/* ========================
+   Media Queries Styles.
+============================ */
+/*@media(min-width: 768px)
+{
+    .header-content
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .header-text
+    {
+        flex: 1;
+        align-self: center;
+    }
+
+    .header-image-wrapper
+    {
+        flex: 1;
+    }
+}*/

@@ -1,6 +1,6 @@
 /* Filename: App.css */
 
-/* App Root Container Styles. */
+/* App Root Styles. */
 .app
 {
     display: flex;
@@ -8,10 +8,15 @@
     min-height: 100vh;
 }
 
-/* Main Content Wrapper Styles. */
-.site-main
+/* Main Content Styles. */
+.content-container
 {
     flex: 1;
     display: flex;
     flex-direction: column;
+
+    gap: 3rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1.25rem;
 }

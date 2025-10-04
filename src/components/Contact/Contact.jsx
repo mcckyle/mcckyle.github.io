@@ -1,54 +1,58 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 28 September 2025
+//Date: 2 October 2025
 //Description: This file contains the React component for the personal React project contact details section.
 
-import React from 'react';
-import './Contact.css';
+import React from "react";
+import "./Contact.css";
 
-function Contact() {
+function Contact()
+{
+  const contacts = [
+    {
+      label: "GitHub",
+      value: "github.com/mcckyle",
+      href: "https://www.github.com/mcckyle",
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/kylemccolgan",
+      href: "https://www.linkedin.com/in/kylemccolgan/",
+    },
+    {
+      label: "Location",
+      value: "South Saint Louis, Missouri, USA",
+    },
+    {
+      label: "Resume / CV",
+      value: "View PDF",
+      href: "/Kyle-McColgan-Resume-May-2025.pdf",
+    },
+  ];
     return (
-        <section id="contact" aria-label="Contact Information">
-            <h2>Contact</h2>
-            <address className="contact-list">
-              <ul>
-                <li>
-                  <span className="contact-label">GitHub:</span>
+      <section id="contact" aria-label="Contact Information" className="section">
+          <h2 className="section-title">Contact</h2>
+          <address className="contact-list">
+            <ul>
+            {contacts.map((item, i) => (
+              <li key={i}>
+                <span className="contact-label">{item.label}:</span>
+                {item.href ? (
                   <a
-                    href="https://www.github.com/mcckyle"
-                    target="_blank"
-                    rel="noopener noreferrer me"
-                  >
-                    github.com/mcckyle
-                  </a>
-                </li>
-                <li>
-                  <span className="contact-label">LinkedIn:</span>
-                    <a
-                      href="https://www.linkedin.com/in/kylemccolgan/"
-                      target="_blank"
-                      rel="noopener noreferrer me"
-                    >
-                      linkedin.com/in/kylemccolgan
-                    </a>
-                </li>
-                <li>
-                  <span className="contact-label">Location:</span>
-                  South Saint Louis, Missouri, USA
-                </li>
-                <li>
-                  <span className="contact-label">Resume / CV:</span>
-                  <a
-                    href="/Kyle-McColgan-Resume-May-2025.pdf"
+                    href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View PDF (opens in a new tab).
+                    {item.value}
                   </a>
-                </li>
-              </ul>
-            </address>
-        </section>
+                ) : (
+                  <span>{item.value}</span>
+                )}
+              </li>
+            ))}
+            </ul>
+          </address>
+      </section>
     );
 }
 
