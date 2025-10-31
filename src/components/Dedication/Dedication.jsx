@@ -1,6 +1,6 @@
 //Filename: Dedication.jsx
 //Author: Kyle McColgan
-//Date: 2 October 2025
+//Date: 30 October 2025
 //Description: This file contains the component for the React personal project dedication section.
 
 import React from "react";
@@ -9,10 +9,11 @@ import "./Dedication.css";
 function Dedication()
 {
   return (
-    <section
+    <div
       id="dedication"
+      role="region"
       aria-labelledby="dedication-title"
-      className="section"
+      className="section-content"
     >
       <h2 id="dedication-title" className="section-title">
         Dedication
@@ -28,7 +29,7 @@ function Dedication()
           deeply grateful.
         </p>
       </div>
-    </section>
+    </div>
   );
 }
 

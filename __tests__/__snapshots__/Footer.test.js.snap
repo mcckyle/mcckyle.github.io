@@ -10,9 +10,9 @@ exports[`Footer Component footer matches the snapshot. 1`] = `
       class="footer-container"
     >
       <p
-        class="footer-seasonal"
+        class="footer-message"
       >
-        Embracing the spirit of October 🎃👻
+        Grateful for the journey and the growth this November 🦃🍂
       </p>
       <p
         class="footer-credit"
@@ -21,7 +21,7 @@ exports[`Footer Component footer matches the snapshot. 1`] = `
         <strong>
           Kyle McColgan
         </strong>
-         · Saint Louis
+         · Saint Louis
       </p>
     </div>
   </footer>

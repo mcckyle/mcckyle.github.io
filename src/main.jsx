@@ -1,6 +1,6 @@
 //Filename: main.jsx
 //Author: Kyle McColgan
-//Date: 29 September 2025
+//Date: 21 October 2025
 //Description: This file contains the main React component for the personal React project.
 
 import { StrictMode } from 'react';
@@ -16,8 +16,8 @@ import './App.css';
 
 //Dynamic theme loading...
 const month = new Date().getMonth(); //0 = January, 11 = December, etc.
-import (`./themes/${month}.css`);
-//import './themes/9.css'; //Uncomment this line for testing purposes...
+// import (`./themes/${month}.css`);
+import './themes/10.css'; //Uncomment this line for testing purposes...
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

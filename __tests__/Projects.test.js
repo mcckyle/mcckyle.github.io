@@ -1,7 +1,7 @@
 //Filename: Projects.test.js
 //Author: Kyle McColgan
-//Date: 2 October 2025
-//Description: This file contains the Jest unit tests for the personal React project projects section.
+//Date: 29 October 2025
+//Description: This file contains the Jest unit tests for the React personal project projects section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -34,12 +34,9 @@ describe('Projects component', () => {
     //Test #4
     it('renders the first project correctly', () => {
         const firstTitle = screen.getByText(/Automated Snapshot Management Script/i);
-        const firstDesc = screen.getByText(/A Bash Script designed to automate/i);
+        const firstDesc = screen.getByText(/A Bash Script that automates/i);
         expect(firstTitle).toBeInTheDocument();
         expect(firstDesc).toBeInTheDocument();
-
-        // const firstTechTags = screen.getAllByText(/Bash|Linux|Snapper/i);
-        // expect(firstTechTags).toHaveLength(3);
     });
 
     //Test #5
@@ -48,16 +45,16 @@ describe('Projects component', () => {
         const secondDesc = screen.getByText(/A full-stack to-do list application/i);
         expect(secondTitle).toBeInTheDocument();
         expect(secondDesc).toBeInTheDocument();
-
-        // const secondTechTags = screen.getAllByText(/Java|React|Spring Boot|MySQL/i);
-        // expect(secondTechTags).toHaveLength(4);
     });
 
     //Test #6
-    // it('renders each project title in bold', () => {
-    //     const boldElements = screen.getAllByRole('strong');
-    //     expect(boldElements.length).toBeGreaterThanOrEqual(2);
-    // });
+    it('renders each project title as a level 3 heading', () => {
+        const headings = screen.getAllByRole('heading', { level: 3});
+        expect(headings.length).toBeGreaterThanOrEqual(2);
+        headings.forEach(h => {
+            expect(h).toHaveClass('project-title');
+        })
+    });
 
     //Test #7
     it('does not render any empty project cards', () => {
@@ -68,10 +65,13 @@ describe('Projects component', () => {
     });
 
     //Test #8
-    // it('uses a <ul> to list projects', () => {
-    //     const list = screen.getByRole('list');
-    //     expect(list.tagName).toBe('UL');
-    // });
+    it('uses a <ul> to list top-level projects', () => {
+        const region = screen.getByRole('region', { name: /projects/i });
+        const list = screen.getAllByRole('list', { hidden: false})[0];
+        expect(list.tagName).toBe('UL');
+        expect(list).toHaveClass('projects-list');
+        expect(region).toContainElement(list);
+    });
 
     //Test #9
     it('renders without console errors', () => {

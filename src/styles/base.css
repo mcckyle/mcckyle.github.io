@@ -1,57 +1,47 @@
 /* Filename: base.css */
 
-/* =================
+/* ====================================
    Base Styles.
-==================== */
+======================================= */
 body
 {
     margin: 0;
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
+    font-size: 16.5px;
+    line-height: 1.85;
+    letter-spacing: 0.3px;
     color: var(--text);
     background: var(--bg-base);
-    position: relative;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-/* ===============================
-   Body Paper Texture Styles.
-================================== */
-body::before
+/* ====================================
+   Headings Styles.
+======================================= */
+h1, h2, h3, h4
 {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.035;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.015) 0 2px, transparent 2px 4px);
-    z-index: -1;
+    color: color-mix(in srgb, var(--text-strong) 90%, var(--ember) 10%);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.6px;
 }
 
-/* ===============================
-   Global Text Elements Styles.
-================================== */
+/* ====================================
+   Paragraphs Styles.
+======================================= */
 p
 {
-    margin-bottom: 1.15rem;
-    line-height: 1.8;
-    color: var(--text);
+    color: color-mix(in srgb, var(--text-muted) 85%, var(--sage) 15%);
+    max-width: 68ch;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
-h1,
-h2,
-h3,
-h4
-{
-    margin: 0 0 1rem;
-    font-weight: 600;
-    color: var(--text-strong);
-}
-
-/* =======================
-   List Styles.
-========================== */
+/* ====================================
+   List Resets Styles.
+======================================= */
 ul
 {
     list-style: none;
@@ -65,29 +55,47 @@ ul li
     padding-left: 1.6rem;
 }
 
-/* =======================
+/* ====================================
    Card Styles.
-========================== */
+======================================= */
 .card
 {
     background: var(--surface);
-    border-radius: 0.85rem;
+    border-radius: 1rem;
     border: 1px solid var(--line);
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
 
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 
 .card:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* =======================
+/* ====================================
+   Links Styles.
+======================================= */
+a
+{
+    color: var(--berry);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: color var(--transition), text-shadow var(--transition);
+}
+
+a:hover
+{
+    color: var(--ember);
+    text-shadow: 0 0 6px color-mix(in srgb, var(--ember) 60%, transparent);
+}
+
+/* ====================================
    Scrollbar Styles.
-========================== */
+======================================= */
 ::-webkit-scrollbar
 {
     width: 8px;

@@ -2,10 +2,11 @@
 
 exports[`Mission Component matches the snapshot of the Mission section 1`] = `
 <DocumentFragment>
-  <section
+  <div
     aria-labelledby="mission-title"
-    class="section"
+    class="section-content"
     id="mission"
+    role="region"
   >
     <h2
       class="section-title"
@@ -27,6 +28,6 @@ exports[`Mission Component matches the snapshot of the Mission section 1`] = `
         Driven by the evolving world of technology, I embrace challenges as opportunities for growth. By staying curious and persistent, I strive to contribute positively to the broader tech landscape while growing personally and professionally.
       </p>
     </div>
-  </section>
+  </div>
 </DocumentFragment>
 `;

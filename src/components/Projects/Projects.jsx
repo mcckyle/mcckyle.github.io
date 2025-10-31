@@ -1,6 +1,6 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 3 October 2025
+//Date: 28 October 2025
 //Description: This file contains the component for the personal React project projects section.
 
 import React from "react";
@@ -12,25 +12,23 @@ function Projects()
       {
         title: "Automated Snapshot Management Script",
         description:
-          "A Bash script designed to automate the storage of system snapshots using Snapper. Enhances system reliability by creating and managing snapshots efficiently. Includes automated transfer to a local host storage, ensuring minimal disk usage while maintaining version history.",
+          "A Bash script that automates system snapshot storage with Snapper. Enhances reliability by managing snapshots efficiently and transferring them to local storage to conserve disk space while maintaining version history.",
         tech: ["Bash", "Linux", "Snapper"],
       },
       {
         title: "ShowMeTasks",
         description:
-          "A full-stack to-do list application built with Java, React, and Spring Boot. Provides a streamlined experience for task management with responsive design, robust backend logic, and secure RESTful APIs. Emphasizes clean architecture and scalability.",
+          "A full-stack to-do list application built with Java, React, and Spring Boot. Offers a seamless task management experience with responsive design, robust backend logic, and secure RESTful APIs.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
     ];
 
     return (
-        <section id="projects" aria-labelledby="projects-title" className="section">
-          <h2 id="projects-title" className="section-title">
-            Projects
-          </h2>
+        <div id="projects" role="region" aria-labelledby="projects-title" className="section-content">
+          <h2 id="projects-title" className="section-title">Projects</h2>
           <ul className="projects-list">
             {projects.map((project, index) => (
-              <li key={index} className="card project-card">
+              <li key={index} className="card">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 <ul className="project-tech">
@@ -43,7 +41,7 @@ function Projects()
               </li>
             ))}
           </ul>
-       </section>
+       </div>
     );
 }
 

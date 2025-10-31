@@ -2,10 +2,11 @@
 
 exports[`History component matches the snapshot of the History section 1`] = `
 <DocumentFragment>
-  <section
+  <div
     aria-labelledby="history-title"
-    class="section"
+    class="section-content"
     id="history"
+    role="region"
   >
     <h2
       class="section-title"
@@ -71,6 +72,6 @@ exports[`History component matches the snapshot of the History section 1`] = `
         </div>
       </li>
     </ul>
-  </section>
+  </div>
 </DocumentFragment>
 `;

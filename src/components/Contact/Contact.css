@@ -1,46 +1,65 @@
 /* Filename: Contact.css */
 
-/* ============================
+/* ====================================
    Contact Section Styles.
-=============================== */
+======================================= */
 #contact .section-title
 {
     color: var(--accent);
 }
 
+.contact-container
+{
+    max-width: 720px;
+}
+
 .contact-list
 {
     font-style: normal; /* Override <address> italics. */
-    margin-top: 1rem;
 }
 
 .contact-list ul
 {
     display: grid;
-    gap: 0.75rem;
+    gap: 1rem;
     padding: 0;
     margin: 0;
 }
 
-.contact-list li
+.contact-item
 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    align-items: center;
 
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: var(--text);
+
+    transition: transform 0.3s var(--ease), color var(--transition);
 }
 
-/* Labels Styles. */
+.contact-item:hover
+{
+    transform: translateX(4px);
+}
+
+/* ====================================
+   Contact Label Styles.
+======================================= */
 .contact-label
 {
     font-weight: 600;
-    color: var(--secondary);
+    color: var(--highlight);
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
 
-/* Contact Links Styles. */
+/* ====================================
+   Contact Links Styles.
+======================================= */
 .contact-list a
 {
     color: var(--accent);

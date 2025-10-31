@@ -1,24 +1,21 @@
 /* Filename: Projects.css */
 
-/* =======================
+/* ====================================
    Projects Styles.
-========================== */
+======================================= */
 #projects .section-title
 {
     color: var(--accent);
 }
 
-#projects .card
-{
-    padding: 1rem;
-}
-
 .projects-list
 {
     display: grid;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+
+    margin-top: 2rem;
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 
@@ -33,10 +30,9 @@
 /* Project Description Styles. */
 .project-description
 {
-    font-size: 1rem;
-    line-height: 1.6;
     color: var(--text);
-    margin-bottom: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
 }
 
 /* Project Tech Tags Styles. */

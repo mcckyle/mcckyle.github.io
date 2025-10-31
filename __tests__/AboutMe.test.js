@@ -1,6 +1,6 @@
 //Filename: AboutMe.test.js
 //Author: Kyle McColgan
-//Date: 2 October 2025
+//Date: 28 October 2025
 //Description: This file contains the Jest unit tests for the personal React project about me section.
 
 import React from 'react';
@@ -14,9 +14,9 @@ describe('AboutMe Component', () => {
   });
 
   //Test #1
-  it('renders a <section> with id "about-me"', () => {
-    const section = screen.getByRole('region', { name: /about me/i });
-    expect(section).toBeInTheDocument();
+  it('renders a <div> with id "about-me"', () => {
+    const div = screen.getByRole('region', { name: /about me/i });
+    expect(div).toBeInTheDocument();
   });
 
   //Test #2
@@ -32,8 +32,8 @@ describe('AboutMe Component', () => {
 
   //Test #4
   it('renders the About Me section', () => {
-    const section = screen.getByRole('region', { name: /about me/i });
-    expect(section).toBeInTheDocument();
+    const div = screen.getByRole('region', { name: /about me/i });
+    expect(div).toBeInTheDocument();
   });
 
   //Test #5
@@ -56,8 +56,8 @@ describe('AboutMe Component', () => {
 
   //Test #8
   it('renders semantic HTML tags', () => {
-    const section = screen.getByRole('region', { name: /about me/i });
-    expect(section.tagName.toLowerCase()).toBe('section');
+    const div = screen.getByRole('region', { name: /about me/i });
+    expect(div.tagName.toLowerCase()).toBe('div');
   });
 
   //Test #9

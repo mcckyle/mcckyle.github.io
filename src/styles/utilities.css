@@ -1,8 +1,8 @@
 /* Filename: utilities.css */
 
-/* =======================
+/* ====================================
    Media Queries Styles.
-========================== */
+======================================= */
 @media (prefers-reduced-motion: reduce)
 {
     .site-main > section
@@ -18,13 +18,9 @@
 @media (max-width: 768px)
 {
     html { font-size: 15px; }
-    section { padding: 1.75rem; }
 }
 
 @media (max-width: 480px)
 {
-    html { font-size: 14px; }
-    h1 { font-size: 1.9rem; }
-    h2 { font-size: 1.05rem; }
-    section { padding: 1.25rem; }
+    html { font-size: clamp(14px, 0.9vw + 0.5rem, 17px); }
 }

@@ -1,6 +1,6 @@
 //Filename: History.test.js
 //Author: Kyle McColgan
-//Date: 2 October 2025
+//Date: 28 October 2025
 //Description: This file contains the Jest unit tests for the personal React project history component.
 
 import React from 'react';
@@ -15,8 +15,8 @@ describe('History component', () => {
 
     //Test #1
     it('renders the History section', () => {
-        const section = screen.getByRole('region', { name: /Professional History/i });
-        expect(section).toBeInTheDocument();
+        const div = screen.getByRole('region', { name: /Professional History/i });
+        expect(div).toBeInTheDocument();
     });
 
     //Test #2
@@ -49,8 +49,8 @@ describe('History component', () => {
 
     //Test #6
     it('has the correct ARIA role of "region"', () => {
-        const section = screen.getByRole('region', { name: /Professional History/i });
-        expect(section).toBeInTheDocument();
+        const div = screen.getByRole('region', { name: /Professional History/i });
+        expect(div).toBeInTheDocument();
     });
 
     //Test #7

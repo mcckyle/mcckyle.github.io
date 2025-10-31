@@ -1,8 +1,8 @@
 /* Filename: History.css */
 
-/* =======================
+/* ====================================
    History Styles.
-========================== */
+======================================= */
 #history .section-title
 {
     color: var(--highlight);
@@ -12,10 +12,10 @@
 {
     list-style: none;
     padding: 0;
-    margin: 0;
+
+    margin-top: 2rem;
     display: grid;
     gap: 2rem;
-    position: relative;
 }
 
 /* History Timeline Item Styles. */
@@ -23,22 +23,35 @@
 {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.25rem;
     position: relative;
+
+    background: var(--surface);
+    padding: 1.5rem 1.75rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.history-item:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
 /* History Timeline Line Styles. */
-.history-item::before
+/*.history-item::before
 {
     content: "";
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 0;
     bottom: 0;
     width: 2px;
     background: var(--highlight);
     opacity: 0.25;
-}
+}*/
 
 /* History Timeline Marker Styles. */
 .history-marker
@@ -48,21 +61,17 @@
     height: 14px;
     background: var(--highlight);
     border-radius: 50%;
+    margin-top: 0.5rem;
     box-shadow: 0 0 0 3px var(--surface);
-    margin-top: 0.4rem;
-}
-
-.history-content
-{
-    flex: 1;
 }
 
 .history-role
 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--primary);
-    margin: 0 0 0.35rem;
+    margin-bottom: 0.35rem;
+
     transition: color var(--transition);
 }
 
@@ -74,9 +83,8 @@
 .history-company
 {
     font-size: 1rem;
-    font-weight: 500;
     color: var(--accent);
-    margin: 0 0 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .history-period

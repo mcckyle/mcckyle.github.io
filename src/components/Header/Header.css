@@ -1,52 +1,127 @@
 /* Filename: Header.css */
 
-/* =================
-   Header Styles.
-==================== */
+/* ====================================
+   Header Container Styles.
+======================================= */
 .site-header
 {
-    margin-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 6vw, 3rem);
+    overflow: hidden;
+
+    background: linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--surface) 95%, var(--primary) 5%) 0%,
+      color-mix(in srgb, var(--surface-alt) 95%, transparent 5%) 100%
+    );
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05)
 }
 
+.site-header::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 75%
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ====================================
+   Header Content Styles.
+======================================= */
 .header-content
+{
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3rem);
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* =========================================
+   Header Image Presentation Styles.
+============================================ */
+.header-image-wrapper
+{
+    max-width: 380px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.header-img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    filter: brightness(0.98) saturate(1.05);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+
+    transition: transform var(--transition),
+                filter var(--transition),
+                box-shadow var(--transition);
+}
+
+.header-img:hover
+{
+    transform: scale(1.015);
+    filter: brightness(1.02) saturate(1.12);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+/* ====================================
+   Header Text Styles.
+======================================= */
+.header-text
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    text-align: center;
+    gap: 0.75rem;
 }
 
-/* =======================
-   Header Text Styles.
-========================== */
 .header-name
 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(2.4rem, 5vw, 3.25rem);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.75rem, 6vw, 3.75rem);
     font-weight: 700;
-    color: var(--primary);
+    color: var(--text-strong);
     margin: 0;
-    line-height: 1.2;
-    letter-spacing: 1.2px;
-    position: relative;
+
+    letter-spacing: 1px;
+    line-height: 1.05;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
 }
 
 .header-name::after
 {
     content: "";
     display: block;
-    width: 80px;
     height: 3px;
-    margin: 12px auto 0;
+    width: 80px;
+    margin: 1rem auto 0;
     border-radius: 999px;
 
-    background: linear-gradient(
-      90deg,
-      var(--primary),
-      var(--accent),
-      var(--secondary)
-    );
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    opacity: 0.9;
 }
 
 .header-role
@@ -56,45 +131,12 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent);
-    margin: 0.5rem 0 0;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
-/* ========================
-   Header Image Styles.
-=========================== */
-.header-image-wrapper
-{
-    max-width: 480px;
-    width: 100%;
-}
-
-.header-img
-{
-    width: 100%;
-    max-height: 340px;
-    border-radius: 1rem;
-    object-fit: cover;
-
-    filter: brightness(0.97) saturate(1.04);
-    box-shadow: var(--shadow);
-
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, transparent);
-    mask-repeat: no-repeat;
-    mask-size: cover;
-
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.header-img:hover
-{
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-/* ========================
-   Accessibility Styles.
-============================ */
+/* ====================================
+   Accessibility Utilities Styles.
+======================================= */
 .visually-hidden
 {
     position: absolute;
@@ -107,27 +149,3 @@
     white-space: nowrap;
     border: 0;
 }
-
-/* ========================
-   Media Queries Styles.
-============================ */
-/*@media(min-width: 768px)
-{
-    .header-content
-    {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .header-text
-    {
-        flex: 1;
-        align-self: center;
-    }
-
-    .header-image-wrapper
-    {
-        flex: 1;
-    }
-}*/

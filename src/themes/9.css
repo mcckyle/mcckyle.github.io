@@ -1,8 +1,8 @@
 /* Filename: 9.css (October Theme) */
 
-/* =================
+/* ====================================
    Theme Tokens.
-==================== */
+======================================= */
 :root
 {
     /* Core Palette for October. */
@@ -29,9 +29,9 @@
     --transition: 0.3s var(--ease);
 }
 
-/* ================================
+/* ====================================
    List Pumpkin Accent Styles.
-=================================== */
+======================================= */
 ul li::before
 {
     content: "🎃"; /* Pumpkin Emoji For October 2025!! */
@@ -51,9 +51,9 @@ ul li:hover::before
     transform: rotate(6deg) scale(1.15);
 }
 
-/* ================================
+/* ====================================
    Seasonal Accent (BG) Styles.
-=================================== */
+======================================= */
 body::after
 {
     content: "🎃";
@@ -61,15 +61,15 @@ body::after
     position: fixed;
     bottom: 5%;
     right: 5%;
-    opacity: 0.05;
+    opacity: 0.03;
     pointer-events: none;
 
     animation: floatPumpkin 18s ease-in-out infinite;
 }
 
-/* =======================
+/* ====================================
    Animations Styles.
-=========================== */
+======================================= */
 @keyframes floatPumpkin
 {
     0% { transform: translate(0, 0) rotate(0deg); }

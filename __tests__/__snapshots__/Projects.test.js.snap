@@ -2,10 +2,11 @@
 
 exports[`Projects component matches the snapshot of the Projects section 1`] = `
 <DocumentFragment>
-  <section
+  <div
     aria-labelledby="projects-title"
-    class="section"
+    class="section-content"
     id="projects"
+    role="region"
   >
     <h2
       class="section-title"
@@ -17,7 +18,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
       class="projects-list"
     >
       <li
-        class="card project-card"
+        class="card"
       >
         <h3
           class="project-title"
@@ -27,7 +28,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         <p
           class="project-description"
         >
-          A Bash script designed to automate the storage of system snapshots using Snapper. Enhances system reliability by creating and managing snapshots efficiently. Includes automated transfer to a local host storage, ensuring minimal disk usage while maintaining version history.
+          A Bash script that automates system snapshot storage with Snapper. Enhances reliability by managing snapshots efficiently and transferring them to local storage to conserve disk space while maintaining version history.
         </p>
         <ul
           class="project-tech"
@@ -50,7 +51,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
       <li
-        class="card project-card"
+        class="card"
       >
         <h3
           class="project-title"
@@ -60,7 +61,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         <p
           class="project-description"
         >
-          A full-stack to-do list application built with Java, React, and Spring Boot. Provides a streamlined experience for task management with responsive design, robust backend logic, and secure RESTful APIs. Emphasizes clean architecture and scalability.
+          A full-stack to-do list application built with Java, React, and Spring Boot. Offers a seamless task management experience with responsive design, robust backend logic, and secure RESTful APIs.
         </p>
         <ul
           class="project-tech"
@@ -88,6 +89,6 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
     </ul>
-  </section>
+  </div>
 </DocumentFragment>
 `;

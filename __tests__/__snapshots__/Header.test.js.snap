@@ -4,10 +4,27 @@ exports[`Header Component matches the snapshot 1`] = `
 <DocumentFragment>
   <header
     class="site-header"
+    role="banner"
   >
     <div
       class="header-content"
     >
+      <figure
+        class="header-image-wrapper"
+      >
+        <img
+          alt="Kyle on a boat by the beach."
+          class="header-img"
+          decoding="async"
+          loading="lazy"
+          src="test-file-stub"
+        />
+        <figcaption
+          class="visually-hidden"
+        >
+          Portrait of Kyle D. McColgan on a boat by the beach.
+        </figcaption>
+      </figure>
       <div
         class="header-text"
       >
@@ -16,27 +33,12 @@ exports[`Header Component matches the snapshot 1`] = `
         >
           Kyle D. McColgan
         </h1>
-        <h2
+        <p
           class="header-role"
         >
           Technology Professional
-        </h2>
+        </p>
       </div>
-      <figure
-        class="header-image-wrapper"
-      >
-        <img
-          alt="Kyle at the beach."
-          class="header-img"
-          loading="lazy"
-          src="test-file-stub"
-        />
-        <figcaption
-          class="visually-hidden"
-        >
-          Semi-professional headshot of Kyle.
-        </figcaption>
-      </figure>
     </div>
   </header>
 </DocumentFragment>

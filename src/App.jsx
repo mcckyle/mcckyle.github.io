@@ -1,7 +1,7 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 3 October 2025
-//Description: This file contains the React root component for the personal React website.
+//Date: 29 October 2025
+//Description: This file contains the root component for the personal React website.
 
 import React from "react";
 
@@ -19,17 +19,25 @@ import "./App.css";
 
 function App()
 {
+  const sections = [
+    Contact,
+    Dedication,
+    Mission,
+    AboutMe,
+    Skills,
+    Projects,
+    History,
+  ];
+
   return (
     <div className="app">
       <Header />
-      <main id="main-content" className="content-container">
-        <Contact />
-        <Dedication />
-        <Mission />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <History />
+      <main id="main-content" className="site-main">
+        {sections.map((Section, index) => (
+          <section key={index} style={{ "--i": index + 1 }}>
+            <Section />
+          </section>
+        ))}
       </main>
       <Footer />
     </div>
