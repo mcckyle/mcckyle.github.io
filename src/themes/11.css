@@ -1,0 +1,104 @@
+/* Filename: 11.css (December 2025 Theme) */
+
+/* ====================================
+   Theme Tokens.
+======================================= */
+:root
+{
+    /* Core Palette for Christmas. */
+    --primary: #e24d4d; /* Color: Festive Red. */
+    --secondary: #3c9b5b; /* Color: Evergreen Pine. */
+    --accent: #f4e9c7; /* Color: Candlelight Cream. */
+    --highlight: #e9f4ff; /* Color: Frost Glow. */
+
+    --ember: #ff6656; /* Color: Hearth Ember. */
+    --berry: #c94161; /* Color: Cranberry Rose. */
+    --sage: #b3d4c4; /* Color: Winter Sage. */
+
+    /* Backgrounds and Surfaces. */
+    --bg-base: #0a0e12; /* Color: Winter Night Sky. */
+    --surface: rgba(24, 30, 38, 0.85);
+    --surface-alt: rgba(30, 38, 46, 0.8);
+    --line: rgba(255, 255, 255, 0.08);
+    --glass: rgba(255, 255, 255, 0.05);
+
+    /* Text Tokens. */
+    --text-strong: #ffffff;
+    --text: #e5eaee;
+    --text-muted: #b7c2cc;
+
+    /* System Tokens. */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    --blur-sm: blur(8px);
+    --blur-md: blur(18px);
+
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+    /* Effects. */
+    --footer-bg: #10161c;
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition: 0.45s var(--ease);
+}
+
+/* ====================================
+   List Accent Styles.
+======================================= */
+ul li::before
+{
+    content: "🎄"; /* Christmas Tree Emoji For December 2025!! */
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    font-size: 1rem;
+    color: var(--accent);
+    opacity: 0.85;
+    transform: rotate(-3deg);
+
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ul li:hover::before
+{
+    transform: rotate(3deg) scale(1.15);
+    color: var(--primary);
+}
+
+/* ====================================
+   Failling Snow Accent Styles.
+======================================= */
+.snowflake
+{
+    position: fixed;
+    top: -10px;
+    font-size: 0.8rem;
+    color: var(--highlight);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.35);
+
+    animation: snowfall linear infinite;
+}
+
+.snowflake:nth-child(3n) { font-size: 0.6rem; opacity: 0.4; }
+.snowflake:nth-child(4n) { font-size: 1rem; opacity: 0.7; }
+
+/* ====================================
+   Animations Styles.
+======================================= */
+@keyframes snowfall
+{
+    0% { transform: translateY(-10vh); opacity: 0.4; }
+    100% { transform: translateY(110vh); opacity: 0; }
+}

@@ -1,13 +1,12 @@
 /* Filename: animations.css */
 
 /* Sequential fade-slide entrance styles. */
-.site-main > section
+.section[data-animate]
 {
     opacity: 0;
     transform: translateY(3svh);
 
     animation-delay: calc(0.15s * var(--i));
-    animation-duration: 0.95s;
     animation: fadeSlideIn 0.85s var(--ease) forwards;
 }
 

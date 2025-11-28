@@ -5,10 +5,10 @@
 ======================================= */
 .footer
 {
-    background: linear-gradient(to top, var(--footer-bg), transparent 60%);
+    background: var(--glass);
+    backdrop-filter: var(--blur-md) saturate(1.05);
+    border-top: 1px solid var(--line);
     padding: clamp(2rem, 4vw, 3rem) 0;
-    border-top: 1px solid color-mix(in oklab, var(--rule), white 10%);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 
     transition: background var(--transition);
 }
@@ -29,19 +29,9 @@
 {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--highlight);
-    letter-spacing: 0.4px;
-    text-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+    color: var(--accent);
     margin: 0;
-    transform: translateY(0);
-
-    transition: transform var(--transition), text-shadow var(--transition);
-}
-
-.footer-message:hover
-{
-    transform: translateY(-2px);
-    text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+    opacity: 0.9;
 }
 
 /* Ownership Line Styles. */
@@ -50,22 +40,13 @@
     font-size: 0.9rem;
     color: var(--text-muted);
     margin: 0;
-    letter-spacing: 0.3px;
-
-    transition: color 0.25s ease;
+    opacity: 0.85;
 }
 
 .footer-credit strong
 {
     font-weight: 600;
     color: var(--accent);
-
-    transition: color 0.25s ease;
-}
-
-.footer-credit:hover strong
-{
-    color: var(--primary);
 }
 
 @media (min-width: 768px)

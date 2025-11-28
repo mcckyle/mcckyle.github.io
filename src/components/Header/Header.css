@@ -15,13 +15,10 @@
     padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 6vw, 3rem);
     overflow: hidden;
 
-    background: linear-gradient(
-      to bottom,
-      color-mix(in srgb, var(--surface) 95%, var(--primary) 5%) 0%,
-      color-mix(in srgb, var(--surface-alt) 95%, transparent 5%) 100%
-    );
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+    background: var(--glass);
+    backdrop-filter: var(--blur-md) saturate(1.1);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .site-header::before
@@ -31,12 +28,13 @@
     inset: 0;
     background: radial-gradient(
       circle at 50% 35%,
-      rgba(255, 255, 255, 0.04) 0%,
-      transparent 75%
+      rgba(255, 255, 255, 0.06),
+      transparent 70%
     );
 
     pointer-events: none;
     z-index: 0;
+    opacity: 0.35;
 }
 
 /* ====================================
@@ -61,7 +59,7 @@
 ============================================ */
 .header-image-wrapper
 {
-    max-width: 380px;
+    max-width: 360px;
     width: 100%;
     aspect-ratio: 1 / 1;
 }
@@ -72,19 +70,17 @@
     height: 100%;
     border-radius: var(--radius-lg);
     object-fit: cover;
-    filter: brightness(0.98) saturate(1.05);
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
 
     transition: transform var(--transition),
-                filter var(--transition),
                 box-shadow var(--transition);
 }
 
 .header-img:hover
 {
-    transform: scale(1.015);
-    filter: brightness(1.02) saturate(1.12);
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    transform: scale(1.02);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25),
+                0 0 24px rgba(255, 255, 255, 0.12);
 }
 
 /* ====================================
@@ -108,7 +104,7 @@
 
     letter-spacing: 1px;
     line-height: 1.05;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-name::after
@@ -131,7 +127,8 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent);
-    opacity: 0.9;
+    opacity: 0.92;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* ====================================

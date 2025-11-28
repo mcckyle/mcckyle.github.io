@@ -1,38 +1,50 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Portfolio and projects of Kyle D. McColgan - Technology Professional based in Saint Louis. Focused on simple, modern, and meaningful designs."
-        />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="theme-color" content="#1b1612" media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" content="#f2c87e" media="(prefers-color-scheme: light)" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Kyle D. McColgan" />
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+        name="description"
+        content="Portfolio and projects of Kyle D. McColgan - Technology Professional based in Saint Louis. Focused on simple, modern, and meaningful designs."
+      />
+      <meta name="color-scheme" content="dark light" />
+      <meta name="theme-color" content="#0a0e12" media="(prefers-color-scheme: dark)" />
+      <meta name="theme-color" content="#f4e9c7" media="(prefers-color-scheme: light)" />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Kyle D. McColgan" />
 
-        <!-- External Fonts Imports. -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-          as="style"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-          rel="stylesheet"
-        />
+      <!-- External Fonts Imports. -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet"
+      />
 
-        <!-- Favicon for the Website -->
-        <link rel="icon" href="/images/favicon-design-04042025.png" type="image/png" />
-        <title>Kyle D. McColgan - Portfolio</title>
+      <!-- Favicon Import. -->
+      <link rel="icon" href="/images/favicon-design-04042025.png" type="image/png" />
+      <title>Kyle D. McColgan - Portfolio</title>
+  </head>
 
-    </head>
   <body>
+    <div id="snow-container" aria-hidden="true"></div>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const snowContainer = document.getElementById('snow-container');
+      const snowflakes = 30;
+      for (let i = 0; i < snowflakes; i ++ )
+      {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄';
+        snowflake.style.left = `${Math.random() * 100}%`;
+        snowflake.style.animationDuration = `${6 + Math.random() * 8}s`;
+        snowflake.style.fontSize = `${0.7 + Math.random() * 0.6}rem`;
+        snowflake.style.animationDelay = `${Math.random() * 10}s`;
+        snowContainer.appendChild(snowflake);
+      }
+    </script>
   </body>
 </html>

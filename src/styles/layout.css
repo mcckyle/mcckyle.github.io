@@ -15,11 +15,12 @@
     z-index: 2;
     padding: clamp(2rem, 3vw, 3rem);
 
-    background: rgba(22, 28, 34, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    background: var(--glass);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
     border-radius: var(--radius-lg);
-    backdrop-filter: blur(10px) saturate(1.2);
+    backdrop-filter: var(--blur-md) saturate(1.1);
+    container-type: inline-size;
 
     transition: transform 0.35s var(--ease),
                 box-shadow 0.35s var(--ease);
@@ -27,8 +28,8 @@
 
 .section-content:hover
 {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 /* ====================================
@@ -39,9 +40,8 @@
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 3vw, 2.75rem);
     font-weight: 700;
-    line-height: 1.15;
+    color: var(--text-strong);
     letter-spacing: 0.5px;
-    color: color-mix(in srgb, var(--text-strong) 90%, var(--ember) 10%);
     margin-bottom: 1rem;
 }
 
@@ -52,9 +52,9 @@
     height: 2px;
     width: 60px;
     margin-top: 0.75rem;
-    background: linear-gradient(90deg, var(--ember), var(--berry), var(--sage));
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
     border-radius: 999px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* ====================================
