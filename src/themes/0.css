@@ -1,0 +1,80 @@
+/* Filename: 0.css (January 2026 Light Theme) */
+
+/* ====================================
+   Theme Tokens.
+======================================= */
+:root
+{
+    /* Core Palette for January. */
+    --primary: #4b74f2; /* Color: Clear Winter Sky Blue. */
+    --secondary: #8fb3e8; /* Color: Soft Cold Daylight. */
+    --accent: #335dff; /* Color: Focus Accent. */
+    --highlight: #ffffff; /* Color: Clean White. */
+
+    /* Backgrounds and Surfaces. */
+    --bg-base: #f5f7fb; /* Color: Clean Paper White. */
+    --surface: rgba(255, 255, 255, 0.85);
+    --surface-alt: #f8fafc; /* Flat, non-glass surface. */
+    --glass: rgba(255, 255, 255, 0.6);
+    --line: rgba(15, 23, 42, 0.06);
+
+    /* Text Tokens. */
+    --text-strong: #0f172a; /* Color: Deep Slate. */
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --footer-bg: #eef2f7;
+
+    /* System Tokens. */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.25rem;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Effects. */
+    --blur-sm: blur(4px);
+    --blur-md: blur(10px);
+
+    --shadow-sm: 0 1px 4px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.12);
+
+    /* Motion. */
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition: 0.35s var(--ease);
+}
+
+/* ====================================
+   List Accent Styles.
+======================================= */
+ul li::before
+{
+    content: "❄️"; /* Christmas Tree Emoji For December 2025!! */
+    position: absolute;
+    top: 0.15rem;
+    left: 0;
+    font-size: 1rem;
+    color: var(--accent);
+    opacity: 0.6;
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+ul li:hover::before { opacity: 1; transform: translateX(2px); }
+
+/* ====================================
+   Ambient Light Accent Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background: radial-gradient(circle at 70% 12%, rgba(75, 116, 242, 0.06), transparent 60%),
+                radial-gradient(circle at 20% 88%, rgba(143, 179, 232, 0.05), transparent 65%);
+}

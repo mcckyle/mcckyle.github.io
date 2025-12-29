@@ -1,6 +1,6 @@
 //Filename: AboutMe.test.js
 //Author: Kyle McColgan
-//Date: 28 October 2025
+//Date: 29 December 2025
 //Description: This file contains the Jest unit tests for the personal React project about me section.
 
 import React from 'react';
@@ -26,8 +26,8 @@ describe('AboutMe Component', () => {
   });
 
   //Test #3
-  it('renders the first paragraph introducing Kyle', () => {
-    expect(screen.getByText(/Hello! My name is/i)).toBeInTheDocument();
+  it('renders the first paragraph with introduction', () => {
+    expect(screen.getByText(/Hello! I'm/i)).toBeInTheDocument();
   });
 
   //Test #4
@@ -61,13 +61,13 @@ describe('AboutMe Component', () => {
   });
 
   //Test #9
-  it('contains exactly 3 paragraph elements', () => {
+  it('contains exactly 4 paragraph elements', () => {
     const paragraphs = screen.getByRole('region', { name: /about me/i }).querySelectorAll('p');
-    expect(paragraphs.length).toBe(3);
+    expect(paragraphs.length).toBe(4);
   });
 
   //Test #10
-  it('contains a closing line inviting others to connect', () => {
-    expect(screen.getByText(/If anything here resonates, I’d be thrilled to connect/i)).toBeInTheDocument();
+  it('contains a closing line', () => {
+    expect(screen.getByText(/I'm always open to learning something new./i)).toBeInTheDocument();
   });
 });

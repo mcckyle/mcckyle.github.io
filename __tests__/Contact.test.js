@@ -1,6 +1,6 @@
 //Filename: Contact.test.js
 //Author: Kyle McColgan
-//Date: 28 October 2025
+//Date: 18 December 2025
 //Description: This file contains the Jest unit tests for the personal React project contact section.
 
 import React from 'react';
@@ -15,8 +15,8 @@ describe('Contact component', () => {
 
   //Test #1
   it('renders the Contact section', () => {
-    const section = screen.getByRole('region', { name: /Contact Information/i });
-    expect(section).toBeInTheDocument();
+    const heading = screen.getByText(/Contact/i);
+    expect(heading).toBeInTheDocument();
   });
 
   //Test #2

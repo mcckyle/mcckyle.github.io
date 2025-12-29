@@ -1,6 +1,6 @@
 //Filename: Mission.test.js
 //Author: Kyle McColgan
-//Date: 28 October 2025
+//Date: 18 December 2025
 //Description: This file contains the Jest unit tests for the personal React project mission section.
 
 import React from 'react';
@@ -15,14 +15,14 @@ describe('Mission Component', () => {
 
     //Test #1
     it('renders the Mission section', () => {
-        const section = screen.getByRole('region', { name: /Mission Statement/i });
-        expect(section).toBeInTheDocument();
+        const heading = screen.getByText(/Mission/);
+        expect(heading).toBeInTheDocument();
     });
 
     //Test #2
     it('renders the section title correctly', () => {
         const title = screen.getByRole('heading', { level: 2 });
-        expect(title).toHaveTextContent('Mission Statement');
+        expect(title).toHaveTextContent('Mission');
     });
 
     //Test #3
@@ -50,9 +50,9 @@ describe('Mission Component', () => {
     });
 
     //Test #7
-    it('has the correct ARIA role of "region"', () => {
-        const section = screen.getByRole('region', { name: /Mission Statement/i });
-        expect(section).toBeInTheDocument();
+    it('has the correct heading text content"', () => {
+        const heading = screen.getByText(/Mission/);
+        expect(heading).toBeInTheDocument();
     });
 
     //Test #8

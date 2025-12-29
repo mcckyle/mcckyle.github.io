@@ -1,66 +1,109 @@
-/* Filename: Projects.css */
+/* Filename: src/components/Projects/Projects.css */
 
 /* ====================================
-   Projects Styles.
+   Projects Section Styles.
 ======================================= */
-#projects .section-title
+.projects { display: flex; flex-direction: column; align-items: flex-start; }
+
+/* ====================================
+   Intro Text Styles.
+======================================= */
+.projects-intro
 {
-    color: var(--accent);
+    margin-top: 1.5rem;
+    max-width: 62ch;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
 }
 
+/* ====================================
+   Projects List Styles.
+======================================= */
 .projects-list
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    flex-direction: column;
+    gap: clamp(2.5rem, 5vw, 3.5rem);
 
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     padding: 0;
     list-style: none;
 }
 
+/* ====================================
+   Projects Item Styles.
+======================================= */
+.project-item
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--line);
+}
+.project-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+/* ====================================
+   Projects Content Styles.
+======================================= */
+.project-main { max-width: 70ch; }
+
+/* Project Title Styles. */
 .project-title
 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary);
+    letter-spacing: 0.3px;
+    color: var(--text-strong);
     margin-bottom: 0.75rem;
 }
 
 /* Project Description Styles. */
 .project-description
 {
+    font-size: 1.02rem;
+    line-height: 1.75;
     color: var(--text);
-    line-height: 1.65;
-    margin-bottom: 1.25rem;
+    opacity: 0.92;
+    margin: 0;
 }
 
-/* Project Tech Tags Styles. */
+/* ====================================
+   Tech Stack Styles.
+======================================= */
 .project-tech
 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+
     padding: 0;
     margin: 0;
     list-style: none;
+    align-self: flex-start;
 }
 
 .tech-tag
 {
-    background: color-mix(in oklab, var(--accent), white 88%);
-    color: var(--accent);
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    padding: 0.35rem 0.65rem;
-    border-radius: 0.5rem;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.04em;
 
-    transition: background var(--transition), color var(--transition);
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+
+    background: var(--surface-alt);
+    color: var(--text-muted);
 }
 
-.tech-tag:hover
+/* ====================================
+   Media Query Styles.
+======================================= */
+@media (max-width: 768px)
 {
-    background: var(--accent);
-    color: #fff;
+    .project-item { grid-template-columns: 1fr; gap: 1.25rem; }
+    .project-tech { margin-top: 0.5rem; }
 }

@@ -1,9 +1,40 @@
-/* Filename: Mission.css */
+/* Filename: src/components/Mission/Mission.css */
 
-/* =======================
-   Mission Styles.
-========================== */
-#mission .section-title
+/* ====================================
+   Mission Section Styles.
+======================================= */
+.mission { display: flex; flex-direction: column; align-items: flex-start; }
+
+
+/* ====================================
+   Body Container Styles.
+======================================= */
+.mission-body
 {
-    color: var(--secondary);
+    margin-top: 2rem;
+    max-width: 68ch;
 }
+
+/* ====================================
+   Lead Statement Styles.
+======================================= */
+.mission-lead
+{
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--text-strong);
+    opacity: 0.95;
+}
+
+/* ====================================
+   Supporting Paragraphs Styles.
+ ======================================= */
+.mission-body p
+{
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+    opacity: 0.92;
+}
+.mission-body p + p { margin-top: 1.6rem; }

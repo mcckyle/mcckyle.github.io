@@ -1,33 +1,64 @@
-/* Filename: Skills.css */
+/* Filename: src/components/Skills/Skills.css */
 
 /* ====================================
-   Skills Styles.
+   Skills Section Styles.
 ======================================= */
-#skills .section-title
+.skills { display: flex; flex-direction: column; align-items: flex-start; }
+
+/* ====================================
+   Intro Text Styles.
+======================================= */
+.skills-intro
 {
-    color: var(--secondary);
+    margin-top: 1.5rem;
+    max-width: 60ch;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
 }
 
+/* ====================================
+   Skills Grid Layout Styles.
+======================================= */
 .skills-list
 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: clamp(2rem, 4vw, 3rem);
+    margin-top: 3rem;
     padding: 0;
     list-style: none;
 }
 
-.skills-subtitle
+/* ====================================
+   Skills Item Styles.
+======================================= */
+.skills-item
 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.card p
+/* ====================================
+   Skills Title Styles.
+======================================= */
+.skills-subtitle
 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--text-strong);
+}
+
+/* ====================================
+   Skills Description Styles.
+======================================= */
+.skills-item p
+{
+    font-size: 1.02rem;
+    line-height: 1.75;
     color: var(--text);
-    line-height: 1.65;
+    opacity: 0.92;
+    margin: 0;
 }

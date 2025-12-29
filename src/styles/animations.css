@@ -1,4 +1,4 @@
-/* Filename: animations.css */
+/* Filename: src/styles/animations.css */
 
 /* Sequential fade-slide entrance styles. */
 .section[data-animate]
@@ -6,7 +6,7 @@
     opacity: 0;
     transform: translateY(3svh);
 
-    animation-delay: calc(0.15s * var(--i));
+    animation-delay: calc(0.12s * var(--i));
     animation: fadeSlideIn 0.85s var(--ease) forwards;
 }
 
@@ -15,19 +15,6 @@
 ======================================= */
 @keyframes fadeSlideIn
 {
-    from
-    {
-        opacity: 0;
-        transform: translateY(3svh);
-        filter: blur(4px);
-        background-color: color-mix(in srgb, var(--berry) 5%, transparent);
-    }
-
-    to
-    {
-        opacity: 1;
-        transform: translateY(0);
-        filter: none;
-        background-color: none;
-    }
+    from { opacity: 0; transform: translateY(3svh); filter: blur(4px); }
+    to { opacity: 1; transform: translateY(0); filter: none; }
 }

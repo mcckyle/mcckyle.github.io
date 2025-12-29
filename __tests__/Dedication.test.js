@@ -1,6 +1,6 @@
 //Filename: Dedication.test.js
 //Author: Kyle McColgan
-//Date: 28 October 2025
+//Date: 29 December 2025
 //Description: This file contains the Jest unit tests for the personal React project dedication section.
 
 import React from 'react';
@@ -39,8 +39,8 @@ describe('Dedication component', () => {
 
   //Test #5
   it('renders the section with a <div> element.', () => {
-    const section = screen.getByRole('region');
-    expect(section.tagName).toBe('DIV');
+    const div = screen.getByRole('region');
+    expect(div.tagName).toBe('DIV');
   });
 
   //Test #6

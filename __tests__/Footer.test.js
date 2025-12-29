@@ -1,6 +1,6 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 25 November 2025
+//Date: 18 December 2025
 //Description: This file contains the Jest unit tests for the personal React project footer component.
 
 import React from 'react';
@@ -28,7 +28,7 @@ describe('Footer Component', () => {
 
   //Test #3
   test('footer contains a paragraph with the correct class.', () => {
-    const paragraph = screen.getByText(/Wishing peace, joy, and warmth this December/i);
+    const paragraph = screen.getByText(/Blessed to see another year this January/i);
     expect(paragraph).toHaveClass('footer-message');
   });
 
@@ -39,9 +39,9 @@ describe('Footer Component', () => {
   });
 
   //Test #5
-  test('text content includes the word "December" and an emoji.', () => {
-    const text = screen.getByText(/December/i);
-    expect(text.textContent).toMatch(/🎄✨/);
+  test('text content includes the word "January" and an emoji.', () => {
+    const text = screen.getByText(/January/i);
+    expect(text.textContent).toMatch(/✨/);
   });
 
   //Test #6
@@ -51,9 +51,9 @@ describe('Footer Component', () => {
   });
 
   //Test #7
-  test('footer only contains one child element (the paragraph).', () => {
+  test('footer contains two child elements (the paragraphs).', () => {
     const footer = screen.getByRole('contentinfo');
-    expect(footer.childElementCount).toBe(1);
+    expect(footer.childElementCount).toBe(2);
   });
 
   //Test #8

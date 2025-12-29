@@ -4,7 +4,7 @@ exports[`Dedication component matches the snapshot of the Dedication section. 1`
 <DocumentFragment>
   <div
     aria-labelledby="dedication-title"
-    class="section-content"
+    class="section-content dedication"
     id="dedication"
     role="region"
   >
@@ -15,8 +15,7 @@ exports[`Dedication component matches the snapshot of the Dedication section. 1`
       Dedication
     </h2>
     <div
-      class="section-body"
-      id="dedication-body"
+      class="dedication-body"
     >
       <p>
         This website is lovingly dedicated to my family and closest friends, whose encouragement fuels my strength.

@@ -4,7 +4,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
 <DocumentFragment>
   <div
     aria-labelledby="projects-title"
-    class="section-content"
+    class="section-content projects"
     id="projects"
     role="region"
   >
@@ -14,22 +14,31 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
     >
       Projects
     </h2>
+    <p
+      class="projects-intro"
+    >
+      A selection of personal and technical projects focused on reliability, clarity, and thoughtful design.
+    </p>
     <ul
       class="projects-list"
     >
       <li
-        class="card"
+        class="project-item"
       >
-        <h3
-          class="project-title"
+        <div
+          class="project-main"
         >
-          Automated Snapshot Management Script
-        </h3>
-        <p
-          class="project-description"
-        >
-          A Bash script that automates system snapshot storage with Snapper. Enhances reliability by managing snapshots efficiently and transferring them to local storage to conserve disk space while maintaining version history.
-        </p>
+          <h3
+            class="project-title"
+          >
+            Automated Snapshot Management Script
+          </h3>
+          <p
+            class="project-description"
+          >
+            A Bash utility that automates system snapshot management using Snapper, improving reliability while conserving disk space through intelligent snapshot rotation and offloading.
+          </p>
+        </div>
         <ul
           class="project-tech"
         >
@@ -51,18 +60,106 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
       <li
-        class="card"
+        class="project-item"
       >
-        <h3
-          class="project-title"
+        <div
+          class="project-main"
         >
-          ShowMeTasks
-        </h3>
-        <p
-          class="project-description"
+          <h3
+            class="project-title"
+          >
+            ShowMeTasks
+          </h3>
+          <p
+            class="project-description"
+          >
+            A full-stack task management application featuring a React frontend and Spring Boot backend, designed with clean APIs, secure data handling, and a responsive user experience.
+          </p>
+        </div>
+        <ul
+          class="project-tech"
         >
-          A full-stack to-do list application built with Java, React, and Spring Boot. Offers a seamless task management experience with responsive design, robust backend logic, and secure RESTful APIs.
-        </p>
+          <li
+            class="tech-tag"
+          >
+            Java
+          </li>
+          <li
+            class="tech-tag"
+          >
+            React
+          </li>
+          <li
+            class="tech-tag"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-tag"
+          >
+            MySQL
+          </li>
+        </ul>
+      </li>
+      <li
+        class="project-item"
+      >
+        <div
+          class="project-main"
+        >
+          <h3
+            class="project-title"
+          >
+            Gift Planner
+          </h3>
+          <p
+            class="project-description"
+          >
+            A full-stack gift planning application that helps organize people and gift ideas, backed by a secure REST API and a modern React interface.
+          </p>
+        </div>
+        <ul
+          class="project-tech"
+        >
+          <li
+            class="tech-tag"
+          >
+            Java
+          </li>
+          <li
+            class="tech-tag"
+          >
+            React
+          </li>
+          <li
+            class="tech-tag"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-tag"
+          >
+            MySQL
+          </li>
+        </ul>
+      </li>
+      <li
+        class="project-item"
+      >
+        <div
+          class="project-main"
+        >
+          <h3
+            class="project-title"
+          >
+            Gratitude Journal
+          </h3>
+          <p
+            class="project-description"
+          >
+            A journaling application focused on simplicity and reflection, combining a clean React UI with a robust Spring Boot backend for secure data persistence.
+          </p>
+        </div>
         <ul
           class="project-tech"
         >

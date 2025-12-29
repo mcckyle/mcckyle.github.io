@@ -4,22 +4,22 @@ exports[`Mission Component matches the snapshot of the Mission section 1`] = `
 <DocumentFragment>
   <div
     aria-labelledby="mission-title"
-    class="section-content"
+    class="section-content mission"
     id="mission"
-    role="region"
   >
     <h2
       class="section-title"
       id="mission-title"
     >
-      Mission Statement
+      Mission
     </h2>
     <div
-      class="section-body"
-      id="mission-body"
+      class="mission-body"
     >
-      <p>
-        My mission is to uplift the local tech community by sharing the knowledge I've gained and fostering an environment of integrity, collaboration, and continuous growth. Through leading by example, I aim to inspire others in their journey toward technical excellence.
+      <p
+        class="mission-lead"
+      >
+        My mission is to uplift the local tech community by sharing the knowledge I've gained and fostering an environment of integrity, collaboration, and continuous growth.
       </p>
       <p>
         I am dedicated to supporting developers, IT professionals, and organizations in building secure, efficient, and scalable systems. My goal is to exceed expectations by delivering solutions that are thoughtfully designed, secure, and accessible.

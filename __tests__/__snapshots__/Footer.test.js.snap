@@ -6,24 +6,19 @@ exports[`Footer Component footer matches the snapshot. 1`] = `
     aria-label="Site Footer"
     class="footer"
   >
-    <div
-      class="footer-container"
+    <p
+      class="footer-message"
     >
-      <p
-        class="footer-message"
-      >
-        Wishing peace, joy, and warmth this December 🎄✨
-      </p>
-      <p
-        class="footer-credit"
-      >
-        © 2025 
-        <strong>
-          Kyle McColgan
-        </strong>
-         · Saint Louis
-      </p>
-    </div>
+      Blessed to see another year this January ✨
+    </p>
+    <p
+      class="footer-credit"
+    >
+      © 2025 Designed in Saint Louis by 
+      <strong>
+        Kyle McColgan
+      </strong>
+    </p>
   </footer>
 </DocumentFragment>
 `;

@@ -1,9 +1,30 @@
-/* Filename: Dedication.css */
+/* Filename: src/components/Dedication/Dedication.css */
 
-/* =======================
-   Dedication Styles.
-========================== */
+/* ====================================
+   Dedication Section Styles.
+======================================= */
 #dedication .section-title
 {
-    color: var(--highlight);
+    opacity: 0.85;
 }
+
+.dedication-body
+{
+    margin-top: 2.25rem;
+    max-width: 60ch;
+}
+
+.dedication-body p
+{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    opacity: 0.92;
+}
+
+.dedication-body p + p
+{
+    margin-top: 1.75rem;
+}
+
+#dedication { color: var(--text); }

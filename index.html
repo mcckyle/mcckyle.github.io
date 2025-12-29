@@ -25,26 +25,8 @@
       <link rel="icon" href="/images/favicon-design-04042025.png" type="image/png" />
       <title>Kyle D. McColgan - Portfolio</title>
   </head>
-
   <body>
-    <div id="snow-container" aria-hidden="true"></div>
     <div id="root"></div>
-
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      const snowContainer = document.getElementById('snow-container');
-      const snowflakes = 30;
-      for (let i = 0; i < snowflakes; i ++ )
-      {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.textContent = '❄';
-        snowflake.style.left = `${Math.random() * 100}%`;
-        snowflake.style.animationDuration = `${6 + Math.random() * 8}s`;
-        snowflake.style.fontSize = `${0.7 + Math.random() * 0.6}rem`;
-        snowflake.style.animationDelay = `${Math.random() * 10}s`;
-        snowContainer.appendChild(snowflake);
-      }
-    </script>
   </body>
 </html>

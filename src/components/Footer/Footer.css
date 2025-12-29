@@ -1,63 +1,47 @@
-/* Filename: Footer.css */
+/* Filename: src/components/Footer/Footer.css */
 
 /* ====================================
    Footer Styles.
 ======================================= */
 .footer
 {
-    background: var(--glass);
-    backdrop-filter: var(--blur-md) saturate(1.05);
-    border-top: 1px solid var(--line);
-    padding: clamp(2rem, 4vw, 3rem) 0;
+    margin-top: clamp(4rem, 8vw, 6rem);
+    padding: clamp(2rem, 4vw, 3rem) 1.25rem;
 
-    transition: background var(--transition);
-}
-
-.footer-container
-{
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.65rem;
+    text-align: center;
+
+    border-top: 1px solid var(--line);
+    background: transparent;
 }
 
-/* Seasonal Line Styles. */
+/* Seasonal Message Styles. */
 .footer-message
 {
-    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    color: var(--accent);
-    margin: 0;
-    opacity: 0.9;
+    color: var(--text-muted);
 }
 
 /* Ownership Line Styles. */
 .footer-credit
 {
-    font-size: 0.9rem;
-    color: var(--text-muted);
     margin: 0;
-    opacity: 0.85;
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 .footer-credit strong
 {
     font-weight: 600;
-    color: var(--accent);
+    color: var(--text);
 }
 
 @media (min-width: 768px)
 {
-    .footer
-    {
-        padding: 2.5rem 1.25rem;
-    }
-
-    .footer-message
-    {
-        font-size: 1.05rem;
-    }
+    .footer { padding: 2.5rem 1.25rem; }
+    .footer-message { font-size: 1.05rem; }
 }

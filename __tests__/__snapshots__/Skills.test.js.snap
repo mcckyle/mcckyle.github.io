@@ -4,7 +4,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
 <DocumentFragment>
   <div
     aria-labelledby="skills-title"
-    class="section-content"
+    class="section-content skills"
     id="skills"
     role="region"
   >
@@ -14,11 +14,16 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
     >
       Skills
     </h2>
+    <p
+      class="skills-intro"
+    >
+      A focused overview of the technical disciplines I work in most often.
+    </p>
     <ul
       class="skills-list"
     >
       <li
-        class="card"
+        class="skills-item"
       >
         <h3
           class="skills-subtitle"
@@ -26,11 +31,11 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
           Application Development
         </h3>
         <p>
-          Proficient in Java and JavaScript, building scalable web apps with clean architecture. Experienced with React on the front end and Spring Boot on the backend to deliver responsive full-stack solutions.
+          Designing and building scalable web applications with clean architecture. Experienced in Java and JavaScript, using React on the frontend and Spring Boot on the backend to deliver cohesive, full-stack systems.
         </p>
       </li>
       <li
-        class="card"
+        class="skills-item"
       >
         <h3
           class="skills-subtitle"
@@ -38,11 +43,11 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
           Frontend Engineering
         </h3>
         <p>
-          Skilled in HTML, CSS, and modern JavaScript. I use React to create intuitive, accessible UIs and incorporate libraries like Bootstrap and Material-UI to accelerate design implementation.
+          Creating intuitive, accessible interfaces with HTML, CSS, and modern JavaScript. Focused on clarity, responsiveness, and maintainable React component design.
         </p>
       </li>
       <li
-        class="card"
+        class="skills-item"
       >
         <h3
           class="skills-subtitle"
@@ -50,11 +55,11 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
           Backend & Systems
         </h3>
         <p>
-          Comfortable working with Java, C++, and Python for backend development and systems programming. I focus on writing efficient, secure, and well-documented code for maintainability and performance.
+          Developing efficient backend services and system-level software in Java, C++, and Python, with an emphasis on performance, security, and long-term maintainability.
         </p>
       </li>
       <li
-        class="card"
+        class="skills-item"
       >
         <h3
           class="skills-subtitle"
@@ -62,7 +67,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
           Information Security
         </h3>
         <p>
-          Solid understanding of secure coding practices, data protection, and threat mitigation. Actively applying these principles in personal projects to reinforce privacy, integrity, and robust application design.
+          Applying secure coding practices and threat-mitigation principles to protect data integrity, privacy, and application reliability.
         </p>
       </li>
     </ul>

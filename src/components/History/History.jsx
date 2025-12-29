@@ -1,6 +1,6 @@
 //Filename: History.jsx
 //Author: Kyle McColgan
-//Date: 28 October 2025
+//Date: 29 December 2025
 //Description: This file contains the component for the React personal project professional history section.
 
 import React from "react";
@@ -22,14 +22,26 @@ function History()
   ];
 
   return (
-    <div id="history" role="region" aria-labelledby="history-title" className="section-content">
+    <div
+      id="history"
+      role="region"
+      className="section-content history"
+      aria-labelledby="history-title"
+    >
       <h2 id="history-title" className="section-title">
         Professional History
       </h2>
-      <ul className="history-list">
+
+      <p className="history-intro">
+        A focused timeline of roles centered on systems reliability,
+        engineering discipline, and practical software development.
+      </p>
+
+      <ol className="history-list">
         {experiences.map((exp, index) => (
           <li key={index} className="history-item">
-            <div className="history-marker" aria-hidden="true"></div>
+            <span className="history-marker" aria-hidden="true" />
+
             <div className="history-content">
               <h3 className="history-role">{exp.role}</h3>
               <p className="history-company">{exp.company}</p>
@@ -37,7 +49,7 @@ function History()
             </div>
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

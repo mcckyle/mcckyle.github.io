@@ -4,7 +4,7 @@ exports[`History component matches the snapshot of the History section 1`] = `
 <DocumentFragment>
   <div
     aria-labelledby="history-title"
-    class="section-content"
+    class="section-content history"
     id="history"
     role="region"
   >
@@ -14,13 +14,18 @@ exports[`History component matches the snapshot of the History section 1`] = `
     >
       Professional History
     </h2>
-    <ul
+    <p
+      class="history-intro"
+    >
+      A focused timeline of roles centered on systems reliability, engineering discipline, and practical software development.
+    </p>
+    <ol
       class="history-list"
     >
       <li
         class="history-item"
       >
-        <div
+        <span
           aria-hidden="true"
           class="history-marker"
         />
@@ -47,7 +52,7 @@ exports[`History component matches the snapshot of the History section 1`] = `
       <li
         class="history-item"
       >
-        <div
+        <span
           aria-hidden="true"
           class="history-marker"
         />
@@ -71,7 +76,7 @@ exports[`History component matches the snapshot of the History section 1`] = `
           </time>
         </div>
       </li>
-    </ul>
+    </ol>
   </div>
 </DocumentFragment>
 `;

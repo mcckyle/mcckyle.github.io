@@ -1,75 +1,68 @@
-/* Filename: Contact.css */
+/* Filename: src/components/Contact/Contact.css */
 
 /* ====================================
-   Contact Section Styles.
+   Contact List Styles.
 ======================================= */
-#contact .section-title
-{
-    color: var(--accent);
-}
-
-.contact-container
-{
-    max-width: 720px;
-}
-
 .contact-list
 {
     font-style: normal; /* Override <address> italics. */
-}
-
-.contact-list ul
-{
-    display: grid;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-item
-{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
-
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--text);
-
-    transition: transform 0.3s var(--ease), color var(--transition);
-}
-
-.contact-item:hover
-{
-    transform: translateX(4px);
+    margin-top: 2.5rem;
 }
 
 /* ====================================
-   Contact Label Styles.
+   Contact Grid Styles.
+======================================= */
+.contact-list ul
+{
+    display: grid;
+    gap: 1.75rem;
+    max-width: 720px;
+}
+
+/* ====================================
+   Contact Item Styles.
+======================================= */
+.contact-item
+{
+    display: grid;
+    grid-template-columns: minmax(110px, 140px) 1fr;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--line), transparent 50%);
+}
+
+/* ====================================
+   Contact Labels Styles.
 ======================================= */
 .contact-label
 {
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--highlight);
     text-transform: uppercase;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
 }
+
+/* ====================================
+   Contact Values Styles.
+======================================= */
+.contact-value { font-size: 1rem; color: var(--text); }
 
 /* ====================================
    Contact Links Styles.
 ======================================= */
-.contact-list a
+.contact-link
 {
+    font-size: 1rem;
     color: var(--accent);
     text-decoration: none;
-    position: relative;
 
     transition: color var(--transition);
 }
 
-.contact-list a::after
+.contact-link::after
 {
     content: "";
     position: absolute;
@@ -78,29 +71,30 @@
     width: 100%;
     height: 1px;
     background: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
+    opacity: 0.35;
 
-    transition: transform var(--transition);
+    transition: opacity var(--transition), transform var(--transition);
 }
+.contact-link:hover,
+.contact-link:focus-visible { color: var(--primary); }
+.contact-link:hover::after,
+.contact-link:focus-visible::after { opacity: 1; transform: scaleX(1.05); }
 
-.contact-list a:hover,
-.contact-list a:focus
-{
-    color: var(--primary);
-}
-
-.contact-list a:hover::after,
-.contact-list a:focus::after
-{
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* Accessibility Focus Styles. */
-.contact-list a:focus-visible
+/* ====================================
+   Accessibility Styles.
+======================================= */
+.contact-link:focus-visible
 {
     outline: 2px solid var(--primary);
-    outline-offset: 3px;
-    border-radius: 3px;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* ====================================
+   Media Query Styles.
+======================================= */
+@media (max-width: 640px)
+{
+    .contact-item { grid-template-columns: 1fr; row-gap: 0.35rem; }
+    .contact-label { font-size: 0.7rem; }
 }

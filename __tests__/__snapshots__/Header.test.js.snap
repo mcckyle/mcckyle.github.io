@@ -13,17 +13,12 @@ exports[`Header Component matches the snapshot 1`] = `
         class="header-image-wrapper"
       >
         <img
-          alt="Kyle on a boat by the beach."
+          alt="Portrait of Kyle D. McColgan."
           class="header-img"
           decoding="async"
           loading="lazy"
           src="test-file-stub"
         />
-        <figcaption
-          class="visually-hidden"
-        >
-          Portrait of Kyle D. McColgan on a boat by the beach.
-        </figcaption>
       </figure>
       <div
         class="header-text"

@@ -1,6 +1,6 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 28 October 2025
+//Date: 29 December 2025
 //Description: This file contains the component for the personal React project skills section.
 
 import React from "react";
@@ -12,31 +12,43 @@ function Skills()
     {
       title: "Application Development",
       description:
-        "Proficient in Java and JavaScript, building scalable web apps with clean architecture. Experienced with React on the front end and Spring Boot on the backend to deliver responsive full-stack solutions.",
+        "Designing and building scalable web applications with clean architecture. Experienced in Java and JavaScript, using React on the frontend and Spring Boot on the backend to deliver cohesive, full-stack systems.",
     },
     {
       title: "Frontend Engineering",
       description:
-        "Skilled in HTML, CSS, and modern JavaScript. I use React to create intuitive, accessible UIs and incorporate libraries like Bootstrap and Material-UI to accelerate design implementation.",
+        "Creating intuitive, accessible interfaces with HTML, CSS, and modern JavaScript. Focused on clarity, responsiveness, and maintainable React component design.",
     },
     {
       title: "Backend & Systems",
       description:
-        "Comfortable working with Java, C++, and Python for backend development and systems programming. I focus on writing efficient, secure, and well-documented code for maintainability and performance.",
+        "Developing efficient backend services and system-level software in Java, C++, and Python, with an emphasis on performance, security, and long-term maintainability.",
     },
     {
       title: "Information Security",
       description:
-        "Solid understanding of secure coding practices, data protection, and threat mitigation. Actively applying these principles in personal projects to reinforce privacy, integrity, and robust application design.",
+        "Applying secure coding practices and threat-mitigation principles to protect data integrity, privacy, and application reliability.",
     },
   ];
 
   return (
-    <div id="skills" role="region" aria-labelledby="skills-title" className="section-content">
-      <h2 id="skills-title" className="section-title">Skills</h2>
+    <div
+      id="skills"
+      role="region"
+      className="section-content skills"
+      aria-labelledby="skills-title"
+    >
+      <h2 id="skills-title" className="section-title">
+        Skills
+      </h2>
+
+      <p className="skills-intro">
+        A focused overview of the technical disciplines I work in most often.
+      </p>
+
       <ul className="skills-list">
         {skills.map((skill, index) => (
-          <li key={index} className="card">
+          <li key={index} className="skills-item">
             <h3 className="skills-subtitle">{skill.title}</h3>
             <p>{skill.description}</p>
           </li>

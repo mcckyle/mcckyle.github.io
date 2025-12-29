@@ -1,89 +1,82 @@
-/* Filename: History.css */
+/* Filename: src/components/History/History.css */
 
 /* ====================================
    History Styles.
 ======================================= */
-#history .section-title
+.history { display: flex; flex-direction: column; align-items: flex-start; }
+
+/* History Intro Text Styles. */
+.history-intro
 {
-    color: var(--highlight);
+    margin-top: 1.25rem;
+    max-width: 60ch;
+    font-size: 1.05rem;
+    color: var(--text-muted);
 }
 
+/* History Timeline List Styles. */
 .history-list
 {
-    list-style: none;
+    position: relative;
+    margin-top: 2.75rem;
     padding: 0;
+    list-style: none;
 
-    margin-top: 2rem;
     display: grid;
-    gap: 2rem;
+    gap: 2.25rem;
+}
+
+/* Vertical Timeline Line Styles. */
+.history-item::before
+{
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+    background: var(--line);
 }
 
 /* History Timeline Item Styles. */
 .history-item
 {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
     position: relative;
-
-    background: var(--surface);
-    padding: 1.5rem 1.75rem;
-    border-radius: 1rem;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-
-    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    gap: 1.5rem;
+    padding-left: 1.5rem;
 }
-
-.history-item:hover
-{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-}
-
-/* History Timeline Line Styles. */
-/*.history-item::before
-{
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--highlight);
-    opacity: 0.25;
-}*/
 
 /* History Timeline Marker Styles. */
 .history-marker
 {
-    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+
     width: 14px;
     height: 14px;
-    background: var(--highlight);
     border-radius: 50%;
-    margin-top: 0.5rem;
-    box-shadow: 0 0 0 3px var(--surface);
+
+    background: var(--surface);
+    border: 2px solid var(--accent);
 }
+
+.history-content { max-width: 60ch; }
 
 .history-role
 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.35rem;
-
-    transition: color var(--transition);
-}
-
-.history-role:hover
-{
-    color: var(--accent);
+    color: var(--text-strong);
+    margin-bottom: 0.25rem;
 }
 
 .history-company
 {
     font-size: 1rem;
-    color: var(--accent);
+    color: var(--text);
     margin-bottom: 0.25rem;
 }
 

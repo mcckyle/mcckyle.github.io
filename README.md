@@ -10,7 +10,7 @@ This repository contains the source code for my personal website, designed to sh
 
 Feel free to explore my work, as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./public/images/Screenshot_20251031_165837.png)
+![Portfolio Screenshot](./public/images/Screenshot_20251229_171736.png)
 *A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*

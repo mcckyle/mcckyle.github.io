@@ -1,6 +1,6 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 25 November 2025
+//Date: 18 December 2025
 //Description: This file contains the component implementation for the React personal project footer section.
 
 import React from "react";
@@ -12,14 +12,13 @@ function Footer()
 
   return (
     <footer className="footer" aria-label="Site Footer">
-      <div className="footer-container">
-        <p className="footer-message">
-          Wishing peace, joy, and warmth this December 🎄✨
-        </p>
-        <p className="footer-credit">
-          © {year} <strong>Kyle McColgan</strong> · Saint&nbsp;Louis
-        </p>
-      </div>
+      <p className="footer-message">
+        Blessed to see another year this January ✨
+      </p>
+
+      <p className="footer-credit">
+        © {year} Designed in Saint&nbsp;Louis by <strong>Kyle McColgan</strong>
+      </p>
     </footer>
   );
 }

@@ -1,35 +1,14 @@
-/* Filename: layout.css */
+/* Filename: src/styles/layout.css */
 
 /* ====================================
    Section Inner Content Styles.
 ======================================= */
 .section-content
 {
-    width: min(90%, 1000px);
-    margin-inline: auto;
+    width: 100%;
+    margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 2.5vw, 2.5rem);
-    position: relative;
-    z-index: 2;
-    padding: clamp(2rem, 3vw, 3rem);
-
-    background: var(--glass);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow-md);
-    border-radius: var(--radius-lg);
-    backdrop-filter: var(--blur-md) saturate(1.1);
-    container-type: inline-size;
-
-    transition: transform 0.35s var(--ease),
-                box-shadow 0.35s var(--ease);
-}
-
-.section-content:hover
-{
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    padding-inline: clamp(2rem, 6vw, 6rem);
 }
 
 /* ====================================
@@ -41,8 +20,8 @@
     font-size: clamp(2rem, 3vw, 2.75rem);
     font-weight: 700;
     color: var(--text-strong);
-    letter-spacing: 0.5px;
-    margin-bottom: 1rem;
+    letter-spacing: 0.4px;
+    margin-bottom: 1.25rem;
 }
 
 .section-title::after
@@ -50,11 +29,11 @@
     content: "";
     display: block;
     height: 2px;
-    width: 60px;
+    width: 64px;
     margin-top: 0.75rem;
     background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
     border-radius: 999px;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 /* ====================================
@@ -62,14 +41,5 @@
 ======================================= */
 @media (max-width: 768px)
 {
-    .section-content
-    {
-        width: min(94%, 95%);
-        padding: clamp(1.25rem, 5vw, 2rem);
-    }
-
-    .section-title::after
-    {
-        width: 60px;
-    }
+    .section-content { padding-inline: clamp(1.25rem, 5vw, 2rem); }
 }
