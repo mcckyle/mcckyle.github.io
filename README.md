@@ -6,11 +6,11 @@
 
 Welcome! 👋
 
-This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating user-friendly and accessible web designs.
+This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating simple and modern web designs.
 
 Feel free to explore my work, as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./public/images/Screenshot_20251229_171736.png)
+![Portfolio Screenshot](./public/images/Screenshot_20251229_175640.png)
 *A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
