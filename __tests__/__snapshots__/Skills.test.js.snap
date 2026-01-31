@@ -2,11 +2,10 @@
 
 exports[`Skills Component matches the snapshot of the Skills section 1`] = `
 <DocumentFragment>
-  <div
+  <section
     aria-labelledby="skills-title"
     class="section-content skills"
     id="skills"
-    role="region"
   >
     <h2
       class="section-title"
@@ -23,7 +22,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
       class="skills-list"
     >
       <li
-        class="skills-item"
+        class="card"
       >
         <h3
           class="skills-subtitle"
@@ -35,7 +34,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
         </p>
       </li>
       <li
-        class="skills-item"
+        class="card"
       >
         <h3
           class="skills-subtitle"
@@ -47,7 +46,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
         </p>
       </li>
       <li
-        class="skills-item"
+        class="card"
       >
         <h3
           class="skills-subtitle"
@@ -59,7 +58,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
         </p>
       </li>
       <li
-        class="skills-item"
+        class="card"
       >
         <h3
           class="skills-subtitle"
@@ -71,6 +70,6 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
         </p>
       </li>
     </ul>
-  </div>
+  </section>
 </DocumentFragment>
 `;

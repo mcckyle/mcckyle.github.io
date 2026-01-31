@@ -1,7 +1,7 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 29 December 2025
-//Description: This file contains the component for the personal React project projects section.
+//Date: 27 January 2026
+//Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
 import "./Projects.css";
@@ -36,12 +36,12 @@ function Projects()
     ];
 
     return (
-        <div
+        <section
           id="projects"
           role="region"
           className="section-content projects"
           aria-labelledby="projects-title"
-          >
+        >
             <h2 id="projects-title" className="section-title">
               Projects
             </h2>
@@ -53,7 +53,7 @@ function Projects()
 
             <ul className="projects-list">
               {projects.map((project, index) => (
-                <li key={index} className="project-item">
+                <li key={index} className="card">
                   <div className="project-main">
                     <h3 className="project-title">{project.title}</h3>
                     <p className="project-description">{project.description}</p>
@@ -69,7 +69,7 @@ function Projects()
                 </li>
               ))}
             </ul>
-        </div>
+        </section>
     );
 }
 

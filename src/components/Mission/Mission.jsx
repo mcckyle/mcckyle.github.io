@@ -1,7 +1,7 @@
 //Filename: Mission.jsx
 //Author: Kyle McColgan
-//Date: 29 December 2025
-//Description: This file contains the component for the personal React project mission statement.
+//Date: 27 January 2026
+//Description: This file contains the Mission component for the personal React project.
 
 import React from 'react';
 import './Mission.css';
@@ -9,7 +9,7 @@ import './Mission.css';
 function Mission()
 {
     return (
-      <div
+      <section
         id="mission"
         className="section-content mission"
         aria-labelledby="mission-title"
@@ -39,7 +39,7 @@ function Mission()
             personally and professionally.
           </p>
         </div>
-      </div>
+      </section>
     );
 }
 

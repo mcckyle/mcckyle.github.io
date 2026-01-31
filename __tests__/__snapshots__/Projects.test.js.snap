@@ -2,7 +2,7 @@
 
 exports[`Projects component matches the snapshot of the Projects section 1`] = `
 <DocumentFragment>
-  <div
+  <section
     aria-labelledby="projects-title"
     class="section-content projects"
     id="projects"
@@ -23,7 +23,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
       class="projects-list"
     >
       <li
-        class="project-item"
+        class="card"
       >
         <div
           class="project-main"
@@ -60,7 +60,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
       <li
-        class="project-item"
+        class="card"
       >
         <div
           class="project-main"
@@ -102,7 +102,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
       <li
-        class="project-item"
+        class="card"
       >
         <div
           class="project-main"
@@ -144,7 +144,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
       <li
-        class="project-item"
+        class="card"
       >
         <div
           class="project-main"
@@ -186,6 +186,6 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
         </ul>
       </li>
     </ul>
-  </div>
+  </section>
 </DocumentFragment>
 `;

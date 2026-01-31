@@ -1,19 +1,14 @@
 /* Filename: src/components/Projects/Projects.css */
 
 /* ====================================
-   Projects Section Styles.
-======================================= */
-.projects { display: flex; flex-direction: column; align-items: flex-start; }
-
-/* ====================================
-   Intro Text Styles.
+   Projects Intro Text Styles.
 ======================================= */
 .projects-intro
 {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     max-width: 62ch;
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text-muted);
 }
 
@@ -40,11 +35,7 @@
     grid-template-columns: 1fr auto;
     gap: 2rem;
     align-items: start;
-
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--line);
 }
-.project-item:last-child { border-bottom: none; padding-bottom: 0; }
 
 /* ====================================
    Projects Content Styles.
@@ -54,7 +45,7 @@
 /* Project Title Styles. */
 .project-title
 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 0.3px;
     color: var(--text-strong);
@@ -64,15 +55,14 @@
 /* Project Description Styles. */
 .project-description
 {
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     line-height: 1.75;
     color: var(--text);
-    opacity: 0.92;
     margin: 0;
 }
 
 /* ====================================
-   Tech Stack Styles.
+   Projects Tech Stack Styles.
 ======================================= */
 .project-tech
 {
@@ -88,22 +78,24 @@
 
 .tech-tag
 {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-
-    padding: 0.35rem 0.55rem;
+    padding: 0.35rem 0.6rem;
     border-radius: 999px;
 
     background: var(--surface-alt);
     color: var(--text-muted);
+
+    transition: background 0.3s var(--ease), color 0.3s var(--ease);
 }
+.tech-tag:hover { background: var(--primary); color: var(--bg-base); }
 
 /* ====================================
-   Media Query Styles.
+   Projects Media Query Styles.
 ======================================= */
 @media (max-width: 768px)
 {
-    .project-item { grid-template-columns: 1fr; gap: 1.25rem; }
-    .project-tech { margin-top: 0.5rem; }
+    .project-item { grid-template-columns: 1fr; gap: 1.5rem; padding: var(--space-sm); }
+    .project-tech { margin-top: 0.75rem; }
 }

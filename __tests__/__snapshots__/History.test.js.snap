@@ -2,11 +2,10 @@
 
 exports[`History component matches the snapshot of the History section 1`] = `
 <DocumentFragment>
-  <div
+  <section
     aria-labelledby="history-title"
     class="section-content history"
     id="history"
-    role="region"
   >
     <h2
       class="section-title"
@@ -17,7 +16,7 @@ exports[`History component matches the snapshot of the History section 1`] = `
     <p
       class="history-intro"
     >
-      A focused timeline of roles centered on systems reliability, engineering discipline, and practical software development.
+      A concise timeline of roles focused on systems reliability, engineering discipline, and practical software development.
     </p>
     <ol
       class="history-list"
@@ -37,16 +36,20 @@ exports[`History component matches the snapshot of the History section 1`] = `
           >
             IT System Engineer
           </h3>
-          <p
-            class="history-company"
+          <div
+            class="history-meta"
           >
-            Primary Systems
-          </p>
-          <time
-            class="history-period"
-          >
-            May 2023 - September 2023
-          </time>
+            <span
+              class="history-company"
+            >
+              Primary Systems
+            </span>
+            <time
+              class="history-period"
+            >
+              May 2023 - September 2023
+            </time>
+          </div>
         </div>
       </li>
       <li
@@ -64,19 +67,23 @@ exports[`History component matches the snapshot of the History section 1`] = `
           >
             Software Engineer
           </h3>
-          <p
-            class="history-company"
+          <div
+            class="history-meta"
           >
-            Walmart
-          </p>
-          <time
-            class="history-period"
-          >
-            July 2021 - October 2022
-          </time>
+            <span
+              class="history-company"
+            >
+              Walmart
+            </span>
+            <time
+              class="history-period"
+            >
+              July 2021 - October 2022
+            </time>
+          </div>
         </div>
       </li>
     </ol>
-  </div>
+  </section>
 </DocumentFragment>
 `;

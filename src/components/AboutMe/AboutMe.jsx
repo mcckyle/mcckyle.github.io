@@ -1,7 +1,7 @@
 //Filename: AboutMe.jsx
 //Author: Kyle McColgan
-//Date: 29 December 2025
-//Description: This file contains the component for the personal React project about section.
+//Date: 27 January 2026
+//Description: This file contains the AboutMe component for the personal React project.
 
 import React from 'react';
 import './AboutMe.css';
@@ -9,9 +9,8 @@ import './AboutMe.css';
 function AboutMe()
 {
     return (
-      <div
+      <section
         id="about-me"
-        role="region"
         className="section-content about-me"
         aria-labelledby="about-title"
       >
@@ -43,7 +42,7 @@ function AboutMe()
             with intention - and I'm always open to learning something new.
           </p>
         </div>
-      </div>
+      </section>
     );
 }
 

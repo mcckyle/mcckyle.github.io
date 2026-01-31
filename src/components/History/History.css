@@ -1,54 +1,60 @@
 /* Filename: src/components/History/History.css */
 
 /* ====================================
-   History Styles.
+   History Intro Text Styles.
 ======================================= */
-.history { display: flex; flex-direction: column; align-items: flex-start; }
-
-/* History Intro Text Styles. */
 .history-intro
 {
     margin-top: 1.25rem;
     max-width: 60ch;
     font-size: 1.05rem;
+    line-height: 1.7;
     color: var(--text-muted);
 }
 
-/* History Timeline List Styles. */
+/* ====================================
+   History Timeline List Styles.
+======================================= */
 .history-list
 {
     position: relative;
-    margin-top: 2.75rem;
+    margin-top: 3rem;
     padding: 0;
     list-style: none;
 
     display: grid;
-    gap: 2.25rem;
+    gap: 2.5rem;
 }
 
-/* Vertical Timeline Line Styles. */
+/* ====================================
+   History Timeline Item Styles.
+======================================= */
+.history-item
+{
+    position: relative;
+    display: flex;
+    gap: 1.75rem;
+    padding-left: 1.75rem;
+}
+
+/* ====================================
+   History Vertical Connector Styles.
+======================================= */
 .history-item::before
 {
     content: "";
     position: absolute;
     left: 6px;
-    top: 0;
-    bottom: 0;
+    top: 0.9rem;
+    height: calc(100% - 0.9rem);
 
-    width: 2px;
+    width: 1px;
     background: var(--line);
 }
 
-/* History Timeline Item Styles. */
-.history-item
-{
-    position: relative;
-    display: flex;
-    gap: 1.5rem;
-    padding-left: 1.5rem;
-}
-
-/* History Timeline Marker Styles. */
+/* ====================================
+   History Timeline Marker Styles.
+======================================= */
 .history-marker
 {
     position: absolute;
@@ -63,21 +69,37 @@
     border: 2px solid var(--accent);
 }
 
-.history-content { max-width: 60ch; }
+/* ====================================
+   History Timeline Marker Styles.
+======================================= */
+.history-content
+{
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
 
 .history-role
 {
     font-size: 1.15rem;
     font-weight: 600;
+    letter-spacing: 0.2px;
     color: var(--text-strong);
-    margin-bottom: 0.25rem;
+}
+
+.history-meta
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .history-company
 {
     font-size: 1rem;
     color: var(--text);
-    margin-bottom: 0.25rem;
 }
 
 .history-period

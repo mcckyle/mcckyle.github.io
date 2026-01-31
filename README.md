@@ -10,7 +10,7 @@ This repository contains the source code for my personal website, designed to sh
 
 Feel free to explore my work, as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
 
-![Portfolio Screenshot](./public/images/Screenshot_20251229_175640.png)
+![Portfolio Screenshot](./public/images/Screenshot_20260127_222909.png)
 *A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
@@ -29,10 +29,10 @@ Feel free to explore my work, as well as reach out if you're interested in colla
 
 ## Technologies Used
 
-- **Languages:** HTML, CSS, JavaScript, React.
+- **Languages:** HTML, CSS, JavaScript, React
   For building responsive, interactive, and dynamic web interfaces.
   
-- **Build Tool** [Vite](https://vitejs.dev)
+- **Build Tool:** [Vite](https://vitejs.dev)
   Enables rapid development with optimized production builds.
   
 - **Testing:** [Jest](https://jestjs.io)

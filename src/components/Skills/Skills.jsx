@@ -1,7 +1,7 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 29 December 2025
-//Description: This file contains the component for the personal React project skills section.
+//Date: 27 January 2026
+//Description: This file contains the Skills component for the personal React project.
 
 import React from "react";
 import "./Skills.css";
@@ -32,9 +32,8 @@ function Skills()
   ];
 
   return (
-    <div
+    <section
       id="skills"
-      role="region"
       className="section-content skills"
       aria-labelledby="skills-title"
     >
@@ -48,13 +47,13 @@ function Skills()
 
       <ul className="skills-list">
         {skills.map((skill, index) => (
-          <li key={index} className="skills-item">
+          <li key={index} className="card">
             <h3 className="skills-subtitle">{skill.title}</h3>
             <p>{skill.description}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 

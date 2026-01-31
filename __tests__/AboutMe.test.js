@@ -1,6 +1,6 @@
 //Filename: AboutMe.test.js
 //Author: Kyle McColgan
-//Date: 29 December 2025
+//Date: 27 January 2026
 //Description: This file contains the Jest unit tests for the personal React project about me section.
 
 import React from 'react';
@@ -56,8 +56,8 @@ describe('AboutMe Component', () => {
 
   //Test #8
   it('renders semantic HTML tags', () => {
-    const div = screen.getByRole('region', { name: /about me/i });
-    expect(div.tagName.toLowerCase()).toBe('div');
+    const section = screen.getByRole('region', { name: /about me/i });
+    expect(section.tagName.toLowerCase()).toBe('section');
   });
 
   //Test #9

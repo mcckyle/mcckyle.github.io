@@ -2,11 +2,10 @@
 
 exports[`Dedication component matches the snapshot of the Dedication section. 1`] = `
 <DocumentFragment>
-  <div
+  <section
     aria-labelledby="dedication-title"
     class="section-content dedication"
     id="dedication"
-    role="region"
   >
     <h2
       class="section-title"
@@ -24,6 +23,6 @@ exports[`Dedication component matches the snapshot of the Dedication section. 1`
         This work is a testament to your guidance, patience, and unwavering faith in me. For all that you are, and all that you have given - I am deeply grateful.
       </p>
     </div>
-  </div>
+  </section>
 </DocumentFragment>
 `;

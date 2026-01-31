@@ -1,7 +1,7 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 18 December 2025
-//Description: This file contains the component implementation for the React personal project footer section.
+//Date: 27 January 2026
+//Description: This file contains the Footer component for the personal React project.
 
 import React from "react";
 import "./Footer.css";
@@ -13,7 +13,7 @@ function Footer()
   return (
     <footer className="footer" aria-label="Site Footer">
       <p className="footer-message">
-        Blessed to see another year this January ✨
+        Grounded in gratitude this February ♥
       </p>
 
       <p className="footer-credit">

@@ -1,0 +1,80 @@
+/* Filename: src/themes/1.css (February 2026 - Light Theme) */
+
+/* ====================================
+   Theme Tokens.
+======================================= */
+:root
+{
+    /* Core Palette for January. */
+    --primary: #e06c8b; /* Color: Dusty Rose. */
+    --secondary: #f1a3b8; /* Color: Blush Pink. */
+    --accent: #b4234c; /* Color: Deep Wine Red. */
+    --highlight: #ffffff;
+
+    /* Backgrounds and Surfaces. */
+    --bg-base: #fbf4f6; /* Color: Warm Paper Pink. */
+    --surface: rgba(255, 255, 255, 0.88);
+    --surface-alt: #fdf7f9;
+    --glass: rgba(255, 255, 255, 0.65);
+    --line: rgba(90, 24, 48, 0.08);
+
+    /* Text Tokens. */
+    --text-strong: #3a0f1f; /* Color: Deep Romantic Charcoal. */
+    --text: #4a1627;
+    --text-muted: #8b5a6b;
+    --footer-bg: #f6e9ee;
+
+    /* System Tokens. */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.25rem;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Effects. */
+    --blur-sm: blur(4px);
+    --blur-md: blur(10px);
+
+    --shadow-sm: 0 1px 4px rgba(90, 24, 48, 0.08);
+    --shadow-md: 0 10px 28px rgba(90, 24, 48, 0.14);
+
+    /* Motion. */
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition: 0.35s var(--ease);
+}
+
+/* ====================================
+   List Accent Styles.
+======================================= */
+ul li::before
+{
+    content: "♥"; /* Heart Emoji For February 2026!! */
+    position: absolute;
+    top: 0.15rem;
+    left: 0;
+    font-size: 0.9rem;
+    color: var(--accent);
+    opacity: 0.45;
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+ul li:hover::before { opacity: 0.9; transform: translateX(2px) scale(1.05); }
+
+/* ====================================
+   Ambient Light Accent Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background: radial-gradient(circle at 75% 15%, rgba(224, 108, 139, 0.08), transparent 60%),
+                radial-gradient(circle at 20% 85%, rgba(180, 35, 76, 0.06), transparent 65%);
+}

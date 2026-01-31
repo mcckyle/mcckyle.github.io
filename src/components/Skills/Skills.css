@@ -1,19 +1,14 @@
 /* Filename: src/components/Skills/Skills.css */
 
 /* ====================================
-   Skills Section Styles.
-======================================= */
-.skills { display: flex; flex-direction: column; align-items: flex-start; }
-
-/* ====================================
-   Intro Text Styles.
+   Skills Intro Text Styles.
 ======================================= */
 .skills-intro
 {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     max-width: 60ch;
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text-muted);
 }
 
@@ -45,10 +40,11 @@
 ======================================= */
 .skills-subtitle
 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.3px;
     color: var(--text-strong);
+    margin: 0;
 }
 
 /* ====================================
@@ -56,9 +52,17 @@
 ======================================= */
 .skills-item p
 {
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     line-height: 1.75;
     color: var(--text);
-    opacity: 0.92;
     margin: 0;
+}
+
+/* ====================================
+   Skills Media Query Styles.
+======================================= */
+@media (max-width: 640px)
+{
+    .skills-list { gap: 1.75rem; }
+    .skills-item { padding: var(--space-sm); }
 }

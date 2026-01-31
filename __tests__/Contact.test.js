@@ -1,6 +1,6 @@
 //Filename: Contact.test.js
 //Author: Kyle McColgan
-//Date: 18 December 2025
+//Date: 27 January 2026
 //Description: This file contains the Jest unit tests for the personal React project contact section.
 
 import React from 'react';
@@ -52,7 +52,7 @@ describe('Contact component', () => {
   //Test #7
   it('has a resume link pointing to the PDF path', () => {
     const resumeLink = screen.getByRole('link', { name: /View PDF/i });
-    expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-May-2025.pdf');
+    expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-January-2026.pdf');
   });
 
   //Test #8

@@ -6,7 +6,8 @@
 .contact-list
 {
     font-style: normal; /* Override <address> italics. */
-    margin-top: 2.5rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+    width: 100%;
 }
 
 /* ====================================
@@ -15,8 +16,9 @@
 .contact-list ul
 {
     display: grid;
-    gap: 1.75rem;
+    gap: 2rem;
     max-width: 720px;
+    width: 100%;
 }
 
 /* ====================================
@@ -25,23 +27,24 @@
 .contact-item
 {
     display: grid;
-    grid-template-columns: minmax(110px, 140px) 1fr;
-    align-items: center;
+    grid-template-columns: 140px 1fr;
+    align-items: baseline;
     column-gap: 1.5rem;
 
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--line), transparent 50%);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--line), transparent 65%);
 }
+.contact-item:last-child { border-bottom: none; } /* Remove divider from last item. */
 
 /* ====================================
    Contact Labels Styles.
 ======================================= */
 .contact-label
 {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
     color: var(--text-muted);
 }
 
@@ -55,7 +58,9 @@
 ======================================= */
 .contact-link
 {
+    position: relative;
     font-size: 1rem;
+    font-weight: 500;
     color: var(--accent);
     text-decoration: none;
 
@@ -67,21 +72,22 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -3px;
     width: 100%;
     height: 1px;
     background: currentColor;
-    opacity: 0.35;
+    opacity: 0.25;
+    transform: scaleX(0.85);
 
     transition: opacity var(--transition), transform var(--transition);
 }
 .contact-link:hover,
 .contact-link:focus-visible { color: var(--primary); }
 .contact-link:hover::after,
-.contact-link:focus-visible::after { opacity: 1; transform: scaleX(1.05); }
+.contact-link:focus-visible::after { opacity: 1; transform: scaleX(1); }
 
 /* ====================================
-   Accessibility Styles.
+   Contact Accessibility Styles.
 ======================================= */
 .contact-link:focus-visible
 {
@@ -91,10 +97,10 @@
 }
 
 /* ====================================
-   Media Query Styles.
+   Contact Media Query Styles.
 ======================================= */
 @media (max-width: 640px)
 {
     .contact-item { grid-template-columns: 1fr; row-gap: 0.35rem; }
-    .contact-label { font-size: 0.7rem; }
+    .contact-label { font-size: 0.65rem; }
 }

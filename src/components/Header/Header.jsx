@@ -1,7 +1,7 @@
 //Filename: Header.jsx
 //Author: Kyle McColgan
-//Date: 17 December 2025
-//Description: This file contains the component for the personal React project header section.
+//Date: 27 January 2026
+//Description: This file contains the Header component for the personal React project.
 
 import React from "react";
 import profilePic from "/images/kdm-ocean-01.png";
@@ -17,7 +17,7 @@ function Header()
             <img
               className="header-img"
               src={profilePic}
-              alt="Portrait of Kyle D. McColgan."
+              alt="Portrait of Kyle D. McColgan"
               loading="lazy"
               decoding="async"
             />

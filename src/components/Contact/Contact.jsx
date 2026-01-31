@@ -1,7 +1,7 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 29 December 2025
-//Description: This file contains the React component for the personal React project contact details section.
+//Date: 27 January 2026
+//Description: This file contains the Contact component for the personal React project.
 
 import React from "react";
 import "./Contact.css";
@@ -12,11 +12,11 @@ function Contact()
     { label: "GitHub", value: "github.com/mcckyle", href: "https://www.github.com/mcckyle", },
     { label: "LinkedIn", value: "linkedin.com/in/kylemccolgan", href: "https://www.linkedin.com/in/kylemccolgan/", },
     { label: "Location", value: "South Saint Louis, Missouri, USA", },
-    { label: "Resume", value: "View PDF", href: "/Kyle-McColgan-Resume-May-2025.pdf", },
+    { label: "Resume", value: "View PDF", href: "/Kyle-McColgan-Resume-January-2026.pdf", },
   ];
 
   return (
-      <div
+      <section
         id="contact"
         className="section-content"
         aria-labelledby="contact-title"
@@ -46,7 +46,7 @@ function Contact()
             ))}
           </ul>
         </address>
-      </div>
+      </section>
     );
 }
 

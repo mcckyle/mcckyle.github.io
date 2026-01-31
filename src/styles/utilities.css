@@ -1,11 +1,11 @@
 /* Filename: src/styles/utilities.css */
 
 /* ====================================
-   Media Queries Styles.
+   Reduced Motion Styles.
 ======================================= */
 @media (prefers-reduced-motion: reduce)
 {
-    .site-main > section
+    .section[data-animate]
     {
         opacity: 1 !important;
         transform: none !important;
@@ -15,6 +15,9 @@
     }
 }
 
+/* ====================================
+   Media Queries Styles.
+======================================= */
 @media (max-width: 768px)
 {
     html { font-size: 15px; }
@@ -22,5 +25,5 @@
 
 @media (max-width: 480px)
 {
-    html { font-size: clamp(14px, 0.9vw + 0.5rem, 17px); }
+    html { font-size: clamp(14px, 0.9vw + 0.5rem, 16px); }
 }

@@ -1,6 +1,6 @@
 //Filename: Header.test.js
 //Author: Kyle McColgan
-//Date: 18 December 2025
+//Date: 27 January 2026
 //Description: This file contains the Jest unit tests for the personal React website header section.
 
 import React from 'react';
@@ -27,25 +27,25 @@ describe('Header Component', () => {
 
     //Test #3
     it('renders the header image', () => {
-        const image = screen.getByAltText('Portrait of Kyle D. McColgan.');
+        const image = screen.getByAltText('Portrait of Kyle D. McColgan');
         expect(image).toBeInTheDocument();
     });
 
     //Test #4
     it('has the correct image source', () => {
-        const image = screen.getByAltText('Portrait of Kyle D. McColgan.');
+        const image = screen.getByAltText('Portrait of Kyle D. McColgan');
         expect(image).toHaveAttribute('src', 'test-file-stub');
     });
 
     //Test #5
     it('has the correct alt text for the image', () => {
-        const image = screen.getByAltText('Portrait of Kyle D. McColgan.');
-        expect(image).toHaveAttribute('alt', 'Portrait of Kyle D. McColgan.');
+        const image = screen.getByAltText('Portrait of Kyle D. McColgan');
+        expect(image).toHaveAttribute('alt', 'Portrait of Kyle D. McColgan');
     });
 
     //Test #6
     it('renders the image with the correct class', () => {
-        const image = screen.getByAltText('Portrait of Kyle D. McColgan.');
+        const image = screen.getByAltText('Portrait of Kyle D. McColgan');
         expect(image).toHaveClass('header-img');
     });
 

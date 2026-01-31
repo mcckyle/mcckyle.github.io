@@ -1,39 +1,32 @@
 /* Filename: src/components/AboutMe/AboutMe.css */
 
 /* ====================================
-   About Me Section Styles.
-======================================= */
-.about-me { display: flex; flex-direction: column; align-items: flex-start; }
-
-/* ====================================
-   Body Container Styles.
+   AboutMe Body Container Styles.
 ======================================= */
 .about-body
 {
-    margin-top: 2rem;
+    margin-top: 2.25rem;
     max-width: 68ch;
 }
 
 /* ====================================
-   Lead Paragraph Styles.
+   AboutMe Lead Paragraph Styles.
 ======================================= */
 .about-lead
 {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.8;
     color: var(--text-strong);
-    opacity: 0.95;
 }
 
 /* ====================================
-   Supporting Paragraphs Styles.
+   AboutMe Supporting Paragraphs Styles.
 ======================================= */
 .about-body p
 {
     font-size: 1.05rem;
     line-height: 1.75;
     color: var(--text);
-    opacity: 0.92;
 }
 .about-body p + p { margin-top: 1.6rem; }

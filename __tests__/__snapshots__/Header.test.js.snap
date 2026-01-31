@@ -13,7 +13,7 @@ exports[`Header Component matches the snapshot 1`] = `
         class="header-image-wrapper"
       >
         <img
-          alt="Portrait of Kyle D. McColgan."
+          alt="Portrait of Kyle D. McColgan"
           class="header-img"
           decoding="async"
           loading="lazy"

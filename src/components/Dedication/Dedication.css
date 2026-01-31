@@ -8,23 +8,23 @@
     opacity: 0.85;
 }
 
+/* Dedication Text Container Styles. */
 .dedication-body
 {
     margin-top: 2.25rem;
     max-width: 60ch;
 }
 
+/* Dedication Paragraphs Styles. */
 .dedication-body p
 {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text);
-    opacity: 0.92;
 }
 
+/* Dedication Paragraph Spacing Styles. */
 .dedication-body p + p
 {
     margin-top: 1.75rem;
 }
-
-#dedication { color: var(--text); }
