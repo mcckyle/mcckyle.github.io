@@ -5,17 +5,8 @@
 ======================================= */
 body
 {
-    margin: 0;
-    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    font-size: 16.5px;
-    line-height: 1.75;
-    letter-spacing: 0.15px;
-
-    color: var(--text);
-    background: var(--bg-base);
-
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    letter-spacing: 0.01em;
 }
 
 /* ====================================
@@ -23,74 +14,65 @@ body
 ======================================= */
 h1, h2, h3, h4
 {
-    color: var(--text-strong);
-    line-height: 1.25;
+    margin: 0;
     font-weight: 600;
-    letter-spacing: 0.4px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--text-strong);
 }
+h1 { font-size: clamp(2.8rem, 4vw, 3.5rem); }
+h2 { font-size: clamp(2.1rem, 3vw, 2.5rem); }
+h3 { font-size: 1.15rem; }
 
 /* ====================================
    Paragraphs Styles.
 ======================================= */
 p
 {
-    color: var(--text);
-    line-height: 1.65;
-    margin-bottom: 1.4rem;
+    margin: 0;
     max-width: 65ch;
+    color: var(--text);
 }
 
 /* ====================================
    Lists Styles.
 ======================================= */
-ul { list-style: none; padding: 0; margin: 0; }
-ul li { position: relative; padding-left: 1.6rem; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ====================================
    Cards Styles.
 ======================================= */
 .card
 {
-    background: var(--glass);
+    background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius-md);
     padding: var(--space-md);
 
-    backdrop-filter: var(--blur-md) saturate(1.05);
-    box-shadow: var(--shadow-sm);
-
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: border-color var(--transition), background var(--transition), transform var(--transition);
 }
-
-.card:hover
-{
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
+.card:hover { border-color: var(--brand-strong); transform: translateY(-2px); }
 
 /* ====================================
    Links Styles.
 ======================================= */
 a
 {
-    color: var(--accent);
+    color: var(--brand-strong);
     text-decoration: none;
     font-weight: 500;
 
-    transition: color var(--transition);
+    transition: opacity var(--transition);
 }
-
-a:hover
-{
-    color: color-mix(in srgb, var(--accent) 85%, white);
-}
+a:hover { opacity: 0.75; }
+a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
 
 /* ====================================
    Scrollbar Styles.
 ======================================= */
-::-webkit-scrollbar { width: 8px; }
+/*::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb
 {
     background: linear-gradient(var(--primary), var(--secondary));
     border-radius: 4px;
-}
+}*/

@@ -1,101 +1,49 @@
 /* Filename: src/components/Projects/Projects.css */
 
 /* ====================================
-   Projects Intro Text Styles.
+   Projects Grid Styles.
 ======================================= */
-.projects-intro
-{
-    margin-top: 1.75rem;
-    max-width: 62ch;
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text-muted);
-}
-
-/* ====================================
-   Projects List Styles.
-======================================= */
-.projects-list
+.projects-grid
 {
     display: grid;
-    flex-direction: column;
-    gap: clamp(2.5rem, 5vw, 3.5rem);
-
-    margin-top: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(2rem, 3vw, 3rem);
     padding: 0;
-    list-style: none;
 }
 
 /* ====================================
-   Projects Item Styles.
+   Projects Project Card Composition Styles.
 ======================================= */
-.project-item
+.project
 {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    border-radius: var(--radius-lg);
 }
+.project-title { font-size: 1.15rem; font-weight: 600; color: var(--text-strong); margin-bottom: 0.5rem; }
+.project-description { max-width: 58ch; }
 
 /* ====================================
-   Projects Content Styles.
-======================================= */
-.project-main { max-width: 70ch; }
-
-/* Project Title Styles. */
-.project-title
-{
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    color: var(--text-strong);
-    margin-bottom: 0.75rem;
-}
-
-/* Project Description Styles. */
-.project-description
-{
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text);
-    margin: 0;
-}
-
-/* ====================================
-   Projects Tech Stack Styles.
+   Projects Tech Pills Styles.
 ======================================= */
 .project-tech
 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-
     padding: 0;
-    margin: 0;
-    list-style: none;
-    align-self: flex-start;
 }
 
-.tech-tag
+.project-tech li
 {
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
     border-radius: 999px;
 
     background: var(--surface-alt);
     color: var(--text-muted);
-
-    transition: background 0.3s var(--ease), color 0.3s var(--ease);
-}
-.tech-tag:hover { background: var(--primary); color: var(--bg-base); }
-
-/* ====================================
-   Projects Media Query Styles.
-======================================= */
-@media (max-width: 768px)
-{
-    .project-item { grid-template-columns: 1fr; gap: 1.5rem; padding: var(--space-sm); }
-    .project-tech { margin-top: 0.75rem; }
+    border: 1px solid var(--line);
 }

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience component matches the snapshot of the Experience section 1`] = `
+<DocumentFragment>
+  <h2
+    class="section-title"
+    id="experience-title"
+  >
+    Experience
+  </h2>
+  <p
+    class="section-intro"
+  >
+    Roles centered on measurable impact and building reliable systems that last.
+  </p>
+  <ol
+    class="experience-timeline"
+  >
+    <li
+      class="experience-entry"
+    >
+      <div
+        aria-hidden="true"
+        class="experience-marker"
+      />
+      <div
+        class="experience-content"
+      >
+        <h3
+          class="experience-role"
+        >
+          IT System Engineer
+        </h3>
+        <div
+          class="experience-meta"
+        >
+          <span
+            class="experience-company"
+          >
+            Primary Systems
+          </span>
+          <time
+            class="experience-period"
+            datetime="2023-05/2023-09"
+          >
+            May 2023 - September 2023
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="experience-entry"
+    >
+      <div
+        aria-hidden="true"
+        class="experience-marker"
+      />
+      <div
+        class="experience-content"
+      >
+        <h3
+          class="experience-role"
+        >
+          Software Engineer
+        </h3>
+        <div
+          class="experience-meta"
+        >
+          <span
+            class="experience-company"
+          >
+            Walmart
+          </span>
+          <time
+            class="experience-period"
+            datetime="2021-07/2022-10"
+          >
+            July 2021 - October 2022
+          </time>
+        </div>
+      </div>
+    </li>
+  </ol>
+</DocumentFragment>
+`;

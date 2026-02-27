@@ -1,32 +1,27 @@
 /* Filename: src/components/Mission/Mission.css */
 
-/* ====================================
-   Mission Body Container Styles.
-======================================= */
-.mission-body
-{
-    margin-top: 2.25rem;
-    max-width: 68ch;
-}
+/* Mission uses global section layout.
+   No additional layout styles required. */
+/*.mission { display: flex; flex-direction: column; }*/
 
 /* ====================================
-   Mission Lead Statement Styles.
+   Mission Text Block Container Styles.
 ======================================= */
-.mission-lead
+/*.mission .section-text
 {
-    font-size: 1.125rem;
+    max-width: 62ch;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 2.5vw, 2rem);
+}*/
+
+/* ====================================
+   Mission Lead Paragraph Styles.
+======================================= */
+/*.mission .section-lead
+{
+    font-size: clamp(1.2rem, 1.4vw, 1.35rem);
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.6;
     color: var(--text-strong);
-}
-
-/* ====================================
-   Mission Supporting Paragraphs Styles.
- ======================================= */
-.mission-body p
-{
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text);
-}
-.mission-body p + p { margin-top: 1.6rem; }
+}*/

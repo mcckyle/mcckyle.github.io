@@ -1,7 +1,7 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 27 January 2026
-//Description: This file contains the Skills component for the personal React project.
+//Date: 26 February 2026
+//Description: This file contains the Skills component for the React personal project.
 
 import React from "react";
 import "./Skills.css";
@@ -12,48 +12,48 @@ function Skills()
     {
       title: "Application Development",
       description:
-        "Designing and building scalable web applications with clean architecture. Experienced in Java and JavaScript, using React on the frontend and Spring Boot on the backend to deliver cohesive, full-stack systems.",
+        "Designing scalable web applications with modular architecture using Java, React, and Spring Boot.",
     },
     {
       title: "Frontend Engineering",
       description:
-        "Creating intuitive, accessible interfaces with HTML, CSS, and modern JavaScript. Focused on clarity, responsiveness, and maintainable React component design.",
+        "Creating accessible, intuitive interfaces with modern JavaScript and maintainable React component design.",
     },
     {
       title: "Backend & Systems",
       description:
-        "Developing efficient backend services and system-level software in Java, C++, and Python, with an emphasis on performance, security, and long-term maintainability.",
+        "Building performant backend services and system-level software in Java and C++.",
     },
     {
       title: "Information Security",
       description:
-        "Applying secure coding practices and threat-mitigation principles to protect data integrity, privacy, and application reliability.",
+        "Applying secure coding practices and threat mitigation principles to protect data integrity and privacy.",
     },
   ];
 
   return (
-    <section
-      id="skills"
-      className="section-content skills"
-      aria-labelledby="skills-title"
-    >
+    <>
       <h2 id="skills-title" className="section-title">
         Skills
       </h2>
 
-      <p className="skills-intro">
-        A focused overview of the technical disciplines I work in most often.
+      <p className="section-intro">
+        Core technical disciplines I work in most often.
       </p>
 
-      <ul className="skills-list">
+      <ul
+        className="skills-grid"
+        role="list"
+        aria-labelledby="skills-title"
+      >
         {skills.map((skill, index) => (
-          <li key={index} className="card">
-            <h3 className="skills-subtitle">{skill.title}</h3>
-            <p>{skill.description}</p>
+          <li key={index} className="skill card">
+            <h3 className="skill-title">{skill.title}</h3>
+            <p className="skill-description">{skill.description}</p>
           </li>
         ))}
       </ul>
-    </section>
+    </>
   );
 }
 

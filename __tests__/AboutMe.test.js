@@ -1,7 +1,7 @@
 //Filename: AboutMe.test.js
 //Author: Kyle McColgan
-//Date: 27 January 2026
-//Description: This file contains the Jest unit tests for the personal React project about me section.
+//Date: 26 February 2026
+//Description: This file contains the Jest unit tests for the React personal project about me section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -14,26 +14,27 @@ describe('AboutMe Component', () => {
   });
 
   //Test #1
-  it('renders a <div> with id "about-me"', () => {
-    const div = screen.getByRole('region', { name: /about me/i });
-    expect(div).toBeInTheDocument();
+  it('renders a <div> with id "about"', () => {
+    const heading = screen.getByRole('heading', { level: 2, name: /about/i });
+    expect(heading).toBeInTheDocument();
+    expect(heading.tagName.toLowerCase()).toBe('h2');
   });
 
   //Test #2
-  it('renders a heading with text "About Me"', () => {
-    const heading = screen.getByRole('heading', { level: 2, name: /about me/i });
+  it('renders a heading with text "About"', () => {
+    const heading = screen.getByRole('heading', { level: 2, name: /about/i });
     expect(heading).toBeInTheDocument();
   });
 
   //Test #3
   it('renders the first paragraph with introduction', () => {
-    expect(screen.getByText(/Hello! I'm/i)).toBeInTheDocument();
+    expect(screen.getByText(/I'm Kyle/i)).toBeInTheDocument();
   });
 
   //Test #4
-  it('renders the About Me section', () => {
-    const div = screen.getByRole('region', { name: /about me/i });
-    expect(div).toBeInTheDocument();
+  it('renders the first paragraph correctly', () => {
+    const firstParagraph = screen.getByText(/I'm Kyle McColgan/);
+    expect(firstParagraph).toBeInTheDocument();
   });
 
   //Test #5
@@ -55,19 +56,19 @@ describe('AboutMe Component', () => {
   });
 
   //Test #8
-  it('renders semantic HTML tags', () => {
-    const section = screen.getByRole('region', { name: /about me/i });
-    expect(section.tagName.toLowerCase()).toBe('section');
+  it('matches the snapshot of the AboutMe section', () => {
+    const { asFragment } = render(<AboutMe />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   //Test #9
   it('contains exactly 4 paragraph elements', () => {
-    const paragraphs = screen.getByRole('region', { name: /about me/i }).querySelectorAll('p');
+    const paragraphs = screen.getAllByText((_, element) => element.tagName.toLowerCase() === 'p');
     expect(paragraphs.length).toBe(4);
   });
 
   //Test #10
   it('contains a closing line', () => {
-    expect(screen.getByText(/I'm always open to learning something new./i)).toBeInTheDocument();
+    expect(screen.getByText(/I'm always learning something new./i)).toBeInTheDocument();
   });
 });

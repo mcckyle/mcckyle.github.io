@@ -1,28 +1,29 @@
-//Filename: History.test.js
+//Filename: Experience.test.js
 //Author: Kyle McColgan
-//Date: 28 October 2025
-//Description: This file contains the Jest unit tests for the personal React project history component.
+//Date: 26 February 2026
+//Description: This file contains the Jest unit tests for the Experience component.
 
 import React from 'react';
 import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import History from '../src/components/History/History.jsx';
+import Experience from '../src/components/Experience/Experience.jsx';
 
-describe('History component', () => {
+describe('Experience component', () => {
     beforeEach(() => {
-        render(<History />);
+        render(<Experience />);
     });
 
     //Test #1
-    it('renders the History section', () => {
-        const div = screen.getByRole('region', { name: /Professional History/i });
-        expect(div).toBeInTheDocument();
+    it('renders a <div> with id "experience"', () => {
+        const heading = screen.getByRole('heading', { level: 2, name: /experience/i });
+        expect(heading).toBeInTheDocument();
+        expect(heading.tagName.toLowerCase()).toBe('h2');
     });
 
     //Test #2
     it('renders the section title correctly', () => {
         const title = screen.getByRole('heading', { level: 2 });
-        expect(title).toHaveTextContent('Professional History');
+        expect(title).toHaveTextContent('Experience');
     });
 
     //Test #3
@@ -48,9 +49,9 @@ describe('History component', () => {
     });
 
     //Test #6
-    it('has the correct ARIA role of "region"', () => {
-        const div = screen.getByRole('region', { name: /Professional History/i });
-        expect(div).toBeInTheDocument();
+    it('renders the Experience section', () => {
+        const heading = screen.getByText(/Experience/i);
+        expect(heading).toBeInTheDocument();
     });
 
     //Test #7
@@ -75,8 +76,8 @@ describe('History component', () => {
     });
 
     //Test #10
-    it('matches the snapshot of the History section', () => {
-        const { asFragment } = render(<History />);
+    it('matches the snapshot of the Experience section', () => {
+        const { asFragment } = render(<Experience />);
         expect(asFragment()).toMatchSnapshot();
     });
 });

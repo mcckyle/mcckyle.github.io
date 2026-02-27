@@ -1,45 +1,36 @@
 //Filename: Mission.jsx
 //Author: Kyle McColgan
-//Date: 27 January 2026
-//Description: This file contains the Mission component for the personal React project.
+//Date: 26 February 2026
+//Description: This file contains the Mission component for the React personal project.
 
 import React from 'react';
-import './Mission.css';
 
 function Mission()
 {
     return (
-      <section
-        id="mission"
-        className="section-content mission"
-        aria-labelledby="mission-title"
-      >
+      <>
         <h2 id="mission-title" className="section-title">
           Mission
         </h2>
 
-        <div className="mission-body">
-          <p className="mission-lead">
-            My mission is to uplift the local tech community by sharing the
-            knowledge I've gained and fostering an environment of integrity,
-            collaboration, and continuous growth.
+        <div
+          className="section-text"
+          role="region"
+          aria-labelledby="mission-title"
+        >
+          <p className="section-lead">
+            My mission consists of sharing the wealth of knowledge earned
+            throughout my career in order to uplift and elevate the local
+            technology community in Saint Louis.
           </p>
 
           <p>
-            I am dedicated to supporting developers, IT professionals, and
-            organizations in building secure, efficient, and scalable systems.
-            My goal is to exceed expectations by delivering solutions that are
-            thoughtfully designed, secure, and accessible.
-          </p>
-
-          <p>
-            Driven by the evolving world of technology, I embrace challenges as
-            opportunities for growth. By staying curious and persistent, I strive
-            to contribute positively to the broader tech landscape while growing
-            personally and professionally.
+            Through mentorship and collaboration, I strive to contribute simple,
+            modern systems that raise the standard of local innovation and
+            strengthen the people behind it.
           </p>
         </div>
-      </section>
+      </>
     );
 }
 

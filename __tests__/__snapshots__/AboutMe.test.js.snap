@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutMe Component matches the snapshot of the AboutMe section 1`] = `
+<DocumentFragment>
+  <h2
+    class="section-title"
+    id="about-title"
+  >
+    About
+  </h2>
+  <div
+    aria-labelledby="about-title"
+    class="section-text"
+    role="region"
+  >
+    <p
+      class="section-lead"
+    >
+      I'm Kyle McColgan, a technology professional based in Saint Louis, Missouri.
+    </p>
+    <p>
+      My work spans full-stack development and information security, grounded in thoughtful design and practical, real-world impact.
+    </p>
+    <p>
+      Outside of work, I spend time in nature, explore mystery audiobooks, attend live music events, and contribute where I can through community service.
+    </p>
+    <p>
+      I'm drawn to meaningful problems and well-crafted solutions - and I'm always learning something new.
+    </p>
+  </div>
+</DocumentFragment>
+`;

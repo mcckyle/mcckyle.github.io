@@ -1,6 +1,6 @@
 //Filename: Projects.test.js
 //Author: Kyle McColgan
-//Date: 18 December 2025
+//Date: 26 February 2026
 //Description: This file contains the Jest unit tests for the React personal project projects section.
 
 import React from 'react';
@@ -14,9 +14,10 @@ describe('Projects component', () => {
     });
 
     //Test #1
-    it('renders the Projects section', () => {
-        const section = screen.getByRole('region', { name: /Projects/i });
-        expect(section).toBeInTheDocument();
+    it('renders a <div> with id "projects"', () => {
+        const heading = screen.getByRole('heading', { level: 2, name: /projects/i });
+        expect(heading).toBeInTheDocument();
+        expect(heading.tagName.toLowerCase()).toBe('h2');
     });
 
     //Test #2
@@ -28,7 +29,7 @@ describe('Projects component', () => {
     //Test #3
     it('renders the list of project cards', () => {
         const projectCards = screen.getAllByRole('listitem', { name: '' }); //Default list items.
-        expect(projectCards).toHaveLength(4 + 3 + 4 + 4 + 4); //4 cards, 3 tech tags (Proj. 1), 4 tech tags (Proj. 2), etc...
+        expect(projectCards).toHaveLength(5 + 3 + 4 + 4 + 4 + 4); //4 cards, 3 tech tags (Proj. 1), 4 tech tags (Proj. 2), etc...
     });
 
     //Test #4
@@ -42,7 +43,7 @@ describe('Projects component', () => {
     //Test #5
     it('renders the second project correctly', () => {
         const secondTitle = screen.getByText(/ShowMeTasks/i);
-        const secondDesc = screen.getByText(/A full-stack task management application/i);
+        const secondDesc = screen.getByText(/A modular full-stack task manager/i);
         expect(secondTitle).toBeInTheDocument();
         expect(secondDesc).toBeInTheDocument();
     });
@@ -51,9 +52,6 @@ describe('Projects component', () => {
     it('renders each project title as a level 3 heading', () => {
         const headings = screen.getAllByRole('heading', { level: 3});
         expect(headings.length).toBeGreaterThanOrEqual(2);
-        headings.forEach(h => {
-            expect(h).toHaveClass('project-title');
-        })
     });
 
     //Test #7
@@ -65,12 +63,9 @@ describe('Projects component', () => {
     });
 
     //Test #8
-    it('uses a <ul> to list top-level projects', () => {
-        const region = screen.getByRole('region', { name: /projects/i });
-        const list = screen.getAllByRole('list', { hidden: false})[0];
-        expect(list.tagName).toBe('UL');
-        expect(list).toHaveClass('projects-list');
-        expect(region).toContainElement(list);
+    it('does not render any empty <li> elements', () => {
+        const items = screen.getAllByRole('listitem');
+        items.forEach(item => expect(item).not.toBeEmptyDOMElement());
     });
 
     //Test #9

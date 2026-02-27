@@ -1,7 +1,7 @@
 //Filename: Header.test.js
 //Author: Kyle McColgan
-//Date: 27 January 2026
-//Description: This file contains the Jest unit tests for the personal React website header section.
+//Date: 25 February 2026
+//Description: This file contains the Jest unit tests for the React personal project header section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -21,7 +21,7 @@ describe('Header Component', () => {
 
     //Test #2
     it('renders the header with the correct subtitle', () => {
-        const subtitle = screen.getByText(/Technology Professional/i);
+        const subtitle = screen.getByText(/Building simple, modern technology./i);
         expect(subtitle).toBeInTheDocument();
     });
 
@@ -46,7 +46,7 @@ describe('Header Component', () => {
     //Test #6
     it('renders the image with the correct class', () => {
         const image = screen.getByAltText('Portrait of Kyle D. McColgan');
-        expect(image).toHaveClass('header-img');
+        expect(image).toHaveClass('header-avatar');
     });
 
     //Test #7

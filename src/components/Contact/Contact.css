@@ -1,40 +1,32 @@
 /* Filename: src/components/Contact/Contact.css */
 
 /* ====================================
-   Contact List Styles.
+   Contact Grid Container Styles.
 ======================================= */
-.contact-list
+.contact-grid { font-style: normal; /* Override <address> italics. */ }
+.contact-grid ul
 {
-    font-style: normal; /* Override <address> italics. */
-    margin-top: clamp(2rem, 4vw, 3rem);
-    width: 100%;
+    display: grid;
+    gap: clamp(1.75rem, 3vw, 2.25rem);
+    max-width: 640px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 /* ====================================
-   Contact Grid Styles.
+   Contact Entry Layout Styles.
 ======================================= */
-.contact-list ul
+.contact-entry
 {
-    display: grid;
-    gap: 2rem;
-    max-width: 720px;
-    width: 100%;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-/* ====================================
-   Contact Item Styles.
-======================================= */
-.contact-item
-{
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    align-items: baseline;
-    column-gap: 1.5rem;
-
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--line), transparent 65%);
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
 }
-.contact-item:last-child { border-bottom: none; } /* Remove divider from last item. */
+.contact-entry:last-child { border-bottom: none; } /* Remove divider from last item. */
 
 /* ====================================
    Contact Labels Styles.
@@ -43,7 +35,7 @@
 {
     font-size: 0.7rem;
     font-weight: 600;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text-muted);
 }
@@ -51,56 +43,20 @@
 /* ====================================
    Contact Values Styles.
 ======================================= */
-.contact-value { font-size: 1rem; color: var(--text); }
+.contact-value { font-size: 1rem; color: var(--text); word-break: break-word; }
 
 /* ====================================
    Contact Links Styles.
 ======================================= */
 .contact-link
 {
-    position: relative;
     font-size: 1rem;
     font-weight: 500;
-    color: var(--accent);
+    color: var(--brand);
     text-decoration: none;
 
-    transition: color var(--transition);
-}
-
-.contact-link::after
-{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.25;
-    transform: scaleX(0.85);
-
-    transition: opacity var(--transition), transform var(--transition);
+    transition: color var(--transition), opacity var(--transition);
 }
 .contact-link:hover,
-.contact-link:focus-visible { color: var(--primary); }
-.contact-link:hover::after,
-.contact-link:focus-visible::after { opacity: 1; transform: scaleX(1); }
-
-/* ====================================
-   Contact Accessibility Styles.
-======================================= */
-.contact-link:focus-visible
-{
-    outline: 2px solid var(--primary);
-    outline-offset: 4px;
-    border-radius: 4px;
-}
-
-/* ====================================
-   Contact Media Query Styles.
-======================================= */
-@media (max-width: 640px)
-{
-    .contact-item { grid-template-columns: 1fr; row-gap: 0.35rem; }
-    .contact-label { font-size: 0.65rem; }
-}
+.contact-link:focus-visible { color: var(--brand-strong); opacity: 0.85; }
+.contact-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 4px; }

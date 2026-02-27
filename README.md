@@ -6,9 +6,9 @@
 
 Welcome! 👋
 
-This repository contains the source code for my personal website, designed to showcase my technical skills, projects, and journey in web development. Built with React, this site reflects my approach to creating simple and modern web designs.
+This repository contains the source code for my personal website, designed to showcase my projects and journey in web development. Built with React, this site reflects my approach to creating simple and modern web designs.
 
-Feel free to explore my work, as well as reach out if you're interested in collaborating, sharing insights, or discussing new ideas!
+Feel free to explore my work, as well as reach out if you're interested in collaborating or discussing new ideas!
 
 ![Portfolio Screenshot](./public/images/Screenshot_20260127_222909.png)
 *A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
@@ -93,34 +93,38 @@ mcckyle.github.io/
 │       └── autograding.yml
 │
 ├── public/                # Public assets.
-│   └── index.html
+│   └── images/            # Screenshots and favicons.
 │
 ├── src/                   # Source code for the React app.
 │   ├── components/        # Reusable UI components.
 │   │   ├── Header/
 │   │   │   ├── Header.jsx
 │   │   │   └── Header.css
-│   │   ├── Contact/
-│   │   │   ├── Contact.jsx
-│   │   │   └── Contact.css
-│   │   ├── Dedication/
-│   │   │   ├── Dedication.jsx
-│   │   │   └── Dedication.css
+│   │   │
 │   │   ├── Mission/
 │   │   │   ├── Mission.jsx
 │   │   │   └── Mission.css
-│   │   ├── AboutMe/
-│   │   │   ├── AboutMe.jsx
-│   │   │   └── AboutMe.css
-│   │   ├── Skills/
-│   │   │   ├── Skills.jsx
-│   │   │   └── Skills.css
+│   │   │
 │   │   ├── Projects/
 │   │   │   ├── Projects.jsx
 │   │   │   └── Projects.css
-│   │   ├── History/
-│   │   │   ├── History.jsx
-│   │   │   └── History.css
+│   │   │
+│   │   ├── Skills/
+│   │   │   ├── Skills.jsx
+│   │   │   └── Skills.css
+│   │   │
+│   │   ├── AboutMe/
+│   │   │   ├── AboutMe.jsx
+│   │   │   └── AboutMe.css
+│   │   │
+│   │   ├── Experience/
+│   │   │   ├── Experience.jsx
+│   │   │   └── Experience.css
+│   │   │
+│   │   ├── Contact/
+│   │   │   ├── Contact.jsx
+│   │   │   └── Contact.css
+│   │   │
 │   │   └── Footer/
 │   │       ├── Footer.jsx
 │   │       └── Footer.css
@@ -129,14 +133,13 @@ mcckyle.github.io/
 │   ├── App.css
 │   ├── main.jsx
 │   ├── index.css          # Global styles.
-│   ├── setupTests.js
 │   └── styles/
 │       ├── base.css
 │       ├── layout.css
 │       ├── utilities.css
 │       └── animations.css
 │
-├── __tests__/             # Unit and integration tests.
+├── __tests__/             # Jest unit tests.
 │   ├── Header.test.js
 │   ├── Contact.test.js
 │   ├── Dedication.test.js
@@ -198,4 +201,4 @@ This project was made possible thanks to the following:
 - [**React**](https://reactjs.org/) - for the intuitive front-end library.
 - [**Node.js**](https://nodejs.org/) -  for the powerful and robust runtime environment.
 - [**GitHub Pages**](https://pages.github.com/) - for providing free and reliable static site hosting.
-- The **Open Source Community** - for generously sharing the tools, libraries, and knowledge that inspire and enable innovation and collaboration.
+- The **Open Source Community** - for generously sharing the tools and knowledge that enable this technology.

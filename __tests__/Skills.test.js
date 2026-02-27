@@ -1,6 +1,6 @@
 //Filename: Skills.test.js
 //Author: Kyle McColgan
-//Date: 29 October 2025
+//Date: 24 February 2026
 //Description: This file contains the Jest unit tests for the React personal project skills section.
 
 import React from 'react';
@@ -14,9 +14,10 @@ describe('Skills Component', () => {
     });
 
     //Test #1
-    it('renders the Skills section', () => {
-        const section = screen.getByRole('region', { name: /Skills/i });
-        expect(section).toBeInTheDocument();
+    it('renders a <div> with id "skills"', () => {
+        const heading = screen.getByRole('heading', { level: 2, name: /skills/i });
+        expect(heading).toBeInTheDocument();
+        expect(heading.tagName.toLowerCase()).toBe('h2');
     });
 
     //Test #2
@@ -47,10 +48,6 @@ describe('Skills Component', () => {
     it('renders all skill category titles as level 3 headings', () => {
         const headings = screen.getAllByRole('heading', { level: 3 });
         expect(headings).toHaveLength(4);
-
-        headings.forEach((heading) => {
-            expect(heading).toHaveClass('skills-subtitle');
-        });
     });
 
     //Test #7

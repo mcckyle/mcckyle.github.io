@@ -2,74 +2,78 @@
 
 exports[`Skills Component matches the snapshot of the Skills section 1`] = `
 <DocumentFragment>
-  <section
-    aria-labelledby="skills-title"
-    class="section-content skills"
-    id="skills"
+  <h2
+    class="section-title"
+    id="skills-title"
   >
-    <h2
-      class="section-title"
-      id="skills-title"
+    Skills
+  </h2>
+  <p
+    class="section-intro"
+  >
+    Core technical disciplines I work in most often.
+  </p>
+  <ul
+    aria-labelledby="skills-title"
+    class="skills-grid"
+    role="list"
+  >
+    <li
+      class="skill card"
     >
-      Skills
-    </h2>
-    <p
-      class="skills-intro"
+      <h3
+        class="skill-title"
+      >
+        Application Development
+      </h3>
+      <p
+        class="skill-description"
+      >
+        Designing scalable web applications with modular architecture using Java, React, and Spring Boot.
+      </p>
+    </li>
+    <li
+      class="skill card"
     >
-      A focused overview of the technical disciplines I work in most often.
-    </p>
-    <ul
-      class="skills-list"
+      <h3
+        class="skill-title"
+      >
+        Frontend Engineering
+      </h3>
+      <p
+        class="skill-description"
+      >
+        Creating accessible, intuitive interfaces with modern JavaScript and maintainable React component design.
+      </p>
+    </li>
+    <li
+      class="skill card"
     >
-      <li
-        class="card"
+      <h3
+        class="skill-title"
       >
-        <h3
-          class="skills-subtitle"
-        >
-          Application Development
-        </h3>
-        <p>
-          Designing and building scalable web applications with clean architecture. Experienced in Java and JavaScript, using React on the frontend and Spring Boot on the backend to deliver cohesive, full-stack systems.
-        </p>
-      </li>
-      <li
-        class="card"
+        Backend & Systems
+      </h3>
+      <p
+        class="skill-description"
       >
-        <h3
-          class="skills-subtitle"
-        >
-          Frontend Engineering
-        </h3>
-        <p>
-          Creating intuitive, accessible interfaces with HTML, CSS, and modern JavaScript. Focused on clarity, responsiveness, and maintainable React component design.
-        </p>
-      </li>
-      <li
-        class="card"
+        Building performant backend services and system-level software in Java and C++.
+      </p>
+    </li>
+    <li
+      class="skill card"
+    >
+      <h3
+        class="skill-title"
       >
-        <h3
-          class="skills-subtitle"
-        >
-          Backend & Systems
-        </h3>
-        <p>
-          Developing efficient backend services and system-level software in Java, C++, and Python, with an emphasis on performance, security, and long-term maintainability.
-        </p>
-      </li>
-      <li
-        class="card"
+        Information Security
+      </h3>
+      <p
+        class="skill-description"
       >
-        <h3
-          class="skills-subtitle"
-        >
-          Information Security
-        </h3>
-        <p>
-          Applying secure coding practices and threat-mitigation principles to protect data integrity, privacy, and application reliability.
-        </p>
-      </li>
-    </ul>
-  </section>
+        Applying secure coding practices and threat mitigation principles to protect data integrity and privacy.
+      </p>
+    </li>
+  </ul>
 </DocumentFragment>
 `;

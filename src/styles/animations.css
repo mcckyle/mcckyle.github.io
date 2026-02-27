@@ -1,22 +1,20 @@
 /* Filename: src/styles/animations.css */
 
 /* ====================================
-   Sequential Section Entrance Animation Styles.
+   Section Entrance Animation Styles.
 ======================================= */
-.section[data-animate]
+.section
 {
     opacity: 0;
-    transform: translateY(2.5svh);
+    transform: translateY(6px);
 
-    animation-delay: calc(0.1s * var(--i));
-    animation: fadeSlideIn 0.7s var(--ease) forwards;
+    animation: sectionFade 0.5s var(--ease) forwards;
 }
 
 /* ====================================
    Animation Keyframes Styles.
 ======================================= */
-@keyframes fadeSlideIn
+@keyframes sectionFade
 {
-    from { opacity: 0; transform: translateY(2.5svh); filter: blur(3px); }
-    to { opacity: 1; transform: translateY(0); filter: none; }
+    to { opacity: 1; transform: translateY(0); }
 }

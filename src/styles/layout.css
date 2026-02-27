@@ -1,42 +1,60 @@
 /* Filename: src/styles/layout.css */
 
 /* ====================================
-   Section Inner Content Styles.
+   Section Container Styles.
 ======================================= */
-.section-content
+.section
 {
-    width: 100%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    gap: clamp(2rem, 3vw, 3rem);
 }
 
 /* ====================================
-   Section Title Styles.
+   Section Header Styles.
 ======================================= */
 .section-title
 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 3vw, 2.75rem);
-    font-weight: 700;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
 
     color: var(--text-strong);
-    letter-spacing: 0.3px;
-
-    margin-bottom: 1.25rem;
+}
+.section-intro
+{
+    /*max-width: 60ch;*/
+    color: var(--text-muted);
+}
+.section-text
+{
+    /*max-width: 60ch;*/
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+}
+.section-lead
+{
+    font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--text-strong);
 }
 
 /* ====================================
-   Section Title Underline Styles.
+   Section Title Accent Underline Styles.
 ======================================= */
-.section-title::after
+/*.section-title::after
 {
     content: "";
     display: block;
 
+    width: 48px;
     height: 2px;
-    width: 56px;
-    margin-top: 0.75rem;
+    margin-top: 0.65rem;
 
-    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    background: linear-gradient(90deg, var(--primary), var(--accent));
     border-radius: 999px;
-    opacity: 0.7;
-}
+    opacity: 0.55;
+}*/

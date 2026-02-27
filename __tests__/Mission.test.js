@@ -1,7 +1,7 @@
 //Filename: Mission.test.js
 //Author: Kyle McColgan
-//Date: 18 December 2025
-//Description: This file contains the Jest unit tests for the personal React project mission section.
+//Date: 17 February 2026
+//Description: This file contains the Jest unit tests for the React personal project mission section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -26,27 +26,27 @@ describe('Mission Component', () => {
     });
 
     //Test #3
-    it('renders all paragraphs in the Mission section', () => {
-        const paragraphs = screen.getAllByText(/I/);
-        expect(paragraphs).toHaveLength(3);
+    it('contains exactly 2 paragraph elements', () => {
+        const paragraphs = screen.getAllByText((_, element) => element.tagName.toLowerCase() === 'p');
+        expect(paragraphs.length).toBe(2);
     });
 
     //Test #4
     it('renders the first paragraph correctly', () => {
-        const firstParagraph = screen.getByText(/My mission is to uplift/);
+        const firstParagraph = screen.getByText(/My mission consists of/);
         expect(firstParagraph).toBeInTheDocument();
     });
 
     //Test #5
     it('renders the second paragraph correctly', () => {
-        const secondParagraph = screen.getByText(/I am dedicated to supporting/);
+        const secondParagraph = screen.getByText(/Through mentorship and collaboration/);
         expect(secondParagraph).toBeInTheDocument();
     });
 
     //Test #6
-    it('renders the third paragraph correctly', () => {
-        const thirdParagraph = screen.getByText(/Driven by the evolving world of technology/);
-        expect(thirdParagraph).toBeInTheDocument();
+    it('contains a level 2 heading', () => {
+        const heading = screen.getByRole('heading', { level: 2 });
+        expect(heading).toBeInTheDocument();
     });
 
     //Test #7

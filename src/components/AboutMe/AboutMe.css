@@ -1,32 +1,28 @@
 /* Filename: src/components/AboutMe/AboutMe.css */
 
+/* AboutMe uses global section layout.
+ No additional layout styles required. */
+
+/*.about { display: flex; flex-direction: column; }*/
+
 /* ====================================
-   AboutMe Body Container Styles.
+   AboutMe Text Stucture Styles.
 ======================================= */
-.about-body
+/*.about .section-text
 {
-    margin-top: 2.25rem;
-    max-width: 68ch;
-}
+    max-width: 62ch;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 2.5vw, 2rem);
+}*/
 
 /* ====================================
    AboutMe Lead Paragraph Styles.
 ======================================= */
-.about-lead
+/*.about .section-lead
 {
-    font-size: 1.125rem;
+    font-size: clamp(1.2rem, 1.4vw, 1.35rem);
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.6;
     color: var(--text-strong);
-}
-
-/* ====================================
-   AboutMe Supporting Paragraphs Styles.
-======================================= */
-.about-body p
-{
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text);
-}
-.about-body p + p { margin-top: 1.6rem; }
+}*/

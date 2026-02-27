@@ -1,68 +1,25 @@
 /* Filename: src/components/Skills/Skills.css */
 
 /* ====================================
-   Skills Intro Text Styles.
-======================================= */
-.skills-intro
-{
-    margin-top: 1.75rem;
-    max-width: 60ch;
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text-muted);
-}
-
-/* ====================================
    Skills Grid Layout Styles.
 ======================================= */
-.skills-list
+.skills-grid
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(2rem, 4vw, 3rem);
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(2rem, 3vw, 3rem);
     padding: 0;
-    list-style: none;
 }
 
 /* ====================================
-   Skills Item Styles.
+   Skills Skill Block Styles.
 ======================================= */
-.skills-item
+.skill
 {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-}
+    gap: 1rem;
 
-/* ====================================
-   Skills Title Styles.
-======================================= */
-.skills-subtitle
-{
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    color: var(--text-strong);
-    margin: 0;
+    border-radius: var(--radius-lg);
 }
-
-/* ====================================
-   Skills Description Styles.
-======================================= */
-.skills-item p
-{
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text);
-    margin: 0;
-}
-
-/* ====================================
-   Skills Media Query Styles.
-======================================= */
-@media (max-width: 640px)
-{
-    .skills-list { gap: 1.75rem; }
-    .skills-item { padding: var(--space-sm); }
-}
+.skill-title { font-size: 1.1rem; font-weight: 600; color: var(--text-strong); }

@@ -1,7 +1,7 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 27 January 2026
-//Description: This file contains the Jest unit tests for the personal React project footer component.
+//Date: 24 February 2026
+//Description: This file contains the Jest unit tests for the React personal project footer component.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -28,7 +28,7 @@ describe('Footer Component', () => {
 
   //Test #3
   test('footer contains a paragraph with the correct class.', () => {
-    const paragraph = screen.getByText(/Grounded in gratitude this February ♥/i);
+    const paragraph = screen.getByText(/Built with intention in Saint Louis./i);
     expect(paragraph).toHaveClass('footer-message');
   });
 
@@ -39,9 +39,9 @@ describe('Footer Component', () => {
   });
 
   //Test #5
-  test('text content includes the word "February" and an emoji.', () => {
-    const text = screen.getByText(/February/i);
-    expect(text.textContent).toMatch(/♥/);
+  it('contains at least one paragraph of text', () => {
+    const paragraphs = screen.getAllByText((_, element) => element.tagName.toLowerCase() === 'p');
+    expect(paragraphs.length).toBeGreaterThan(0);
   });
 
   //Test #6
@@ -51,9 +51,9 @@ describe('Footer Component', () => {
   });
 
   //Test #7
-  test('footer contains two child elements (the paragraphs).', () => {
+  test('footer contains one inner div.', () => {
     const footer = screen.getByRole('contentinfo');
-    expect(footer.childElementCount).toBe(2);
+    expect(footer.childElementCount).toBe(1);
   });
 
   //Test #8
