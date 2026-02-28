@@ -8,9 +8,9 @@ Welcome! 👋
 
 This repository contains the source code for my personal website, designed to showcase my projects and journey in web development. Built with React, this site reflects my approach to creating simple and modern web designs.
 
-Feel free to explore my work, as well as reach out if you're interested in collaborating or discussing new ideas!
+Feel free to explore my work, as well as reach out if you're interested in collaborating!
 
-![Portfolio Screenshot](./public/images/Screenshot_20260127_222909.png)
+![Portfolio Screenshot](./public/images/Screenshot_20260227_183640.png)
 *A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
@@ -30,19 +30,10 @@ Feel free to explore my work, as well as reach out if you're interested in colla
 ## Technologies Used
 
 - **Languages:** HTML, CSS, JavaScript, React
-  For building responsive, interactive, and dynamic web interfaces.
-  
 - **Build Tool:** [Vite](https://vitejs.dev)
-  Enables rapid development with optimized production builds.
-  
 - **Testing:** [Jest](https://jestjs.io)
-  Used for writing and running the unit tests for the JavaScript functionality.
-  
 - **Deployment:** [GitHub Pages](https://pages.github.com/)
-  Provides free hosting and deployment directly from the repository.
-  
 - **Version Control:** [Git](https://git-scm.com/)
-  For source control, collaboration, and code management.
 
 ## How to Use
 
@@ -185,7 +176,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## Contact
 
-I'm always open to new opportunities, collaborations, or thoughtful discussions about technology.
+I'm always open to new opportunities and collaborations.
 
 Feel free to connect with me:
 
