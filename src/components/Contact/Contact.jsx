@@ -22,7 +22,7 @@ function Contact()
       </h2>
 
       <p className="section-intro">
-        Open to meanigful collaboration and thoughtful conversation.
+        Find me on the following platforms:
       </p>
 
       <address className="contact-grid">
