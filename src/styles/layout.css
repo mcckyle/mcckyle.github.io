@@ -1,44 +1,29 @@
 /* Filename: src/styles/layout.css */
 
 /* ====================================
-   Section Container Styles.
-======================================= */
-.section
-{
-    display: flex;
-    flex-direction: column;
-
-    gap: clamp(2rem, 3vw, 3rem);
-}
-
-/* ====================================
    Section Header Styles.
 ======================================= */
 .section-title
 {
+    color: var(--text-strong);
     font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 600;
-    letter-spacing: -0.02em;
-
-    color: var(--text-strong);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
 }
-.section-intro
-{
-    /*max-width: 60ch;*/
-    color: var(--text-muted);
-}
+.section-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
 .section-text
 {
-    /*max-width: 60ch;*/
     display: flex;
     flex-direction: column;
-    gap: clamp(1.25rem, 2vw, 1.75rem);
+    gap: clamp(1rem, 1.8vw, 1.5rem);
 }
 .section-lead
 {
-    font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+    max-width: 60ch;
+    font-size: clamp(1.08rem, 1.35vw, 1.22rem);
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--text-strong);
 }
 

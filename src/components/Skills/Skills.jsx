@@ -1,7 +1,7 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
-//Description: This file contains the Skills component for the React personal project.
+//Date: 19 March 2026
+//Description: This file contains the Skills component for the personal React project.
 
 import React from "react";
 import "./Skills.css";

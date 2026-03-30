@@ -11,20 +11,29 @@
     list-style: none;
 
     display: grid;
-    gap: clamp(2.75rem, 4vw, 3.75rem);
+    gap: clamp(2rem, 3.5vw, 3rem);
 }
 
-/* Experience Simple Vertical Rail Styles. */
+/* ====================================
+   Experience Timeline "Spine" Styles.
+======================================= */
 .experience-timeline::before
 {
     content: "";
     position: absolute;
-    left: 56px;
     top: 0.6rem;
     bottom: 0.6rem;
+    left: 5px;
 
     width: 1px;
-    background: var(--line);
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--line),
+        transparent
+    );
+
+    opacity: 0.7;
 }
 
 /* ====================================
@@ -33,7 +42,7 @@
 .experience-entry
 {
     position: relative;
-    padding-left: 2.5rem;
+    padding-left: 1.75rem;
 }
 
 /* ====================================
@@ -42,21 +51,31 @@
 .experience-marker
 {
     position: absolute;
-    left: 3px;
-    top: 0.4rem;
+    left: 0;
+    top: 0.5rem;
 
     width: 10px;
     height: 10px;
     border-radius: 50%;
 
-    background: var(--brand);
+    background: var(--surface);
+    border: 2px solid var(--brand);
+    box-shadow: 0 0 0 3px var(--bg-base), 0 2px 6px rgba(16, 24, 32, 0.08);
+
+    transition: transform var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+.experience-entry:hover .experience-marker
+{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px var(--bg-base), 0 6px 14px rgba(16, 24, 32, 0.12);
 }
 
 /* ====================================
    Experience Content Styles.
 ======================================= */
-.experience-content { display: flex; flex-direction: column; gap: 0.65rem; max-width: 60ch;  }
-.experience-role { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.015em; color: var(--text-strong); }
-.experience-meta { display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: baseline; }
-.experience-company { font-size: 1rem; font-weight: 500; color: var(--text); }
-.experience-period { font-size: 0.9rem; color: var(--text-muted); }
+.experience-content { display: flex; flex-direction: column; gap: 0.45rem; max-width: 58ch;  }
+.experience-role { font-size: 1.12rem; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; color: var(--text-strong); }
+.experience-meta { display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; align-items: baseline; }
+.experience-company { font-size: 0.94rem; font-weight: 500; color: var(--text); }
+.experience-period { font-size: 0.85rem; color: var(--text-muted); }

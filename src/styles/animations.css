@@ -1,20 +1,27 @@
 /* Filename: src/styles/animations.css */
 
 /* ====================================
-   Section Entrance Animation Styles.
+   Section Animation (Opt-in) Styles.
 ======================================= */
-.section
+.section-animate
 {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(10px);
 
-    animation: sectionFade 0.5s var(--ease) forwards;
+    animation: section-fade-up 0.7s var(--ease) forwards;
 }
+.delay-1 { animation-delay: 0.04s; }
+.delay-2 { animation-delay: 0.08s; }
+.delay-3 { animation-delay: 0.12s; }
+.delay-4 { animation-delay: 0.16s; }
+.delay-5 { animation-delay: 0.2s; }
+.delay-6 { animation-delay: 0.24s; }
 
 /* ====================================
    Animation Keyframes Styles.
 ======================================= */
-@keyframes sectionFade
+@keyframes section-fade-up
 {
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }

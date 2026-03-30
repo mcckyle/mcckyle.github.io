@@ -1,7 +1,7 @@
 //Filename: Header.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
-//Description: This file contains the Header component for the React personal project.
+//Date: 26 March 2026
+//Description: This file contains the Header component for the personal React project.
 
 import React from "react";
 import profilePic from "/images/kdm-ocean-01.png";
@@ -11,8 +11,8 @@ import "./Header.css";
 function Header()
 {
   return (
-    <header className="site-header">
-      <div className="header-inner">
+    <header className="site-header" role="banner">
+      <div className="container header-inner">
         <img
           className="header-avatar"
           src={profilePic}

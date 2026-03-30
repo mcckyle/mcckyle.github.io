@@ -1,7 +1,7 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 24 February 2026
-//Description: This file contains the Jest unit tests for the React personal project footer component.
+//Date: 21 March 2026
+//Description: This file contains the Jest unit tests for the personal React project footer component.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -28,7 +28,7 @@ describe('Footer Component', () => {
 
   //Test #3
   test('footer contains a paragraph with the correct class.', () => {
-    const paragraph = screen.getByText(/Built with intention in Saint Louis./i);
+    const paragraph = screen.getByText(/Designed in Saint Louis/i);
     expect(paragraph).toHaveClass('footer-message');
   });
 

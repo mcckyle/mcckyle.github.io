@@ -1,7 +1,7 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
-//Description: This file contains the Projects component for the React personal project.
+//Date: 19 March 2026
+//Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
 import "./Projects.css";
@@ -30,13 +30,19 @@ function Projects()
       {
         title: "Gift Planner",
         description:
-          "A structured application for organizing gift ideas and relationships, through a modern REST-driven system.",
+          "A structured application for organizing relationships and gift ideas, through a modern REST-driven system.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
       {
         title: "Gratitude Journal",
         description:
-          "A secure journaling experience centered around reflection and persistent data design.",
+          "A secure journaling experience centered around reflection and long-term data persistence.",
+        tech: ["Java", "React", "Spring Boot", "MySQL"],
+      },
+      {
+        title: "PotOfGoals",
+        description:
+        "A modern personal goal tracking application with seasonal interaction design.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
     ];

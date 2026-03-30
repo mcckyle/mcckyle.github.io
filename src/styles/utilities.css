@@ -5,5 +5,7 @@
 ======================================= */
 @media (prefers-reduced-motion: reduce)
 {
-    * { transition: none !important; animation: none !important; }
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    .section { opacity: 1 !important; transform: none !important; }
 }

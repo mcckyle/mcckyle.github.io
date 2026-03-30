@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
+//Date: 26 March 2026
 //Description: This file contains the main App component for the personal React website.
 
 import React from "react";
@@ -23,12 +23,24 @@ function App()
       <Header />
 
       <main id="main-content" className="site-main">
-        <section className="section"><Mission /></section>
-        <section className="section"><Projects /></section>
-        <section className="section"><Skills /></section>
-        <section className="section"><AboutMe /></section>
-        <section className="section"><Experience /></section>
-        <section className="section"><Contact /></section>
+        <section className="section">
+          <div className="container"><Mission /></div>
+        </section>
+        <section className="section">
+          <div className="container"><Projects /></div>
+        </section>
+        <section className="section">
+          <div className="container"><Skills /></div>
+        </section>
+        <section className="section">
+          <div className="container"><AboutMe /></div>
+        </section>
+        <section className="section">
+          <div className="container"><Experience /></div>
+        </section>
+        <section className="section">
+          <div className="container"><Contact /></div>
+        </section>
       </main>
 
       <Footer />

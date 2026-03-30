@@ -1,12 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Header Component matches the snapshot 1`] = `
 <DocumentFragment>
   <header
     class="site-header"
+    role="banner"
   >
     <div
-      class="header-inner"
+      class="container header-inner"
     >
       <img
         alt="Portrait of Kyle D. McColgan"

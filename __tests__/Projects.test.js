@@ -1,7 +1,7 @@
 //Filename: Projects.test.js
 //Author: Kyle McColgan
-//Date: 26 February 2026
-//Description: This file contains the Jest unit tests for the React personal project projects section.
+//Date: 19 March 2026
+//Description: This file contains the Jest unit tests for the personal React project projects section.
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -29,7 +29,7 @@ describe('Projects component', () => {
     //Test #3
     it('renders the list of project cards', () => {
         const projectCards = screen.getAllByRole('listitem', { name: '' }); //Default list items.
-        expect(projectCards).toHaveLength(5 + 3 + 4 + 4 + 4 + 4); //4 cards, 3 tech tags (Proj. 1), 4 tech tags (Proj. 2), etc...
+        expect(projectCards).toHaveLength(6 + 3 + 4 + 4 + 4 + 4 + 4); //4 cards, 3 tech tags (Proj. 1), 4 tech tags (Proj. 2), etc...
     });
 
     //Test #4

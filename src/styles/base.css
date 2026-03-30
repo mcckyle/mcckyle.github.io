@@ -5,7 +5,7 @@
 ======================================= */
 body
 {
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 0.01em;
 }
 
@@ -15,14 +15,15 @@ body
 h1, h2, h3, h4
 {
     margin: 0;
+    color: var(--text-strong);
     font-weight: 600;
     line-height: 1.1;
-    letter-spacing: -0.015em;
-    color: var(--text-strong);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
 }
 h1 { font-size: clamp(2.8rem, 4vw, 3.5rem); }
-h2 { font-size: clamp(2.1rem, 3vw, 2.5rem); }
-h3 { font-size: 1.15rem; }
+h2 { font-size: clamp(2rem, 3vw, 2.5rem); }
+h3 { font-size: clamp(1.05rem, 1.2vw, 1.15rem); line-height: 1.2; }
 
 /* ====================================
    Paragraphs Styles.
@@ -32,6 +33,8 @@ p
     margin: 0;
     max-width: 65ch;
     color: var(--text);
+    line-height: 1.65;
+    text-wrap: pretty;
 }
 
 /* ====================================
@@ -44,14 +47,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 ======================================= */
 .card
 {
-    background: var(--surface);
+    padding: clamp(1.35rem, 2vw, var(--space-md));
     border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
 
-    transition: border-color var(--transition), background var(--transition), transform var(--transition);
+    transition: border-color var(--transition),
+                background-color var(--transition),
+                transform var(--transition),
+                box-shadow var(--transition);
 }
-.card:hover { border-color: var(--brand-strong); transform: translateY(-2px); }
+.card:hover { border-color: color-mix(in srgb, var(--brand-strong) 16%, var(--line)); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.card:active { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
 
 /* ====================================
    Links Styles.
@@ -60,12 +68,12 @@ a
 {
     color: var(--brand-strong);
     text-decoration: none;
-    font-weight: 500;
+    text-underline-offset: 0.18em;
 
-    transition: opacity var(--transition);
+    transition: color var(--transition-fast), opacity var(--transition-fast);
 }
-a:hover { opacity: 0.75; }
-a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+a:hover { opacity: 0.82; }
+a:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 4px; }
 
 /* ====================================
    Scrollbar Styles.

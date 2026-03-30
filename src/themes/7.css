@@ -66,10 +66,13 @@ hr
     background: linear-gradient(to right, transparent, var(--hr-color), transparent);
 }
 
-/* =======================
- * Animations Styles.
- = ==*======================= */
-/*@keyframes float {
- * 0%, 100% { transform: translateY(0px); opacity: 0.85; }
- * 50% { transform: translateY(-4px); opacity: 1; }
- } */*
+/* ==========================
+   Animations Styles.
+============================= */
+/*
+@keyframes float
+{
+   0%, 100% { transform: translateY(0px); opacity: 0.85; }
+   50% { transform: translateY(-4px); opacity: 1; }
+}
+*/

@@ -1,20 +1,180 @@
-/* Filename: 3.css (April) */
+/* Filename: src/themes/3.css (April 2026 Theme) */
 
-/* CSS variables... */
+/* ====================================
+   Root Design System - Light Mode.
+======================================= */
 :root
 {
-    --bg-light: #f0f4f8;
-    --text-dark: #2d2d2d;
-    --blue: #4a6fa5;
-    --lavender: #a678b2;
-    --border-light: #dbe6f1;
-    --footer-bg: #e2eaf3;
-    --hr-color: #a8c4e8;
+    /* Brand System (Fresh Spring Rain). */
+    --brand: #5a9fc4;
+    --brand-strong: #34789a;
+    --brand-soft: #e3f2fa;
+
+    /* Background System. */
+    --bg-base: #f6f9fb;
+    --surface: #ffffff;
+    --surface-alt: #f3f8fb;
+    --glass: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.35);
+    --line: rgba(24, 43, 61, 0.05);
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 35%, transparent);
+
+    /* Text System. */
+    --text-strong: #12212d;
+    --text: #30495a;
+    --text-muted: #7f93a2;
+
+    /* Radius. */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.75rem;
+
+    /* Spacing. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 1px 2px rgba(16, 24, 32, 0.04), 0 4px 12px rgba(16, 24, 32, 0.04);
+    --shadow-md: 0 2px 6px rgba(16, 24, 32, 0.05), 0 12px 32px rgba(16, 24, 32, 0.06);
+    --shadow-lg: 0 4px 14px rgba(16, 24, 32, 0.06), 0 24px 64px rgba(16, 24, 32, 0.08);
+
+    /* Motion System. */
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-fast: 0.2s var(--ease);
+    --transition: 0.35s var(--ease);
+    --transition-slow: 0.6s var(--ease);
+
+    color-scheme: light;
 }
 
-ul li::before
+/* ====================================
+   Ambient April Atmosphere Styles.
+======================================= */
+/*body::before
 {
-    content: '💦'; /* Raindrops icon for April showers */
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        900px circle at 90% -10%,
+        rgba(183, 215, 232, 0.06),
+        transparent 65%
+    ),
+    radial-gradient(
+        700px circle at -10% 30%,
+        rgba(79, 143, 178, 0.03),
+        transparent 60%
+    );
+}*/
+
+/* ====================================
+   Ambient April Atmosphere Styles. (Soft drifting rain-light shimmer).
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -10%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            520px circle at 12% 10%,
+            rgba(90, 159, 196, 0.045),
+            transparent 70%
+        ),
+        radial-gradient(
+            480px circle at 88% 22%,
+            rgba(90, 159, 196, 0.035),
+            transparent 68%
+        ),
+        radial-gradient(
+            620px circle at 60% 85%,
+            rgba(227, 242, 250, 0.05),
+            transparent 72%
+        );
+
+    opacity: 0.65;
+    animation: april-drift 220s linear infinite;
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand. */
+        --brand: #5fa4c7;
+        --brand-strong: #7fc2e4;
+        --brand-soft: #1f3643;
+
+        /* Background System. */
+        --bg-base: #0b1218;
+        --surface: #121a21;
+        --surface-alt: #18232c;
+        --glass: rgba(18, 26, 33, 0.68);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --line: rgba(255, 255, 255, 0.06);
+        --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 45%, transparent);
+
+        /* Text Tokens. */
+        --text-strong: #f2f6f8;
+        --text: #c8d3da;
+        --text-muted: #7e8e98;
+
+        /* Shadow System. */
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 6px 18px rgba(0, 0, 0, 0.35);
+        --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.4), 0 14px 40px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.45), 0 28px 80px rgba(0, 0, 0, 0.55);
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        background:
+            radial-gradient(
+                520px circle at 12% 10%,
+                rgba(95, 164, 199, 0.055),
+                transparent 70%
+            ),
+            radial-gradient(
+                480px circle at 88% 22%,
+                rgba(95, 164, 199, 0.04),
+                transparent 68%
+            ),
+            radial-gradient(
+                620px circle at 60% 85%,
+                rgba(95, 164, 199, 0.035),
+                transparent 72%
+            );
+
+        opacity: 0.55;
+    }
+}
+
+/* ====================================
+   April Cloud Drift Animation Styles.
+======================================= */
+@keyframes april-drift
+{
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    40% { transform: translate3d(-0.6%, 0.5%, 0) scale(1.02); }
+    75% { transform: translate3d(0.4%, -0.3%, 0) scale(1.015); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+/*ul li::before
+{
+    content: '💦';
     display: inline-block;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -26,11 +186,10 @@ ul li:hover::before
     opacity: 0.7;
 }
 
-/* Horizontal rule */
 hr
 {
     margin: 20px 0;
-    border: 1px solid #a8c4e8; /* Subtle pastel blue */
+    border: 1px solid #a8c4e8;
 }
 
 @keyframes raindrop
@@ -45,4 +204,4 @@ hr
         transform: translateY(4px);
         opacity: 0.7;
     }
-}
+}*/

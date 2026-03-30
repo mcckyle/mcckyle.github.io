@@ -2,7 +2,7 @@
 
 # Kyle McColgan – Technology Professional
 
-## Overview
+## Introduction
 
 Welcome! 👋
 
@@ -10,24 +10,34 @@ This repository contains the source code for my personal website, designed to sh
 
 Feel free to explore my work, as well as reach out if you're interested in collaborating!
 
-![Portfolio Screenshot](./public/images/Screenshot_20260227_183640.png)
-*A glimpse of the website, with a screenshot, designed to summarize my technology related projects*
+![Portfolio Screenshot](./public/images/Screenshot_20260329_211709.png)
+*A glimpse of my website, captured with a screenshot.*
 
 *🌐 [Visit the live site](https://mcckyle.github.io/)*
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Technologies Used](#technologies-used)
-3. [How to Use](#how-to-use)
-4. [Project Structure](#project-structure)
-5. [Future Plans](#future-plans)
-6. [Tests](#tests)
-7. [License](#license)
-8. [Contact](#contact)
-9. [Acknowledgements](#acknowledgements)
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Getting Started](#getting-started)
+5. [Architecture](#architecture)
+6. [Design Philosophy](#design-philosophy)
+7. [Roadmap](#roadmap)
+8. [License](#license)
+9. [Contact](#contact)
+10. [Acknowledgements](#acknowledgements)
 
-## Technologies Used
+## Features
+
+- **Scalable, Modular Design** – Built with React, ensuring each component can grow without friction.
+- **Seasonal Color Palettes** – Expect a fresh, seasonal palette every month.
+- **Intuitive Interface** – Clean, minimal layouts prioritize clarity and usability, making every interaction smooth and predictable.
+- **Responsive & Adaptive** – Fully optimized for all devices, with fluid layouts and readable typography at any screen size. 
+- **Performance Focused** – Optimized for fast load times and minimal render overhead, enabling a snappy user experience.
+- **Maintainable & Testable** – Modular code structure and integrated unit tests promote maintainability and confidence in production.
+
+## Tech Stack
 
 - **Languages:** HTML, CSS, JavaScript, React
 - **Build Tool:** [Vite](https://vitejs.dev)
@@ -35,7 +45,7 @@ Feel free to explore my work, as well as reach out if you're interested in colla
 - **Deployment:** [GitHub Pages](https://pages.github.com/)
 - **Version Control:** [Git](https://git-scm.com/)
 
-## How to Use
+## Getting Started
 
 To run this project locally, follow the steps below:
 
@@ -74,7 +84,7 @@ To run this project locally, follow the steps below:
 
 ---
 
-## Project Structure
+## Architecture
 
 ```
 mcckyle.github.io/
@@ -132,13 +142,12 @@ mcckyle.github.io/
 │
 ├── __tests__/             # Jest unit tests.
 │   ├── Header.test.js
-│   ├── Contact.test.js
-│   ├── Dedication.test.js
 │   ├── Mission.test.js
-│   ├── AboutMe.test.js
-│   ├── Skills.test.js
 │   ├── Projects.test.js
-│   ├── History.test.js
+│   ├── Skills.test.js
+│   ├── AboutMe.test.js
+│   ├── Experience.test.js
+│   ├── Contact.test.js
 │   └── Footer.test.js
 │
 ├── dist/                 # Production build output.
@@ -154,21 +163,22 @@ mcckyle.github.io/
 └── README.md             # Project documentation.
 ```
 
-## Future Plans
+## Design Philosophy
+
+This project is built with **intention and simplicty** at its core:
+
+- **Minimalism with Purpose** – Every element has meaning; no visual clutter or redundant features.
+- **Consistency & Readability** – Typography, spacing, and color usage are harmonious across all components, reflecting a cohesive brand presence.
+- **User-Centered Thinking** – Interfaces anticipate user needs, emphasizing accessibility and smooth interactions.
+- **Modern Standards** – Leveraging latest React patterns and responsive design practices.
+- **Intentional Performance** – Lightweight, maintainable code ensures fast loading and smooth execution, even on constrained devices.
+- **Future-Proof Architecture** – Designed for scalability and maintainability as the project grows.
+
+## Roadmap
 
 - **Enhanced Features:** Introduce dynamic, interactive components using JavaScript.
 - **Security Upgrades:** Adopt advanced secure web development practices.
 - **Project Showcase:** Add more projects highlighting C++ and security work.
-
-## Tests
-
-To ensure the quality and reliability of the website, this project utilizes the **Jest** testing framework. Unit tests are located in the `__tests__` directory and cover the key components of the app.
-
-To run the tests locally, use the following command:
-
-```bash
-npm test
-```
 
 ## License
 

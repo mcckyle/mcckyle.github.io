@@ -1,7 +1,7 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 24 February 2026
-//Description: This file contains the Footer component for the React personal project.
+//Date: 26 March 2026
+//Description: This file contains the Footer component for the personal React project.
 
 import React from "react";
 import "./Footer.css";
@@ -11,10 +11,10 @@ function Footer()
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer" aria-label="Site footer">
-      <div className="footer-inner">
+    <footer className="footer" role="contentinfo">
+      <div className="container footer-inner">
         <p className="footer-message">
-          Built with intention in Saint Louis.
+          Designed in Saint Louis by Kyle McColgan.
         </p>
 
         <p className="footer-dedication">

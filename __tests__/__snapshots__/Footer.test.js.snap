@@ -1,18 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Footer Component footer matches the snapshot. 1`] = `
 <DocumentFragment>
   <footer
-    aria-label="Site footer"
     class="footer"
+    role="contentinfo"
   >
     <div
-      class="footer-inner"
+      class="container footer-inner"
     >
       <p
         class="footer-message"
       >
-        Built with intention in Saint Louis.
+        Designed in Saint Louis by Kyle McColgan.
       </p>
       <p
         class="footer-dedication"
