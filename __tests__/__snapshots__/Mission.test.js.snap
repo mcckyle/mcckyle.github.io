@@ -16,7 +16,7 @@ exports[`Mission Component matches the snapshot of the Mission section 1`] = `
     <p
       class="section-lead"
     >
-      My mission consists of sharing the wealth of knowledge earned throughout my career in order to uplift and elevate the local technology community in Saint Louis.
+      My mission consists of sharing the wealth of knowledge earned throughout my career in order to uplift and elevate the technology community in Saint Louis.
     </p>
     <p>
       Through mentorship and collaboration, I strive to contribute simple, modern systems that raise the standard of local innovation and strengthen the people behind it.
