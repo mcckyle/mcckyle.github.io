@@ -1,17 +1,14 @@
 /* Filename: src/components/Contact/Contact.css */
 
 /* ====================================
-   Contact Grid Container Styles.
+   Contact Container Styles.
 ======================================= */
-.contact-grid { font-style: normal; /* Override <address> italics. */ }
-.contact-grid ul
+.contact { font-style: normal; /* Override <address> italics. */ }
+.contact-list
 {
     display: grid;
-    gap: clamp(1.25rem, 2.5vw, 1.75rem);
-    max-width: 640px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    gap: clamp(1rem, 2vw, 1.45rem);
+    width: min(100%, 640px);
 }
 
 /* ====================================
@@ -19,19 +16,17 @@
 ======================================= */
 .contact-entry
 {
-    display: grid;
-    grid-template-columns: minmax(110px, 140px) 1fr;
-    align-items: baseline;
-    column-gap: 1.5rem;
     position: relative;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(112px, 140px) 1fr;
+    align-items: start;
+    gap: 0.42rem 1.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
 
-    padding-bottom: 1.1rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--line) 85%, transparent);
-
-    transition: transform var(--transition-fast), border-color var(--transition-fast);
+    transition: border-color var(--transition-fast);
 }
-.contact-entry::before
+/*.contact-entry::before
 {
     content: "";
     position: absolute;
@@ -46,41 +41,37 @@
 
     transition: opacity var(--transition);
 }
-.contact-entry:hover::before { opacity: 1; }
-.contact-entry:hover { transform: translateY(-1px); border-color: color-mix(in srgb, var(--brand) 25%, var(--line)); }
-.contact-entry:last-child { border-bottom: none; } /* Remove divider from last item. */
+.contact-entry:hover::before { opacity: 1; }*/
+/* Remove divider from last item. */
+.contact-entry:last-child { padding-bottom: 0; border-bottom: none; }
+.contact-entry:hover { border-color: color-mix(in srgb, var(--brand) 16%, var(--line)); }
 
 /* ====================================
    Contact Labels Styles.
 ======================================= */
 .contact-label
 {
-    font-size: 0.66rem;
+    padding-top: 0.12rem;
+    font-size: 0.64rem;
     font-weight: 600;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: var(--text-muted);
 }
 
 /* ====================================
-   Contact Values Styles.
+   Contact Values / Links Styles.
 ======================================= */
-.contact-value { font-size: 0.97rem; line-height: 1.6; color: var(--text); word-break: break-word; }
-
-/* ====================================
-   Contact Links Styles.
-======================================= */
+.contact-value, .contact-link { font-size: 0.95rem; line-height: 1.76; color: var(--text); word-break: break-word; }
 .contact-link
 {
-    font-size: 0.97rem;
-    font-weight: 500;
-    color: var(--brand);
+    color: var(--brand-strong);
     text-decoration: none;
-    position: relative;
 
-    transition: color var(--transition-fast), opacity var(--transition-fast);
+    transition: opacity var(--transition-fast), color var(--transition-fast);
 }
-.contact-link::after
+.contact-link:hover { opacity: 0.8; }
+/*.contact-link::after
 {
     content: "";
     position: absolute;
@@ -97,15 +88,13 @@
     transition: transform var(--transition-fast);
 }
 .contact-link:hover::after,
-.contact-link:focus-visible::after { transform: scaleX(1); }
-.contact-link:hover,
-.contact-link:focus-visible { color: var(--brand-strong); opacity: 0.95; }
-.contact-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
+.contact-link:focus-visible::after { transform: scaleX(1); }*/
 
 /* ====================================
    Contact Media Query Styles.
 ======================================= */
 @media (max-width: 640px)
 {
-    .contact-entry { grid-template-columns: 1fr; row-gap: 0.25rem; }
+    .contact-entry { grid-template-columns: 1fr; gap: 0.32rem; }
+    .contact-label { padding-top: 0; }
 }

@@ -1,14 +1,15 @@
 /* Filename: src/styles/animations.css */
 
 /* ====================================
-   Section Animation (Opt-in) Styles.
+   Fade-Up Animation (Composable) Styles.
 ======================================= */
-.section-animate
+.fade-up
 {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translate3d(0, 10px, 0);
+    will-change: transform, opacity;
 
-    animation: section-fade-up 0.7s var(--ease) forwards;
+    animation: fade-up 0.8s var(--ease) forwards;
 }
 .delay-1 { animation-delay: 0.04s; }
 .delay-2 { animation-delay: 0.08s; }
@@ -18,10 +19,10 @@
 .delay-6 { animation-delay: 0.24s; }
 
 /* ====================================
-   Animation Keyframes Styles.
+   Animation Fade-Up Keyframes Styles.
 ======================================= */
-@keyframes section-fade-up
+@keyframes fade-up
 {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translate3d(0, 10px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
 }

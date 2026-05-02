@@ -1,6 +1,6 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 19 March 2026
+//Date: 29 April 2026
 //Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
@@ -13,7 +13,7 @@ function Projects()
         title: "Automated Snapshot Management Script",
         description:
           "A Bash utility that automates Snapper snapshot offloading to improve reliability while conserving disk space.",
-        tech: ["Bash", "Linux", "Snapper"],
+        tech: ["Bash", "GNU/Linux", "Snapper"],
       },
       {
         title: "ShowMeTasks",
@@ -30,7 +30,7 @@ function Projects()
       {
         title: "Gift Planner",
         description:
-          "A structured application for organizing relationships and gift ideas, through a modern REST-driven system.",
+          "A structured application for organizing relationships and gift ideas through a modern REST-driven system.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
       {
@@ -42,7 +42,7 @@ function Projects()
       {
         title: "PotOfGoals",
         description:
-        "A modern personal goal tracking application with seasonal interaction design.",
+          "A modern personal goal tracking application with seasonal interaction design.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
     ];
@@ -58,22 +58,26 @@ function Projects()
         </p>
 
         <ul
-          className="projects-grid"
+          className="content-grid"
           role="list"
           aria-labelledby="projects-title"
         >
-          {projects.map((project, index) => (
-            <li key={index} className="project card">
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">
+          {projects.map((project) => (
+            <li key={project.title} className="content-card project card">
+              <div className="content-stack">
+                <h3 className="content-title">{project.title}</h3>
+                <p className="content-description">
                   {project.description}
                 </p>
               </div>
 
-              <ul className="project-tech">
-                {project.tech.map((tech, i) => (
-                  <li key={i}>{tech}</li>
+              <ul
+                className="tech-list"
+                role="list"
+                aria-label={`${project.title} technologies`}
+              >
+                {project.tech.map((tech) => (
+                  <li key={tech} className="tech-pill">{tech}</li>
                 ))}
               </ul>
             </li>

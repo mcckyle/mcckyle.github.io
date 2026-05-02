@@ -1,0 +1,150 @@
+/* Filename: src/themes/4.css (May 2026 Theme) */
+
+/* ====================================
+   Root Design System - Light Mode.
+======================================= */
+:root
+{
+    /* Brand System (Fresh Spring Growth). */
+    --brand: #69be8c;
+    --brand-strong: #409f70;
+    --brand-soft: #eef8f2;
+
+    /* Accent (Warm Sunlight). */
+    --accent: #f4cf63;
+
+    /* Background & Surface System. */
+    --bg-base: #f8fcf9;
+    --surface: rgba(255, 255, 255, 0.78);
+    --surface-strong: rgba(255, 255, 255, 0.9);
+    --surface-alt: #f4faf6;
+    --glass: rgba(255, 255, 255, 0.56);
+    --glass-border: rgba(255, 255, 255, 0.42);
+    --line: rgba(18, 36, 28, 0.06);
+
+    /* Text System. */
+    --text-muted: #84978d;
+    --text: #375348;
+    --text-strong: #15231d;
+
+    /* Radius System. */
+    --radius-sm: 0.65rem;
+    --radius-md: 1.1rem;
+    --radius-lg: 1.5rem;
+
+    /* Spacing System. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 1px 2px rgba(15, 23, 32, 0.018), 0 10px 24px rgba(15, 23, 32, 0.028);
+    --shadow-md: 0 2px 10px rgba(15, 23, 32, 0.032), 0 18px 42px rgba(15, 23, 32, 0.042);
+    --shadow-lg: 0 16px 40px rgba(15, 23, 32, 0.048), 0 44px 96px rgba(15, 23, 32, 0.068);
+
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent);
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-slow: 0.68s var(--ease);
+    --transition: 0.32s var(--ease);
+    --transition-fast: 0.18s var(--ease);
+
+    color-scheme: light;
+}
+
+/* ====================================
+   Ambient Atmospheric Bloom Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -14%;
+    z-index: -2;
+    pointer-events: none;
+    will-change: transform;
+    background: radial-gradient(560px circle at 14% 12%, rgba(105, 190, 140, 0.032), transparent 74%),
+                radial-gradient(460px circle at 84% 18%, rgba(244, 207, 99, 0.03), transparent 70%),
+                radial-gradient(720px circle at 50% 92%, rgba(105, 190, 140, 0.018), transparent 78%);
+
+    opacity: 0.5;
+
+    animation: may-atmosphere 360s linear infinite;
+}
+
+/* ====================================
+   Soft Grain Overlay Styles.
+======================================= */
+body::after
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.005;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.14), transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.14), transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(circle at center, black, transparent 92%);
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand System. */
+        --brand: #74d49d;
+        --brand-strong: #9ce8bc;
+        --brand-soft: #1a3025;
+
+        /* Accent. */
+        --accent: #f1ca54;
+
+        /* Background & Surface System. */
+        --bg-base: #09120e;
+        --surface: rgba(16, 27, 22, 0.78);
+        --surface-strong: rgba(16, 27, 22, 0.9);
+        --surface-alt: #15211b;
+        --glass: rgba(16, 27, 23, 0.58);
+        --glass-border: rgba(255, 255, 255, 0.065);
+        --line: rgba(255, 255, 255, 0.058);
+        --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 38%, transparent);
+
+        /* Text System. */
+        --text-muted: #87988f;
+        --text: #c8d8d0;
+        --text-strong: #edf6f1;
+
+        /* Shadow System. */
+        --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.22), 0 10px 24px rgba(0, 0, 0, 0.24);
+        --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.28), 0 22px 48px rgba(0, 0, 0, 0.34);
+        --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.38), 0 44px 96px rgba(0, 0, 0, 0.44);
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        opacity: 0.44;
+        background: radial-gradient(560px circle at 14% 12%, rgba(116, 212, 157, 0.034), transparent 74%),
+                    radial-gradient(460px circle at 84% 18%, rgba(241, 202, 84, 0.026), transparent 70%),
+                    radial-gradient(720px circle at 50% 92%, rgba(116, 212, 157, 0.018), transparent 78%);
+    }
+    body::after { opacity: 0.004; }
+}
+
+/* ====================================
+   April Cloud Drift Animation Styles.
+======================================= */
+@keyframes may-atmosphere
+{
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    33% { transform: translate3d(-0.24%, 0.3%, 0) scale(1.008); }
+    66% { transform: translate3d(0.26%, -0.16%, 0) scale(1.006); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
+}

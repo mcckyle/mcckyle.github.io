@@ -15,64 +15,80 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
   </p>
   <ul
     aria-labelledby="skills-title"
-    class="skills-grid"
+    class="content-grid"
     role="list"
   >
     <li
-      class="skill card"
+      class="content-card skill card"
     >
-      <h3
-        class="skill-title"
+      <div
+        class="content-stack"
       >
-        Application Development
-      </h3>
-      <p
-        class="skill-description"
-      >
-        Designing scalable web applications with modular architecture using Java, React, and Spring Boot.
-      </p>
+        <h3
+          class="content-title"
+        >
+          Application Development
+        </h3>
+        <p
+          class="content-description"
+        >
+          Designing scalable web applications with modular architecture using Java, React, and Spring Boot.
+        </p>
+      </div>
     </li>
     <li
-      class="skill card"
+      class="content-card skill card"
     >
-      <h3
-        class="skill-title"
+      <div
+        class="content-stack"
       >
-        Frontend Engineering
-      </h3>
-      <p
-        class="skill-description"
-      >
-        Creating accessible, intuitive interfaces with modern JavaScript and maintainable React component design.
-      </p>
+        <h3
+          class="content-title"
+        >
+          Frontend Engineering
+        </h3>
+        <p
+          class="content-description"
+        >
+          Creating accessible, intuitive interfaces with modern JavaScript and maintainable React component design.
+        </p>
+      </div>
     </li>
     <li
-      class="skill card"
+      class="content-card skill card"
     >
-      <h3
-        class="skill-title"
+      <div
+        class="content-stack"
       >
-        Backend & Systems
-      </h3>
-      <p
-        class="skill-description"
-      >
-        Building performant backend services and system-level software in Java and C++.
-      </p>
+        <h3
+          class="content-title"
+        >
+          Backend & Systems
+        </h3>
+        <p
+          class="content-description"
+        >
+          Building performant backend services and system-level software in Java and C++.
+        </p>
+      </div>
     </li>
     <li
-      class="skill card"
+      class="content-card skill card"
     >
-      <h3
-        class="skill-title"
+      <div
+        class="content-stack"
       >
-        Information Security
-      </h3>
-      <p
-        class="skill-description"
-      >
-        Applying secure coding practices and threat mitigation principles to protect data integrity and privacy.
-      </p>
+        <h3
+          class="content-title"
+        >
+          Information Security
+        </h3>
+        <p
+          class="content-description"
+        >
+          Applying secure coding practices and threat mitigation principles to protect data integrity and privacy.
+        </p>
+      </div>
     </li>
   </ul>
 </DocumentFragment>

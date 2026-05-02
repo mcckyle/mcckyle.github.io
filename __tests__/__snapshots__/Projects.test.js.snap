@@ -15,206 +15,264 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
   </p>
   <ul
     aria-labelledby="projects-title"
-    class="projects-grid"
+    class="content-grid"
     role="list"
   >
     <li
-      class="project card"
+      class="content-card project card"
     >
       <div
-        class="project-content"
+        class="content-stack"
       >
         <h3
-          class="project-title"
+          class="content-title"
         >
           Automated Snapshot Management Script
         </h3>
         <p
-          class="project-description"
+          class="content-description"
         >
           A Bash utility that automates Snapper snapshot offloading to improve reliability while conserving disk space.
         </p>
       </div>
       <ul
-        class="project-tech"
+        aria-label="Automated Snapshot Management Script technologies"
+        class="tech-list"
+        role="list"
       >
-        <li>
+        <li
+          class="tech-pill"
+        >
           Bash
         </li>
-        <li>
-          Linux
+        <li
+          class="tech-pill"
+        >
+          GNU/Linux
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           Snapper
         </li>
       </ul>
     </li>
     <li
-      class="project card"
+      class="content-card project card"
     >
       <div
-        class="project-content"
+        class="content-stack"
       >
         <h3
-          class="project-title"
+          class="content-title"
         >
           ShowMeTasks
         </h3>
         <p
-          class="project-description"
+          class="content-description"
         >
           A modular full-stack task manager built with React and Spring Boot, emphasizing secure data handling and scalable architecture.
         </p>
       </div>
       <ul
-        class="project-tech"
+        aria-label="ShowMeTasks technologies"
+        class="tech-list"
+        role="list"
       >
-        <li>
+        <li
+          class="tech-pill"
+        >
           Java
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           React
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           Spring Boot
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           MySQL
         </li>
       </ul>
     </li>
     <li
-      class="project card"
+      class="content-card project card"
     >
       <div
-        class="project-content"
+        class="content-stack"
       >
         <h3
-          class="project-title"
+          class="content-title"
         >
           LoveNotes
         </h3>
         <p
-          class="project-description"
+          class="content-description"
         >
           A platform for sharing meaningful messages through an intuitive React interface combined with secure backend mail delivery.
         </p>
       </div>
       <ul
-        class="project-tech"
+        aria-label="LoveNotes technologies"
+        class="tech-list"
+        role="list"
       >
-        <li>
+        <li
+          class="tech-pill"
+        >
           Java
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           React
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           Spring Boot
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           MySQL
         </li>
       </ul>
     </li>
     <li
-      class="project card"
+      class="content-card project card"
     >
       <div
-        class="project-content"
+        class="content-stack"
       >
         <h3
-          class="project-title"
+          class="content-title"
         >
           Gift Planner
         </h3>
         <p
-          class="project-description"
+          class="content-description"
         >
-          A structured application for organizing relationships and gift ideas, through a modern REST-driven system.
+          A structured application for organizing relationships and gift ideas through a modern REST-driven system.
         </p>
       </div>
       <ul
-        class="project-tech"
+        aria-label="Gift Planner technologies"
+        class="tech-list"
+        role="list"
       >
-        <li>
+        <li
+          class="tech-pill"
+        >
           Java
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           React
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           Spring Boot
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           MySQL
         </li>
       </ul>
     </li>
     <li
-      class="project card"
+      class="content-card project card"
     >
       <div
-        class="project-content"
+        class="content-stack"
       >
         <h3
-          class="project-title"
+          class="content-title"
         >
           Gratitude Journal
         </h3>
         <p
-          class="project-description"
+          class="content-description"
         >
           A secure journaling experience centered around reflection and long-term data persistence.
         </p>
       </div>
       <ul
-        class="project-tech"
+        aria-label="Gratitude Journal technologies"
+        class="tech-list"
+        role="list"
       >
-        <li>
+        <li
+          class="tech-pill"
+        >
           Java
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           React
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           Spring Boot
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           MySQL
         </li>
       </ul>
     </li>
     <li
-      class="project card"
+      class="content-card project card"
     >
       <div
-        class="project-content"
+        class="content-stack"
       >
         <h3
-          class="project-title"
+          class="content-title"
         >
           PotOfGoals
         </h3>
         <p
-          class="project-description"
+          class="content-description"
         >
           A modern personal goal tracking application with seasonal interaction design.
         </p>
       </div>
       <ul
-        class="project-tech"
+        aria-label="PotOfGoals technologies"
+        class="tech-list"
+        role="list"
       >
-        <li>
+        <li
+          class="tech-pill"
+        >
           Java
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           React
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           Spring Boot
         </li>
-        <li>
+        <li
+          class="tech-pill"
+        >
           MySQL
         </li>
       </ul>

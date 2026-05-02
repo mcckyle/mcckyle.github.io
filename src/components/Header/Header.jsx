@@ -1,6 +1,6 @@
 //Filename: Header.jsx
 //Author: Kyle McColgan
-//Date: 26 March 2026
+//Date: 28 April 2026
 //Description: This file contains the Header component for the personal React project.
 
 import React from "react";
@@ -11,23 +11,25 @@ import "./Header.css";
 function Header()
 {
   return (
-    <header className="site-header" role="banner">
-      <div className="container header-inner">
-        <img
-          className="header-avatar"
-          src={profilePic}
-          alt="Portrait of Kyle D. McColgan"
-          width="160"
-          height="160"
-          loading="eager"
-          decoding="async"
-        />
+    <header className="site-header">
+      <div className="container">
+        <div className="header-inner">
+          <img
+            className="header-avatar"
+            src={profilePic}
+            alt="Portrait of Kyle D. McColgan"
+            width="160"
+            height="160"
+            loading="eager"
+            decoding="async"
+          />
 
-        <div className="header-intro">
-          <h1 className="header-title">Kyle D. McColgan</h1>
-          <p className="header-tagline">
-            Building simple, modern technology.
-          </p>
+          <div className="header-intro">
+            <h1 className="header-title">Kyle D. McColgan</h1>
+            <p className="header-tagline">
+              Building simple, modern technology.
+            </p>
+          </div>
         </div>
       </div>
     </header>

@@ -11,15 +11,16 @@ exports[`Experience component matches the snapshot of the Experience section 1`]
   <p
     class="section-intro"
   >
-    Roles centered on measurable impact and building reliable systems that last.
+    Roles centered on building reliable systems designed to last.
   </p>
   <ol
+    aria-labelledby="experience-title"
     class="experience-timeline"
   >
     <li
       class="experience-entry"
     >
-      <div
+      <span
         aria-hidden="true"
         class="experience-marker"
       />
@@ -51,7 +52,7 @@ exports[`Experience component matches the snapshot of the Experience section 1`]
     <li
       class="experience-entry"
     >
-      <div
+      <span
         aria-hidden="true"
         class="experience-marker"
       />

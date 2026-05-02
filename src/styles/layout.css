@@ -1,31 +1,71 @@
 /* Filename: src/styles/layout.css */
 
 /* ====================================
-   Section Header Styles.
+   Section Structure Styles.
 ======================================= */
-.section-title
+.section-title { margin-bottom: 0.55rem; }
+.section-intro
 {
-    color: var(--text-strong);
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    font-weight: 600;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
+    max-width: 60ch;
+    margin-bottom: clamp(1.65rem, 2.5vw, 2.1rem);
+    color: var(--text-muted);
 }
-.section-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
-.section-text
-{
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1rem, 1.8vw, 1.5rem);
-}
+
+/* ====================================
+   Section Text Composition Styles.
+ ======================================= */
+.section-text { display: grid; gap: 1rem; }
 .section-lead
 {
     max-width: 60ch;
-    font-size: clamp(1.08rem, 1.35vw, 1.22rem);
+    font-size: clamp(1.04rem, 1.25vw, 1.16rem);
     font-weight: 500;
-    line-height: 1.65;
+    line-height: 1.75;
     color: var(--text-strong);
 }
+
+/* ====================================
+   Shared Content Grid Styles.
+======================================= */
+.content-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    align-items: stretch;
+    gap: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+/* ====================================
+   Shared Content Card Styles.
+======================================= */
+.content-card
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    min-height: 100%;
+}
+
+/* ====================================
+   Shared Content Stack Styles.
+======================================= */
+.content-stack
+{
+    display: grid;
+    gap: 0.55rem;
+}
+
+/* ====================================
+   Shared Content Typography Styles.
+======================================= */
+.content-title
+{
+    color: var(--text-strong);
+    font-weight: 600;
+    line-height: 1.34;
+    letter-spacing: -0.015em;
+}
+.content-description { font-size: 0.94rem; line-height: 1.72; }
 
 /* ====================================
    Section Title Accent Underline Styles.

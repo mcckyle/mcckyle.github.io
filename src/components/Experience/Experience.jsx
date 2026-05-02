@@ -1,6 +1,6 @@
 //Filename: Experience.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
+//Date: 29 April 2026
 //Description: This file contains the Experience component for the React personal project.
 
 import React from "react";
@@ -30,25 +30,24 @@ function Experience()
       </h2>
 
       <p className="section-intro">
-        Roles centered on measurable impact and
-        building reliable systems that last.
+        Roles centered on building reliable systems designed to last.
       </p>
 
-      <ol className="experience-timeline">
-        {experiences.map((exp, index) => (
-          <li key={index} className="experience-entry">
-            <div className="experience-marker" aria-hidden="true" />
+      <ol className="experience-timeline" aria-labelledby="experience-title">
+        {experiences.map((experience) => (
+          <li
+            key={`${experience.company}-${experience.role}`}
+            className="experience-entry"
+          >
+            <span className="experience-marker" aria-hidden="true" />
 
             <div className="experience-content">
-              <h3 className="experience-role">{exp.role}</h3>
+              <h3 className="experience-role">{experience.role}</h3>
 
               <div className="experience-meta">
-                <span className="experience-company">{exp.company}</span>
-                <time
-                  className="experience-period"
-                  dateTime={exp.dateTime}
-                >
-                  {exp.period}
+                <span className="experience-company">{experience.company}</span>
+                <time className="experience-period" dateTime={experience.dateTime}>
+                  {experience.period}
                 </time>
               </div>
             </div>

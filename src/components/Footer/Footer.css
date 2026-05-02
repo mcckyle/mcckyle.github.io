@@ -6,30 +6,43 @@
 .footer
 {
     position: relative;
-    margin-top: clamp(4rem, 8vw, 6rem);
-    padding-block: clamp(2.75rem, 5vw, 3.75rem);
+    overflow: clip;
+    margin-top: clamp(4.75rem, 8vw, 7rem);
+    padding-block: clamp(3rem, 5vw, 4.25rem);
 
     background: linear-gradient(
         to top,
-        color-mix(in srgb, var(--surface) 60%, transparent),
-        transparent 70%
+        color-mix(in srgb, var(--surface) 42%, transparent),
+        transparent 74%
     );
 }
-/* Footer Simple Top Divider with fade Styles. */
 .footer::before
 {
     content: "";
     display: block;
-    width: min(68%, 760px);
+    width: min(720px, 72%);
     height: 1px;
-    margin: 0 auto clamp(2rem, 4vw, 2.75rem);
-    background: linear-gradient(
-        to right,
-        transparent,
-        color-mix(in srgb, var(--line) 85%, transparent),
-        transparent
+    margin: 0 auto clamp(2.5rem, 4vw, 3rem);
+    background: linear-gradient(to right, transparent, var(--line) 18%, var(--line) 82%, transparent);
+    opacity: 0.7;
+}
+.footer::after
+{
+    content: "";
+    position: absolute;
+    inset: auto 50% -10rem;
+    width: min(48rem, 90vw);
+    height: 18rem;
+
+    transform: translateX(-50%);
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        color-mix(in srgb, var(--brand) 8%, transparent),
+        transparent 74%
     );
-    opacity: 0.45;
+    opacity: 0.42;
+    filter: blur(28px);
 }
 
 /* ====================================
@@ -37,12 +50,15 @@
 ======================================= */
 .footer-inner
 {
-    max-width: 640px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    justify-items: center;
     text-align: center;
-    gap: 0.75rem;
+
+    width: min(100%, 620px);
+    margin-inline: auto; /* Visually centers the Footer content. */
+    gap: 0.9rem;
 }
 
 /* ====================================
@@ -53,7 +69,7 @@
     max-width: 38ch;
     font-size: 0.95rem;
     font-weight: 500;
-    line-height: 1.65;
+    line-height: 1.72;
     color: var(--text);
 }
 
@@ -62,9 +78,10 @@
 ======================================= */
 .footer-dedication
 {
-    max-width: 52ch;
-    font-size: 0.88rem;
-    line-height: 1.7;
+    max-width: 56ch;
+    font-size: 0.84rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
     color: var(--text-muted);
 }
 
@@ -73,15 +90,14 @@
 ======================================= */
 .footer-credit
 {
-    margin-top: 0.9rem;
+    margin-top: 0.45rem;
 
-    font-size: 0.72rem;
-    line-height: 1.4;
+    font-size: 0.68rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
     color: var(--text-muted);
-    opacity: 0.55;
+    opacity: 0.5;
 }
 
 /* ====================================
@@ -89,9 +105,9 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .footer { margin-top: clamp(3.5rem, 10vw, 5rem); padding-block: clamp(2.25rem, 7vw, 3.25rem); }
-    .footer-inner { gap: 0.7rem; }
-    .footer-message { font-size: 0.92rem; }
-    .footer-dedication { font-size: 0.85rem; }
-    .footer-credit { font-size: 0.68rem; letter-spacing: 0.08em; }
+    .footer { margin-top: clamp(3.5rem, 10vw, 5rem); padding-block: clamp(2.4rem, 7vw, 3.2rem); }
+    .footer-inner { gap: 0.78rem; }
+    .footer-message { font-size: 0.91rem; }
+    .footer-dedication { font-size: 0.82rem; }
+    .footer-credit { font-size: 0.64rem; }
 }

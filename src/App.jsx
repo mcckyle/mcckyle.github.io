@@ -1,7 +1,7 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 26 March 2026
-//Description: This file contains the main App component for the personal React website.
+//Date: 1 May 2026
+//Description: This file contains the App component for the personal React website.
 
 import React from "react";
 
@@ -16,35 +16,33 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import "./App.css";
 
+/* Pure Layout Primitive. */
+function Section({ children, className = "" })
+{
+  return (
+    <section className={`section ${className}`.trim()}>
+      <div className="container">{children}</div>
+    </section>
+  );
+}
+
 function App()
 {
   return (
-    <>
+    <div className="app-shell">
       <Header />
 
       <main id="main-content" className="site-main">
-        <section className="section">
-          <div className="container"><Mission /></div>
-        </section>
-        <section className="section">
-          <div className="container"><Projects /></div>
-        </section>
-        <section className="section">
-          <div className="container"><Skills /></div>
-        </section>
-        <section className="section">
-          <div className="container"><AboutMe /></div>
-        </section>
-        <section className="section">
-          <div className="container"><Experience /></div>
-        </section>
-        <section className="section">
-          <div className="container"><Contact /></div>
-        </section>
+        <Section><Mission /></Section>
+        <Section><Projects /></Section>
+        <Section><Skills /></Section>
+        <Section><AboutMe /></Section>
+        <Section><Experience /></Section>
+        <Section><Contact /></Section>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

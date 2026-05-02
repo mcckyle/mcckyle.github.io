@@ -4,33 +4,36 @@ exports[`Header Component matches the snapshot 1`] = `
 <DocumentFragment>
   <header
     class="site-header"
-    role="banner"
   >
     <div
-      class="container header-inner"
+      class="container"
     >
-      <img
-        alt="Portrait of Kyle D. McColgan"
-        class="header-avatar"
-        decoding="async"
-        height="160"
-        loading="eager"
-        src="test-file-stub"
-        width="160"
-      />
       <div
-        class="header-intro"
+        class="header-inner"
       >
-        <h1
-          class="header-title"
+        <img
+          alt="Portrait of Kyle D. McColgan"
+          class="header-avatar"
+          decoding="async"
+          height="160"
+          loading="eager"
+          src="test-file-stub"
+          width="160"
+        />
+        <div
+          class="header-intro"
         >
-          Kyle D. McColgan
-        </h1>
-        <p
-          class="header-tagline"
-        >
-          Building simple, modern technology.
-        </p>
+          <h1
+            class="header-title"
+          >
+            Kyle D. McColgan
+          </h1>
+          <p
+            class="header-tagline"
+          >
+            Building simple, modern technology.
+          </p>
+        </div>
       </div>
     </div>
   </header>

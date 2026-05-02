@@ -1,6 +1,6 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 19 March 2026
+//Date: 28 April 2026
 //Description: This file contains the Skills component for the personal React project.
 
 import React from "react";
@@ -42,14 +42,16 @@ function Skills()
       </p>
 
       <ul
-        className="skills-grid"
+        className="content-grid"
         role="list"
         aria-labelledby="skills-title"
       >
-        {skills.map((skill, index) => (
-          <li key={index} className="skill card">
-            <h3 className="skill-title">{skill.title}</h3>
-            <p className="skill-description">{skill.description}</p>
+        {skills.map((skill) => (
+          <li key={skill.title} className="content-card skill card">
+            <div className="content-stack">
+              <h3 className="content-title">{skill.title}</h3>
+              <p className="content-description">{skill.description}</p>
+            </div>
           </li>
         ))}
       </ul>

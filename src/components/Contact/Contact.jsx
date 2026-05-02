@@ -1,6 +1,6 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
+//Date: 28 April 2026
 //Description: This file contains the Contact component for the React personal project.
 
 import React from "react";
@@ -25,17 +25,17 @@ function Contact()
         Find me on the following platforms:
       </p>
 
-      <address className="contact-grid">
-        <ul>
-          {contacts.map((item, i) => (
-            <li key={i} className="contact-entry">
+      <address className="contact">
+        <ul className="contact-list" aria-labelledby="contact-title">
+          {contacts.map((item) => (
+            <li key={item.label} className="contact-entry">
               <span className="contact-label">{item.label}</span>
               {item.href ? (
                 <a
+                  className="contact-link"
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="contact-link"
                 >
                   {item.value}
                 </a>
