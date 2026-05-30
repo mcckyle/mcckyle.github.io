@@ -15,6 +15,7 @@ exports[`Header Component matches the snapshot 1`] = `
           alt="Portrait of Kyle D. McColgan"
           class="header-avatar"
           decoding="async"
+          fetchpriority="high"
           height="160"
           loading="eager"
           src="test-file-stub"
@@ -23,16 +24,25 @@ exports[`Header Component matches the snapshot 1`] = `
         <div
           class="header-intro"
         >
-          <h1
-            class="header-title"
-          >
-            Kyle D. McColgan
-          </h1>
           <p
-            class="header-tagline"
+            class="header-eyebrow"
           >
-            Building simple, modern technology.
+            Technology Professional
           </p>
+          <div
+            class="header-title-group"
+          >
+            <h1
+              class="header-title"
+            >
+              Kyle D. McColgan
+            </h1>
+            <p
+              class="header-tagline"
+            >
+              Building simple, modern software systems.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 //Filename: Header.test.js
 //Author: Kyle McColgan
-//Date: 25 February 2026
+//Date: 20 May 2026
 //Description: This file contains the Jest unit tests for the React personal project header section.
 
 import React from 'react';
@@ -21,7 +21,7 @@ describe('Header Component', () => {
 
     //Test #2
     it('renders the header with the correct subtitle', () => {
-        const subtitle = screen.getByText(/Building simple, modern technology./i);
+        const subtitle = screen.getByText(/Building simple, modern software systems./i);
         expect(subtitle).toBeInTheDocument();
     });
 

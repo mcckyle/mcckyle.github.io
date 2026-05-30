@@ -11,7 +11,7 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
   <p
     class="section-intro"
   >
-    Selected works focused on scalable systems and thoughtful design.
+    Selected works focused on scalable systems and thoughtful user experiences.
   </p>
   <ul
     aria-labelledby="projects-title"
@@ -21,261 +21,318 @@ exports[`Projects component matches the snapshot of the Projects section 1`] = `
     <li
       class="content-card project card"
     >
-      <div
-        class="content-stack"
+      <article
+        class="project-shell"
       >
-        <h3
-          class="content-title"
+        <div
+          class="content-stack project-stack"
         >
-          Automated Snapshot Management Script
-        </h3>
-        <p
-          class="content-description"
+          <header
+            class="project-header"
+          >
+            <h3
+              class="content-title"
+            >
+              STL Events
+            </h3>
+            <a
+              aria-label="Visit STL Events"
+              class="project-link"
+              href="https://mcckyle.github.io/the-calendar"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Visit Project
+            </a>
+          </header>
+          <p
+            class="content-description"
+          >
+            A modern calendar experience for discovering and tracking events throughout Saint Louis with a streamlined React interface.
+          </p>
+        </div>
+        <ul
+          aria-label="STL Events technologies"
+          class="tech-list"
+          role="list"
         >
-          A Bash utility that automates Snapper snapshot offloading to improve reliability while conserving disk space.
-        </p>
-      </div>
-      <ul
-        aria-label="Automated Snapshot Management Script technologies"
-        class="tech-list"
-        role="list"
-      >
-        <li
-          class="tech-pill"
-        >
-          Bash
-        </li>
-        <li
-          class="tech-pill"
-        >
-          GNU/Linux
-        </li>
-        <li
-          class="tech-pill"
-        >
-          Snapper
-        </li>
-      </ul>
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+        </ul>
+      </article>
     </li>
     <li
       class="content-card project card"
     >
-      <div
-        class="content-stack"
+      <article
+        class="project-shell"
       >
-        <h3
-          class="content-title"
+        <div
+          class="content-stack project-stack"
         >
-          ShowMeTasks
-        </h3>
-        <p
-          class="content-description"
+          <header
+            class="project-header"
+          >
+            <h3
+              class="content-title"
+            >
+              ShowMeTasks
+            </h3>
+          </header>
+          <p
+            class="content-description"
+          >
+            A modular full-stack task management platform focused on scalable architecture and secure data handling.
+          </p>
+        </div>
+        <ul
+          aria-label="ShowMeTasks technologies"
+          class="tech-list"
+          role="list"
         >
-          A modular full-stack task manager built with React and Spring Boot, emphasizing secure data handling and scalable architecture.
-        </p>
-      </div>
-      <ul
-        aria-label="ShowMeTasks technologies"
-        class="tech-list"
-        role="list"
-      >
-        <li
-          class="tech-pill"
-        >
-          Java
-        </li>
-        <li
-          class="tech-pill"
-        >
-          React
-        </li>
-        <li
-          class="tech-pill"
-        >
-          Spring Boot
-        </li>
-        <li
-          class="tech-pill"
-        >
-          MySQL
-        </li>
-      </ul>
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
     </li>
     <li
       class="content-card project card"
     >
-      <div
-        class="content-stack"
+      <article
+        class="project-shell"
       >
-        <h3
-          class="content-title"
+        <div
+          class="content-stack project-stack"
         >
-          LoveNotes
-        </h3>
-        <p
-          class="content-description"
+          <header
+            class="project-header"
+          >
+            <h3
+              class="content-title"
+            >
+              LoveNotes
+            </h3>
+          </header>
+          <p
+            class="content-description"
+          >
+            A thoughtful messaging platform combining an intuitive React experience with secure backend mail delivery.
+          </p>
+        </div>
+        <ul
+          aria-label="LoveNotes technologies"
+          class="tech-list"
+          role="list"
         >
-          A platform for sharing meaningful messages through an intuitive React interface combined with secure backend mail delivery.
-        </p>
-      </div>
-      <ul
-        aria-label="LoveNotes technologies"
-        class="tech-list"
-        role="list"
-      >
-        <li
-          class="tech-pill"
-        >
-          Java
-        </li>
-        <li
-          class="tech-pill"
-        >
-          React
-        </li>
-        <li
-          class="tech-pill"
-        >
-          Spring Boot
-        </li>
-        <li
-          class="tech-pill"
-        >
-          MySQL
-        </li>
-      </ul>
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
     </li>
     <li
       class="content-card project card"
     >
-      <div
-        class="content-stack"
+      <article
+        class="project-shell"
       >
-        <h3
-          class="content-title"
+        <div
+          class="content-stack project-stack"
         >
-          Gift Planner
-        </h3>
-        <p
-          class="content-description"
+          <header
+            class="project-header"
+          >
+            <h3
+              class="content-title"
+            >
+              Gift Planner
+            </h3>
+          </header>
+          <p
+            class="content-description"
+          >
+            A structured gift planning system designed around modern REST-driven architecture.
+          </p>
+        </div>
+        <ul
+          aria-label="Gift Planner technologies"
+          class="tech-list"
+          role="list"
         >
-          A structured application for organizing relationships and gift ideas through a modern REST-driven system.
-        </p>
-      </div>
-      <ul
-        aria-label="Gift Planner technologies"
-        class="tech-list"
-        role="list"
-      >
-        <li
-          class="tech-pill"
-        >
-          Java
-        </li>
-        <li
-          class="tech-pill"
-        >
-          React
-        </li>
-        <li
-          class="tech-pill"
-        >
-          Spring Boot
-        </li>
-        <li
-          class="tech-pill"
-        >
-          MySQL
-        </li>
-      </ul>
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
     </li>
     <li
       class="content-card project card"
     >
-      <div
-        class="content-stack"
+      <article
+        class="project-shell"
       >
-        <h3
-          class="content-title"
+        <div
+          class="content-stack project-stack"
         >
-          Gratitude Journal
-        </h3>
-        <p
-          class="content-description"
+          <header
+            class="project-header"
+          >
+            <h3
+              class="content-title"
+            >
+              Gratitude Journal
+            </h3>
+          </header>
+          <p
+            class="content-description"
+          >
+            A secure journaling experience centered around reflection and long-term persistence.
+          </p>
+        </div>
+        <ul
+          aria-label="Gratitude Journal technologies"
+          class="tech-list"
+          role="list"
         >
-          A secure journaling experience centered around reflection and long-term data persistence.
-        </p>
-      </div>
-      <ul
-        aria-label="Gratitude Journal technologies"
-        class="tech-list"
-        role="list"
-      >
-        <li
-          class="tech-pill"
-        >
-          Java
-        </li>
-        <li
-          class="tech-pill"
-        >
-          React
-        </li>
-        <li
-          class="tech-pill"
-        >
-          Spring Boot
-        </li>
-        <li
-          class="tech-pill"
-        >
-          MySQL
-        </li>
-      </ul>
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
     </li>
     <li
       class="content-card project card"
     >
-      <div
-        class="content-stack"
+      <article
+        class="project-shell"
       >
-        <h3
-          class="content-title"
+        <div
+          class="content-stack project-stack"
         >
-          PotOfGoals
-        </h3>
-        <p
-          class="content-description"
+          <header
+            class="project-header"
+          >
+            <h3
+              class="content-title"
+            >
+              PotOfGoals
+            </h3>
+          </header>
+          <p
+            class="content-description"
+          >
+            A modern personal goal tracking platform with seasonal interaction design and reflective workflows.
+          </p>
+        </div>
+        <ul
+          aria-label="PotOfGoals technologies"
+          class="tech-list"
+          role="list"
         >
-          A modern personal goal tracking application with seasonal interaction design.
-        </p>
-      </div>
-      <ul
-        aria-label="PotOfGoals technologies"
-        class="tech-list"
-        role="list"
-      >
-        <li
-          class="tech-pill"
-        >
-          Java
-        </li>
-        <li
-          class="tech-pill"
-        >
-          React
-        </li>
-        <li
-          class="tech-pill"
-        >
-          Spring Boot
-        </li>
-        <li
-          class="tech-pill"
-        >
-          MySQL
-        </li>
-      </ul>
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
     </li>
   </ul>
 </DocumentFragment>

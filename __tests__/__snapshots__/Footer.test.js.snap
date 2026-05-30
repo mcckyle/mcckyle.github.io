@@ -19,12 +19,7 @@ exports[`Footer Component footer matches the snapshot. 1`] = `
         <p
           class="footer-dedication"
         >
-          Dedicated to the friends and family who made the journey possible.
-        </p>
-        <p
-          class="footer-credit"
-        >
-          © 2026 Kyle McColgan
+          Dedicated to the friends and family who made this journey possible.
         </p>
       </div>
     </div>

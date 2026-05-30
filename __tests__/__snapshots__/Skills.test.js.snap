@@ -32,7 +32,7 @@ exports[`Skills Component matches the snapshot of the Skills section 1`] = `
         <p
           class="content-description"
         >
-          Designing scalable web applications with modular architecture using Java, React, and Spring Boot.
+          Designing scalable web applications with modular architecture using Java, React, and Spring Boot ecosystems.
         </p>
       </div>
     </li>

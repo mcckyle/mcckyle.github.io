@@ -6,27 +6,34 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 /* ====================================
-   Document Styles.
+   Root Document Styles.
 ======================================= */
 html
 {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
+
+/* ====================================
+   Body Styles.
+======================================= */
 body
 {
     margin: 0;
     min-width: 320px;
-    min-height: 100vh;
+    min-height: 100svh;
     overflow-x: clip;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
 
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 1rem;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
-    text-rendering: optimizeLegibility;
+    line-height: 1.72;
+    letter-spacing: -0.012em;
     -webkit-tap-highlight-color: transparent;
 
     background: var(--bg-base);
@@ -42,10 +49,14 @@ body
 #root { min-height: 100vh; isolation: isolate; }
 
 /* ====================================
-   Media Defaults Styles.
+   Media Element Defaults Styles.
 ======================================= */
 img, svg, video, canvas { display: block; max-width: 100%; }
 img { height: auto; }
+
+/* ====================================
+   Form Element Styles.
+======================================= */
 button, input, textarea, select { font: inherit; }
 
 /* ====================================
@@ -69,20 +80,20 @@ button { border: 0; padding: 0; background: transparent; color: inherit; cursor:
     left: 1rem;
     z-index: 1000;
 
-    padding: 0.72rem 1rem;
+    padding: 0.78rem 1rem;
     border: 1px solid var(--line);
     border-radius: var(--radius-sm);
 
     background: var(--surface-strong);
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
 
     color: var(--text-strong);
     font-weight: 600;
     transform: translateY(-140%);
 
     transition: transform var(--transition-fast),
-                box-shadow var(--transition-fast),
-                border-color var(--transition-fast);
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast);
 }
 .skip-link:focus { transform: translateY(0); }
 .skip-link:focus-visible { outline: none; box-shadow: var(--focus-ring); }

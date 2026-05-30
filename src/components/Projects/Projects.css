@@ -6,12 +6,23 @@
 .project
 {
     position: relative;
-    justify-content: space-between;
-    gap: clamp(1.35rem, 2vw, 1.7rem);
     min-height: 100%;
     isolation: isolate;
 }
-.project::before /* Projects Subtle Ambient Highlight Styles. */
+
+.project-shell
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(1.6rem, 2vw, 2rem);
+    min-height: 100%;
+}
+
+/* ====================================
+   Projects Ambient Overlay Styles.
+======================================= */
+.project::before
 {
     content: "";
     position: absolute;
@@ -19,17 +30,37 @@
     z-index: -1;
     pointer-events: none;
     background: radial-gradient(
-        140% 140% at 0% 0%,
-        color-mix(in srgb, var(--brand) 6%, transparent),
-        transparent 54%
+        140% 120% at 0% 0%,
+        color-mix(in srgb, var(--brand) 5%, transparent),
+        transparent 58%
     );
     opacity: 0;
 
     transition: opacity var(--transition);
 }
 .project:hover::before { opacity: 1; }
-.project .content-stack { gap: 0.72rem; }
-.project .content-description { max-width: 52ch; }
+.project-stack { gap: 0.95rem; }
+.project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.project .content-title { max-width: 18ch; }
+.project .content-description { max-width: 56ch; }
+
+/* ====================================
+   Projects Link Styles.
+======================================= */
+.project-link
+{
+    flex-shrink: 0;
+    color: var(--brand-strong);
+
+    font-size: 0.76rem;
+    font-weight: 620;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    opacity: 0.84;
+
+    transition: opacity var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+.project-link:hover { opacity: 1; transform: translateX(1px); }
 
 /* ====================================
    Projects Technology List Styles.
@@ -38,10 +69,8 @@
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.55rem;
-
+    gap: 0.6rem;
     margin-top: auto;
-    padding-top: 0.2rem;
 }
 
 /* ====================================
@@ -54,29 +83,29 @@
     justify-content: center;
 
     min-height: 2rem;
-    padding-inline: 0.82rem;
+    padding-inline: 0.85rem;
 
     border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
     border-radius: 999px;
 
-    background: color-mix(in srgb, var(--surface-alt) 86%, transparent);
+    background: color-mix(in srgb, var(--surface-alt) 92%, transparent);
     color: var(--text-muted);
 
     font-size: 0.68rem;
-    font-weight: 500;
+    font-weight: 540;
     letter-spacing: 0.015em;
     line-height: 1;
     backdrop-filter: blur(10px);
 
-    transition: transform var(--transition-fast),
-                border-color var(--transition-fast),
+    transition: border-color var(--transition-fast),
                 background-color var(--transition-fast),
-                color var(--transition-fast);
+                color var(--transition-fast),
+                transform var(--transition-fast);
 }
 .tech-pill:hover
 {
     transform: translateY(-1px);
-    border-color: color-mix(in srgb, var(--brand) 22%, var(--line));
+    border-color: color-mix(in srgb, var(--brand) 16%, var(--line));
     background: color-mix(in srgb, var(--surface) 96%, transparent);
     color: var(--text);
 }
@@ -86,7 +115,8 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .project { gap: 1.2rem; }
+    .project-shell { gap: 1.45rem; }
+    .project-header { flex-direction: column; gap: 0.55rem; }
     .tech-list { gap: 0.45rem; }
     .tech-pill { min-height: 1.9rem; padding-inline: 0.72rem; }
 }

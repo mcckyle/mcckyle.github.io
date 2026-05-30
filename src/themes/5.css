@@ -1,20 +1,191 @@
-/* Filename: 5.css (June) */
+/* Filename: src/themes/5.css (June 2026 Theme). */
 
-/* CSS variables... */
+/* ====================================
+   Root Design System - Light Mode.
+======================================= */
 :root
 {
-    --bg-light: #fffdf7;         /* Creamy off-white */
-    --text-dark: #2e2e2e;
-    --blue: #87bce4;            /* Soft sky blue */
-    --accent-pink: #f4a9a8;     /* Blush coral pink */
-    --border-light: #f0eae0;    /* Light sandy beige */
-    --footer-bg: #fdf7f0;       /* Pale golden cream */
-    --hr-color: #d4c6b8;        /* Taupe*/
+    /* Brand System (Early Summer Horizon). */
+    --brand: #6d98e8;
+    --brand-strong: #4f7fd8;
+    --brand-soft: #edf4ff;
+
+    /* Accent System (Sunset Coral). */
+    --accent: #ff947d;
+    --accent-soft: #fff2ee;
+
+    /* Transitional Americana Undertones. */
+    --signal-red: #ff7465;
+    --signal-blue: #7aa8ff;
+
+    /* Atmospheric Highlight System. */
+    --highlight: #fff9f2;
+    --highlight-soft: #f8fbff;
+
+    /* Background & Surface System. */
+    --bg-base: #fcfcfe;
+    --surface: rgba(255, 255, 255, 0.8);
+    --surface-strong: rgba(255, 255, 255, 0.92);
+    --surface-alt: #f4f8ff;
+
+    --glass: rgba(255, 255, 255, 0.58);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --line: rgba(20, 38, 74, 0.06);
+
+    /* Text System. */
+    --text-muted: #7b8aa6;
+    --text: #44526b;
+    --text-strong: #162033;
+
+    /* Radius System. */
+    --radius-sm: 0.7rem;
+    --radius-md: 1.2rem;
+    --radius-lg: 1.7rem;
+
+    /* Spacing System. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 1px 2px rgba(15, 23, 32, 0.014), 0 10px 22px rgba(79, 127, 216, 0.022);
+    --shadow-md: 0 4px 10px rgba(15, 23, 32, 0.024), 0 22px 48px rgba(79, 127, 216, 0.04);
+    --shadow-lg: 0 18px 44px rgba(15, 23, 32, 0.04), 0 58px 128px rgba(79, 127, 216, 0.08);
+
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 28%, transparent);
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-slow: 0.72s var(--ease);
+    --transition: 0.34s var(--ease);
+    --transition-fast: 0.18s var(--ease);
+
+    color-scheme: light;
 }
 
+/* ====================================
+   Ambient Summer Atmosphere Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -12%;
+    z-index: -2;
+    pointer-events: none;
+    will-change: transform;
+    background:
+      radial-gradient(760px circle at 12% 10%, rgba(109, 152, 232, 0.08), transparent 72%),
+      radial-gradient(560px circle at 84% 16%, rgba(255, 148, 125, 0.065), transparent 72%),
+      radial-gradient(1100px circle at 50% 100%, rgba(255, 252, 248, 0.92), transparent 82%),
+      radial-gradient(720px circle at 52% 86%, rgba(122, 168, 255, 0.035), transparent 76%);
+
+    opacity: 0.84;
+
+    animation: june-atmosphere 520s linear infinite;
+}
+
+/* ====================================
+   Soft Grain Overlay Styles.
+======================================= */
+body::after
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.0035;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.12), transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 1px);
+    background-size: 34px 34px;
+    mask-image: radial-gradient(circle at center, black, transparent 92%);
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand System. */
+        --brand: #8cb5ff;
+        --brand-strong: #b2ccff;
+        --brand-soft: #18253d;
+
+        /* Accent System. */
+        --accent: #ff9a86;
+        --accent-soft: #2a1e1d;
+
+        /* Transitional Americana Undertones. */
+        --signal-red: #ff8a7c;
+        --signal-blue: #8cb5ff;
+
+        --highlight: #182130;
+        --highlight-soft: #111b2b;
+
+        /* Background & Surface System. */
+        --bg-base: #06101d;
+        --surface: rgba(14, 22, 38, 0.8);
+        --surface-strong: rgba(15, 24, 42, 0.9);
+        --surface-alt: #101a2c;
+        --glass: rgba(12, 20, 36, 0.56);
+        --glass-border: rgba(255, 255, 255, 0.06);
+        --line: rgba(255, 255, 255, 0.055);
+
+        /* Text System. */
+        --text-muted: #8493ad;
+        --text: #cfdbef;
+        --text-strong: #f4f7ff;
+
+        /* Shadow System. */
+        --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.24), 0 10px 24px rgba(0, 0, 0, 0.24);
+        --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.32), 0 24px 52px rgba(0, 0, 0, 0.36);
+        --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.42), 0 56px 120px rgba(0, 0, 0, 0.5);
+        --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 40%, transparent);
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        opacity: 0.58;
+        background:
+          radial-gradient(720px circle at 8% 10%, rgba(140, 181, 255, 0.11), transparent 74%),
+          radial-gradient(520px circle at 86% 14%, rgba(255, 154, 134, 0.08), transparent 74%),
+          radial-gradient(840px circle at 50% 100%, rgba(24, 33, 48, 0.78), transparent 84%),
+          radial-gradient(640px circle at 52% 88%, rgba(140, 181, 255, 0.05), transparent 78%);
+    }
+    body::after { opacity: 0.0025; }
+}
+
+/* ====================================
+   June Atmosphere Animation Styles.
+======================================= */
+@keyframes june-atmosphere
+{
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    33% { transform: translate3d(-0.32%, 0.24%, 0) scale(1.012); }
+    66% { transform: translate3d(0.3%, -0.18%, 0) scale(1.008); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+/*
+:root
+{
+    --bg-light: #fffdf7;
+    --text-dark: #2e2e2e;
+    --blue: #87bce4;
+    --accent-pink: #f4a9a8;
+    --border-light: #f0eae0;
+    --footer-bg: #fdf7f0;
+    --hr-color: #d4c6b8;
+}
 ul li::before
 {
-    content: '☀️'; /* Sun emoji for June warmth */
+    content: '☀️';
     display: inline-block;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -25,8 +196,6 @@ ul li:hover::before
     transform: translateY(4px);
     opacity: 0.7;
 }
-
-/* Horizontal rule */
 hr
 {
     margin: 20px 0;
@@ -45,4 +214,4 @@ hr
         transform: translateY(4px);
         opacity: 0.7;
     }
-}
+}*/

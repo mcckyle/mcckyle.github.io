@@ -1,6 +1,6 @@
 //Filename: Footer.test.js
 //Author: Kyle McColgan
-//Date: 21 March 2026
+//Date: 20 May 2026
 //Description: This file contains the Jest unit tests for the personal React project footer component.
 
 import React from 'react';
@@ -33,10 +33,10 @@ describe('Footer Component', () => {
   });
 
   //Test #4
-  test('footer displays the current year dynamically.', () => {
-    const currentYear = new Date().getFullYear().toString();
-    expect(screen.getByText(new RegExp(currentYear))).toBeInTheDocument();
-  });
+  // test('footer displays the current year dynamically.', () => {
+  //   const currentYear = new Date().getFullYear().toString();
+  //   expect(screen.getByText(new RegExp(currentYear))).toBeInTheDocument();
+  // });
 
   //Test #5
   it('contains at least one paragraph of text', () => {
@@ -45,10 +45,10 @@ describe('Footer Component', () => {
   });
 
   //Test #6
-  test('footer text includes the © symbol.', () => {
-    const text = screen.getByText(/©/);
-    expect(text).toBeInTheDocument();
-  });
+  // test('footer text includes the © symbol.', () => {
+  //   const text = screen.getByText(/©/);
+  //   expect(text).toBeInTheDocument();
+  // });
 
   //Test #7
   test('footer contains one inner div.', () => {
@@ -57,10 +57,10 @@ describe('Footer Component', () => {
   });
 
   //Test #8
-  test('text content includes a date', () => {
-    const text = screen.getByText(/2026/);
-    expect(text).toBeInTheDocument();
-  });
+  // test('text content includes a date', () => {
+  //   const text = screen.getByText(/2026/);
+  //   expect(text).toBeInTheDocument();
+  // });
 
   //Test #9
   test('footer has the correct class for styling.', () => {

@@ -1,6 +1,6 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 28 April 2026
+//Date: 20 May 2026
 //Description: This file contains the Skills component for the personal React project.
 
 import React from "react";
@@ -12,7 +12,7 @@ function Skills()
     {
       title: "Application Development",
       description:
-        "Designing scalable web applications with modular architecture using Java, React, and Spring Boot.",
+        "Designing scalable web applications with modular architecture using Java, React, and Spring Boot ecosystems.",
     },
     {
       title: "Frontend Engineering",

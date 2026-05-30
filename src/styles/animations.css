@@ -6,10 +6,10 @@
 .fade-up
 {
     opacity: 0;
-    transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 12px, 0);
     will-change: transform, opacity;
 
-    animation: fade-up 0.8s var(--ease) forwards;
+    animation: fade-up 0.9s var(--ease) forwards;
 }
 .delay-1 { animation-delay: 0.04s; }
 .delay-2 { animation-delay: 0.08s; }
@@ -23,6 +23,6 @@
 ======================================= */
 @keyframes fade-up
 {
-    from { opacity: 0; transform: translate3d(0, 10px, 0); }
+    from { opacity: 0; transform: translate3d(0, 14px, 0); }
     to { opacity: 1; transform: translate3d(0, 0, 0); }
 }

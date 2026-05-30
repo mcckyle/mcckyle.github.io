@@ -1,6 +1,6 @@
 //Filename: Projects.test.js
 //Author: Kyle McColgan
-//Date: 19 March 2026
+//Date: 20 May 2026
 //Description: This file contains the Jest unit tests for the personal React project projects section.
 
 import React from 'react';
@@ -34,8 +34,8 @@ describe('Projects component', () => {
 
     //Test #4
     it('renders the first project correctly', () => {
-        const firstTitle = screen.getByText(/Automated Snapshot Management Script/i);
-        const firstDesc = screen.getByText(/A Bash utility that automates/i);
+        const firstTitle = screen.getByText(/STL Events/i);
+        const firstDesc = screen.getByText(/A modern calendar experience/i);
         expect(firstTitle).toBeInTheDocument();
         expect(firstDesc).toBeInTheDocument();
     });
@@ -43,7 +43,7 @@ describe('Projects component', () => {
     //Test #5
     it('renders the second project correctly', () => {
         const secondTitle = screen.getByText(/ShowMeTasks/i);
-        const secondDesc = screen.getByText(/A modular full-stack task manager/i);
+        const secondDesc = screen.getByText(/A modular full-stack task management platform/i);
         expect(secondTitle).toBeInTheDocument();
         expect(secondDesc).toBeInTheDocument();
     });

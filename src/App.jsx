@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 1 May 2026
+//Date: 27 May 2026
 //Description: This file contains the App component for the personal React website.
 
 import React from "react";
@@ -17,10 +17,14 @@ import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
 /* Pure Layout Primitive. */
-function Section({ children, className = "" })
+function Section({ children, className = "", id, ariaLabel })
 {
   return (
-    <section className={`section ${className}`.trim()}>
+    <section
+      id={id}
+      aria-label={ariaLabel}
+      className={className ? `section ${className}` : "section"}
+    >
       <div className="container">{children}</div>
     </section>
   );
@@ -33,12 +37,12 @@ function App()
       <Header />
 
       <main id="main-content" className="site-main">
-        <Section><Mission /></Section>
-        <Section><Projects /></Section>
-        <Section><Skills /></Section>
-        <Section><AboutMe /></Section>
-        <Section><Experience /></Section>
-        <Section><Contact /></Section>
+        <Section id="mission" ariaLabel="Mission"><Mission /></Section>
+        <Section id="projects" ariaLabel="Projects"><Projects /></Section>
+        <Section id="skills" ariaLabel="Skills"><Skills /></Section>
+        <Section id="about" ariaLabel="About Me"><AboutMe /></Section>
+        <Section id="experience" ariaLabel="Experience"><Experience /></Section>
+        <Section id="contact" ariaLabel="Contact"><Contact /></Section>
       </main>
 
       <Footer />

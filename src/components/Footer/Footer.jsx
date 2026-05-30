@@ -1,6 +1,6 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 28 April 2026
+//Date: 28 May 2026
 //Description: This file contains the Footer component for the personal React project.
 
 import React from "react";
@@ -8,7 +8,7 @@ import "./Footer.css";
 
 function Footer()
 {
-  const year = new Date().getFullYear();
+  //const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -19,11 +19,7 @@ function Footer()
           </p>
 
           <p className="footer-dedication">
-            Dedicated to the friends and family who made the journey possible.
-          </p>
-
-          <p className="footer-credit">
-            © {year} Kyle McColgan
+            Dedicated to the friends and family who made this journey possible.
           </p>
         </div>
       </div>

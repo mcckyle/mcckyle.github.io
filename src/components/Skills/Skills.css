@@ -1,16 +1,19 @@
 /* Filename: src/components/Skills/Skills.css */
 
 /* ====================================
-   Skill Card Styles.
+   Skills Card Styles.
 ======================================= */
 .skill
 {
     position: relative;
-    justify-content: flex-start;
     min-height: 100%;
     isolation: isolate;
 }
-.skill::before /* Skills Subtle Ambient Highlight Styles. */
+
+/* ====================================
+   Skills Ambient Overlay Styles.
+======================================= */
+.skill::before
 {
     content: "";
     position: absolute;
@@ -19,16 +22,17 @@
     pointer-events: none;
     background: radial-gradient(
         120% 120% at 100% 0%,
-        color-mix(in srgb, var(--brand) 5%, transparent),
-        transparent 56%
+        color-mix(in srgb, var(--brand) 4%, transparent),
+        transparent 60%
     );
     opacity: 0;
 
     transition: opacity var(--transition);
 }
 .skill:hover::before { opacity: 1; }
-.skill .content-stack { gap: 0.72rem; }
-.skill .content-description { max-width: 50ch; }
+.skill .content-stack { gap: 0.9rem; }
+.skill .content-title { max-width: 18ch; }
+.skill .content-description { max-width: 54ch; }
 
 /* ====================================
    Skills Card Composition Styles (Shared with Projects).
