@@ -134,6 +134,7 @@ mcckyle.github.io/
 │   ├── App.css
 │   ├── main.jsx
 │   ├── index.css          # Global styles.
+│   ├── themes/            # Seasonal monthly styles.
 │   └── styles/
 │       ├── base.css
 │       ├── layout.css
