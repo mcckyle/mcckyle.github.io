@@ -1,0 +1,275 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Projects component > matches the snapshot of the Projects section 1`] = `
+<DocumentFragment>
+  <header
+    class="section-header"
+  >
+    <h2
+      id="projects-title"
+    >
+      Projects
+    </h2>
+    <p
+      class="section-intro"
+    >
+      Selected works focused on scalable systems and thoughtful user experiences.
+    </p>
+  </header>
+  <ul
+    aria-labelledby="projects-title"
+    class="content-grid projects-grid"
+    role="list"
+  >
+    <li>
+      <article
+        class="project surface-card"
+      >
+        <header
+          class="project-header"
+        >
+          <h3>
+            STL Events
+          </h3>
+          <a
+            class="project-link"
+            href="https://mcckyle.github.io/the-calendar"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Visit
+          </a>
+        </header>
+        <p>
+          A modern calendar experience for discovering and tracking events throughout Saint Louis with a streamlined React interface.
+        </p>
+        <ul
+          aria-label="STL Events technologies"
+          class="tech-list"
+        >
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li>
+      <article
+        class="project surface-card"
+      >
+        <header
+          class="project-header"
+        >
+          <h3>
+            ShowMeTasks
+          </h3>
+        </header>
+        <p>
+          A modular full-stack task management platform focused on scalable architecture and secure data handling.
+        </p>
+        <ul
+          aria-label="ShowMeTasks technologies"
+          class="tech-list"
+        >
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li>
+      <article
+        class="project surface-card"
+      >
+        <header
+          class="project-header"
+        >
+          <h3>
+            LoveNotes
+          </h3>
+        </header>
+        <p>
+          A thoughtful messaging platform combining an intuitive React experience with secure backend mail delivery.
+        </p>
+        <ul
+          aria-label="LoveNotes technologies"
+          class="tech-list"
+        >
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li>
+      <article
+        class="project surface-card"
+      >
+        <header
+          class="project-header"
+        >
+          <h3>
+            Gift Planner
+          </h3>
+        </header>
+        <p>
+          A structured gift planning system built around modern REST-driven application architecture.
+        </p>
+        <ul
+          aria-label="Gift Planner technologies"
+          class="tech-list"
+        >
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li>
+      <article
+        class="project surface-card"
+      >
+        <header
+          class="project-header"
+        >
+          <h3>
+            Gratitude Journal
+          </h3>
+        </header>
+        <p>
+          A secure journaling experience centered around reflection and long-term persistence.
+        </p>
+        <ul
+          aria-label="Gratitude Journal technologies"
+          class="tech-list"
+        >
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li>
+      <article
+        class="project surface-card"
+      >
+        <header
+          class="project-header"
+        >
+          <h3>
+            PotOfGoals
+          </h3>
+        </header>
+        <p>
+          A modern personal goal tracking platform designed around reflective workflows and seasonal interactions.
+        </p>
+        <ul
+          aria-label="PotOfGoals technologies"
+          class="tech-list"
+        >
+          <li
+            class="tech-pill"
+          >
+            Java
+          </li>
+          <li
+            class="tech-pill"
+          >
+            React
+          </li>
+          <li
+            class="tech-pill"
+          >
+            Spring Boot
+          </li>
+          <li
+            class="tech-pill"
+          >
+            MySQL
+          </li>
+        </ul>
+      </article>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

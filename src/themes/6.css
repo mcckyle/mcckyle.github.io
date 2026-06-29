@@ -1,21 +1,176 @@
-/* Filename: 6.css (July) */
+/* Filename: src/themes/6.css (July 2026 Theme). */
 
+/* ====================================
+   Root Design System - Light Mode.
+======================================= */
 :root
 {
-    /* Core Brand. */
-    --blue: #123d6d; /* Deep navy. */
-    --red: #c7383a; /* Ribbon. */
+    /* Brand System (Deep Heritage Blue). */
+    --brand: #174a7c;
+    --brand-strong: #0d3157;
+    --brand-soft: #eef5ff;
+
+    /* Accent System (Warm Summer Red). */
+    --accent: #d94a4a;
+    --accent-strong: #ad3038;
+    --accent-soft: #fff3f2;
+
+    /* Seasonal Signal System. */
+    --summer-blue: #78a7e8;
+    --summer-gold: #f6d58a;
+
+    /* Highlight System (Warm Summer Light). */
+    --highlight: #fffaf1;
+    --highlight-soft: #f5f8fc;
+
+    /* Background & Surface System. */
+    --bg-base: #fbfaf7;
+    --surface: rgba(255, 255, 255, 0.76);
+    --surface-strong: rgba(255, 255, 255, 0.92);
+    --surface-alt: #f3f7fc;
+
+    --glass: rgba(255, 255, 255, 0.42);
+    --glass-border: rgba(255, 255, 255, 0.58);
+    --line: rgba(23, 74, 124, 0.08);
+
+    /* Text System. */
+    --text-muted: #748198;
+    --text: #3c4a60;
+    --text-strong: #101827;
+
+    /* Radius System. */
+    --radius-sm: 0.75rem;
+    --radius-md: 1.25rem;
+    --radius-lg: 1.85rem;
+
+    /* Spacing System. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 1px 2px rgba(15, 23, 32, 0.025), 0 12px 30px rgba(23, 74, 124, 0.045);
+    --shadow-md: 0 10px 32px rgba(15, 23, 32, 0.04), 0 40px 90px rgba(23, 74, 124, 0.08);
+    --shadow-lg: 0 35px 100px rgba(15, 23, 32, 0.07), 0 80px 160px rgba(217, 74, 74, 0.08);
+
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent);
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-slow: 0.8s var(--ease);
+    --transition: 0.35s var(--ease);
+    --transition-fast: 0.18s var(--ease);
+
+    color-scheme: light;
+}
+
+/* ====================================
+   July Sunlight Atmosphere Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -18%;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(900px circle at 12% 8%, rgba(120, 167, 232, 0.14), transparent 72%),
+        radial-gradient(800px circle at 88% 12%, rgba(217, 74, 74, 0.09), transparent 72%),
+        radial-gradient(1100px circle at 50% 100%, rgba(246, 213, 133, 0.22), transparent 78%);
+
+    opacity: 0.9;
+
+    animation: july-atmosphere 1000s linear infinite;
+}
+
+/* ====================================
+   July Soft Paper Texture Styles.
+======================================= */
+body::after
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.012;
+    background-image: radial-gradient(circle, rgba(23, 74, 124, 0.35) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at center, black, transparent 90%);
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand System. */
+        --brand: #9cc2ff;
+        --brand-strong: #d5e5ff;
+        --brand-soft: #15243b;
+
+        /* Accent System. */
+        --accent: #ff8a8f;
+        --accent-strong: #ffb0b5;
+        --accent-soft: #342027;
+
+        --summer-blue: #7daef8;
+        --summer-gold: #d7bd7b;
+
+        --highlight: #172233;
+        --highlight-soft: #101928;
+
+        /* Background & Surface System. */
+        --bg-base: #07111e;
+        --surface: rgba(15, 25, 43, 0.78);
+        --surface-strong: rgba(18, 31, 52, 0.92);
+        --surface-alt: #101b2d;
+        --glass: rgba(15, 25, 43, 0.55);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --line: rgba(255, 255, 255, 0.07);
+
+        /* Text System. */
+        --text-muted: #8b9ab4;
+        --text: #d6def0;
+        --text-strong: #f8faff;
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        opacity: 0.65;
+        background:
+            radial-gradient(800px circle at 12% 10%, rgba(156, 194, 255, 0.14), transparent 72%),
+            radial-gradient(700px circle at 88% 14%, rgba(255, 138, 143, 0.12), transparent 72%),
+            radial-gradient(1000px circle at 50% 100%, rgba(16, 25, 40, 0.9), transparent 80%);
+    }
+}
+
+/* ====================================
+   July Atmosphere Animation Styles.
+======================================= */
+@keyframes july-atmosphere
+{
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(-0.12%, 0.08%, 0) scale(1.006); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+/*:root
+{
+    --blue: #123d6d;
+    --red: #c7383a;
     --white: #ffffff;
-
-    /* Neutrals & accents. */
-    --bg-light: #fdfdfd; /* Bright parchment. */
+    --bg-light: #fdfdfd;
     --text-dark: #242424;
-    --border-light: #e6e6e6; /* Subtle Frame */
+    --border-light: #e6e6e6;
     --gold-accent: #c79a39;
-
-    /*UI Details.*/
-    --footer-bg: #f8f9fb; /* Light gray-blue. */
-    --hr-color: #d0d6e4; /* Divider. */
+    --footer-bg: #f8f9fb;
+    --hr-color: #d0d6e4;
 }
 
 h1::after
@@ -37,7 +192,7 @@ h1::after
 
 ul li::before
 {
-    content: '🎆'; /* Firework emoji for July. */
+    content: '🎆';
     font-size: 1.1rem;
     position: absolute;
     left: 0;
@@ -50,8 +205,6 @@ ul li:hover::before
 {
     animation: burst 0.4s ease-out forwards;
 }
-
-/* Horizontal rule. */
 hr
 {
     border: 0;
@@ -86,4 +239,4 @@ hr
         transform: translateY(12px) scale(0.95) rotate(-5deg);
         opacity: 0.5;
     }
-}
+}*/

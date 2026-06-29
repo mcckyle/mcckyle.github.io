@@ -1,9 +1,10 @@
-//Filename: Footer.test.js
+//Filename: Footer.test.jsx
 //Author: Kyle McColgan
-//Date: 20 May 2026
-//Description: This file contains the Jest unit tests for the personal React project footer component.
+//Date: 18 June 2026
+//Description: This file contains the Vitest unit tests for the personal React project footer component.
 
 import React from 'react';
+import { beforeAll, vi } from "vitest";
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Footer from '../src/components/Footer/Footer.jsx';
@@ -28,7 +29,7 @@ describe('Footer Component', () => {
 
   //Test #3
   test('footer contains a paragraph with the correct class.', () => {
-    const paragraph = screen.getByText(/Designed in Saint Louis/i);
+    const paragraph = screen.getByText(/Designed and developed in Saint Louis/i);
     expect(paragraph).toHaveClass('footer-message');
   });
 

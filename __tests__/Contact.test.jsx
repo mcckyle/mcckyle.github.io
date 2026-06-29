@@ -1,9 +1,10 @@
-//Filename: Contact.test.js
+//Filename: Contact.test.jsx
 //Author: Kyle McColgan
-//Date: 17 February 2026
-//Description: This file contains the Jest unit tests for the React personal project contact section.
+//Date: 17 June 2026
+//Description: This file contains the Vitest unit tests for the React personal project contact section.
 
 import React from 'react';
+import { beforeAll, vi } from "vitest";
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Contact from '../src/components/Contact/Contact.jsx';

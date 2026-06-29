@@ -1,6 +1,6 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 28 May 2026
+//Date: 29 June 2026
 //Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
@@ -15,7 +15,6 @@ function Projects()
           "A modern calendar experience for discovering and tracking events throughout Saint Louis with a streamlined React interface.",
         tech: ["Java", "React", "Spring Boot"],
         href: "https://mcckyle.github.io/the-calendar",
-        linkLabel: "Visit Project",
       },
       {
         title: "ShowMeTasks",
@@ -32,7 +31,7 @@ function Projects()
       {
         title: "Gift Planner",
         description:
-          "A structured gift planning system designed around modern REST-driven architecture.",
+          "A structured gift planning system built around modern REST-driven application architecture.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
       {
@@ -44,52 +43,48 @@ function Projects()
       {
         title: "PotOfGoals",
         description:
-          "A modern personal goal tracking platform with seasonal interaction design and reflective workflows.",
+          "A modern personal goal tracking platform designed around reflective workflows and seasonal interactions.",
         tech: ["Java", "React", "Spring Boot", "MySQL"],
       },
     ];
 
     return (
       <>
-        <h2 id="projects-title" className="section-title">
-          Projects
-        </h2>
+        <header className="section-header">
+          <h2 id="projects-title">
+            Projects
+          </h2>
 
-        <p className="section-intro">
-          Selected works focused on scalable systems and thoughtful user experiences.
-        </p>
+          <p className="section-intro">
+            Selected works focused on scalable systems and thoughtful user experiences.
+          </p>
+        </header>
 
         <ul
-          className="content-grid"
+          className="content-grid projects-grid"
           role="list"
           aria-labelledby="projects-title"
         >
           {projects.map((project) => (
-            <li key={project.title} className="content-card project card">
-              <article className="project-shell">
-                <div className="content-stack project-stack">
-                  <header className="project-header">
-                    <h3 className="content-title">{project.title}</h3>
-                    {project.href && (
-                      <a
-                        className="project-link"
-                        href={project.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Visit ${project.title}`}
-                      >
-                        {project.linkLabel}
-                      </a>
-                    )}
-                  </header>
-                  <p className="content-description">
-                    {project.description}
-                  </p>
-                </div>
+            <li key={project.title}>
+              <article className="project surface-card">
+                <header className="project-header">
+                  <h3>{project.title}</h3>
+                  {project.href && (
+                    <a
+                      className="project-link"
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit
+                    </a>
+                  )}
+                </header>
+                <p>{project.description}</p>
 
                 <ul
                   className="tech-list"
-                  role="list"
                   aria-label={`${project.title} technologies`}
                 >
                   {project.tech.map((tech) => (

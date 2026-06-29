@@ -1,9 +1,10 @@
-//Filename: AboutMe.test.js
+//Filename: AboutMe.test.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
-//Description: This file contains the Jest unit tests for the React personal project about me section.
+//Date: 17 June 2026
+//Description: This file contains the Vitest unit tests for the React personal project about me section.
 
 import React from 'react';
+import { beforeAll, vi } from "vitest";
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AboutMe from '../src/components/AboutMe/AboutMe.jsx';

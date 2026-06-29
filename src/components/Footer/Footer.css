@@ -3,43 +3,71 @@
 /* ====================================
    Footer Section Styles.
 ======================================= */
-.footer
-{
-    position: relative;
-    overflow: clip;
-    margin-top: clamp(5rem, 9vw, 7.5rem);
-    padding-block: clamp(3.5rem, 6vw, 5rem);
-
-    background: linear-gradient(
-        to top,
-        color-mix(in srgb, var(--surface) 32%, transparent),
-        transparent 80%
-    );
-}
-
-/* ====================================
-   Footer Divider Styles.
-======================================= */
-.footer::before
+.footer { margin-top: clamp(4rem, 10vw, 8rem); padding-block: clamp(3rem, 8vw, 6rem); }
+/*.footer::before
 {
     content: "";
-    display: block;
-    width: min(760px, 74%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(120px, 30vw);
     height: 1px;
-    margin: 0 auto clamp(3rem, 5vw, 4rem);
+    transform: translateX(-50%);
     background: linear-gradient(
         to right,
         transparent,
-        color-mix(in srgb, var(--line) 84%, transparent) 18%,
-        color-mix(in srgb, var(--line) 84%, transparent) 82%,
+        var(--line),
         transparent
     );
-    opacity: 0.5;
+}*/
+
+/* ====================================
+   Footer Content Styles.
+======================================= */
+.footer-inner
+{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 0.85rem;
+    max-width: 640px;
+    margin-inline: auto; /* Visually centers the Footer content. */
+}
+
+/* ====================================
+   Footer Message Styles.
+======================================= */
+.footer-message
+{
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* ====================================
+   Footer Dedication Paragraphs Styles.
+======================================= */
+.footer-dedication
+{
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+}
+
+/* ====================================
+   Footer Media Query Styles.
+======================================= */
+@media (max-width: 640px)
+{
+    .footer-message { font-size: 0.9rem; }
 }
 
 /* ====================================
    Footer Ambient Glow Styles.
 ======================================= */
+/*
 .footer::after
 {
     content: "";
@@ -58,71 +86,4 @@
     opacity: 0.24;
     filter: blur(42px);
 }
-
-/* ====================================
-   Footer Inner Layout Styles.
-======================================= */
-.footer-inner
-{
-    position: relative;
-    z-index: 1;
-    display: grid;
-    justify-items: center;
-    text-align: center;
-
-    width: min(100%, 640px);
-    margin-inline: auto; /* Visually centers the Footer content. */
-    gap: 1rem;
-}
-
-/* ====================================
-   Footer Message Styles.
-======================================= */
-.footer-message
-{
-    max-width: 38ch;
-    font-size: 0.94rem;
-    font-weight: 520;
-    line-height: 1.82;
-    letter-spacing: -0.012em;
-    color: var(--text);
-}
-
-/* ====================================
-   Footer Dedication Paragraphs Styles.
-======================================= */
-.footer-dedication
-{
-    max-width: 56ch;
-    font-size: 0.82rem;
-    line-height: 1.9;
-    letter-spacing: 0.012em;
-    color: var(--text-muted);
-    opacity: 0.88;
-}
-
-/* ====================================
-   Footer Credit Line Styles.
-======================================= */
-/*.footer-credit
-{
-    margin-top: 0.45rem;
-
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
-    color: var(--text-muted);
-    opacity: 0.5;
-}*/
-
-/* ====================================
-   Footer Media Query Styles.
-======================================= */
-@media (max-width: 640px)
-{
-    .footer { margin-top: clamp(3.8rem, 10vw, 5.5rem); padding-block: clamp(2.8rem, 8vw, 3.8rem); }
-    .footer-inner { gap: 0.85rem; }
-    .footer-message { font-size: 0.9rem; }
-    .footer-dedication { font-size: 0.8rem; line-height: 1.84; }
-}
+*/

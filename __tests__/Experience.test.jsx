@@ -1,9 +1,10 @@
-//Filename: Experience.test.js
+//Filename: Experience.test.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
-//Description: This file contains the Jest unit tests for the Experience component.
+//Date: 17 June 2026
+//Description: This file contains the Vitest unit tests for the Experience component.
 
 import React from 'react';
+import { beforeAll, vi } from "vitest";
 import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Experience from '../src/components/Experience/Experience.jsx';
@@ -70,7 +71,7 @@ describe('Experience component', () => {
 
     //Test #9
     it('does not log any errors to the console', () => {
-        const consoleError = jest.spyOn(console, 'error').mockImplementation();
+        const consoleError = vi.spyOn(console, 'error').mockImplementation();
         expect(consoleError).not.toHaveBeenCalled();
         consoleError.mockRestore();
     });

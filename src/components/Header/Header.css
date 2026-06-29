@@ -1,24 +1,59 @@
 /* Filename: src/components/Header/Header.css */
 
 /* ====================================
-   Header Container Styles.
+   Header Hero Styles.
 ======================================= */
-.site-header
-{
-    position: relative;
-    overflow: clip;
-    padding-block: clamp(6rem, 11vw, 9rem);
+.site-header { padding-block: clamp(5rem, 12vw, 9rem); }
 
-    background: linear-gradient(
-        to bottom,
-        color-mix(in srgb, var(--surface) 38%, transparent),
-        transparent 78%
-    );
+/* ====================================
+   Header Layout Styles.
+======================================= */
+.header-inner
+{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: clamp(1.75rem, 4vw, 3rem);
 }
+
+/* =========================================
+   Header Avatar Styles.
+============================================ */
+.header-avatar
+{
+    width: clamp(120px, 16vw, 156px);
+    aspect-ratio: 1;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+}
+/*.header-avatar:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--brand) 20%, var(--line)); box-shadow: var(--shadow-lg); }*/
+
+/* ====================================
+   Header Text Block Styles.
+======================================= */
+.header-title-group { display: grid; justify-items: center; gap: 0.85rem; }
+.header-title { max-width: 12ch; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 0.9; letter-spacing: -0.075em; }
+.header-eyebrow { order: -1; color: var(--text-muted); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+.header-tagline { max-width: 44ch; color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.75; }
+
+/* ====================================
+   Header Media Query Styles.
+======================================= */
+/*@media (max-width: 640px)
+{
+    .site-header { padding-block: clamp(4rem, 12vw, 6rem); }
+    .header-title { font-size: clamp(2.7rem, 12vw, 4rem); }
+}*/
 
 /* ====================================
    Header Divider Styles.
 ======================================= */
+/*
 .site-header::after
 {
     content: "";
@@ -28,71 +63,11 @@
     margin: clamp(3.5rem, 6vw, 4.5rem) auto 0;
     background: linear-gradient(
         to right,
-        transparent,
-        color-mix(in srgb, var(--line) 88%, transparent) 18%,
-        color-mix(in srgb, var(--line) 88%, transparent) 82%,
-        transparent
+    transparent,
+    color-mix(in srgb, var(--line) 88%, transparent) 18%,
+    color-mix(in srgb, var(--line) 88%, transparent) 82%,
+    transparent
     );
     opacity: 0.54;
 }
-
-/* ====================================
-   Header Inner Layout Styles.
-======================================= */
-.header-inner
-{
-    position: relative;
-    z-index: 1;
-    display: grid;
-    justify-items: center;
-    text-align: center;
-    gap: clamp(1.8rem, 2vw, 2.4rem);
-}
-
-/* =========================================
-   Header Avatar Styles.
-============================================ */
-.header-avatar
-{
-    width: clamp(120px, 14vw, 148px);
-    aspect-ratio: 1;
-
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
-
-    background: var(--surface);
-    box-shadow: 0 24px 60px rgba(16, 24, 32, 0.045), 0 4px 14px rgba(16, 24, 32, 0.02);
-    transform: translateZ(0);
-
-    transition: transform var(--transition),
-                border-color var(--transition),
-                box-shadow var(--transition);
-}
-.header-avatar:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--brand) 16%, var(--line)); box-shadow: 0 28px 72px rgba(16, 24, 32, 0.055), 0 4px 18px rgba(16, 24, 32, 0.024);}
-
-/* ====================================
-   Header Text Block Styles.
-======================================= */
-.header-intro
-{
-    display: grid;
-    justify-items: center;
-    gap: 1.1rem;
-}
-.header-title-group { display: grid; justify-items: center; gap: 1rem; }
-.header-eyebrow { font-size: 0.68rem; font-weight: 640; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
-.header-title { max-width: 12ch; font-size: clamp(3.1rem, 5vw, 4rem); line-height: 0.9; letter-spacing: -0.065em; }
-.header-tagline { max-width: 38ch; font-size: 1rem; font-weight: 450; line-height: 1.84; letter-spacing: -0.012em; color: var(--text-muted); }
-
-/* ====================================
-   Header Media Query Styles.
-======================================= */
-@media (max-width: 640px)
-{
-    .site-header { padding-block: clamp(4.8rem, 13vw, 6.5rem); }
-    .header-inner { gap: 1.5rem; }
-    .header-title-group { gap: 0.85rem; }
-    .header-title { line-height: 0.94; }
-    .header-tagline { max-width: 30ch; font-size: 0.96rem; }
-}
+*/

@@ -1,6 +1,6 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 28 April 2026
+//Date: 29 June 2026
 //Description: This file contains the Contact component for the React personal project.
 
 import React from "react";
@@ -17,18 +17,20 @@ function Contact()
 
   return (
     <>
-      <h2 id="contact-title" className="section-title">
-        Contact
-      </h2>
+      <header className="section-header">
+        <h2 id="contact-title">
+          Contact
+        </h2>
 
-      <p className="section-intro">
-        Find me on the following platforms:
-      </p>
+        <p className="section-intro">
+          Find me on the following platforms:
+        </p>
+      </header>
 
       <address className="contact">
         <ul className="contact-list" aria-labelledby="contact-title">
           {contacts.map((item) => (
-            <li key={item.label} className="contact-entry">
+            <li key={item.label} className="contact-entry surface-card">
               <span className="contact-label">{item.label}</span>
               {item.href ? (
                 <a
@@ -40,7 +42,7 @@ function Contact()
                   {item.value}
                 </a>
               ) : (
-                <span className="contact-value">{item.value}</span>
+                <span>{item.value}</span>
               )}
             </li>
           ))}

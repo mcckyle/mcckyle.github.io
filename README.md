@@ -8,7 +8,7 @@ Welcome! 👋
 
 This repository contains the source code for my personal website, designed to showcase my projects and journey in web development. Built with React, this site reflects my approach to creating simple and modern web designs.
 
-Feel free to explore my work, as well as reach out if you're interested in collaborating!
+Feel free to explore my work - or reach out if you're open to sharing what you're working on!
 
 ![Portfolio Screenshot](./public/images/Screenshot_20260530_004143.png)
 *A glimpse of my website, captured with a screenshot.*
@@ -41,7 +41,7 @@ Feel free to explore my work, as well as reach out if you're interested in colla
 
 - **Languages:** HTML, CSS, JavaScript, React
 - **Build Tool:** [Vite](https://vitejs.dev)
-- **Testing:** [Jest](https://jestjs.io)
+- **Testing:** [Vitest](https://vitest.dev/)
 - **Deployment:** [GitHub Pages](https://pages.github.com/)
 - **Version Control:** [Git](https://git-scm.com/)
 
@@ -77,7 +77,7 @@ To run this project locally, follow the steps below:
     After the server starts, open your browser and navigate to:
 
     ```
-    http://localhost:5173
+    http://localhost:5173/
     ```
 
     This will display the website running locally in development mode.
@@ -138,25 +138,23 @@ mcckyle.github.io/
 │   └── styles/
 │       ├── base.css
 │       ├── layout.css
-│       ├── utilities.css
-│       └── animations.css
+│       ├── animations.css
+│       └── utilities.css
 │
-├── __tests__/             # Jest unit tests.
-│   ├── Header.test.js
-│   ├── Mission.test.js
-│   ├── Projects.test.js
-│   ├── Skills.test.js
-│   ├── AboutMe.test.js
-│   ├── Experience.test.js
-│   ├── Contact.test.js
-│   └── Footer.test.js
+├── __tests__/             # Vitest unit tests.
+│   ├── Header.test.jsx
+│   ├── Mission.test.jsx
+│   ├── Projects.test.jsx
+│   ├── Skills.test.jsx
+│   ├── AboutMe.test.jsx
+│   ├── Experience.test.jsx
+│   ├── Contact.test.jsx
+│   └── Footer.test.jsx
 │
 ├── dist/                 # Production build output.
 ├── .gitignore            # Files and directories to ignore in Git.
-├── babel.config.js
 ├── eslint.config.js
 ├── vite.config.js
-├── jest.config.cjs
 ├── index.html
 ├── package-lock.json
 ├── package.json          # Project metadata and dependencies.

@@ -1,56 +1,31 @@
 /* Filename: src/App.css */
 
 /* ====================================
-   App Shell Styles.
+   Application Shell Styles.
 ======================================= */
 .app-shell
 {
-    position: relative;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
-}
-
-/* ====================================
-   App Layout (Structure Only) Styles.
-======================================= */
-.site-main
-{
     position: relative;
-    flex: 1;
-    width: 100%;
 }
+.site-main { flex: 1; }
 
 /* =========================================
-   App Shared Section Layout Styles.
+   App Shared Page Sections Styles.
 ============================================ */
 .section
 {
     position: relative;
-    padding-block: clamp(4rem, 7vw, 6rem);
-}
-.section:first-of-type { padding-top: clamp(2.5rem, 5vw, 4rem); }
-.section:last-of-type { padding-bottom: clamp(5rem, 9vw, 7rem); }
-
-/* =========================================
-   App Shared Container Styles.
-============================================ */
-.container
-{
-    width: min(1120px, calc(100% - 2rem));
-    margin-inline: auto;
+    padding-block: clamp(4.5rem, 10vw, 8rem);
+    padding-inline: 1rem;
 }
 
 /* ====================================
    App Media Query Styles.
 ======================================= */
-@media (min-width: 1600px)
-{
-    .container { width: min(1240px, calc(100% - 4rem)); }
-}
 @media (max-width: 768px)
 {
-    .section { padding-block: clamp(3rem, 8vw, 4.5rem); }
-    .section:last-of-type { padding-bottom: clamp(4rem, 10vw, 5rem); }
-    .container { width: min(1120px, calc(100% - 1.4rem)); }
+    .section { padding-block: clamp(3.5rem, 12vw, 5rem); }
 }

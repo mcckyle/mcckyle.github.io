@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer Component > footer matches the snapshot. 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="footer-inner"
+      >
+        <p
+          class="footer-message"
+        >
+          Designed and developed in Saint Louis by Kyle McColgan.
+        </p>
+        <p
+          class="footer-dedication"
+        >
+          Dedicated to the friends and family who made this journey possible.
+        </p>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

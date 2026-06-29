@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header Component > matches the snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="site-header"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="header-inner"
+      >
+        <img
+          alt="Portrait of Kyle D. McColgan"
+          class="header-avatar"
+          decoding="async"
+          height="160"
+          loading="eager"
+          src="/images/kdm-ocean-01.png"
+          width="160"
+        />
+        <div
+          class="header-title-group"
+        >
+          <p
+            class="header-eyebrow"
+          >
+            Technology Professional
+          </p>
+          <h1
+            class="header-title"
+          >
+            Kyle D. McColgan
+          </h1>
+          <p
+            class="header-tagline"
+          >
+            Building simple, modern software systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

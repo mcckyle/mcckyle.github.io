@@ -1,6 +1,6 @@
 //Filename: AboutMe.jsx
 //Author: Kyle McColgan
-//Date: 26 February 2026
+//Date: 29 June 2026
 //Description: This file contains the AboutMe component for the React personal project.
 
 import React from 'react';
@@ -9,15 +9,13 @@ function AboutMe()
 {
     return (
       <>
-        <h2 id="about-title" className="section-title">
-          About
-        </h2>
+        <header className="section-header">
+          <h2 id="about-title">
+            About
+          </h2>
+        </header>
 
-        <div
-          className="section-text"
-          role="region"
-          aria-labelledby="about-title"
-        >
+        <div className="section-text">
           <p className="section-lead">
             I'm Kyle McColgan, a technology professional based in Saint Louis, Missouri.
           </p>
@@ -32,7 +30,8 @@ function AboutMe()
           </p>
 
           <p>
-            I'm drawn to meaningful problems and well-crafted solutions - and I'm always learning something new.
+            I'm drawn to meaningful problems and well-crafted solutions -
+            and I'm always learning something new.
           </p>
         </div>
       </>

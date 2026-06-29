@@ -1,0 +1,82 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Skills Component > matches the snapshot of the Skills section 1`] = `
+<DocumentFragment>
+  <header
+    class="section-header"
+  >
+    <h2
+      id="skills-title"
+    >
+      Skills
+    </h2>
+    <p
+      class="section-intro"
+    >
+      Core technical disciplines I work in most often.
+    </p>
+  </header>
+  <ul
+    aria-labelledby="skills-title"
+    class="content-grid"
+    role="list"
+  >
+    <li
+      class="skill surface-card"
+    >
+      <h3
+        class="content-title"
+      >
+        Application Development
+      </h3>
+      <p
+        class="content-description"
+      >
+        Designing scalable applications with modular architecture using Java, React, and Spring Boot ecosystems.
+      </p>
+    </li>
+    <li
+      class="skill surface-card"
+    >
+      <h3
+        class="content-title"
+      >
+        Frontend Engineering
+      </h3>
+      <p
+        class="content-description"
+      >
+        Creating accessible interfaces with modern JavaScript and maintainable React component design.
+      </p>
+    </li>
+    <li
+      class="skill surface-card"
+    >
+      <h3
+        class="content-title"
+      >
+        Backend & Systems
+      </h3>
+      <p
+        class="content-description"
+      >
+        Building reliable backend services and system-level software using Java and C++.
+      </p>
+    </li>
+    <li
+      class="skill surface-card"
+    >
+      <h3
+        class="content-title"
+      >
+        Information Security
+      </h3>
+      <p
+        class="content-description"
+      >
+        Applying secure development practices and threat mitigation principles throughout the software lifecycle to protect system confidentiality and availability.
+      </p>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

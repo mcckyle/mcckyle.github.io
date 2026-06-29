@@ -1,9 +1,10 @@
-//Filename: Skills.test.js
+//Filename: Skills.test.jsx
 //Author: Kyle McColgan
-//Date: 24 February 2026
-//Description: This file contains the Jest unit tests for the React personal project skills section.
+//Date: 17 June 2026
+//Description: This file contains the Vitest unit tests for the React personal project skills section.
 
 import React from 'react';
+import { beforeAll, vi } from "vitest";
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Skills from '../src/components/Skills/Skills.jsx';
@@ -70,7 +71,7 @@ describe('Skills Component', () => {
 
     //Test #10
     it('renders without console errors', () => {
-        const consoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
+        const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
         expect(consoleError).not.toHaveBeenCalled();
         consoleError.mockRestore();
     });

@@ -1,9 +1,10 @@
-//Filename: Header.test.js
+//Filename: Header.test.jsx
 //Author: Kyle McColgan
-//Date: 20 May 2026
-//Description: This file contains the Jest unit tests for the React personal project header section.
+//Date: 17 June 2026
+//Description: This file contains the Vitest unit tests for the React personal project header section.
 
 import React from 'react';
+import { beforeAll, vi } from "vitest";
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../src/components/Header/Header.jsx';
@@ -34,7 +35,7 @@ describe('Header Component', () => {
     //Test #4
     it('has the correct image source', () => {
         const image = screen.getByAltText('Portrait of Kyle D. McColgan');
-        expect(image).toHaveAttribute('src', 'test-file-stub');
+        expect(image).toHaveAttribute('src', '/images/kdm-ocean-01.png');
     });
 
     //Test #5
@@ -57,7 +58,7 @@ describe('Header Component', () => {
 
     //Test #8
     it('does not log any errors to the console', () => {
-        const consoleError = jest.spyOn(console, 'error').mockImplementation();
+        const consoleError = vi.spyOn(console, 'error').mockImplementation();
         expect(consoleError).not.toHaveBeenCalled();
     });
 
