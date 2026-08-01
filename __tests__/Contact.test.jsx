@@ -1,6 +1,6 @@
 //Filename: Contact.test.jsx
 //Author: Kyle McColgan
-//Date: 17 June 2026
+//Date: 31 July 2026
 //Description: This file contains the Vitest unit tests for the React personal project contact section.
 
 import React from 'react';
@@ -53,7 +53,7 @@ describe('Contact component', () => {
   //Test #7
   it('has a resume link pointing to the PDF path', () => {
     const resumeLink = screen.getByRole('link', { name: /View PDF/i });
-    expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-February-2026.pdf');
+    expect(resumeLink).toHaveAttribute('href', '/Kyle-McColgan-Resume-May-2026.pdf');
   });
 
   //Test #8

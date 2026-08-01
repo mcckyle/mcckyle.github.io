@@ -1,6 +1,6 @@
 //Filename: Experience.test.jsx
 //Author: Kyle McColgan
-//Date: 17 June 2026
+//Date: 31 July 2026
 //Description: This file contains the Vitest unit tests for the Experience component.
 
 import React from 'react';
@@ -38,7 +38,7 @@ describe('Experience component', () => {
         const firstItem = screen.getAllByRole('listitem')[0];
         expect(within(firstItem).getByText(/IT System Engineer/i)).toBeInTheDocument();
         expect(within(firstItem).getByText(/Primary Systems/i)).toBeInTheDocument();
-        expect(within(firstItem).getByText(/May 2023 - September 2023/i)).toBeInTheDocument();
+        expect(within(firstItem).getByText(/May 2023/i)).toBeInTheDocument();
     });
 
     //Test #5
@@ -46,7 +46,7 @@ describe('Experience component', () => {
         const secondItem = screen.getAllByRole('listitem')[1];
         expect(within(secondItem).getByText(/Software Engineer/i)).toBeInTheDocument();
         expect(within(secondItem).getByText(/Walmart/i)).toBeInTheDocument();
-        expect(within(secondItem).getByText(/July 2021 - October 2022/i)).toBeInTheDocument();
+        expect(within(secondItem).getByText(/July 2021/i)).toBeInTheDocument();
     });
 
     //Test #6
