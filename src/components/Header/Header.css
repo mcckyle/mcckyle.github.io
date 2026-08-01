@@ -3,7 +3,7 @@
 /* ====================================
    Header Hero Styles.
 ======================================= */
-.site-header { padding-block: clamp(5rem, 12vw, 9rem); }
+.site-header { padding-block: clamp(5rem, 11vw, 8rem) clamp(6rem, 12vw, 10rem); }
 
 /* ====================================
    Header Layout Styles.
@@ -13,7 +13,7 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    gap: clamp(1.75rem, 4vw, 3rem);
+    gap: clamp(2rem, 4vw, 3rem);
 }
 
 /* =========================================
@@ -21,53 +21,21 @@
 ============================================ */
 .header-avatar
 {
-    width: clamp(120px, 16vw, 156px);
+    inline-size: clamp(120px, 16vw, 156px);
     aspect-ratio: 1;
 
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid var(--line);
+    border: 1px solid color-mix(in srgb, var(--brand) 14%, var(--line));
 
     background: var(--surface);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--foliage) 7%, transparent), var(--shadow-md);
 }
-/*.header-avatar:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--brand) 20%, var(--line)); box-shadow: var(--shadow-lg); }*/
 
 /* ====================================
    Header Text Block Styles.
 ======================================= */
 .header-title-group { display: grid; justify-items: center; gap: 0.85rem; }
-.header-title { max-width: 12ch; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 0.9; letter-spacing: -0.075em; }
-.header-eyebrow { order: -1; color: var(--text-muted); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
-.header-tagline { max-width: 44ch; color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.75; }
-
-/* ====================================
-   Header Media Query Styles.
-======================================= */
-/*@media (max-width: 640px)
-{
-    .site-header { padding-block: clamp(4rem, 12vw, 6rem); }
-    .header-title { font-size: clamp(2.7rem, 12vw, 4rem); }
-}*/
-
-/* ====================================
-   Header Divider Styles.
-======================================= */
-/*
-.site-header::after
-{
-    content: "";
-    display: block;
-    width: min(760px, 74%);
-    height: 1px;
-    margin: clamp(3.5rem, 6vw, 4.5rem) auto 0;
-    background: linear-gradient(
-        to right,
-    transparent,
-    color-mix(in srgb, var(--line) 88%, transparent) 18%,
-    color-mix(in srgb, var(--line) 88%, transparent) 82%,
-    transparent
-    );
-    opacity: 0.54;
-}
-*/
+.header-eyebrow { order: -1; color: var(--text-muted); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; line-height: 1.2; text-transform: uppercase; }
+.header-title { max-inline-size: 12ch; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 0.92; letter-spacing: -0.075em; }
+.header-tagline { max-inline-size: 42ch; color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.7; }

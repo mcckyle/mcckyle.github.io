@@ -1,6 +1,6 @@
 //Filename: Header.jsx
 //Author: Kyle McColgan
-//Date: 29 June 2026
+//Date: 18 July 2026
 //Description: This file contains the Header component for the personal React project.
 
 import React from "react";
@@ -21,6 +21,7 @@ function Header()
             width="160"
             height="160"
             loading="eager"
+            fetchPriority="high"
             decoding="async"
           />
 

@@ -8,7 +8,6 @@
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 .site-main { flex: 1; }
 
@@ -18,7 +17,7 @@
 .section
 {
     position: relative;
-    padding-block: clamp(4.5rem, 10vw, 8rem);
+    padding-block: clamp(5rem, 9vw, 8rem);
     padding-inline: 1rem;
 }
 

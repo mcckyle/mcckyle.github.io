@@ -18,7 +18,7 @@ exports[`Skills Component > matches the snapshot of the Skills section 1`] = `
   </header>
   <ul
     aria-labelledby="skills-title"
-    class="content-grid"
+    class="content-grid skills-grid"
     role="list"
   >
     <li

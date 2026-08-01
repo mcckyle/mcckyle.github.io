@@ -11,6 +11,7 @@
 html
 {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
     scroll-padding-top: clamp(4rem, 8vw, 6rem);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -22,8 +23,8 @@ html
 body
 {
     margin: 0;
-    min-width: 320px;
-    min-height: 100svh;
+    min-inline-size: 320px;
+    min-block-size: 100svh;
     overflow-x: clip;
 
     font-family: "Inter", system-ui, sans-serif;
@@ -38,23 +39,23 @@ body
 /* ====================================
    Root Mount Point Styles.
 ======================================= */
-#root { min-height: 100svh; }
+#root { min-block-size: 100svh; }
 
 /* ====================================
-   Media Element Defaults Styles.
+   Media Elements Defaults Styles.
 ======================================= */
-img, svg, video, canvas { display: block; max-width: 100%; }
-img { height: auto; }
+img, svg, video, canvas { display: block; max-inline-size: 100%; }
+img { block-size: auto; }
 
 /* ====================================
-   Form Element Styles.
+   Form Elements Styles.
 ======================================= */
 button, input, textarea, select { font: inherit; }
-button { cursor: pointer; }
+button { cursor: pointer; background: none; border: 0; }
 
 /* ====================================
    Interactive Defaults Styles.
- ======================================= */
+======================================= */
 a { color: inherit; text-decoration: none; }
 
 /* ====================================
@@ -68,8 +69,8 @@ a { color: inherit; text-decoration: none; }
 .skip-link
 {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    inset-block-start: 1rem;
+    inset-inline-start: 1rem;
     z-index: 1000;
 
     padding: 0.75rem 1rem;

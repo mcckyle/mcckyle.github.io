@@ -2,45 +2,38 @@
 
 # Kyle McColgan – Technology Professional
 
-## Introduction
+A personal portfolio built with React and Vite, focused on simple interfaces and modern engineering practices.
 
-Welcome! 👋
-
-This repository contains the source code for my personal website, designed to showcase my projects and journey in web development. Built with React, this site reflects my approach to creating simple and modern web designs.
-
-Feel free to explore my work - or reach out if you're open to sharing what you're working on!
-
-![Portfolio Screenshot](./public/images/Screenshot_20260703_182710.png)
+![Portfolio Screenshot](./public/images/Screenshot_20260731_185818.png)
 *A glimpse of my website, captured with a screenshot.*
 
-*🌐 [Visit the live site](https://mcckyle.github.io/)*
+*🌐 [Live site](https://mcckyle.github.io/)*
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Getting Started](#getting-started)
-5. [Architecture](#architecture)
-6. [Design Philosophy](#design-philosophy)
-7. [Roadmap](#roadmap)
-8. [License](#license)
-9. [Contact](#contact)
-10. [Acknowledgements](#acknowledgements)
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+4. [Architecture](#architecture)
+5. [Design Philosophy](#design-philosophy)
+6. [Deployment](#deployment)
+7. [License](#license)
+8. [Contact](#contact)
+9. [Acknowledgements](#acknowledgements)
 
 ## Features
 
-- **Scalable, Modular Design** – Built with React, ensuring each component can grow without friction.
-- **Seasonal Color Palettes** – Expect a fresh, seasonal palette every month.
-- **Intuitive Interface** – Clean, minimal layouts prioritize clarity and usability, making every interaction smooth and predictable.
-- **Responsive & Adaptive** – Fully optimized for all devices, with fluid layouts and readable typography at any screen size. 
-- **Performance Focused** – Optimized for fast load times and minimal render overhead, enabling a snappy user experience.
-- **Maintainable & Testable** – Modular code structure and integrated unit tests promote maintainability and confidence in production.
+- **Seasonal themes** – A fresh visual system that evolves throughout the year.
+- **Responsive design** – Fluid layouts and typography adapts across all screen sizes. 
+- **Accessible by default** – Semantic HTML, keyboard navigation, focus states, reduced-motion support, and responsive presentation.
+- **Component-driven architecture** – Each section is isolated into focused React components with dedicated styles and tests.
+- **Performance-minded** – Lightweight CSS, minimal dependencies, optimized assets, and Vite's production build pipeline.
+- **Maintainable styling** – Shared layout primitives, design tokens, reusable surfaces, and seasonal theme layers keep the visual system cohesive.
 
 ## Tech Stack
 
-- **Languages:** HTML, CSS, JavaScript, React
-- **Build Tool:** [Vite](https://vitejs.dev)
+- **Frontend:** React, JavaScript, HTML, CSS
+- **Build:** [Vite](https://vitejs.dev)
 - **Testing:** [Vitest](https://vitest.dev/)
 - **Deployment:** [GitHub Pages](https://pages.github.com/)
 - **Version Control:** [Git](https://git-scm.com/)
@@ -164,20 +157,23 @@ mcckyle.github.io/
 
 ## Design Philosophy
 
-This project is built with **intention and simplicty** at its core:
+The site follows a simple principle: **the content should be the feature**.
 
-- **Minimalism with Purpose** – Every element has meaning; no visual clutter or redundant features.
-- **Consistency & Readability** – Typography, spacing, and color usage are harmonious across all components, reflecting a cohesive brand presence.
-- **User-Centered Thinking** – Interfaces anticipate user needs, emphasizing accessibility and smooth interactions.
-- **Modern Standards** – Leveraging latest React patterns and responsive design practices.
-- **Intentional Performance** – Lightweight, maintainable code ensures fast loading and smooth execution, even on constrained devices.
-- **Future-Proof Architecture** – Designed for scalability and maintainability as the project grows.
+The visual system emphasizes:
 
-## Roadmap
+- restrained typography
+- generous whitespace
+- accessible contrast and interaction
+- subtle atmospheric backgrounds
+- reusable design primitives
+- seasonal color without seasonal clutter
+- progressive enhancement rather than unnecessary complexity
 
-- **Enhanced Features:** Introduce dynamic, interactive components using JavaScript.
-- **Security Upgrades:** Adopt advanced secure web development practices.
-- **Project Showcase:** Add more projects highlighting C++ and security work.
+Each monthly theme changes the visual character of the site while preseving the same underlying structure and interaction patterns.
+
+## Deployment
+
+The site is built with Vite and deployed through GitHub Pages using GitHub Actions.
 
 ## License
 
@@ -185,20 +181,16 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## Contact
 
-I'm always open to new opportunities and collaborations.
+You can reach me in the following ways:
 
-Feel free to connect with me:
-
-- [**LinkedIn:**](https://www.linkedin.com/in/kylemccolgan/) - Kyle McColgan
 - [**GitHub:**](https://github.com/mcckyle) - @mcckyle
-
-Thank you for visiting this repository. I look forward to connecting!!
+- [**LinkedIn:**](https://www.linkedin.com/in/kylemccolgan/) - Kyle McColgan
 
 ## Acknowledgements
 
 This project was made possible thanks to the following:
 
 - [**React**](https://reactjs.org/) - for the intuitive front-end library.
-- [**Node.js**](https://nodejs.org/) -  for the powerful and robust runtime environment.
+- [**Node.js**](https://nodejs.org/) - for the powerful and robust runtime environment.
 - [**GitHub Pages**](https://pages.github.com/) - for providing free and reliable static site hosting.
 - The **Open Source Community** - for generously sharing the tools and knowledge that enable this technology.

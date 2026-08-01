@@ -1,6 +1,6 @@
 //Filename: Projects.test.jsx
 //Author: Kyle McColgan
-//Date: 17 June 2026
+//Date: 18 July 2026
 //Description: This file contains the Vitest unit tests for the personal React project projects section.
 
 import React from 'react';
@@ -30,7 +30,7 @@ describe('Projects component', () => {
     //Test #3
     it('renders the list of project cards', () => {
         const projectCards = screen.getAllByRole('listitem', { name: '' }); //Default list items.
-        expect(projectCards).toHaveLength(6 + 3 + 4 + 4 + 4 + 4 + 4); //4 cards, 3 tech tags (Proj. 1), 4 tech tags (Proj. 2), etc...
+        expect(projectCards).toHaveLength(7 + 3 + 4 + 4 + 4 + 4 + 4 + 4); //4 cards, 3 tech tags (Proj. 1), 4 tech tags (Proj. 2), etc...
     });
 
     //Test #4

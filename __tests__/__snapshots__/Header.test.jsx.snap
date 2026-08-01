@@ -15,6 +15,7 @@ exports[`Header Component > matches the snapshot 1`] = `
           alt="Portrait of Kyle D. McColgan"
           class="header-avatar"
           decoding="async"
+          fetchpriority="high"
           height="160"
           loading="eager"
           src="/images/kdm-ocean-01.png"

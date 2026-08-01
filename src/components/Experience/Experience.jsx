@@ -1,28 +1,34 @@
 //Filename: Experience.jsx
 //Author: Kyle McColgan
-//Date: 26 June 2026
+//Date: 26 July 2026
 //Description: This file contains the Experience component for the React personal project.
 
 import React from "react";
 import "./Experience.css";
 
+const EXPERIENCES = Object.freeze([
+  {
+    id: "primary-systems",
+    company: "Primary Systems",
+    role: "IT System Engineer",
+    start: "2023-05",
+    end: "2023-09",
+    startLabel: "May 2023",
+    endLabel: "September 2023",
+  },
+  {
+    id: "walmart",
+    company: "Walmart",
+    role: "Software Engineer",
+    start: "2021-07",
+    end: "2022-10",
+    startLabel: "July 2021",
+    endLabel: "October 2022",
+  },
+]);
+
 function Experience()
 {
-  const experiences = [
-    {
-      company: "Primary Systems",
-      role: "IT System Engineer",
-      period: "May 2023 - September 2023",
-      dateTime: "2023-05/2023-09",
-    },
-    {
-      company: "Walmart",
-      role: "Software Engineer",
-      period: "July 2021 - October 2022",
-      dateTime: "2021-07/2022-10",
-    },
-  ];
-
   return (
     <>
       <header className="section-header">
@@ -36,22 +42,27 @@ function Experience()
       </header>
 
       <ol className="experience-list" aria-labelledby="experience-title">
-        {experiences.map((experience) => (
-          <li
-            key={`${experience.company}-${experience.role}`}
-            className="experience-entry"
-          >
+        {EXPERIENCES.map((experience) => (
+          <li key={experience.id} className="experience-entry">
             <span className="experience-marker" aria-hidden="true" />
 
             <article className="experience-card surface-card">
-              <h3>{experience.role}</h3>
+              <header className="experience-header">
+                <div className="experience-heading">
+                  <h3>{experience.role}</h3>
+                  <p className="experience-company">{experience.company}</p>
+                </div>
 
-              <div className="experience-meta">
-                <span>{experience.company}</span>
-                <time dateTime={experience.dateTime}>
-                  {experience.period}
-                </time>
-              </div>
+                <div className="experience-period" aria-label="Employment period">
+                  <time dateTime={experience.start}>
+                    {experience.startLabel}
+                  </time>
+                  <span aria-hidden="true">–</span>
+                  <time dateTime={experience.end}>
+                    {experience.endLabel}
+                  </time>
+                </div>
+              </header>
             </article>
           </li>
         ))}

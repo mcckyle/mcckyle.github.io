@@ -30,21 +30,42 @@ exports[`Experience component > matches the snapshot of the Experience section 1
       <article
         class="experience-card surface-card"
       >
-        <h3>
-          IT System Engineer
-        </h3>
-        <div
-          class="experience-meta"
+        <header
+          class="experience-header"
         >
-          <span>
-            Primary Systems
-          </span>
-          <time
-            datetime="2023-05/2023-09"
+          <div
+            class="experience-heading"
           >
-            May 2023 - September 2023
-          </time>
-        </div>
+            <h3>
+              IT System Engineer
+            </h3>
+            <p
+              class="experience-company"
+            >
+              Primary Systems
+            </p>
+          </div>
+          <div
+            aria-label="Employment period"
+            class="experience-period"
+          >
+            <time
+              datetime="2023-05"
+            >
+              May 2023
+            </time>
+            <span
+              aria-hidden="true"
+            >
+              –
+            </span>
+            <time
+              datetime="2023-09"
+            >
+              September 2023
+            </time>
+          </div>
+        </header>
       </article>
     </li>
     <li
@@ -57,21 +78,42 @@ exports[`Experience component > matches the snapshot of the Experience section 1
       <article
         class="experience-card surface-card"
       >
-        <h3>
-          Software Engineer
-        </h3>
-        <div
-          class="experience-meta"
+        <header
+          class="experience-header"
         >
-          <span>
-            Walmart
-          </span>
-          <time
-            datetime="2021-07/2022-10"
+          <div
+            class="experience-heading"
           >
-            July 2021 - October 2022
-          </time>
-        </div>
+            <h3>
+              Software Engineer
+            </h3>
+            <p
+              class="experience-company"
+            >
+              Walmart
+            </p>
+          </div>
+          <div
+            aria-label="Employment period"
+            class="experience-period"
+          >
+            <time
+              datetime="2021-07"
+            >
+              July 2021
+            </time>
+            <span
+              aria-hidden="true"
+            >
+              –
+            </span>
+            <time
+              datetime="2022-10"
+            >
+              October 2022
+            </time>
+          </div>
+        </header>
       </article>
     </li>
   </ol>

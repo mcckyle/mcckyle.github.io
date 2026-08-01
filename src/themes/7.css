@@ -1,36 +1,191 @@
-/* Filename: 7.css (August) */
+/* Filename: src/themes/7.css (August 2026 Theme). */
+
+/* ====================================
+   Root Design System - Light Mode.
+======================================= */
+:root
+{
+    /* Brand System. */
+    --brand: #2f6d57;
+    --brand-strong: #214c3b;
+    --brand-soft: #eef8f3;
+
+    /* Accent System. */
+    --accent: #d79a33;
+    --accent-strong: #b7771d;
+    --accent-soft: #fff6e7;
+
+    /* Signal System. */
+    --foliage: #83c09f;
+    --sunlight: #f2d089;
+
+    /* Highlight System. */
+    --highlight: #fffdf8;
+    --highlight-soft: #f7f4ec;
+
+    /* Background & Surface System. */
+    --bg-base: #fcfbf6;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-strong: rgba(255, 255, 255, 0.94);
+    --surface-alt: #f6f4ec;
+
+    --glass: rgba(255, 255, 255, 0.46);
+    --glass-border: rgba(255, 255, 255, 0.60);
+    --line: rgba(47, 109, 87, 0.08);
+
+    /* Text System. */
+    --text-muted: #6f786c;
+    --text: #3d463d;
+    --text-strong: #172119;
+
+    /* Radius System. */
+    --radius-sm: 0.75rem;
+    --radius-md: 1.25rem;
+    --radius-lg: 1.85rem;
+
+    /* Spacing System. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 2px 6px rgba(18, 24, 20, 0.025), 0 16px 36px rgba(47, 109, 87, 0.045);
+    --shadow-md: 0 18px 45px rgba(18, 24, 20, 0.05), 0 60px 110px rgba(47, 109, 87, 0.08);
+    --shadow-lg: 0 40px 120px rgba(18, 24, 20, 0.08), 0 90px 180px rgba(215, 154, 51, 0.09);
+
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent);
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-slow: 0.8s var(--ease);
+    --transition: 0.35s var(--ease);
+    --transition-fast: 0.18s var(--ease);
+
+    color-scheme: light;
+}
+
+/* ====================================
+   August Atmosphere Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -18%;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(900px circle at 15% 8%, rgba(131, 192, 159, 0.18), transparent 70%),
+        radial-gradient(700px circle at 85% 15%, rgba(242, 208, 137, 0.15), transparent 72%),
+        radial-gradient(1500px circle at 50% 110%, rgba(255, 248, 226, 0.34), transparent 82%);
+
+    opacity: 0.9;
+
+    animation: august-atmosphere 1200s ease-in-out infinite;
+}
+
+/* ====================================
+   August Soft Paper Texture Styles.
+======================================= */
+body::after
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.009;
+    background-image: radial-gradient(circle, rgba(47, 109, 87, 0.24) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at center, black, transparent 90%);
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand System. */
+        --brand: #a7ddbd;
+        --brand-strong: #d7f2e2;
+        --brand-soft: #173126;
+
+        /* Accent System. */
+        --accent: #efc164;
+        --accent-strong: #ffd891;
+        --accent-soft: #332814;
+
+        /* Signal System. */
+        --foliage: #6fa889;
+        --sunlight: #d8b86d;
+
+        --highlight: #18231d;
+        --highlight-soft: #111a15;
+
+        /* Background & Surface System. */
+        --bg-base: #0d1512;
+        --surface: rgba(20, 30, 24, 0.80);
+        --surface-strong: rgba(23, 35, 28, 0.92);
+        --surface-alt: #18241d;
+        --glass: rgba(20, 30, 24, 0.58);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --line: rgba(167, 221, 189, 0.090);
+
+        /* Text System. */
+        --text-muted: #93a198;
+        --text: #d8e6dc;
+        --text-strong: #f7fcf9;
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        opacity: 0.72;
+        background:
+            radial-gradient(900px circle at 14% 10%, rgba(167, 221, 189, 0.13), transparent 72%),
+            radial-gradient(700px circle at 86% 12%, rgba(239, 193, 100, 0.09), transparent 72%),
+            radial-gradient(1300px circle at 50% 105%, rgba(13, 21, 18, 0.96), transparent 82%);
+    }
+}
+
+/* ====================================
+   August Atmosphere Animation Styles.
+======================================= */
+@keyframes august-atmosphere
+{
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0.15%, -0.12%, 0) scale(1.008); }
+}
 
 /* =================
    Theme Tokens.
 ==================== */
-:root
+/*:root
 {
-    /* Core Brand. */
-    --primary: #ffb400; /* Warm, golden sunlight. */
-    --secondary: #6a994e; /* Muted green. */
-    --accent: #ff6b35; /* Coral highlight. */
+    --primary: #ffb400;
+    --secondary: #6a994e;
+    --accent: #ff6b35;
 
-    /* Neutral Palette. */
-    --bg-light: #fffdf9; /* Soft ivory. */
-    --bg-dark: #faf6f0; /* Warm neutral section background color. */
-    --text-dark: #2b2b2b; /* Deep gray for readability. */
-    --text-muted: #6f6f6f; /* Subtext / Secondary Text Color. */
+    --bg-light: #fffdf9;
+    --bg-dark: #faf6f0;
+    --text-dark: #2b2b2b;
+    --text-muted: #6f6f6f;
     --border-light: #e8e2da;
 
-    /* UI Details. */
     --footer-bg: #fdf6f0;
     --hr-color: #ffd97d;
 
-    /* Transitions. */
     --transition-base: 0.3s ease;
 
-    /* Shadow Styles.*/
     --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
+}*/
 
-.header-text h1::after
+/*.header-text h1::after
 {
     content: '';
     display: block;
@@ -39,11 +194,11 @@
     margin: 10px auto 0;
     background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
     border-radius: 2px;
-}
+}*/
 
-ul li::before
+/*ul li::before
 {
-    content: '🌻'; /* Sunflower emoji for August 2025!! */
+    content: '🌻';
     position: absolute;
     top: 0.7rem;
     left: 0;
@@ -51,12 +206,12 @@ ul li::before
     height: 6px;
     background: var(--accent);
     border-radius: 50%;
-}
+}*/
 
 /* =======================
    HR Styles.
 ========================== */
-hr
+/*hr
 {
     border: none;
     height: 2px;
@@ -64,7 +219,7 @@ hr
     width: 100%;
     border-radius: 2px;
     background: linear-gradient(to right, transparent, var(--hr-color), transparent);
-}
+}*/
 
 /* ==========================
    Animations Styles.

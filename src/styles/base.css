@@ -22,7 +22,7 @@ h3 { font-size: 1.1rem; }
 p
 {
     margin: 0;
-    max-width: 65ch;
+    max-inline-size: 65ch;
     color: var(--text);
     line-height: 1.75;
 }
@@ -45,20 +45,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     background: var(--surface);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(20px);
     box-shadow: var(--shadow-sm);
 
     transition: transform var(--transition),
                 box-shadow var(--transition);
 }
-.surface-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.surface-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .surface-card:active { transform: translateY(0); }
 
 /* ====================================
    Links Styles.
 ======================================= */
-a[href] { transition: opacity var(--transition-fast), color var(--transition-fast); }
-a[href]:hover { opacity: 0.86; }
+a[href] { transition: color var(--transition-fast); }
+a[href]:hover { color: var(--brand); }
 a[href]:focus-visible { outline: none; border-radius: 0.35rem; box-shadow: var(--focus-ring); }
 
 /* ====================================

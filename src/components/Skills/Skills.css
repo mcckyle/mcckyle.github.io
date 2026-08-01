@@ -1,11 +1,17 @@
 /* Filename: src/components/Skills/Skills.css */
 
 /* ====================================
+   Skills Grid Styles.
+-====================================== */
+.skills-grid
+{
+    align-items: stretch;
+}
+
+/* ====================================
    Skills Cards Styles.
 ======================================= */
-.skill { height: 100%; }
-.skill h3 { max-width: 20ch; }
-.skill p { max-width: 55ch; }
+.skill { min-block-size: 100%; }
 
 /* ====================================
    Skills Ambient Overlay Styles.

@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 28 June 2026
+//Date: 26 July 2026
 //Description: This file contains the App component for the personal React website.
 
 import React from "react";
@@ -17,13 +17,13 @@ import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
 /* Pure Layout Primitive. */
-function Section({ children, id, label, className = "" })
+function Section({ children, id, ariaLabel, className = "" })
 {
   return (
     <section
       id={id}
-      aria-label={label}
-      className={`section ${className}`}
+      aria-label={ariaLabel}
+      className={`section${className ? ` ${className}` : ""}`}
     >
       {children}
     </section>
@@ -37,12 +37,12 @@ function App()
       <Header />
 
       <main id="main-content" className="site-main">
-        <Section id="mission" label="Mission"><Mission /></Section>
-        <Section id="projects" label="Projects"><Projects /></Section>
-        <Section id="skills" label="Skills"><Skills /></Section>
-        <Section id="about" label="About Me"><AboutMe /></Section>
-        <Section id="experience" label="Experience"><Experience /></Section>
-        <Section id="contact" label="Contact"><Contact /></Section>
+        <Section id="mission" ariaLabel="Mission"><Mission /></Section>
+        <Section id="projects" ariaLabel="Projects"><Projects /></Section>
+        <Section id="skills" ariaLabel="Skills"><Skills /></Section>
+        <Section id="about" ariaLabel="About Me"><AboutMe /></Section>
+        <Section id="experience" ariaLabel="Experience"><Experience /></Section>
+        <Section id="contact" ariaLabel="Contact"><Contact /></Section>
       </main>
 
       <Footer />

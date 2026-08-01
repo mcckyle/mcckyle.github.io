@@ -3,23 +3,7 @@
 /* ====================================
    Footer Section Styles.
 ======================================= */
-.footer { margin-top: clamp(4rem, 10vw, 8rem); padding-block: clamp(3rem, 8vw, 6rem); }
-/*.footer::before
-{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: min(120px, 30vw);
-    height: 1px;
-    transform: translateX(-50%);
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--line),
-        transparent
-    );
-}*/
+.footer { margin-block-start: clamp(5rem, 9vw, 8rem); padding-block: clamp(3rem, 8vw, 6rem); }
 
 /* ====================================
    Footer Content Styles.
@@ -28,10 +12,11 @@
 {
     display: grid;
     justify-items: center;
-    text-align: center;
     gap: 0.85rem;
-    max-width: 640px;
+
+    max-inline-size: 40rem;
     margin-inline: auto; /* Visually centers the Footer content. */
+    text-align: center;
 }
 
 /* ====================================
@@ -40,9 +25,9 @@
 .footer-message
 {
     color: var(--text);
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     font-weight: 600;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 /* ====================================
@@ -51,9 +36,8 @@
 .footer-dedication
 {
     color: var(--text-muted);
-    font-size: 0.82rem;
-    line-height: 1.8;
-    letter-spacing: 0.015em;
+    font-size: 0.8rem;
+    line-height: 1.7;
 }
 
 /* ====================================
@@ -61,29 +45,5 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .footer-message { font-size: 0.9rem; }
+    .footer-message { font-size: 0.85rem; }
 }
-
-/* ====================================
-   Footer Ambient Glow Styles.
-======================================= */
-/*
-.footer::after
-{
-    content: "";
-    position: absolute;
-    inset: auto 50% -14rem;
-    width: min(50rem, 92vw);
-    height: 20rem;
-
-    transform: translateX(-50%);
-    pointer-events: none;
-    background: radial-gradient(
-        circle,
-        color-mix(in srgb, var(--brand) 5%, transparent),
-        transparent 74%
-    );
-    opacity: 0.24;
-    filter: blur(42px);
-}
-*/

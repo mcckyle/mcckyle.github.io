@@ -1,68 +1,63 @@
 /* Filename: src/components/Projects/Projects.css */
 
 /* ====================================
-   Project Card Styles.
+   Projects Grid Styles.
+======================================= */
+.project-grid
+{
+    align-items: stretch;
+}
+
+/* ====================================
+   Projects Card Styles.
 ======================================= */
 .project
 {
-    height: 100%;
+    min-block-size: 100%;
     gap: 1.5rem;
 }
 
 /* ====================================
-   Projects Ambient Overlay Styles.
+   Projects Header Styles.
 ======================================= */
-/*.project::after
-{
-    content: "";
-    position: absolute;
-    inset: auto -30% -40% auto;
-    width: 12rem;
-    height: 12rem;
-    pointer-events: none;
-    background: radial-gradient(
-        circle,
-        color-mix(in srgb, var(--accent) 10%, transparent),
-        transparent 70%
-    );
-
-    opacity: 0;
-
-    transition: opacity var(--transition);
-}
-.project:hover::after { opacity: 1; }*/
-
-/* ====================================
-   Project Header Styles.
-======================================= */
-.project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
-.project h3 { max-width: 18ch; }
-.project p { max-width: 58ch; }
+.project-header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.project h3 { max-inline-size: 18ch; }
+.project-description { color: var(--text); }
 
 /* ====================================
    Projects Link Styles.
 ======================================= */
 .project-link
 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.30rem;
     flex-shrink: 0;
-    color: var(--brand);
 
+    color: var(--brand);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.06em;
+    line-height: 1;
     text-transform: uppercase;
+
+    transition: color var(--transition-fast), transform var(--transition-fast);
 }
+.project-link span { font-size: 0.95rem; line-height: 1; transition: transform var(--transition-fast); }
 .project-link:hover { color: var(--accent); }
+.project-link:hover span { transform: translate(2px, -2px); }
+.project-link:focus-visible { border-radius: 0.35rem; }
 
 /* ====================================
    Projects Technology List Styles.
 ======================================= */
 .tech-list
 {
-    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+
+    margin-block-start: auto;
 }
 
 /* ====================================
@@ -73,8 +68,8 @@
     display: inline-flex;
     align-items: center;
 
-    min-height: 1.8rem;
-    padding-inline: 0.75rem;
+    padding-block: 0.35rem;
+    padding-inline: 0.70rem;
 
     border: 1px solid var(--line);
     border-radius: 999px;
@@ -84,20 +79,22 @@
 
     font-size: 0.72rem;
     font-weight: 650;
+    line-height: 1.2;
 
-    transition: transform var(--transition-fast),
-                border-color var(--transition-fast);
+    transition: border-color var(--transition-fast),
+                background-color var(--transition-fast),
+                color var(--transition-fast);
 }
-.tech-pill:hover
-{
-    transform: translateY(-1px);
-    border-color: color-mix(in srgb, var(--brand) 20%, var(--line));
-}
+.project:hover .tech-pill { border-color: color-mix(in srgb, var(--brand) 14%, var(--line)); }
 
 /* ====================================
    Projects Media Query Styles.
 ======================================= */
 @media (max-width: 640px)
 {
-    .project-header { flex-direction: column; }
+    .project-header { align-items: flex-start; }
+}
+@media (max-width: 420px)
+{
+    .project-header { flex-direction: column; gap: 0.75rem; }
 }
