@@ -6,7 +6,8 @@
 .fade-up
 {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(0.75rem);
+    will-change: opacity, transform;
 
     animation: fade-up 700ms var(--ease) forwards;
 }
@@ -21,6 +22,11 @@
 ======================================= */
 @keyframes fade-up
 {
-    from { opacity: 0; transform: translateY(14px); }
+    from { opacity: 0; transform: translateY(0.75rem); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* ====================================
+   Animation Cleanup Styles.
+======================================= */
+.fade-up { animation-fill-mode: both; }

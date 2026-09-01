@@ -4,7 +4,7 @@
 
 A personal portfolio built with React and Vite, focused on simple interfaces and modern engineering practices.
 
-![Portfolio Screenshot](./public/images/Screenshot_20260731_185818.png)
+![Portfolio Screenshot](./public/images/Screenshot_20260831_233657.png)
 *A glimpse of my website, captured with a screenshot.*
 
 *🌐 [Live site](https://mcckyle.github.io/)*

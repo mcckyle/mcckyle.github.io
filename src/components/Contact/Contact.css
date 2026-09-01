@@ -4,7 +4,7 @@
    Contact Layout Styles.
 ======================================= */
 .contact { max-inline-size: 45rem; font-style: normal; /* Override <address> italics. */ }
-.contact-list { display: grid; gap: 0.75rem; }
+.contact-list { display: grid; gap: 0.65rem; }
 
 /* ====================================
    Contact Entry Styles.
@@ -15,10 +15,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding-block: 1.15rem;
-    padding-inline: 1.5rem;
-
-    transition: transform var(--transition), box-shadow var(--transition);
+    padding-block: 1.05rem;
+    padding-inline: 1.35rem;
 }
 
 /* ====================================
@@ -26,10 +24,11 @@
 ======================================= */
 .contact-label
 {
+    flex-shrink: 0;
     color: var(--text-muted);
-    font-size: 0.72rem;
+    font-size: 0.70rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.11em;
     line-height: 1.2;
     text-transform: uppercase;
 }
@@ -58,11 +57,12 @@
     font-weight: 650;
     text-align: right;
 
-    transition: color var(--transition), transform var(--transition);
+    transition: color var(--transition-fast), transform var(--transition-fast);
 }
-.contact-link span { font-size: 0.95rem; line-height: 1; transition: transform var(--transition-fast); }
+.contact-link > span:last-child { font-size: 0.95rem; line-height: 1; transition: transform var(--transition-fast); }
 .contact-link:hover { color: var(--accent); }
-.contact-link:hover span { transform: translate(2px, -2px); }
+.contact-link:hover > span:last-child { transform: translate(2px, -2px); }
+.contact-link:focus-visible { outline: none; border-radius: 0.35rem; box-shadow: var(--focus-ring); }
 
 /* ====================================
    Contact Media Query Styles.
@@ -70,5 +70,5 @@
 @media (max-width: 640px)
 {
     .contact-entry { align-items: flex-start; flex-direction: column; gap: 0.40rem; }
-    .contact-value .contact-link { text-align: left; }
+    .contact-value, .contact-link { text-align: left; }
 }

@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 26 July 2026
+//Date: 23 August 2026
 //Description: This file contains the App component for the personal React website.
 
 import React from "react";
@@ -19,11 +19,13 @@ import "./App.css";
 /* Pure Layout Primitive. */
 function Section({ children, id, ariaLabel, className = "" })
 {
+  const classes = ["section", className].filter(Boolean).join(" ");
+
   return (
     <section
       id={id}
+      className={classes}
       aria-label={ariaLabel}
-      className={`section${className ? ` ${className}` : ""}`}
     >
       {children}
     </section>

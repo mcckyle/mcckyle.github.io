@@ -1,35 +1,165 @@
-/* Filename: 8.css (September) */
+/* Filename: src/themes/8.css (September 2026 Theme). */
 
-/* =================
-   Theme Tokens.
-==================== */
+/* ====================================
+   Root Design System - Light Mode.
+======================================= */
 :root
 {
-    /* Core Brand Palette for September. */
-    --primary: #e09f3e; /* Color: Amber. */
-    --secondary: #386641; /* Color: Forest Green. */
-    --accent: #bc4749; /* Color: Warm Red. */
-    --highlight: #7b2cbf; /* Color: Plum Purple. */
+    /* Brand System. */
+    --brand: #536b50;
+    --brand-strong: #354635;
+    --brand-soft: #edf2eb;
 
-    /* Neutrals / Surfaces. */
-    --bg-base: #fffaf2; /* Parchment. */
-    --surface: #fbf3e6; /* Card Base. */
-    --line: #eadfce;
+    /* Accent System. */
+    --accent: #b98743;
+    --accent-strong: #96672f;
+    --accent-soft: #faf2e4;
 
-    /* Text Scale. */
-    --text-strong: #231f1a;
-    --text: #2e2e2e;
-    --text-muted: #6f6358; /* Muted Text Color. */
+    /* Seasonal System. */
+    --maple: #ad6b4b;
+    --harvest: #d6bd7f;
 
-    /* Effects Styles. */
-    --rule: #e9c07a;
-    --footer-bg: #f4ece1;
-    --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-    --transition: 0.3s var(--ease);
+    /* Highlight System. */
+    --highlight: #fffefa;
+    --highlight-soft: #f5f2ec;
+
+    /* Background & Surface System. */
+    --bg-base: #faf9f6;
+    --surface: rgba(255, 255, 255, 0.78);
+    --surface-strong: rgba(255, 255, 255, 0.92);
+    --surface-alt: #f1efe9;
+
+    --glass: rgba(255, 255, 255, 0.44);
+    --glass-border: rgba(255, 255, 255, 0.56);
+    --line: rgba(83, 107, 80, 0.085);
+
+    /* Text System. */
+    --text-muted: #70766f;
+    --text: #3b413b;
+    --text-strong: #1b1f1b;
+
+    /* Radius System. */
+    --radius-sm: 0.70rem;
+    --radius-md: 1.15rem;
+    --radius-lg: 1.65rem;
+
+    /* Spacing System. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 1px 3px rgba(25, 29, 26, 0.025), 0 12px 28px rgba(83, 107, 80, 0.035);
+    --shadow-md: 0 12px 32px rgba(25, 29, 26, 0.04), 0 32px 72px rgba(83, 107, 80, 0.05);
+    --shadow-lg: 0 24px 72px rgba(25, 29, 26, 0.055), 0 64px 128px rgba(185, 135, 67, 0.05);
+
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 28%, transparent);
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-slow: 0.80s var(--ease);
+    --transition: 0.30s var(--ease);
+    --transition-fast: 0.16s var(--ease);
+
+    color-scheme: light;
 }
 
-/* Seasonal Accent Styles. */
+/* ====================================
+   September Atmospheric Light Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -16%;
+    z-index: -2;
+    pointer-events: none;
+    background: radial-gradient(850px circle at 14% 4%, rgba(214, 189, 127, 0.13), transparent 70%),
+                radial-gradient(900px circle at 86% 10%, rgba(111, 139, 120, 0.09), transparent 72%),
+                radial-gradient(1300px circle at 50% 108%, rgba(255, 247, 231, 0.28), transparent 80%);
+
+    opacity: 0.90;
+
+    animation: september-atmosphere 1500s ease-in-out infinite;
+}
+
+/* ====================================
+   September Micro Texture Styles.
+======================================= */
+body::after
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.004;
+    background-image: radial-gradient(circle, rgba(83, 107, 80, 0.22) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at center, black, transparent 88%);
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand System. */
+        --brand: #b7cfb8;
+        --brand-strong: #d9e9da;
+        --brand-soft: #1b2d21;
+
+        /* Accent System. */
+        --accent: #d6ad6b;
+        --accent-strong: #ebc98b;
+        --accent-soft: #33291b;
+
+        /* Seasonal System. */
+        --maple: #cd8b68;
+        --harvest: #d7bd7e;
+
+        --highlight: #1a201c;
+        --highlight-soft: #131814;
+
+        /* Background & Surface System. */
+        --bg-base: #101310;
+        --surface: rgba(23, 28, 25, 0.80);
+        --surface-strong: rgba(28, 34, 30, 0.92);
+        --surface-alt: #181f1a;
+        --glass: rgba(23, 28, 25, 0.56);
+        --glass-border: rgba(255, 255, 255, 0.07);
+        --line: rgba(183, 207, 184, 0.085);
+
+        /* Text System. */
+        --text-muted: #98a199;
+        --text: #d9e2da;
+        --text-strong: #f4f8f4;
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        opacity: 0.72;
+        background:
+            radial-gradient(850px circle at 14% 6%, rgba(183, 207, 184, 0.09), transparent 70%),
+            radial-gradient(850px circle at 86% 10%, rgba(214, 173, 107, 0.065), transparent 72%),
+            radial-gradient(1300px circle at 50% 108%, rgba(8, 11, 9, 0.98), transparent 80%);
+    }
+}
+
+/* ====================================
+   September Atmosphere Animation Styles.
+======================================= */
+@keyframes september-atmosphere
+{
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0.10%, -0.06%, 0) scale(1.004); }
+}
+
+/*
 body::after
 {
     content: "🍁🍂";
@@ -45,17 +175,13 @@ body::after
 
 ul li::before
 {
-    content: '🍂'; /* Autumn Leaf Emoji For September 2025!! */
+    content: '🍂';
     position: absolute;
     top: 0.65rem;
     left: 0;
     font-size: 1rem;
     color: var(--primary);
 }
-
-/* =======================
-   Animations Styles.
-========================== */
 @keyframes driftLeaf
 {
     0% { transform: translate(0, 0) rotate(0deg); }
@@ -64,3 +190,4 @@ ul li::before
     75% { transform: translate(8px, -6px) rotate(4deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
 }
+*/

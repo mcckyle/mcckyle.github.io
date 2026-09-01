@@ -28,6 +28,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
         class="experience-marker"
       />
       <article
+        aria-labelledby="primary-systems-role"
         class="experience-card surface-card"
       >
         <header
@@ -36,7 +37,9 @@ exports[`Experience component > matches the snapshot of the Experience section 1
           <div
             class="experience-heading"
           >
-            <h3>
+            <h3
+              id="primary-systems-role"
+            >
               IT System Engineer
             </h3>
             <p
@@ -46,7 +49,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
             </p>
           </div>
           <div
-            aria-label="Employment period"
+            aria-label="May 2023 to September 2023"
             class="experience-period"
           >
             <time
@@ -76,6 +79,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
         class="experience-marker"
       />
       <article
+        aria-labelledby="walmart-role"
         class="experience-card surface-card"
       >
         <header
@@ -84,7 +88,9 @@ exports[`Experience component > matches the snapshot of the Experience section 1
           <div
             class="experience-heading"
           >
-            <h3>
+            <h3
+              id="walmart-role"
+            >
               Software Engineer
             </h3>
             <p
@@ -94,7 +100,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
             </p>
           </div>
           <div
-            aria-label="Employment period"
+            aria-label="July 2021 to October 2022"
             class="experience-period"
           >
             <time

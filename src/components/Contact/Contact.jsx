@@ -41,7 +41,7 @@ function Contact()
                     rel: "noopener noreferrer",
                   })}
                 >
-                  {item.value}
+                  <span>{item.value}</span>
                   {item.external && (
                     <span aria-hidden="true">↗</span>
                   )}

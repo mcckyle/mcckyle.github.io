@@ -5,7 +5,7 @@
 ======================================= */
 .app-shell
 {
-    min-height: 100svh;
+    min-block-size: 100svh;
     display: flex;
     flex-direction: column;
 }
@@ -17,8 +17,8 @@
 .section
 {
     position: relative;
-    padding-block: clamp(5rem, 9vw, 8rem);
-    padding-inline: 1rem;
+    padding-block: clamp(5rem, 8vw, 7.5rem);
+    padding-inline: clamp(1rem, 3vw, 2rem);
 }
 
 /* ====================================
@@ -26,5 +26,5 @@
 ======================================= */
 @media (max-width: 768px)
 {
-    .section { padding-block: clamp(3.5rem, 12vw, 5rem); }
+    .section { padding-block: clamp(4rem, 12vw, 5.5rem); padding-inline: 1rem; }
 }

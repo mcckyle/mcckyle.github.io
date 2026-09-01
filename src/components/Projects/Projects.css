@@ -3,7 +3,7 @@
 /* ====================================
    Projects Grid Styles.
 ======================================= */
-.project-grid
+.projects-grid
 {
     align-items: stretch;
 }
@@ -31,22 +31,22 @@
 {
     display: inline-flex;
     align-items: center;
-    gap: 0.30rem;
+    gap: 0.35rem;
     flex-shrink: 0;
 
     color: var(--brand);
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.055em;
     line-height: 1;
     text-transform: uppercase;
 
     transition: color var(--transition-fast), transform var(--transition-fast);
 }
-.project-link span { font-size: 0.95rem; line-height: 1; transition: transform var(--transition-fast); }
+.project-link > span:last-child { font-size: 0.95rem; line-height: 1; transition: transform var(--transition-fast); }
 .project-link:hover { color: var(--accent); }
-.project-link:hover span { transform: translate(2px, -2px); }
-.project-link:focus-visible { border-radius: 0.35rem; }
+.project-link:hover > span:last-child { transform: translate(2px, -2px); }
+.project-link:focus-visible { outline: none; border-radius: 0.35rem; box-shadow: var(--focus-ring); }
 
 /* ====================================
    Projects Technology List Styles.
@@ -55,7 +55,7 @@
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.40rem;
 
     margin-block-start: auto;
 }
@@ -68,24 +68,25 @@
     display: inline-flex;
     align-items: center;
 
-    padding-block: 0.35rem;
-    padding-inline: 0.70rem;
+    padding-block: 0.30rem;
+    padding-inline: 0.65rem;
 
     border: 1px solid var(--line);
     border-radius: 999px;
 
-    background: var(--surface-alt);
+    background: color-mix(in srgb, var(--surface-alt) 78%, transparent);
     color: var(--text-muted);
 
-    font-size: 0.72rem;
+    font-size: 0.70rem;
     font-weight: 650;
     line-height: 1.2;
+    white-space: nowrap;
 
     transition: border-color var(--transition-fast),
                 background-color var(--transition-fast),
                 color var(--transition-fast);
 }
-.project:hover .tech-pill { border-color: color-mix(in srgb, var(--brand) 14%, var(--line)); }
+.project:hover .tech-pill { border-color: color-mix(in srgb, var(--brand) 13%, var(--line)); }
 
 /* ====================================
    Projects Media Query Styles.

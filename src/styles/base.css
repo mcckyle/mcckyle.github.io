@@ -47,12 +47,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     background: var(--surface);
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-sm);
-
-    transition: transform var(--transition),
-                box-shadow var(--transition);
 }
-.surface-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.surface-card:active { transform: translateY(0); }
+
+/* ====================================
+   Interactive Surface Styles.
+======================================= */
+.surface-card.is-interactive { transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
+.surface-card.is-interactive:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.surface-card.is-interactive:active { transform: translateY(0); }
 
 /* ====================================
    Links Styles.

@@ -1,6 +1,6 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 26 July 2026
+//Date: 23 August 2026
 //Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
@@ -80,9 +80,12 @@ function Projects()
       >
         {PROJECTS.map((project) => (
           <li key={project.id}>
-            <article className="project surface-card">
+            <article
+              className="project surface-card"
+              aria-labelledby={`${project.id}-title`}
+            >
               <header className="project-header">
-                <h3>{project.title}</h3>
+                <h3 id={`${project.id}-title`}>{project.title}</h3>
                 {project.href && (
                   <a
                     className="project-link"
@@ -91,7 +94,7 @@ function Projects()
                     rel="noopener noreferrer"
                     aria-label={`View ${project.title} project`}
                   >
-                    View Project
+                    <span>View Project</span>
                     <span aria-hidden="true">↗</span>
                   </a>
                 )}

@@ -23,12 +23,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
   >
     <li>
       <article
+        aria-labelledby="stlevents-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="stlevents-title"
+          >
             STL Events
           </h3>
           <a
@@ -38,7 +41,9 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
             rel="noopener noreferrer"
             target="_blank"
           >
-            View Project
+            <span>
+              View Project
+            </span>
             <span
               aria-hidden="true"
             >
@@ -75,12 +80,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
     </li>
     <li>
       <article
+        aria-labelledby="showmoevents-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="showmoevents-title"
+          >
             ShowMOEvents
           </h3>
         </header>
@@ -118,12 +126,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
     </li>
     <li>
       <article
+        aria-labelledby="showmetasks-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="showmetasks-title"
+          >
             ShowMeTasks
           </h3>
         </header>
@@ -161,12 +172,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
     </li>
     <li>
       <article
+        aria-labelledby="lovenotes-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="lovenotes-title"
+          >
             LoveNotes
           </h3>
         </header>
@@ -204,12 +218,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
     </li>
     <li>
       <article
+        aria-labelledby="giftplanner-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="giftplanner-title"
+          >
             Gift Planner
           </h3>
         </header>
@@ -247,12 +264,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
     </li>
     <li>
       <article
+        aria-labelledby="gratitudejournal-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="gratitudejournal-title"
+          >
             Gratitude Journal
           </h3>
         </header>
@@ -290,12 +310,15 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
     </li>
     <li>
       <article
+        aria-labelledby="potofgoals-title"
         class="project surface-card"
       >
         <header
           class="project-header"
         >
-          <h3>
+          <h3
+            id="potofgoals-title"
+          >
             PotOfGoals
           </h3>
         </header>
