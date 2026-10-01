@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 23 August 2026
+//Date: 29 September 2026
 //Description: This file contains the App component for the personal React website.
 
 import React from "react";
@@ -16,8 +16,8 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import "./App.css";
 
-/* Pure Layout Primitive. */
-function Section({ children, id, ariaLabel, className = "" })
+/* Pure Layout Primitive with Automatic Accessibility Mapping. */
+function Section({ children, id, headingId, className = "" })
 {
   const classes = ["section", className].filter(Boolean).join(" ");
 
@@ -25,7 +25,7 @@ function Section({ children, id, ariaLabel, className = "" })
     <section
       id={id}
       className={classes}
-      aria-label={ariaLabel}
+      aria-labelledby={headingId} //Links the landmark to the child's heading.
     >
       {children}
     </section>
@@ -39,12 +39,12 @@ function App()
       <Header />
 
       <main id="main-content" className="site-main">
-        <Section id="mission" ariaLabel="Mission"><Mission /></Section>
-        <Section id="projects" ariaLabel="Projects"><Projects /></Section>
-        <Section id="skills" ariaLabel="Skills"><Skills /></Section>
-        <Section id="about" ariaLabel="About Me"><AboutMe /></Section>
-        <Section id="experience" ariaLabel="Experience"><Experience /></Section>
-        <Section id="contact" ariaLabel="Contact"><Contact /></Section>
+        <Section id="mission" headingId="mission-title"><Mission /></Section>
+        <Section id="projects" headingId="projects-title"><Projects /></Section>
+        <Section id="skills" headingId="skills-title"><Skills /></Section>
+        <Section id="about" headingId="about-title"><AboutMe /></Section>
+        <Section id="experience" headingId="experience-title"><Experience /></Section>
+        <Section id="contact" headingId="contact-title"><Contact /></Section>
       </main>
 
       <Footer />

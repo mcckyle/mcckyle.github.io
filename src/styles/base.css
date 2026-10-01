@@ -59,9 +59,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ====================================
    Links Styles.
 ======================================= */
+/*
 a[href] { transition: color var(--transition-fast); }
 a[href]:hover { color: var(--brand); }
 a[href]:focus-visible { outline: none; border-radius: 0.35rem; box-shadow: var(--focus-ring); }
+*/
 
 /* ====================================
    Scrollbar Styles.

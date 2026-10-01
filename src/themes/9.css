@@ -1,40 +1,170 @@
-/* Filename: 9.css (October Theme) */
+/* Filename: src/themes/9.css (October 2026 Theme). */
 
 /* ====================================
-   Theme Tokens.
+   Root Design System - Light Mode.
 ======================================= */
 :root
 {
-    /* Core Palette for October. */
-    --primary: #ff7518; /* Color: Pumpkin Orange. */
-    --secondary: #c71585; /* Color: Spooky Magenta. */
-    --accent: #9e2a2b; /* Color: Rustic Crimson. */
-    --highlight: #f4a259; /* Color: Candlelight Amber. */
+    /* Brand System. */
+    --brand: #a6532f;
+    --brand-strong: #743a25;
+    --brand-soft: #f5e9e2;
 
-    /* Neutrals / Surfaces. */
-    --bg-base: #121212; /* Dark Backdrop. */
-    --surface: #1f1f1f; /* Dark Card Surface. */
-    --line: #2a2a2a; /* Subtle Dark Borders. */
+    /* Accent System. */
+    --accent: #bd7a32;
+    --accent-strong: #925a20;
+    --accent-soft: #f8eee1;
 
-    /* Text Scale. */
-    --text-strong: #ffffff;
-    --text: #e6e6e6;
-    --text-muted: #9a9a9a;
+    /* Seasonal System. */
+    --maple: #a6532f;
+    --harvest: #d1a15d;
 
-    /* Effects Styles. */
-    --rule: var(--primary);
-    --footer-bg: #1c1c1c;
-    --shadow: 0 6px 18px rgba(0, 0, 0, 0.65);
-    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-    --transition: 0.3s var(--ease);
+    /* Highlight System. */
+    --highlight: #fffdf8;
+    --highlight-soft: #f5f0e8;
+
+    /* Background & Surface System. */
+    --bg-base: #faf8f4;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-strong: rgba(255, 255, 255, 0.95);
+    --surface-alt: #f1ede6;
+
+    --glass: rgba(255, 255, 255, 0.50);
+    --glass-border: rgba(255, 255, 255, 0.62);
+    --line: rgba(90, 59, 42, 0.09);
+
+    /* Text System. */
+    --text-muted: #716b64;
+    --text: #403c37;
+    --text-strong: #211e1b;
+
+    /* Radius System. */
+    --radius-sm: 0.70rem;
+    --radius-md: 1.15rem;
+    --radius-lg: 1.65rem;
+
+    /* Spacing System. */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Shadow System. */
+    --shadow-sm: 0 1px 3px rgba(34, 27, 22, 0.025), 0 12px 28px rgba(90, 59, 42, 0.035);
+    --shadow-md: 0 12px 32px rgba(34, 27, 22, 0.04), 0 32px 72px rgba(90, 59, 42, 0.05);
+    --shadow-lg: 0 24px 72px rgba(34, 27, 22, 0.055), 0 64px 128px rgba(166, 83, 47, 0.055);
+
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 28%, transparent);
+    --ease: cubic-bezier(0.33, 1, 0.68, 1);
+    --transition-slow: 0.80s var(--ease);
+    --transition: 0.30s var(--ease);
+    --transition-fast: 0.16s var(--ease);
+
+    color-scheme: light;
+}
+
+/* ====================================
+   October Atmospheric Light Styles.
+======================================= */
+body::before
+{
+    content: "";
+    position: fixed;
+    inset: -16%;
+    z-index: -2;
+    pointer-events: none;
+    background: radial-gradient(850px circle at 10% 2%, rgba(209, 161, 93, 0.13), transparent 70%),
+                radial-gradient(900px circle at 90% 10%, rgba(166, 83, 47, 0.075), transparent 72%),
+                radial-gradient(1300px circle at 50% 108%, rgba(249, 235, 213, 0.28), transparent 80%);
+
+    opacity: 0.90;
+
+    animation: october-atmosphere 1500s ease-in-out infinite;
+}
+
+/* ====================================
+   October Micro Texture Styles.
+======================================= */
+body::after
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.004;
+    background-image: radial-gradient(circle, rgba(90, 59, 42, 0.22) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at center, black, transparent 88%);
+}
+
+/* ====================================
+   Dark Mode Theme Media Query Styles.
+======================================= */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* Brand System. */
+        --brand: #e0a078;
+        --brand-strong: #efc2a5;
+        --brand-soft: #35231c;
+
+        /* Accent System. */
+        --accent: #ddb06d;
+        --accent-strong: #edca92;
+        --accent-soft: #352a1d;
+
+        /* Seasonal System. */
+        --maple: #d98b67;
+        --harvest: #d8b16d;
+
+        --highlight: #211b18;
+        --highlight-soft: #171412;
+
+        /* Background & Surface System. */
+        --bg-base: #11100f;
+        --surface: rgba(27, 24, 22, 0.84);
+        --surface-strong: rgba(32, 28, 26, 0.94);
+        --surface-alt: #1d1917;
+        --glass: rgba(27, 24, 22, 0.60);
+        --glass-border: rgba(255, 255, 255, 0.075);
+        --line: rgba(224, 160, 120, 0.09);
+
+        /* Text System. */
+        --text-muted: #a39a93;
+        --text: #ded8d2;
+        --text-strong: #f7f3ee;
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        opacity: 0.72;
+        background:
+            radial-gradient(850px circle at 12% 6%, rgba(224, 160, 120, 0.085), transparent 70%),
+            radial-gradient(850px circle at 88% 10%, rgba(221, 176, 109, 0.06), transparent 72%),
+            radial-gradient(1300px circle at 50% 108%, rgba(8, 7, 6, 0.98), transparent 80%);
+    }
+}
+
+/* ====================================
+   October Atmosphere Animation Styles.
+====================================== */
+@keyframes october-atmosphere
+{
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0.10%, -0.06%, 0) scale(1.004); }
 }
 
 /* ====================================
    List Pumpkin Accent Styles.
 ======================================= */
-ul li::before
+/*ul li::before
 {
-    content: "🎃"; /* Pumpkin Emoji For October 2025!! */
+    content: "🎃";
     position: absolute;
     top: 0.3rem;
     left: 0;
@@ -45,16 +175,12 @@ ul li::before
 
     transition: transform 0.3s ease;
 }
-
-ul li:hover::before
-{
-    transform: rotate(6deg) scale(1.15);
-}
+ul li:hover::before { transform: rotate(6deg) scale(1.15); }*/
 
 /* ====================================
    Seasonal Accent (BG) Styles.
 ======================================= */
-body::after
+/*body::after
 {
     content: "🎃";
     font-size: 2.5rem;
@@ -65,16 +191,16 @@ body::after
     pointer-events: none;
 
     animation: floatPumpkin 18s ease-in-out infinite;
-}
+}*/
 
 /* ====================================
    Animations Styles.
 ======================================= */
-@keyframes floatPumpkin
+/*@keyframes floatPumpkin
 {
     0% { transform: translate(0, 0) rotate(0deg); }
     25% { transform: translate(-6px, -8px) rotate(4deg); }
     50% { transform: translate(0, -14px) rotate(-3deg); }
     75% { transform: translate(8px, -6px) rotate(2deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
-}
+}*/

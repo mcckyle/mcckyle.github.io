@@ -1,0 +1,20 @@
+#Filename: dependabot.yml
+#Author: Kyle McColgan
+#Date: 30 September 2026
+#Description: This file contains the Dependabot configuration file.
+
+version: 2
+updates:
+  # 1. Automate GitHub Actions Updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly" # Checks for new action versions every week
+    open-pull-requests-limit: 3 # Prevents spamming your PR list
+
+  # 2. Automate Node.js npm Packages (Optional but highly recommended)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5

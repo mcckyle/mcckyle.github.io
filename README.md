@@ -1,10 +1,11 @@
 [![deployment](https://github.com/mcckyle/mcckyle.github.io/actions/workflows/autograding.yml/badge.svg)](https://github.com/mcckyle/mcckyle.github.io/actions/workflows/autograding.yml)
+[![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 
 # Kyle McColgan – Technology Professional
 
 A personal portfolio built with React and Vite, focused on simple interfaces and modern engineering practices.
 
-![Portfolio Screenshot](./public/images/Screenshot_20260831_233657.png)
+![Portfolio Screenshot](./public/images/Screenshot_20260930_195154.png)
 *A glimpse of my website, captured with a screenshot.*
 
 *🌐 [Live site](https://mcckyle.github.io/)*
@@ -83,8 +84,9 @@ To run this project locally, follow the steps below:
 mcckyle.github.io/
 ├── .git/                  # Git version control directory.
 ├── .github/               
+│   ├── dependabot.yml
 │   └── workflows/
-│       └── autograding.yml
+│       └── deploy.yml
 │
 ├── public/                # Public assets.
 │   └── images/            # Screenshots and favicons.
@@ -192,5 +194,6 @@ This project was made possible thanks to the following:
 
 - [**React**](https://reactjs.org/) - for the intuitive front-end library.
 - [**Node.js**](https://nodejs.org/) - for the powerful and robust runtime environment.
+- [**Vite**](https://vitejs.dev/) - for the lightning-fast dev server and build optimizations.
 - [**GitHub Pages**](https://pages.github.com/) - for providing free and reliable static site hosting.
 - The **Open Source Community** - for generously sharing the tools and knowledge that enable this technology.

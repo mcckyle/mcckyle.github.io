@@ -3,7 +3,7 @@
 /* ====================================
    Header Hero Styles.
 ======================================= */
-.site-header { padding-block: clamp(4.5rem, 10vw, 7.5rem) clamp(5.5rem, 11vw, 9rem); }
+.site-header { padding-block: clamp(4rem, 7vw, 6rem) clamp(6rem, 12vw, 10rem); }
 
 /* ====================================
    Header Layout Styles.
@@ -13,7 +13,7 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    gap: clamp(1.75rem, 4vw, 2.75rem);
+    gap: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 /* =========================================
@@ -21,12 +21,12 @@
 ============================================ */
 .header-avatar
 {
-    inline-size: clamp(7rem, 14vw, 9.5rem);
+    inline-size: clamp(7.5rem, 13vw, 9.5rem);
     aspect-ratio: 1;
 
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--brand) 18%, var(--line));
+    border: 1px solid color-mix(in srgb, var(--brand) 20%, var(--line));
 
     background: var(--surface);
     box-shadow: 0 14px 36px rgba(25, 29, 26, 0.045);
@@ -36,16 +36,17 @@
 /* ====================================
    Header Text Block Styles.
 ======================================= */
-.header-title-group { display: grid; justify-items: center; gap: 0.80rem; }
+.header-title-group { display: grid; justify-items: center; gap: 0.75rem; }
 .header-eyebrow { order: -1; color: var(--text-muted); font-size: 0.70rem; font-weight: 700; letter-spacing: 0.17em; line-height: 1.2; text-transform: uppercase; }
-.header-title { max-inline-size: 12ch; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 0.92; letter-spacing: -0.075em; }
-.header-tagline { max-inline-size: 42ch; color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.7; }
+.header-title { max-inline-size: 12ch; font-size: clamp(3.25rem, 7vw, 5.75rem); line-height: 0.92; letter-spacing: -0.075em; }
+.header-tagline { max-inline-size: 42ch; color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.65; }
 
 /* ====================================
    Header Media Query Styles.
 ======================================= */
 @media (max-width: 640px)
 {
-    .site-header { padding-block: 4rem 5rem; }
-    .header-inner { gap: 1.75rem; }
+    .site-header { padding-block: 3.5rem 5.5rem; }
+    .header-inner { gap: 1.5rem; }
+    .header-title { font-size: clamp(2.9rem, 13vw, 4.2rem); }
 }

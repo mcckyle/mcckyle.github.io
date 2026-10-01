@@ -1,6 +1,6 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 31 July 2026
+//Date: 29 September 2026
 //Description: This file contains the Contact component for the React personal project.
 
 import React from "react";
@@ -36,6 +36,7 @@ function Contact()
                 <a
                   className="contact-link"
                   href={item.href}
+                  aria-label={`${item.label}: ${item.value}`}
                   {...(item.external && {
                     target: "_blank",
                     rel: "noopener noreferrer",

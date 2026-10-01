@@ -17,14 +17,6 @@
 .section
 {
     position: relative;
-    padding-block: clamp(5rem, 8vw, 7.5rem);
-    padding-inline: clamp(1rem, 3vw, 2rem);
-}
-
-/* ====================================
-   App Media Query Styles.
-======================================= */
-@media (max-width: 768px)
-{
-    .section { padding-block: clamp(4rem, 12vw, 5.5rem); padding-inline: 1rem; }
+    padding-block: clamp(4.5rem, 8vw, 7.5rem);
+    padding-inline: max(1rem, 3vw);
 }

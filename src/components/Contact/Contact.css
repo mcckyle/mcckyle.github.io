@@ -62,7 +62,6 @@
 .contact-link > span:last-child { font-size: 0.95rem; line-height: 1; transition: transform var(--transition-fast); }
 .contact-link:hover { color: var(--accent); }
 .contact-link:hover > span:last-child { transform: translate(2px, -2px); }
-.contact-link:focus-visible { outline: none; border-radius: 0.35rem; box-shadow: var(--focus-ring); }
 
 /* ====================================
    Contact Media Query Styles.

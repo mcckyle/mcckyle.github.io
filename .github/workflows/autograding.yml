@@ -1,6 +1,6 @@
 #Filename: autograding.yml
 #Author: Kyle McColgan
-#Date: 31 July 2026
+#Date: 30 September 2026
 #Description: This file contains the GitHub Actions workflow for the GitHub Pages deployment process.
 
 name: autograding
@@ -13,31 +13,39 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # For push to the gh-pages branch...
+
+#Prevents multiple concurrent deployments from stepping on each other...
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: 'npm'
 
-      - name: Install package dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build  # Vite outputs to ./dist directory.
+      - name: Install dependencies
+        run: npm ci #Safer/faster alternative to npm install in CI environments.
 
       - name: Execute test cases
         run: npm test
 
+      - name: Build the project
+        run: npm run build  # Vite outputs to ./dist directory.
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} #Fix token reference...
-          publish_dir: ./dist
-          publish_branch: gh-pages
+          branch: gh-pages           # The branch to push to.
+          folder: dist               # Vite's build folder is dist.
+          token: ${{ secrets.GH_TOKEN }}  # Using the PAT secret for deployment.

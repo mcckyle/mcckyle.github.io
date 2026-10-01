@@ -9,7 +9,7 @@
     transform: translateY(0.75rem);
     will-change: opacity, transform;
 
-    animation: fade-up 700ms var(--ease) forwards;
+    animation: fade-up 700ms var(--ease) both;
 }
 .delay-1 { animation-delay: 0.05s; }
 .delay-2 { animation-delay: 0.10s; }
@@ -25,8 +25,3 @@
     from { opacity: 0; transform: translateY(0.75rem); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-/* ====================================
-   Animation Cleanup Styles.
-======================================= */
-.fade-up { animation-fill-mode: both; }

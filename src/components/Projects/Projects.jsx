@@ -1,6 +1,6 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 23 August 2026
+//Date: 29 September 2026
 //Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
@@ -92,7 +92,7 @@ function Projects()
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${project.title} project`}
+                    aria-label={`View ${project.title}`}
                   >
                     <span>View Project</span>
                     <span aria-hidden="true">↗</span>
@@ -114,7 +114,7 @@ function Projects()
         ))}
       </ul>
     </>
-    );
+  );
 }
 
 export default Projects;

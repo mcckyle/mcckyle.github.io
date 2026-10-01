@@ -35,7 +35,7 @@ exports[`Projects component > matches the snapshot of the Projects section 1`] =
             STL Events
           </h3>
           <a
-            aria-label="View STL Events project"
+            aria-label="View STL Events"
             class="project-link"
             href="https://mcckyle.github.io/the-calendar"
             rel="noopener noreferrer"
