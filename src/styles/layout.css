@@ -3,68 +3,74 @@
 /* ====================================
    Container Primitive Styles.
 ======================================= */
-.container
-{
-    inline-size: min(82rem, 100%);
-    margin-inline: auto;
+.container {
+  inline-size: min(82rem, 100%);
+  margin-inline: auto;
 }
 
 /* ====================================
    Section Structure Styles.
 ======================================= */
-.section-header
-{
-    display: grid;
-    gap: 0.85rem;
-    margin-block-end: clamp(1.75rem, 4vw, 3rem);
+.section-header {
+  display: grid;
+  gap: 0.85rem;
+  margin-block-end: clamp(1.75rem, 4vw, 3rem);
 }
-.section-title { margin-block-end: 0.35rem; }
-.section-intro { max-inline-size: 60ch; color: var(--text-muted); }
-.section-text { display: grid; gap: clamp(1rem, 2vw, 1.5rem); max-inline-size: 68ch; }
-.section-lead
-{
-    max-inline-size: 62ch;
-    color: var(--text-strong);
-    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-    font-weight: 500;
-    line-height: 1.65;
+.section-title {
+  margin-block-end: 0.35rem;
+}
+.section-intro {
+  max-inline-size: 60ch;
+  color: var(--text-muted);
+}
+.section-text {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  max-inline-size: 68ch;
+}
+.section-lead {
+  max-inline-size: 62ch;
+  color: var(--text-strong);
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.65;
 }
 
 /* ====================================
    Shared Content Grid Styles.
 ======================================= */
-.content-grid
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-    gap: clamp(1rem, 2vw, 1.75rem);
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
 }
 
 /* ====================================
    Shared Content Stack Styles.
 ======================================= */
-.content-stack
-{
-    display: grid;
-    gap: 0.75rem;
+.content-stack {
+  display: grid;
+  gap: 0.75rem;
 }
 
 /* ====================================
    Shared Content Typography Styles.
 ======================================= */
-.content-title
-{
-    color: var(--text-strong);
-    font-weight: 600;
+.content-title {
+  color: var(--text-strong);
+  font-weight: 600;
 }
-.content-description { font-size: 0.95rem; }
+.content-description {
+  font-size: 0.95rem;
+}
 
 /* ====================================
    Layout Media Query Styles.
 ======================================= */
-@media (min-width: 1600px)
-{
-    .container { inline-size: min(88rem, 100%); }
+@media (min-width: 1600px) {
+  .container {
+    inline-size: min(88rem, 100%);
+  }
 }
 
 /* ====================================
