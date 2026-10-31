@@ -3,84 +3,98 @@
 /* ====================================
    Projects Grid Styles.
 ======================================= */
-.projects-grid
-{
-    align-items: stretch;
+.projects-grid {
+  align-items: stretch;
 }
 
 /* ====================================
    Projects Card Styles.
 ======================================= */
-.project
-{
-    block-size: 100%;
-    gap: 1.25rem;
+.project {
+  block-size: 100%;
+  gap: 1.25rem;
 }
 
 /* ====================================
    Projects Header Styles.
 ======================================= */
-.project-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem 1rem; }
-.project h3 { max-inline-size: 22ch; }
-.project-description { color: var(--text); }
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+.project h3 {
+  max-inline-size: 22ch;
+}
+.project-description {
+  color: var(--text);
+}
 
 /* ====================================
    Projects Link Styles.
 ======================================= */
-.project-link
-{
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    flex-shrink: 0;
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
 
-    color: var(--brand);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.045em;
-    line-height: 1.4;
-    text-transform: uppercase;
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 1.4;
+  text-transform: uppercase;
 
-    transition: color var(--transition-fast);
+  transition: color var(--transition-fast);
 }
-.project-link:hover { color: var(--accent); }
-.project-link > span:last-child { font-size: 0.95rem; transition: transform var(--transition-fast); }
-.project-link:hover > span:last-child { transform: translate(2px, -2px); }
+.project-link:hover {
+  color: var(--accent);
+}
+.project-link > span:last-child {
+  font-size: 0.95rem;
+  transition: transform var(--transition-fast);
+}
+.project-link:hover > span:last-child {
+  transform: translate(2px, -2px);
+}
 
 /* ====================================
    Projects Technology List Styles.
 ======================================= */
-.tech-list
-{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-block-start: auto;
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block-start: auto;
 }
 
 /* ====================================
    Projects Technology Pills Styles.
 ======================================= */
-.tech-pill
-{
-    display: inline-flex;
-    align-items: center;
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
 
-    padding: 0.35rem 0.7rem;
-    border: 1px solid var(--line);
-    border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
 
-    background: var(--surface-alt);
-    color: var(--text-muted);
+  background: var(--surface-alt);
+  color: var(--text-muted);
 
-    font-size: 0.725rem;
-    font-weight: 600;
-    line-height: 1.35;
-    white-space: nowrap;
+  font-size: 0.725rem;
+  font-weight: 600;
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .project-link:hover > span:last-child { transform: translate(2px, -2px); }
+  .project-link:hover > span:last-child {
+    transform: translate(2px, -2px);
+  }
 }
 
 /* ====================================

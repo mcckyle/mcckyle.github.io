@@ -3,83 +3,107 @@
 /* ====================================
    Experience Timeline Styles.
 ======================================= */
-.experience-list
-{
-    position: relative;
-    display: grid;
-    gap: clamp(1.25rem, 2.5vw, 1.75rem);
-    padding-block: 0.25rem;
+.experience-list {
+  position: relative;
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  padding-block: 0.25rem;
 }
 
 /* ====================================
    Experience Timeline Rail Styles.
 ======================================= */
-.experience-list::before
-{
-    content: "";
-    position: absolute;
-    inset-block: 0.8rem;
-    inset-inline-start: 0.3rem;
-    inline-size: 1px;
-    background: linear-gradient(to bottom, transparent, var(--line) 12%, var(--line) 88%, transparent);
+.experience-list::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.8rem;
+  inset-inline-start: 0.3rem;
+  inline-size: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--line) 12%,
+    var(--line) 88%,
+    transparent
+  );
 }
 
 /* ====================================
    Experience Timeline Entry Styles.
 ======================================= */
-.experience-entry
-{
-    position: relative;
-    min-inline-size: 0;
-    padding-inline-start: 1.75rem;
+.experience-entry {
+  position: relative;
+  min-inline-size: 0;
+  padding-inline-start: 1.75rem;
 }
 
 /* ====================================
    Experience Timeline Marker Styles.
 ======================================= */
-.experience-marker
-{
-    position: absolute;
-    inset-block-start: 1.35rem;
-    inset-inline-start: 0;
+.experience-marker {
+  position: absolute;
+  inset-block-start: 1.35rem;
+  inset-inline-start: 0;
 
-    inline-size: 0.6rem;
-    aspect-ratio: 1;
-    border: 2px solid var(--brand);
-    border-radius: 50%;
+  inline-size: 0.6rem;
+  aspect-ratio: 1;
+  border: 2px solid var(--brand);
+  border-radius: 50%;
 
-    background: var(--bg-base);
-    box-shadow: 0 0 0 3px var(--bg-base);
+  background: var(--bg-base);
+  box-shadow: 0 0 0 3px var(--bg-base);
 }
 
 /* ====================================
    Experience Card Styles.
 ======================================= */
-.experience-card { gap: 0; }
-.experience-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
-.experience-heading { display: grid; gap: 0.4rem; }
-.experience-card h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); }
-.experience-company { color: var(--text-muted); font-size: 0.95rem; font-weight: 600; }
-.experience-period
-{
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    gap: 0.4rem;
+.experience-card {
+  gap: 0;
+}
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.experience-heading {
+  display: grid;
+  gap: 0.4rem;
+}
+.experience-card h3 {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+.experience-company {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.experience-period {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.4rem;
 
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    font-weight: 600;
-    line-height: 1.4;
-    white-space: nowrap;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 /* ====================================
    Experience Media Query Styles.
 ======================================= */
-@media (max-width: 640px)
-{
-    .experience-entry { padding-inline-start: 1.5rem; }
-    .experience-header { flex-direction: column; gap: 0.65rem; }
-    .experience-period { flex-wrap: wrap; white-space: normal; }
+@media (max-width: 640px) {
+  .experience-entry {
+    padding-inline-start: 1.5rem;
+  }
+  .experience-header {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .experience-period {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
 }

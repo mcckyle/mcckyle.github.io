@@ -3,49 +3,74 @@
 /* ====================================
    Header Hero Styles.
 ======================================= */
-.site-header { padding-block: clamp(4rem, 7vw, 6rem) clamp(5rem, 9vw, 7rem); }
+.site-header {
+  padding-block: clamp(4rem, 7vw, 6rem) clamp(5rem, 9vw, 7rem);
+}
 
 /* ====================================
    Header Layout Styles.
 ======================================= */
-.header-inner
-{
-    display: grid;
-    justify-items: center;
-    text-align: center;
-    gap: clamp(1.5rem, 3vw, 2.25rem);
+.header-inner {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 /* =========================================
    Header Avatar Styles.
 ============================================ */
-.header-avatar
-{
-    inline-size: clamp(7.5rem, 13vw, 9.5rem);
-    aspect-ratio: 1;
+.header-avatar {
+  inline-size: clamp(7.5rem, 13vw, 9.5rem);
+  aspect-ratio: 1;
 
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--brand) 20%, var(--line));
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--brand) 20%, var(--line));
 
-    background: var(--surface);
-    box-shadow: var(--shadow-md);
-    object-fit: cover;
-    user-select: none;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  user-select: none;
 }
 
 /* ====================================
    Header Text Block Styles.
 ======================================= */
-.header-title-group { display: grid; justify-items: center; gap: 0.75rem; }
-.header-eyebrow { color: var(--text-muted); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.17em; line-height: 1.4; text-transform: uppercase; }
-.header-title { max-inline-size: 100%; font-size: clamp(3rem, 7vw, 5.75rem); line-height: 0.98; letter-spacing: -0.075em; text-wrap: balance; }
-.header-tagline { max-inline-size: 42ch; color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.65; }
+.header-title-group {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+}
+.header-eyebrow {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.header-title {
+  max-inline-size: 100%;
+  font-size: clamp(3rem, 7vw, 5.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+.header-tagline {
+  max-inline-size: 42ch;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.65;
+}
 
 /* ====================================
    Header Media Query Styles.
 ======================================= */
-@media (max-width: 640px)
-{
-    .site-header { padding-block: 3.5rem 4.5rem; }
-    .header-title { font-size: clamp(2.75rem, 11vw, 4.2rem); }
+@media (max-width: 640px) {
+  .site-header {
+    padding-block: 3.5rem 4.5rem;
+  }
+  .header-title {
+    font-size: clamp(2.75rem, 11vw, 4.2rem);
+  }
 }

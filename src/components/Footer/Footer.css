@@ -3,39 +3,39 @@
 /* ====================================
    Footer Section Styles.
 ======================================= */
-.footer { padding-block: clamp(2.5rem, 5vw, 3.5rem); border-block-start: 1px solid var(--line); }
+.footer {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  border-block-start: 1px solid var(--line);
+}
 
 /* ====================================
    Footer Content Styles.
 ======================================= */
-.footer-inner
-{
-    display: grid;
-    justify-items: center;
-    gap: 0.65rem;
+.footer-inner {
+  display: grid;
+  justify-items: center;
+  gap: 0.65rem;
 
-    max-inline-size: 40rem;
-    margin-inline: auto; /* Visually centers the Footer content. */
-    text-align: center;
+  max-inline-size: 40rem;
+  margin-inline: auto; /* Visually centers the Footer content. */
+  text-align: center;
 }
 
 /* ====================================
    Footer Message Styles.
 ======================================= */
-.footer-message
-{
-    color: var(--text);
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.65;
+.footer-message {
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.65;
 }
 
 /* ====================================
    Footer Dedication Paragraphs Styles.
 ======================================= */
-.footer-dedication
-{
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    line-height: 1.65;
+.footer-dedication {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.65;
 }

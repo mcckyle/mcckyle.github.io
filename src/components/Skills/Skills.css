@@ -3,15 +3,16 @@
 /* ====================================
    Skills Grid Styles.
 -====================================== */
-.skills-grid
-{
-    align-items: stretch;
+.skills-grid {
+  align-items: stretch;
 }
 
 /* ====================================
    Skills Cards Styles.
 ======================================= */
-.skill { block-size: 100%; }
+.skill {
+  block-size: 100%;
+}
 
 /* ====================================
    Skills Ambient Overlay Styles.
