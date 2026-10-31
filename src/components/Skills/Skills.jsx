@@ -1,6 +1,6 @@
 //Filename: Skills.jsx
 //Author: Kyle McColgan
-//Date: 26 July 2026
+//Date: 31 October 2026
 //Description: This file contains the Skills component for the personal React project.
 
 import React from "react";
@@ -10,22 +10,22 @@ const SKILLS = Object.freeze([
   {
     title: "Application Development",
     description:
-      "Designing scalable applications with modular architecture using Java, React, and Spring Boot ecosystems.",
+      "Developing maintainable applications using Java, React, and Spring Boot with an emphasis on modular architecture and practical solutions.",
   },
   {
     title: "Frontend Engineering",
     description:
-      "Creating accessible interfaces with modern JavaScript and maintainable React component design.",
+      "Building responsive, accessible interfaces with modern JavaScript and React.",
   },
   {
     title: "Backend & Systems",
     description:
-      "Building reliable backend services and system-level software using Java and C++.",
+      "Developing backend services and system-level software using Java, C++, REST APIs, and relational databases.",
   },
   {
     title: "Information Security",
     description:
-      "Applying secure development practices and threat mitigation principles throughout the software lifecycle to protect system confidentiality and availability.",
+      "Applying secure development practices and defense-in-depth principles to protect systems and data.",
   },
 ]);
 
@@ -45,13 +45,14 @@ function Skills()
 
       <ul
         className="content-grid skills-grid"
-        role="list"
         aria-labelledby="skills-title"
       >
         {SKILLS.map((skill) => (
-          <li key={skill.title} className="skill surface-card">
-            <h3 className="content-title">{skill.title}</h3>
-            <p className="content-description">{skill.description}</p>
+          <li key={skill.title}>
+            <article className="skill surface-card">
+              <h3 className="content-title">{skill.title}</h3>
+              <p className="content-description">{skill.description}</p>
+            </article>
           </li>
         ))}
       </ul>

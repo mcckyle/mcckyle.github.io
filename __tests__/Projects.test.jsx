@@ -1,6 +1,6 @@
 //Filename: Projects.test.jsx
 //Author: Kyle McColgan
-//Date: 18 July 2026
+//Date: 31 October 2026
 //Description: This file contains the Vitest unit tests for the personal React project projects section.
 
 import React from 'react';
@@ -44,7 +44,7 @@ describe('Projects component', () => {
     //Test #5
     it('renders the second project correctly', () => {
         const secondTitle = screen.getByText(/ShowMeTasks/i);
-        const secondDesc = screen.getByText(/A modular full-stack task management platform/i);
+        const secondDesc = screen.getByText(/A modular task management platform/i);
         expect(secondTitle).toBeInTheDocument();
         expect(secondDesc).toBeInTheDocument();
     });

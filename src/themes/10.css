@@ -1,95 +1,175 @@
-/* Filename: 10.css (November 2025 Theme) */
+/* Filename: src/themes/10.css (November 2026 Theme) */
 
 /* ====================================
-   Theme Tokens.
+   Root Design System - Light Mode.
 ======================================= */
 :root
 {
-    /* Core Palette for Thanksgiving. */
-    --primary: #f6aa55; /* Color: Honey Gold. */
-    --secondary: #ec767d; /* Color: Warm Cranberry. */
-    --accent: #ffe7b3; /* Color: Soft Candlelight. */
-    --highlight: #fefbf2; /* Color: Ivory Glow. */
+    /* Brand System. */
+    --brand: #985064;
+    --brand-strong: #703747;
+    --brand-soft: #f2e5e8;
 
-    --ember: #ff8a5b; /* Color: Autumn Ember. */
-    --berry: #d86a88; /* Color: Rosewood Plum. */
-    --sage: #b9d6c2; /* Color: Cool Sage Accent. */
+    /* Accent System. */
+    --accent: #a87535;
+    --accent-strong: #805522;
+    --accent-soft: #f5ecdc;
 
-    /* Backgrounds and Surfaces. */
-    --bg-base: #0b1016; /* Color: Deep Twilight. */
-    --surface: rgba(22, 28, 34, 0.85);
-    --surface-alt: rgba(30, 36, 44, 0.8);
-    --line: rgba(255, 255, 255, 0.08);
+    /* Seasonal System. */
+    --maple: #985064;
+    --harvest: #c39a5b;
+    --ember: #b86b53;
+    --berry: #985064;
+    --sage: #819b8b;
 
-    /* Text Tokens. */
-    --text-strong: #ffffff;
-    --text: #e7ebef;
-    --text-muted: #b8c1cc;
+    /* Highlight System. */
+    --highlight: #fffdf8;
+    --highlight-soft: #f4efe7;
 
-    /* System Tokens. */
-    --radius-sm: 0.5rem;
-    --radius-md: 1rem;
-    --radius-lg: 1.5rem;
+    /* Background & Surface System. */
+    --bg-base: #faf8f3;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-strong: rgba(255, 255, 255, 0.96);
+    --surface-alt: #f0ece5;
 
+    --glass: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.68);
+    --line: rgba(77, 53, 57, 0.1);
+
+    /* Text System. */
+    --text-muted: #746b6b;
+    --text: #413a3b;
+    --text-strong: #241e21;
+
+    /* Radius System. */
+    --radius-sm: 0.7rem;
+    --radius-md: 1.15rem;
+    --radius-lg: 1.65rem;
+
+    /* Spacing System. */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 2rem;
     --space-lg: 4rem;
     --space-xl: 6rem;
 
-    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.12);
-    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.22);
+    /* Shadow System. */
+    --shadow-sm: 0 1px 3px rgba(38, 25, 29, 0.025), 0 12px 28px rgba(77, 53, 57, 0.035);
+    --shadow-md: 0 12px 32px rgba(38, 25, 29, 0.04), 0 32px 72px rgba(77, 53, 57, 0.05);
+    --shadow-lg: 0 24px 72px rgba(38, 25, 29, 0.055), 0 64px 128px rgba(152, 80, 100, 0.055);
 
-    /* Effects. */
-    --footer-bg: #10161c;
+    /* Motion & Focus System. */
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent);
     --ease: cubic-bezier(0.33, 1, 0.68, 1);
-    --transition: 0.45s var(--ease);
+    --transition-slow: 800ms var(--ease);
+    --transition: 300ms var(--ease);
+    --transition-fast: 160ms var(--ease);
+
+    color-scheme: light;
 }
 
 /* ====================================
-   Seasonal Ambient Accent Styles.
+   November Atmospheric Background Styles.
 ======================================= */
 body::before
 {
     content: "";
     position: fixed;
-    inset: 0;
-    background:
-      radial-gradient(circle at 75% 25%, rgba(236, 118, 125, 0.09), transparent 70%),
-      radial-gradient(circle at 25% 75%, rgba(246, 170, 85, 0.08), transparent 70%),
-      radial-gradient(circle at 60% 50%, rgba(185, 214, 194, 0.04),transparent 70%);
-
+    inset: -16%;
+    z-index: -2;
     pointer-events: none;
-    z-index: -1;
-    filter: brightness(1.1);
+    background:
+      radial-gradient(850px circle at 12% 4%, rgba(195, 154, 91, 0.12), transparent 70%),
+      radial-gradient(900px circle at 88% 12%, rgba(152, 80, 100, 0.075), transparent 72%),
+      radial-gradient(1200px circle at 50% 108%, rgba(239, 225, 207, 0.28),transparent 80%);
 }
 
+/* ====================================
+   November Micro Texture Styles.
+======================================= */
 body::after
 {
     content: "";
     position: fixed;
-    bottom: 12%;
-    right: 8%;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background: radial-gradient(
-      circle,
-      rgba(246, 170, 85, 0.15),
-      rgba(236, 118, 125, 0.08),
-      transparent 80%
-    );
-
-    filter: blur(2px);
-    animation: emberGlow 26s ease-in-out infinite alternate;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.004;
+    background-image: radial-gradient(circle, rgba(77, 53, 57, 0.22) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at center, #000, transparent 88%);
 }
 
 /* ====================================
-   List Accent Styles.
+   Dark Mode Theme Media Query Styles.
 ======================================= */
-ul li::before
+@media (prefers-color-scheme: dark)
 {
-    content: "🦃"; /* Turkey Emoji For November 2025!! */
+    :root
+    {
+        /* Brand System. */
+        --brand: #d59aaa;
+        --brand-strong: #edbdca;
+        --brand-soft: #35232b;
+
+        /* Accent System. */
+        --accent: #d9b274;
+        --accent-strong: #ebcc98;
+        --accent-soft: #342b20;
+
+        /* Seasonal System. */
+        --maple: #d59aaa;
+        --harvest: #d9b274;
+        --ember: #d9957d;
+        --berry: #d59aaa;
+        --sage: #a2bdac;
+
+        --highlight: #1b2028;
+        --highlight-soft: #141920;
+
+        /* Background & Surface System. */
+        --bg-base: #0d1219;
+        --surface: rgba(23, 29, 38, 0.84);
+        --surface-strong: rgba(29, 36, 46, 0.96);
+        --surface-alt: #191f28;
+        --glass: rgba(23, 29, 38, 0.62);
+        --glass-border: rgba(255, 255, 255, 0.075);
+        --line: rgba(213, 154, 170, 0.12);
+
+        /* Text System. */
+        --text-muted: #a9aeb8;
+        --text: #e0e3e9;
+        --text-strong: #f7f4f3;
+
+        /* Shadow System. */
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 12px 28px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.16), 0 32px 72px rgba(0, 0, 0, 0.14);
+        --shadow-lg: 0 24px 72px rgba(0, 0, 0, 0.22), 0 64px 128px rgba(0, 0, 0, 0.18);
+
+        color-scheme: dark;
+    }
+    body::before
+    {
+        background:
+          radial-gradient(850px circle at 12% 5%, rgba(213, 154, 170, 0.085), transparent 70%),
+          radial-gradient(900px circle at 88% 12%, rgba(217, 178, 116, 0.065), transparent 72%),
+          radial-gradient(1300px circle at 50% 108%, rgba(5, 8, 13, 0.96), transparent 80%);
+    }
+    body::after { background-image: radial-gradient(circle, rgba(255, 255, 255, 0.18) 1px, transparent 1px); }
+}
+
+/* ====================================
+   November Atmosphere Animation Styles.
+======================================= */
+/*@keyframes november-atmosphere
+{
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0.10%, -0.06%, 0) scale(1.004); }
+}*/
+
+/*ul li::before
+{
+    content: "🦃";
     position: absolute;
     top: 0.25rem;
     left: 0;
@@ -106,13 +186,9 @@ ul li:hover::before
     transform: rotate(4deg) scale(1.15);
     color: var(--primary);
 }
-
-/* ====================================
-   Animations Styles.
-======================================= */
 @keyframes emberGlow
 {
     0% { transform: translate(0, 0) scale(1); opacity: 0.05; }
     50% { transform: translate(-8px, 6px) scale(1.08); opacity: 0.12; }
     100% { transform: translate(8px, -6px) scale(1); opacity: 0.05; }
-}
+}*/

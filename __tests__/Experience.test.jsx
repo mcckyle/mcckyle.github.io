@@ -1,84 +1,165 @@
 //Filename: Experience.test.jsx
 //Author: Kyle McColgan
-//Date: 31 July 2026
+//Date: 31 October 2026
 //Description: This file contains the Vitest unit tests for the Experience component.
 
-import React from 'react';
-import { beforeAll, vi } from "vitest";
-import { render, screen, within } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Experience from '../src/components/Experience/Experience.jsx';
+import React from "react";
+import { describe, it, expect, beforeEach } from "vitest";
+import { render, screen, within } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Experience from "../src/components/Experience/Experience.jsx";
 
-describe('Experience component', () => {
+const EXPECTED_EXPERIENCES = [
+    {
+        role: "IT System Engineer",
+        company: "Primary Systems",
+        start: "2023-05",
+        end: "2023-09",
+        startLabel: "May 2023",
+        endLabel: "September 2023",
+    },
+    {
+        role: "Software Engineer",
+        company: "Walmart",
+        start: "2021-07",
+        end: "2022-10",
+        startLabel: "July 2021",
+        endLabel: "October 2022",
+    },
+];
+
+describe("Experience component", () => {
     beforeEach(() => {
         render(<Experience />);
     });
 
     //Test #1
-    it('renders a <div> with id "experience"', () => {
-        const heading = screen.getByRole('heading', { level: 2, name: /experience/i });
+    it("renders an accessible Experience heading", () => {
+        const heading = screen.getByRole("heading", { level: 2, name: "Experience" });
         expect(heading).toBeInTheDocument();
-        expect(heading.tagName.toLowerCase()).toBe('h2');
+        expect(heading).toHaveAttribute("id", "experience-title");
     });
 
     //Test #2
-    it('renders the section title correctly', () => {
-        const title = screen.getByRole('heading', { level: 2 });
-        expect(title).toHaveTextContent('Experience');
+    it("renders a descriptive section introduction", () => {
+        expect(screen.getByText(/professional experience building and supporting reliable software and technology systems/i)).toBeInTheDocument();
     });
 
     //Test #3
-    it('renders the list of job experiences', () => {
-        const listItems = screen.getAllByRole('listitem');
-        expect(listItems).toHaveLength(2);
+    it("renders an ordered employment list associated with its heading", () => {
+        const heading = screen.getByRole("heading", { level: 2, name: "Experience" });
+        const list = screen.getByRole("list", { name: "Experience" });
+        expect(list.tagName).toBe("OL");
+        expect(list).toHaveAttribute("aria-labelledby", heading.id);
     });
 
     //Test #4
-    it('renders the first job experience correctly', () => {
-        const firstItem = screen.getAllByRole('listitem')[0];
-        expect(within(firstItem).getByText(/IT System Engineer/i)).toBeInTheDocument();
-        expect(within(firstItem).getByText(/Primary Systems/i)).toBeInTheDocument();
-        expect(within(firstItem).getByText(/May 2023/i)).toBeInTheDocument();
+    it("renders every expected employment record", () => {
+        const entries = screen.getAllByRole("listitem");
+        expect(entries).toHaveLength(EXPECTED_EXPERIENCES.length);
     });
 
     //Test #5
-    it('renders the second job experience correctly', () => {
-        const secondItem = screen.getAllByRole('listitem')[1];
-        expect(within(secondItem).getByText(/Software Engineer/i)).toBeInTheDocument();
-        expect(within(secondItem).getByText(/Walmart/i)).toBeInTheDocument();
-        expect(within(secondItem).getByText(/July 2021/i)).toBeInTheDocument();
-    });
+    it.each(EXPECTED_EXPERIENCES)(
+        "renders $role at $company correctly",
+        (experience) => {
+            const article = screen.getByRole("article", {
+                name: experience.role,
+            });
+
+            expect(article).toBeInTheDocument();
+
+            expect(
+                within(article).getByRole("heading", {
+                    level: 3,
+                    name: experience.role,
+                })
+            ).toBeInTheDocument();
+
+            expect(
+                within(article).getByText(experience.company)
+            ).toBeInTheDocument();
+        }
+    );
 
     //Test #6
-    it('renders the Experience section', () => {
-        const heading = screen.getByText(/Experience/i);
-        expect(heading).toBeInTheDocument();
+    it("preseves the intended reverse-chronological employment order", () => {
+        const entries = screen.getAllByRole("listitem");
+        expect(entries).toHaveLength(2);
+
+        expect(
+            within(entries[0]).getByRole("heading", {
+                level: 3,
+                name: "IT System Engineer",
+            })
+        ).toBeInTheDocument();
+
+        expect(
+            within(entries[1]).getByRole("heading", {
+                level: 3,
+                name: "Software Engineer",
+            })
+        ).toBeInTheDocument();
     });
 
     //Test #7
-    it('ensures no empty list items', () => {
-        const listItems = screen.getAllByRole('listitem');
-        listItems.forEach(item => {
-            expect(item).not.toBeEmptyDOMElement();
-        });
-    });
+    it.each(EXPECTED_EXPERIENCES)(
+        "renders valid machine-readable dates for $company",
+        (experience) => {
+            const article = screen.getByRole("article", {
+                name: experience.role,
+            });
+
+            const dates = within(article).getAllByRole("time");
+
+            expect(dates).toHaveLength(2);
+
+            expect(dates[0]).toHaveAttribute("datetime", experience.start);
+            expect(dates[0]).toHaveTextContent(experience.startLabel);
+            expect(dates[1]).toHaveAttribute("datetime", experience.end);
+            expect(dates[1]).toHaveTextContent(experience.endLabel);
+        }
+    );
 
     //Test #8
-    it('renders job titles in the list items', () => {
-        expect(screen.getByText(/IT System Engineer/i)).toBeInTheDocument();
-        expect(screen.getByText(/Software Engineer/i)).toBeInTheDocument();
-    });
+    it.each(EXPECTED_EXPERIENCES)(
+        "provides an accessible employment period for $company",
+        (experience) => {
+            const article = screen.getByRole("article", {
+                name: experience.role,
+            });
+
+            expect(
+                within(article).getByLabelText(
+                    `${experience.startLabel} to ${experience.endLabel}`
+                )
+            ).toBeInTheDocument();
+        }
+    );
 
     //Test #9
-    it('does not log any errors to the console', () => {
-        const consoleError = vi.spyOn(console, 'error').mockImplementation();
-        expect(consoleError).not.toHaveBeenCalled();
-        consoleError.mockRestore();
+    it("provides a descriptive accessible name for every employment article", () => {
+        EXPECTED_EXPERIENCES.forEach(({ role }) => {
+            expect(
+                screen.getByRole("article", { name: role })
+        ).toBeInTheDocument();
+      });
     });
 
     //Test #10
-    it('matches the snapshot of the Experience section', () => {
-        const { asFragment } = render(<Experience />);
-        expect(asFragment()).toMatchSnapshot();
+    it("hides decorative timeline markers from assistive technology", () => {
+        const markers = document.querySelectorAll(".experience-marker");
+        expect(markers).toHaveLength(EXPECTED_EXPERIENCES.length);
+        markers.forEach((marker) => {
+            expect(marker).toHaveAttribute("aria-hidden", "true");
+        });
+    });
+
+    it("renders no empty employment entries", () => {
+        const entries = screen.getAllByRole("listitem");
+        entries.forEach((entry) => {
+            expect(entry).not.toBeEmptyDOMElement();
+            expect(within(entry).getByRole("article")).toBeInTheDocument();
+        });
     });
 });

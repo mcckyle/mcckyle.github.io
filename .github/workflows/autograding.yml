@@ -1,4 +1,4 @@
-#File name: deploy.yml
+#File name: autograding.yml
 #Author: Kyle McColgan
 #Date: 8 October 2026
 #Description: This file contains the workflow for GitHub Actions and the GitHub Pages deployment processes.

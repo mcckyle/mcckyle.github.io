@@ -1,6 +1,6 @@
 //Filename: Experience.jsx
 //Author: Kyle McColgan
-//Date: 23 August 2026
+//Date: 31 October 2026
 //Description: This file contains the Experience component for the React personal project.
 
 import React from "react";
@@ -37,7 +37,7 @@ function Experience()
         </h2>
 
         <p className="section-intro">
-          Roles centered on building reliable systems designed to last.
+          Professional experience building and supporting reliable software and technology systems.
         </p>
       </header>
 
@@ -56,7 +56,7 @@ function Experience()
                   <p className="experience-company">{experience.company}</p>
                 </div>
 
-                <div
+                <p
                   className="experience-period"
                   aria-label={`${experience.startLabel} to ${experience.endLabel}`}
                 >
@@ -67,7 +67,7 @@ function Experience()
                   <time dateTime={experience.end}>
                     {experience.endLabel}
                   </time>
-                </div>
+                </p>
               </header>
             </article>
           </li>

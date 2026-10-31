@@ -11,7 +11,7 @@
 /* ====================================
    Skills Cards Styles.
 ======================================= */
-.skill { min-block-size: 100%; }
+.skill { block-size: 100%; }
 
 /* ====================================
    Skills Ambient Overlay Styles.

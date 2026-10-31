@@ -1,16 +1,16 @@
 //Filename: Contact.jsx
 //Author: Kyle McColgan
-//Date: 29 September 2026
+//Date: 31 October 2026
 //Description: This file contains the Contact component for the React personal project.
 
 import React from "react";
 import "./Contact.css";
 
 const CONTACTS = Object.freeze([
-  { id: "github", label: "GitHub", value: "github.com/mcckyle", href: "https://www.github.com/mcckyle", external: true, },
-  { id: "linkedin", label: "LinkedIn", value: "linkedin.com/in/kylemccolgan", href: "https://www.linkedin.com/in/kylemccolgan/", external: true, },
+  { id: "github", label: "GitHub", value: "github.com/mcckyle", href: "https://www.github.com/mcckyle", newTab: true, },
+  { id: "linkedin", label: "LinkedIn", value: "linkedin.com/in/kylemccolgan", href: "https://www.linkedin.com/in/kylemccolgan/", newTab: true, },
   { id: "location", label: "Location", value: "South Saint Louis, Missouri, USA", },
-  { id: "resume", label: "Resume", value: "View PDF", href: "/Kyle-McColgan-Resume-May-2026.pdf", external: true, },
+  { id: "resume", label: "Resume", value: "View PDF", href: "/Kyle-McColgan-Resume-May-2026.pdf", newTab: true, },
 ]);
 
 function Contact()
@@ -23,7 +23,7 @@ function Contact()
         </h2>
 
         <p className="section-intro">
-          Find me on the following platforms:
+          Connect with me or explore my professional background.
         </p>
       </header>
 
@@ -36,14 +36,13 @@ function Contact()
                 <a
                   className="contact-link"
                   href={item.href}
-                  aria-label={`${item.label}: ${item.value}`}
-                  {...(item.external && {
+                  {...(item.newTab && {
                     target: "_blank",
                     rel: "noopener noreferrer",
                   })}
                 >
                   <span>{item.value}</span>
-                  {item.external && (
+                  {item.newTab && (
                     <span aria-hidden="true">↗</span>
                   )}
                 </a>

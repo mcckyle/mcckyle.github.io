@@ -13,7 +13,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
     <p
       class="section-intro"
     >
-      Roles centered on building reliable systems designed to last.
+      Professional experience building and supporting reliable software and technology systems.
     </p>
   </header>
   <ol
@@ -48,7 +48,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
               Primary Systems
             </p>
           </div>
-          <div
+          <p
             aria-label="May 2023 to September 2023"
             class="experience-period"
           >
@@ -67,7 +67,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
             >
               September 2023
             </time>
-          </div>
+          </p>
         </header>
       </article>
     </li>
@@ -99,7 +99,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
               Walmart
             </p>
           </div>
-          <div
+          <p
             aria-label="July 2021 to October 2022"
             class="experience-period"
           >
@@ -118,7 +118,7 @@ exports[`Experience component > matches the snapshot of the Experience section 1
             >
               October 2022
             </time>
-          </div>
+          </p>
         </header>
       </article>
     </li>

@@ -1,6 +1,6 @@
 //Filename: Projects.jsx
 //Author: Kyle McColgan
-//Date: 29 September 2026
+//Date: 31 October 2026
 //Description: This file contains the Projects component for the personal React project.
 
 import React from "react";
@@ -11,7 +11,7 @@ const PROJECTS = Object.freeze([
     id: "stlevents",
     title: "STL Events",
     description:
-      "A modern calendar experience for discovering and tracking events throughout Saint Louis with a streamlined React interface.",
+      "A modern calendar experience for discovering and tracking events throughout Saint Louis.",
     tech: ["Java", "React", "Spring Boot"],
     href: "https://mcckyle.github.io/the-calendar",
   },
@@ -19,42 +19,42 @@ const PROJECTS = Object.freeze([
     id: "showmoevents",
     title: "ShowMOEvents",
     description:
-      "A local event discovery platform for discovering and sharing events throughout Saint Louis with a simple React interface.",
+      "A local event discovery platform connecting the Saint Louis community through accessible event exploration and sharing.",
     tech: ["Java", "React", "Spring Boot", "MySQL"],
   },
   {
     id: "showmetasks",
     title: "ShowMeTasks",
     description:
-      "A modular full-stack task management platform focused on scalable architecture and secure data handling.",
+      "A modular task management platform built around maintainable architecture and secure data handling.",
     tech: ["Java", "React", "Spring Boot", "MySQL"],
   },
   {
     id: "lovenotes",
     title: "LoveNotes",
     description:
-      "A thoughtful messaging platform combining an intuitive React experience with secure backend mail delivery.",
+      "A personal messaging platform combining an intuitive React interface with secure backend mail delivery.",
     tech: ["Java", "React", "Spring Boot", "MySQL"],
   },
   {
     id: "giftplanner",
     title: "Gift Planner",
     description:
-      "A structured gift planning system built around modern REST-driven application architecture.",
+      "A structured gift planning application powered by modern REST APIs and maintainable full-stack architecture.",
     tech: ["Java", "React", "Spring Boot", "MySQL"],
   },
   {
     id: "gratitudejournal",
     title: "Gratitude Journal",
     description:
-      "A secure journaling experience centered around reflection and long-term persistence.",
+      "A private journaling application designed to support personal reflection and persistent record keeping.",
     tech: ["Java", "React", "Spring Boot", "MySQL"],
   },
   {
     id: "potofgoals",
     title: "PotOfGoals",
     description:
-      "A modern personal goal tracking platform designed around reflective workflows and seasonal interactions.",
+      "A personal goal tracking platform centered around reflective workflows and seasonal experiences.",
     tech: ["Java", "React", "Spring Boot", "MySQL"],
   },
 ]);
@@ -69,13 +69,12 @@ function Projects()
         </h2>
 
         <p className="section-intro">
-          Selected works focused on scalable systems and thoughtful user experiences.
+          Selected works exploring maintainable architecture and practical software solutions.
         </p>
       </header>
 
       <ul
         className="content-grid projects-grid"
-        role="list"
         aria-labelledby="projects-title"
       >
         {PROJECTS.map((project) => (
@@ -92,7 +91,7 @@ function Projects()
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${project.title}`}
+                    aria-label={`View ${project.title} project (opens in a new tab)`}
                   >
                     <span>View Project</span>
                     <span aria-hidden="true">↗</span>

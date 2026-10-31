@@ -5,7 +5,7 @@
 ======================================= */
 .container
 {
-    inline-size: min(82rem, calc(100% - 2rem));
+    inline-size: min(82rem, 100%);
     margin-inline: auto;
 }
 
@@ -25,8 +25,8 @@
 {
     max-inline-size: 62ch;
     color: var(--text-strong);
-    font-size: clamp(1.1rem, 1.8vw, 1.30rem);
-    font-weight: 550;
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    font-weight: 500;
     line-height: 1.65;
 }
 
@@ -55,7 +55,7 @@
 .content-title
 {
     color: var(--text-strong);
-    font-weight: 620;
+    font-weight: 600;
 }
 .content-description { font-size: 0.95rem; }
 
@@ -64,7 +64,7 @@
 ======================================= */
 @media (min-width: 1600px)
 {
-    .container { inline-size: min(88rem, calc(100% - 4rem)); }
+    .container { inline-size: min(88rem, 100%); }
 }
 
 /* ====================================

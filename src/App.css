@@ -5,11 +5,12 @@
 ======================================= */
 .app-shell
 {
-    min-block-size: 100svh;
     display: flex;
     flex-direction: column;
+    min-block-size: 100vh;
+    min-block-size: 100svh;
 }
-.site-main { flex: 1; }
+.site-main { flex: 1 0 auto; min-inline-size: 0; }
 
 /* =========================================
    App Shared Page Sections Styles.
@@ -17,6 +18,15 @@
 .section
 {
     position: relative;
-    padding-block: clamp(4.5rem, 8vw, 7.5rem);
-    padding-inline: max(1rem, 3vw);
+    padding-block: clamp(4rem, 7vw, 7rem);
+    padding-inline: max(1.25rem, 3vw);
+    scroll-margin-block-start: 1rem;
+}
+
+/* ====================================
+   App Media Query Styles.
+======================================= */
+@media (max-width: 640px)
+{
+    .section { padding-block: clamp(3.5rem, 12vw, 5rem); padding-inline: 1.25rem; }
 }
